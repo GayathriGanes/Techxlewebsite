@@ -1,0 +1,58 @@
+<div class="banner-container">
+  <div class="banner-content">
+    <h4>SERVICES</h4>
+    <h1>Business transformation through technology.</h1>
+    <a routerLink="/contact" class="cta-button"
+      >Let's talk
+      <span class="arrow"
+        ><img src="assets/images/vectorarrow.png" alt="Techxle Logo" /></span
+    ></a>
+  </div>
+</div>
+<div class="content">
+  <div class="Innovation">
+    <h1 class="belif">Belief Drives Innovation</h1>
+    <p class="drives">
+      At Techxle, we go beyond helping businesses transform through technology.
+      We empower them to make a meaningful difference—to their customers and the
+      communities they serve. Our innovative solutions drive sustainable growth,
+      and transformative change.
+    </p>
+  </div>
+  <div class="Innovation Explore">
+    <h1 class="belif">Explore Our Services</h1>
+    <div>
+      <mat-card class="card" *ngFor="let card of cards"  [style]="card.style">
+        <div class="card-blocks">
+          <div class="symbol-block">
+            <img [src]="card.symbol" alt="Card Symbol" />
+          </div>
+          <div class="content-block">
+            <mat-card-header>
+              <mat-card-title>{{ card.title }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              {{ card.content }}
+            </mat-card-content>
+            <button
+              mat-button
+              (click)="navigateTo(card.route)"
+              class="read-more-button"
+            >
+              <span class="button-text">Read More</span>
+              <span>
+                <img
+                  src="assets/images/arrow.png"
+                  alt="Techxle Logo"
+                  class="icon"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+

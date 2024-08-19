@@ -1,0 +1,164 @@
+<div class="banner-container">
+  <div class="banner-content">
+    <div class="banner-content-header">
+      <a routerLink="/services">SERVICES</a>
+      <span>/ UI/UX DESIGNING</span>
+    </div>
+    <h1>Business transformation through technology.</h1>
+    <a routerLink="/contact" class="cta-button"
+      >Let's talk
+      <span class="arrow"
+        ><img src="assets/images/vectorarrow.png" alt="Techxle Logo"
+      /></span>
+    </a>
+  </div>
+  <mat-toolbar color="primary" class="header-toolbar">
+    <span class="spacer"></span>
+    <nav class="nav-container">
+      <a
+        class="overview"
+        [routerLink]="['/services/ui']"
+        fragment="overview"
+        [ngClass]="{ 'active-link': activeLink === 'overview' }"
+        (click)="setActiveLink('overview'); scrollToContent('overview')"
+        >OVERVIEW</a
+      >
+      <a
+        class="ourapproach"
+        [routerLink]="['/services/ui']"
+        fragment="ourapproach"
+        [ngClass]="{ 'active-link': activeLink === 'ourapproach' }"
+        (click)="setActiveLink('ourapproach'); scrollToContent('ourapproach')"
+        >OUR APPROACH</a
+      >
+      <a
+        class="ourcapabilities"
+        [routerLink]="['/services/ui']"
+        fragment="ourcapabilities"
+        [ngClass]="{ 'active-link': activeLink === 'ourcapabilities' }"
+        (click)="
+          setActiveLink('ourcapabilities'); scrollToContent('ourcapabilities')
+        "
+        >OUR CAPABILITIES</a
+      >
+      <a
+        class="impact"
+        [routerLink]="['/services/ui']"
+        fragment="impact"
+        [ngClass]="{ 'active-link': activeLink === 'impact' }"
+        (click)="setActiveLink('impact'); scrollToContent('impact')"
+        >IMPACT</a
+      >
+    </nav>
+  </mat-toolbar>
+  <section id="overview">
+    <h1 class="menu">Overview</h1>
+    <p class="text">
+      At Techxle, we cover the entire design lifecycle from concept to delivery,
+      ensuring our research-driven and user-centered UI/UX designs exceed
+      expectations. <br />
+      Our expertise in product design, UI/UX, and app development, combined with
+      lean methodologies and thorough research, results in data-driven solutions
+      that perfectly balance business objectives and user needs, fostering
+      loyalty and maximizing ROI.
+    </p>
+  </section>
+  <section id="ourapproach">
+    <h1 class="approach">Our Approach</h1>
+    <div class="archit">
+      <div class="design">
+        <h2 class="heading">Design Thinking Process</h2>
+      </div>
+    </div>
+    <div class="title">
+      <h2 class="devop">Development</h2>
+    </div>
+    <div class="test">
+      <span class="icon"
+        ><img src="assets/images/test.png" alt="Icon" />
+        <h5 class="text-test">Test</h5>
+      </span>
+      <div class="iterate">
+        <h5 class="iterate-text">
+          Iterate on testing and validating ideas by learning from the target
+          audience
+        </h5>
+      </div>
+    </div>
+    <div class="test-1">
+      <span class="icon"
+        ><img src="assets/images/prototype.png" alt="Icon" />
+        <h5 class="text-prototype">Prototype</h5>
+      </span>
+      <div class="prototype">
+        <h5 class="prototype-text">
+          Convert concepts into practical and testable products that meet
+          customer needs
+        </h5>
+      </div>
+    </div>
+    <div class="test-2">
+      <span class="icon"
+        ><img src="assets/images/ideate.png" alt="Icon" />
+        <h5 class="text-idea">Ideate</h5>
+      </span>
+      <div class="idea">
+        <h5 class="idea-text">
+          Collaborate with the team to generate and evaluate ideas for potential
+          features and/or solutions.
+        </h5>
+      </div>
+    </div>
+    <div class="test-3">
+      <span class="icon"
+        ><img src="assets/images/define.png" alt="Icon" />
+        <h5 class="text-define">Define</h5>
+      </span>
+      <div class="define">
+        <h5 class="define-text">
+          Develop a UX roadmap and strategy that aligns with the business
+          objectives.
+        </h5>
+      </div>
+    </div>
+    <div class="test-4">
+      <span class="icon"
+        ><img src="assets/images/discover.png" alt="Icon" />
+        <h5 class="text-define">Discover</h5>
+      </span>
+      <div class="discover">
+        <h5 class="discover-text">
+          Gain insight into the business domain and digital ecosystem.Identify /
+          Understand the audience
+        </h5>
+      </div>
+    </div>
+    <div class="goal">
+      <h2 class="project">Project Goals</h2>
+    </div>
+  </section>
+  <section id="ourcapabilities">
+    <div class="capability">
+      <h1 class="cap">Our Capabilities</h1>
+      <p class="content">
+        By focusing on employee development, we create a vibrant work
+        environment filled with engaging activities.
+      </p>
+      <div class="img-content">
+        <img src="assets/images/capabilities.png" alt="Icon" />
+        <div class="identity">
+          <h1 class="idnty">Brand Identity</h1>
+          <p class="brandtext">
+            We craft brands to convey precise messages, transforming them into
+            Symbols of clarity, excitement, quality, and global allure. Through
+            design language, we articulate targeted messages for audiences,
+            creating impactful, enjoyable, and visually stunning brand
+            experiences across multiple touch points.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact"></section>
+</div>

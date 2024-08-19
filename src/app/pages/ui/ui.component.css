@@ -1,0 +1,630 @@
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    position: absolute;
+    width: 1440px;
+    height: 400px;
+    left: 0px;
+    top: 90px;
+    background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
+      url("/assets/images/servicebanner.png");
+  }
+  
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 621px;
+    height: 181px;
+    left: 120px;
+    top: 114px;
+    margin-left: 20px;
+  }
+  
+  .banner-content h4 {
+    margin-top: -90px;
+    width: 621px;
+    height: 22px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 155%;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.8);
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .banner-content h1 {
+    width: 621px;
+    height: 100px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-top: -174px;
+  }
+  
+  .cta-button {
+    display: flex;
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin-top: 100px;
+    width: 107px;
+    height: 25px;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24.8px;
+    letter-spacing: 0.02em;
+    text-align: right;
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+  }
+  
+  .cta-button .arrow {
+    margin-left: 10px;
+  }
+
+  .banner-content-header a, .banner-content-header span{
+    margin-top: -90px;
+    width: 621px;
+    height: 22px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 155%;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.8) !important;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  .menu{
+    position:absolute;
+    width: 171px;
+    height: 45px;
+    top: 580px;
+    left: 120px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45.36px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #0A183E;
+  }
+  .text
+  {
+    position:absolute;
+    width: 968px;
+    height: 180px;
+    top: 580px;
+    left: 352px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29.7px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #545D78;
+    position: absolute;
+   
+  }
+  .nav-container {
+    display: flex;
+    position:absolute;
+    align-items: center;
+    top: 39px;
+    left: 400px;
+    width: 594px;
+    height: 22px;
+    justify-content: space-between;
+    gap: 30px;
+    opacity: 1; /* Setting opacity to 1 for visibility */
+    margin-left: auto; /* Move nav-container to the right */
+    margin-right: -95px;
+    
+  }
+
+  .nav-container a {
+    text-decoration: none;
+  }
+  .header-toolbar {
+    
+    max-width: 1440px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    opacity: 1; /* Setting opacity to 1 for visibility */
+    padding: 0 150px; /* Adjust padding to increase space between logo and nav-container */
+    background: var(--header-background-color);
+    margin: 0 auto; /* Center the header with equal left and right margins */
+    position: absolute;
+    top: 400px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(6, 14, 35, 0.1);
+  }
+  .approach{
+    position:absolute;
+    width: 250px;
+    height: 45px;
+    top: 800px;
+    left: 120px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45.36px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #0A183E;
+  }
+  .archit{
+    position:absolute;
+    width: 1200px;
+    height: 457px;
+    top: 1067px;
+    left: 120px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    border: Mixed solid #545D78
+}
+.design{
+    position:absolute;
+    width: 1200px;
+    height: 53px;
+    top: -200px;
+    left: 0px;
+    gap: 10px;
+    border-radius: 4px 0px 0px 0px;
+    background: #0A183E1A;
+}
+.heading{
+    position:absolute;
+    width: 300px;
+    height: 25px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25.2px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #060E23;
+    left:500px;
+    top:10px;
+}
+.title{
+    position:absolute;
+    width: 213px;
+    height: 53px;
+    top: 1200px;
+    left: 1200px;
+    gap: 10px;
+    border-radius: 4px 0px 0px 0px;
+    opacity: 0px;
+    rotate: 90deg;
+    background: #0A183E1A;
+}
+.devop{
+    position:absolute;
+    width: 134px;
+    height: 25px;
+    font-family:"Plus Jakarta Text", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #060E23;
+    right:50px;
+}
+
+.active-link {
+    position: relative;
+  }
+   
+  .active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -28px; /* Position this line above the toolbar's bottom border */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    visibility: visible;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+  }
+  .active-link {
+    color: #3564DF !important;
+  }
+  .goal{
+    position:absolute;
+    width: 213px;
+    height: 25px;
+    top: 1200px;
+    left: 10px;
+    padding: 14px 10px 14px 10px;
+    gap: 10px;
+    border-radius: 4px 0px 0px 0px;
+    rotate: 90deg;
+    background: #0A183E1A;
+ }
+ .project{
+  position:absolute;
+  width: 133px;
+  height: 25px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.2px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #060E23;
+  right:50px;
+ }
+ .test{
+  position:absolute;
+  width: 180px;
+  height: 200px;
+  top: 1130px;
+  left: 1050px;
+  
+ }
+ .icon{
+  position:absolute;
+  width: 66.37px;
+  height: 64px;
+  top: -110px;
+  left: 50px;
+  gap: 20px;
+ }
+ .text-test{
+  position:absolute;
+  width: 80px;
+  height: 23px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.68px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #060E23;
+ }
+ .iterate{
+  position:absolute;
+  width: 180px;
+  height: 213px;
+  top: -10px;
+  left: 10px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px solid #545D78
+ }
+ .iterate-text{
+  position:sticky;
+  width: 175px;
+  height: 130px;
+  top: 1372px;
+  left: 1035px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.1px;
+  text-align: center;
+  color: #545D78;
+}
+.test-1{
+  position:absolute;
+  width: 180px;
+  height: 200px;
+  top: 1130px;
+  left: 840px;
+  
+ }
+ .icon{
+  position:absolute;
+  width: 66.37px;
+  height: 64px;
+  top: -110px;
+  left: 50px;
+  gap: 20px;
+ }
+ .text-prototype{
+  position:absolute;
+  width: 80px;
+  height: 23px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.68px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #060E23;
+ }
+ .prototype{
+  position:absolute;
+  width: 180px;
+  height: 213px;
+  top: -10px;
+  left: 10px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px solid #545D78
+ }
+ .prototype-text{
+  position:sticky;
+  width: 175px;
+  height: 130px;
+  top: 1372px;
+  left: 1035px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.1px;
+  text-align: center;
+  color: #545D78;
+}
+.test-2{
+  position:absolute;
+  width: 180px;
+  height: 200px;
+  top: 1130px;
+  left: 630px;
+  
+ }
+ .icon{
+  position:absolute;
+  width: 66.37px;
+  height: 64px;
+  top: -110px;
+  left: 50px;
+  gap: 20px;
+ }
+ .text-idea{
+  position:absolute;
+  width: 80px;
+  height: 23px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.68px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #060E23;
+ }
+ .idea{
+  position:absolute;
+  width: 180px;
+  height: 213px;
+  top: -10px;
+  left: 10px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px solid #545D78
+ }
+ .idea-text{
+  position:sticky;
+  width: 175px;
+  height: 130px;
+  top: 1372px;
+  left: 1035px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.1px;
+  text-align: center;
+  color: #545D78;
+}
+.test-3{
+  position:absolute;
+  width: 180px;
+  height: 200px;
+  top: 1130px;
+  left: 420px;
+  
+ }
+ .icon{
+  position:absolute;
+  width: 66.37px;
+  height: 64px;
+  top: -110px;
+  left: 50px;
+  gap: 20px;
+ }
+ .text-define{
+  position:absolute;
+  width: 80px;
+  height: 23px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.68px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #060E23;
+ }
+ .define{
+  position:absolute;
+  width: 180px;
+  height: 213px;
+  top: -10px;
+  left: 10px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px solid #545D78
+ }
+ .define-text{
+  position:sticky;
+  width: 175px;
+  height: 130px;
+  top: 1372px;
+  left: 1035px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.1px;
+  text-align: center;
+  color: #545D78;
+}
+.test-4{
+  position:absolute;
+  width: 180px;
+  height: 200px;
+  top: 1130px;
+  left: 210px;
+  
+ }
+ .icon{
+  position:absolute;
+  width: 66.37px;
+  height: 64px;
+  top: -110px;
+  left: 50px;
+  gap: 20px;
+ }
+ .text-discover{
+  position:absolute;
+  width: 80px;
+  height: 23px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.68px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #060E23;
+ }
+ .discover{
+  position:absolute;
+  width: 180px;
+  height: 213px;
+  top: -10px;
+  left: 10px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px solid #545D78
+ }
+ .discover-text{
+  position:sticky;
+  width: 175px;
+  height: 130px;
+  top: 1372px;
+  left: 1035px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 23.1px;
+  text-align: center;
+  color: #545D78;
+}
+.cap{
+  position:absolute;
+  font-family:  "Plus Jakarta Text", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45.36px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  width: 1201px;
+  height: 45px;
+  color: #0A183E;
+  top: 100px;
+  left:120px;
+  
+  
+}
+.content{
+  position:absolute;
+  width: 1201px;
+  height: 28px;
+  font-family:  "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #545D78;
+  top: 150px;
+  left:120px; 
+  
+}
+.capability{
+  position:absolute;
+  width: 1440px;
+  height: 700px;
+  background: #EDF1FD;
+  top:1400px;
+  left: 1px;
+  display:flex;
+}
+.img-content{
+  position:absolute;
+  width: 452px;
+  height: 454px;
+  left:900px;
+  top:200px;
+}
+.identity{
+  position:absolute;
+  width: 680px;
+  height: 46px;
+ 
+}
+.idnty{
+  position:absolute;
+  width: 750px;
+  height: 46px;
+  font-family:  "Plus Jakarta Text", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 46.2px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #0A183E;
+  top:-450px;
+  left: -780px;
+  border-bottom: 1px solid #060E2329
+}
+.brandtext{
+  position:absolute;
+  width: 680px;
+  height: 180px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29.7px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #545D78;
+  top:-400px;
+  left:-780px;
+
+}
+
+
+
+
+  
