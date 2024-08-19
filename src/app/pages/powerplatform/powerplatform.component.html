@@ -1,0 +1,61 @@
+<div class="banner-container">
+  <div class="banner-content">
+    <div class="banner-content-header">
+      <a routerLink="/services">SERVICES</a>
+      <span>/ POWER PLATFORM SOLUTION</span>
+    </div>
+    <h1>Business transformation through technology.</h1>
+    <a routerLink="/contact" class="cta-button"
+      >Let's talk
+      <span class="arrow"
+        ><img src="assets/images/vectorarrow.png" alt="Techxle Logo"
+      /></span>
+    </a>
+  </div>
+</div>
+<mat-toolbar color="primary" class="header-toolbar">
+  <span class="spacer"></span>
+  <nav class="nav-container">
+    <a
+      mat-button
+      routerLink="/services"
+      class="services"
+      [ngClass]="{ 'active-link': activeLink === 'services' }"
+      (click)="setActiveLink('services'); toggleHomeVisibility()"
+      >OVERVIEW</a
+    >
+    <a
+      mat-button
+      routerLink="/solutions"
+      class="solutions"
+      [ngClass]="{ 'active-link': activeLink === 'solutions' }"
+      (click)="setActiveLink('solutions'); toggleHomeVisibility()"
+      >OUR APPROACH</a
+    >
+    <a
+      mat-button
+      routerLink="/aboutus"
+      class="about-us"
+      [ngClass]="{ 'active-link': activeLink === 'aboutus' }"
+      (click)="setActiveLink('aboutus'); toggleHomeVisibility()"
+      >OUR CAPABILITIES</a
+    >
+    <a
+      mat-button
+      routerLink="/career"
+      class="career"
+      [ngClass]="{ 'active-link': activeLink === 'career' }"
+      (click)="setActiveLink('career'); toggleHomeVisibility()"
+      >IMPACT</a
+    >
+    <!--<a
+      mat-button
+      routerLink="/contact"
+      class="contact"
+      [ngClass]="{ 'active-link': activeLink === 'contact' }"
+      (click)="setActiveLink('contact'); toggleHomeVisibility()"
+      >CONTACT</a
+    >-->
+  </nav>
+</mat-toolbar>
+

@@ -1,0 +1,60 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <span class="logo">
+    <a routerLink="/">
+      <img
+        src="assets/images/logo.png"
+        alt="Techxle Logo"
+        class="logo-img"
+        (click)="ttoggleHomeVisibility()"
+      />
+    </a>
+  </span>
+  <span class="spacer"></span>
+  <nav class="nav-container">
+    <a
+      mat-button
+      routerLink="/services"
+      class="services"
+      [ngClass]="{ 'active-link': activeLink === 'services' }"
+      (click)="setActiveLink('services'); toggleHomeVisibility()"
+      >SERVICES</a
+    >
+    <a
+      mat-button
+      routerLink="/solutions"
+      class="solutions"
+      [ngClass]="{ 'active-link': activeLink === 'solutions' }"
+      (click)="setActiveLink('solutions'); toggleHomeVisibility()"
+      >SOLUTIONS</a
+    >
+    <a
+      mat-button
+      routerLink="/aboutus"
+      class="about-us"
+      [ngClass]="{ 'active-link': activeLink === 'aboutus' }"
+      (click)="setActiveLink('aboutus'); toggleHomeVisibility()"
+      >ABOUT US</a
+    >
+    <a
+      mat-button
+      routerLink="/career"
+      class="career"
+      [ngClass]="{ 'active-link': activeLink === 'career' }"
+      (click)="setActiveLink('career'); toggleHomeVisibility()"
+      >CAREER</a
+    >
+    <a
+      mat-button
+      routerLink="/contact"
+      class="contact"
+      [ngClass]="{ 'active-link': activeLink === 'contact' }"
+      (click)="setActiveLink('contact'); toggleHomeVisibility()"
+      >CONTACT</a
+    >
+  </nav>
+</mat-toolbar>
+<div *ngIf="isHomeVisible">
+    <app-solutions></app-solutions>
+    <app-banner></app-banner>
+    <app-callout></app-callout>
+</div>
