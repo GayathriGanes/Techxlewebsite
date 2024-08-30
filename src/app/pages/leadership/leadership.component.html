@@ -1,0 +1,32 @@
+<div class="banner-container">
+    <div class="banner-content">
+      <div class="banner-content-header">
+        <a routerLink="/aboutus">ABOUT US</a>
+        <span>/ LEADERSHIP</span>
+      </div>
+      <h1>Business transformation through technology.</h1>
+      <a routerLink="/contact" class="cta-button"
+        >Let's talk
+        <span class="arrow"
+          ><img src="assets/images/vectorarrow.png" alt="Techxle Logo" /></span>
+      </a>
+    </div>
+    <div class="team">
+        <h1 class="team-text">Meet Our Team</h1>
+        <div class="row"  *ngFor="let row of rows" [style]="row.style">
+            <div class="pic-4">
+                <div class="comp">
+                    <span class="image1">
+                      <img class="bottom-img" src="assets/images/image 92.png" alt="Techxle Logo" id="img1"/>
+                      <img class="top-img" src="assets/images/image 93.png" alt="Techxle Logo" id="img2" />
+                    </span>
+                    <div class="frame-8">
+                      <h1 class="name-ceo">Krishna Sudheendra</h1>
+                      <p class="founder">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
