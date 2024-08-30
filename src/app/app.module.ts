@@ -20,6 +20,9 @@ import { CloudappComponent } from './pages/cloudapp/cloudapp.component';
 import { StaffingComponent } from './pages/staffing/staffing.component';
 import { UIComponent } from './pages/ui/ui.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
+import{MatExpansionModule} from '@angular/material/expansion';
+import { LeadershipComponent } from './pages/leadership/leadership.component';
+
 
 
 
@@ -41,6 +44,7 @@ import { FullstackComponent } from './pages/fullstack/fullstack.component';
     StaffingComponent,
     UIComponent,
     FullstackComponent,
+    LeadershipComponent,
   
     
     
@@ -51,7 +55,8 @@ import { FullstackComponent } from './pages/fullstack/fullstack.component';
     AppRoutingModule,
     MatIconModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule
   ],
   providers: [
     provideClientHydration(),

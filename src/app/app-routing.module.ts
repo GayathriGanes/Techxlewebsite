@@ -10,6 +10,8 @@ import { CloudappComponent } from './pages/cloudapp/cloudapp.component';
 import { StaffingComponent } from './pages/staffing/staffing.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import { UIComponent } from './pages/ui/ui.component';
+import { LeadershipComponent } from './pages/leadership/leadership.component';
+
 
 
 const routes: Routes = [
@@ -21,6 +23,7 @@ const routes: Routes = [
   {path:'services/ui',component:UIComponent},
   {path:'solutions',component:SolutionsComponent},
   {path:'aboutus',component:AboutusComponent},
+  {path:'aboutus/leadership',component:LeadershipComponent},
   {path:'career',component:CareerComponent},
   {path:'contact',component:ContactComponent},
   {path: '', redirectTo: '', pathMatch: 'full' },
