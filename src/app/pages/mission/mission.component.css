@@ -1,0 +1,211 @@
+.container {
+  display: flex;
+  margin-top: 1920px;
+}
+
+.move {  
+  display: flex;
+  gap: 1rem;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+width:38%;
+left:0;
+margin-left: 0;
+margin-right:70px;
+top: 0%;
+bottom: 0%;
+
+
+}
+
+.move > div {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: flex 1s;
+}
+
+.bac-1 {
+  background:linear-gradient(to bottom, rgba(51,51, 51, 0.5), rgba(0, 0, 0, 0.5)),url('/assets/logo/mission.png'); 
+  border-radius: 15px;
+}
+
+.bac-2 {
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5), rgba(0, 0, 0, 0.5)),url('/assets/logo/mission.png'); 
+  border-radius: 15px;
+}
+
+.bac-3 {
+  background: linear-gradient(to bottom, rgba(51, 51,51, 0.5), rgba(0, 0, 0, 0.5)),url('/assets/logo/mission.png'); 
+  border-radius: 15px;
+}
+
+.move > div:first-child {
+  flex: 4;
+}
+.move .bac-1 .heading {
+  display:none;
+}
+.move:not(.locked):hover > div {
+  flex: 1;
+}
+
+.move:not(.locked):hover > div.hovered {
+  flex: 4;
+}
+
+.heading {
+  position: absolute;
+  left: 34.26%;
+  right: 51.44%;
+  top: 92.86%;
+  bottom: -1.9%;
+  font-family: 'Hauora';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+.content {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+width: 555px;
+height: 265px;
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+margin-left: 0px;
+margin-top:100px;
+}
+.title{
+
+width: 161px;
+height: 46px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 145%;
+
+display: flex;
+align-items: center;
+letter-spacing: 0.01em;
+
+color: #060E23;
+flex: none;
+order: 0;
+flex-grow: 0;
+white-space: nowrap;
+
+}
+.para {
+ 
+
+width: 538px;
+height: 203px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 160%;
+/* or 29px */
+display: flex;
+align-items: center;
+letter-spacing: 0.02em;
+
+color: #545D78;
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.move > div .heading {
+  display: none;
+}
+
+
+.move > div .heading {
+  display: block;
+}
+
+.move.locked > div .heading {
+  display: block;
+}
+
+.expanded .heading {
+  display: none;
+}
+
+.locked > div {
+  flex: 1 !important;
+}
+
+.locked > div.expanded {
+  flex: 4 !important;
+}
+
+.move:not(.locked) > div:hover .heading {
+  display: none;
+}
+
+.move:not(.locked) > div:not(.hovered) .heading {
+  display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+      margin-top: 1000px; /* Adjust as needed */
+      left:0;
+      right:0;
+  }
+
+  .move {  
+      width: 400px; /* Adjust the width for tablets */
+      height: 400px; /* Adjusted height */
+      gap: 1rem;
+  }
+
+  .move > div {
+      flex: 1;
+      height: 100%; 
+      transition: flex 1s;
+  }
+
+  .heading {
+      font-size: 24px;
+      left: 60%;
+      top: 85%;
+  }
+
+  .content {
+      width: 0;
+      height: 400px;
+      margin-top: 50px;
+      margin-bottom:0px;
+      margin-left:-50px;
+
+      
+  }
+
+  .title {
+      font-size: 28px;
+  }
+
+  .para {
+      font-size: 16px;
+  }
+}

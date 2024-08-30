@@ -25,6 +25,7 @@ import{MatExpansionModule} from '@angular/material/expansion';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { ServiceeComponent } from './pages/service/service.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MissionComponent } from './pages/mission/mission.component';
 
 
 
@@ -49,7 +50,7 @@ import { MatButtonModule } from '@angular/material/button';
     FullstackComponent,
     LeadershipComponent,
     ServiceeComponent,
-    
+    MissionComponent,
     
     
   ],
