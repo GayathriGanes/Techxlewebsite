@@ -12,7 +12,11 @@ import { StaffingComponent } from './pages/staffing/staffing.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import { UIComponent } from './pages/ui/ui.component';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
-
+import { PowerComponent } from './pages/power/power.component';
+import { CloudComponent } from './pages/cloud/cloud.component';
+import { StaffComponent } from './pages/staff/staff.component';
+import { StackComponent } from './pages/stack/stack.component';
+import { DesignComponent } from './pages/design/design.component';
 
 
 const routes: Routes = [
@@ -24,9 +28,14 @@ const routes: Routes = [
   {path:'services/ui',component:UIComponent},
   {path:'solutions',component:SolutionsComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'aboutus/leadership',component:LeadershipComponent},
+  {path:'leader',component:LeadershipComponent},
   {path:'career',component:CareerComponent},
   {path:'contact',component:ContactComponent},
+  {path:'solutions/power',component:PowerComponent},
+  {path:'solutions/cloud',component:CloudComponent},
+  {path:'solutions/staff',component:StaffComponent},
+  {path:'solutions/stack',component:StackComponent},
+  {path:'solutions/design',component:DesignComponent},
   {path: '', redirectTo: '', pathMatch: 'full' },
   
 ];

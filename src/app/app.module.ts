@@ -26,8 +26,13 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { ServiceeComponent } from './pages/service/service.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MissionComponent } from './pages/mission/mission.component';
-import { SolutionbannerComponent } from './solutionbanner/solutionbanner.component';
 import { SolutionbanComponent } from './pages/solutionban/solutionban.component';
+import { PowerComponent } from './pages/power/power.component';
+import { CloudComponent } from './pages/cloud/cloud.component';
+import { StaffComponent } from './pages/staff/staff.component';
+import { StackComponent } from './pages/stack/stack.component';
+import { DesignComponent } from './pages/design/design.component';
+
 
 
 
@@ -53,8 +58,12 @@ import { SolutionbanComponent } from './pages/solutionban/solutionban.component'
     LeadershipComponent,
     ServiceeComponent,
     MissionComponent,
-    SolutionbannerComponent,
     SolutionbanComponent,
+    PowerComponent,
+    CloudComponent,
+    StaffComponent,
+    StackComponent,
+    DesignComponent
     
     
   ],

@@ -1,22 +1,43 @@
-import { Component, Renderer2 } from '@angular/core';
-
+import { Component } from "@angular/core";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-solutions',
   templateUrl: './solutions.component.html',
   styleUrl: './solutions.component.css'
 })
 export class SolutionsComponent {
-  constructor(private rndr2: Renderer2) {}
-  onDownButtonClick(){
-    const solutionCardOnTopDiv = document.getElementById('solutionCardOnTop') as HTMLDivElement | null;
-    this.rndr2.addClass(solutionCardOnTopDiv, 'solution-card-to-top');
+    services = [
+    {
+      title: 'Power Platform Solution',
+      image: 'assets/logo/banner.png',
+      route: 'power'
+    },
+    {
+      title: 'Cloud App Development',
+      image: 'assets/logo/banner.png',
+      route: 'cloud'
+    },
+    {
+      title: 'Staffing Service',
+      image: 'assets/logo/banner.png',
+      route: 'staff'
+    },
+    {
+      title: 'Full Stack Development',
+      image: 'assets/logo/banner.png',
+      route: 'stack'
+    },
+    {
+      title: 'UI/UX Designing',
+      image: 'assets/logo/banner.png',
+      route: 'design'
+    }
+  ];
+  constructor(private router: Router) {}
+
+  navigateTo(route: string) {
+    this.router.navigate([`solutions/${route}`]);
   }
+    
 
-  /*onUpButtonClick(){
-    const solutionCardOnTopDiv = document.getElementById('solutionCardOnTop') as HTMLDivElement | null;
-    this.rndr2.removeClass(solutionCardOnTopDiv, 'solution-card-to-top');
-    this.rndr2.addClass(solutionCardOnTopDiv, 'solution-card-to-bottom');
-  }*/
 }
-
-

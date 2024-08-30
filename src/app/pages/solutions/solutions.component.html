@@ -1,39 +1,37 @@
-<div class="solution-container">
-  <h2>Discover Our Impact</h2>
-  <div class="solution-card">
-    <div class="solution-text">
-      <h3>SOLUTIONS</h3>
-      <h1>Smart Assistant to Reduce Post-Discharge Readmissions</h1>
+<div class="banner-container">
+    <div class="banner-content">
+      <h4>SOLUTIONS</h4>
+      <h1>Business transformation through technology.</h1>
+      <a routerLink="/contact" class="cta-button">
+        <span class="text">Let's talk</span>
+        <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+      </a>
     </div>
-    <div class="solution-image">
-      <img src="../assets/images/solution img.png" alt="Smart Assistant" />
-      <!-- You can replace the src with the path to your image -->
+</div>
+<div class="belief-section">
+  <h2 class="belief-heading">Belief Drives Innovation</h2>
+  <p class="belief-paragraph">
+      At Techxle, we go beyond helping businesses transform through technology. We empower them to make a meaningful difference-to their customers and the communities they serve. Our innovative solutions drive sustainable growth and transformative change.
+  </p>
+</div>
+<div class="service-container">
+  <div class="heading">Related Solutions</div>
+  <div class="service-box" *ngFor="let service of services"  >
+    <div class="image-box" (click)="navigateTo(service.route)">
+      <img [src]="service.image"  alt="{{service.title}}" />
+      <div class="header-box">
+        <span class="service-title">{{service.title}}</span>
+        <span class="read-more">Read More</span>
+      </div>
     </div>
-    <div class="read-more">
-      <h5>Read More</h5>
-    </div>
-    <div class="icon-circle">
-      <img src="../assets/images/arrow.png" alt="Smart Assistant" />
-      <button (click)="onDownButtonClick()" class="left-arrow">
-        <img src="../assets/images/L-Arrow.png" alt="Smart Assistant" />
-      </button>
-      <button (click)="onDownButtonClick()" class="right-arrow">
-        <img src="../assets/images/R-Arrow.png" alt="Smart Assistant" />
-      </button>
-    </div>
-  </div>
-  <div id="solutionCardOnTop" class="solution-card solution-card-on-top">
-    <div class="solution-text">
-      <h3>SOLUTIONS</h3>
-      <h1>Telehealth Integration in EHR to Assist Over-burdened Providers</h1>
-    </div>
-    <div class="solution-image">
-      <img src="../assets/images/solution img.png" alt="Smart Assistant" />
-    </div>
-    <div class="read-more">
-      <h5>Read More</h5>
-    </div>
-    <div class="icon-circle">
-      <img src="../assets/images/arrow.png" alt="Smart Assistant" />
   </div>
 </div>
+
+
+
+
+
+
+
+
+  

@@ -24,7 +24,7 @@
       routerLink="/solutions"
       class="solutions"
       [ngClass]="{ 'active-link': activeLink === 'solutions' }"
-      (click)="setActiveLink('solutions'); toggleHomeVisibility()"
+      (click)="setActiveLink('solutions'); toggleHomeVisibility();checkurl()"
       >SOLUTIONS</a
     >
     <a
