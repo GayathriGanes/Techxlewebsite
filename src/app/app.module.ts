@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
@@ -22,6 +23,8 @@ import { UIComponent } from './pages/ui/ui.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import{MatExpansionModule} from '@angular/material/expansion';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
+import { ServiceeComponent } from './pages/service/service.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -45,7 +48,7 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
     UIComponent,
     FullstackComponent,
     LeadershipComponent,
-  
+    ServiceeComponent,
     
     
     
@@ -56,11 +59,14 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonModule,
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
