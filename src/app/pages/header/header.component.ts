@@ -40,4 +40,20 @@ export class HeaderComponent implements OnInit {
   setActiveLink(link: string) {
     this.activeLink = link;
   }
+  checkurl(){
+    const url=this.router.url
+    if(url.includes('/solutions/power'))
+    {
+      this.router.navigate(['/solutions/power']);  
+    }
+    else if(url.includes('/solutions/design'))
+      {
+        this.router.navigate(['/solutions/design'])
+      }
+    else if(url.includes('/solutions'))
+    {
+      this.router.navigate(['/solutions'])
+    }
+  
+  }
 }

@@ -1,0 +1,46 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<div class="container">
+  <div class="move" [ngClass]="{'locked': lockedContent}">
+    <div class="bac-1" [ngClass]="{'expanded': expandedContent === 'bac-1-content', 'hovered': hoveredContent === 'bac-1-content'}" (mouseover)="handleMouseOver('bac-1-content')" (mouseout)="handleMouseOut()" (click)="handleClick('bac-1-content')">
+      <div class="heading" *ngIf="activeContent !== 'bac-1-content'">Our Vision</div>
+    </div>
+    <div class="bac-2" [ngClass]="{'expanded': expandedContent === 'bac-2-content', 'hovered': hoveredContent === 'bac-2-content'}" (mouseover)="handleMouseOver('bac-2-content')" (mouseout)="handleMouseOut()" (click)="handleClick('bac-2-content')">
+      <div class="heading" *ngIf="!lockedContent || expandedContent !== 'bac-2-content'">Our Mission</div>
+    </div>
+    <div class="bac-3" [ngClass]="{'expanded': expandedContent === 'bac-3-content', 'hovered': hoveredContent === 'bac-3-content'}" (mouseover)="handleMouseOver('bac-3-content')" (mouseout)="handleMouseOut()" (click)="handleClick('bac-3-content')">
+      <div class="heading" *ngIf="!lockedContent || expandedContent !== 'bac-3-content'">Why Choose Us</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content-item bac-1-content" *ngIf="activeContent === 'bac-1-content'">
+      <h2 class="title">Our Vision</h2>
+      <p class="para">At Techxle we provide comprehensive solutions in no code, 
+        low code, full stack, and DevOps. Whether you need a simple 
+        no code solution or a complex system, our team has the 
+        expertise to deliver. <br>
+        <br>      
+        Let us help you take your software development to the
+        next level.</p>
+    </div>
+    <div class="content-item bac-2-content" *ngIf="activeContent === 'bac-2-content'">
+      <h2 class="title">Our Mission</h2>
+      <p class="para">At Techxle we provide comprehensive solutions in no code, 
+        low code, full stack, and DevOps. Whether you need a simple 
+        no code solution or a complex system, our team has the 
+        expertise to deliver. <br><br>
+        
+        Let us help you take your software development to the
+        next level.</p>
+    </div>
+    <div class="content-item bac-3-content" *ngIf="activeContent === 'bac-3-content'">
+      <h2 class="title">Why Choose Us</h2>
+      <p class="para">At Techxle we provide comprehensive solutions in no code, 
+        low code, full stack, and DevOps. Whether you need a simple 
+        no code solution or a complex system, our team has the 
+        expertise to deliver. <br><br>
+        
+        Let us help you take your software development to the
+        next level.</p>  
+    </div>
+  </div>
+</div>
