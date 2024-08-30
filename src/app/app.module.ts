@@ -26,6 +26,8 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { ServiceeComponent } from './pages/service/service.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MissionComponent } from './pages/mission/mission.component';
+import { SolutionbannerComponent } from './solutionbanner/solutionbanner.component';
+import { SolutionbanComponent } from './pages/solutionban/solutionban.component';
 
 
 
@@ -51,6 +53,8 @@ import { MissionComponent } from './pages/mission/mission.component';
     LeadershipComponent,
     ServiceeComponent,
     MissionComponent,
+    SolutionbannerComponent,
+    SolutionbanComponent,
     
     
   ],
