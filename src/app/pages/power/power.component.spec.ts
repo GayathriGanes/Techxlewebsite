@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SolutionsComponent } from './solutions.component';
+import { PowerComponent } from './power.component';
 
-describe('SolutionsComponent', () => {
-  let component: SolutionsComponent;
-  let fixture: ComponentFixture<SolutionsComponent>;
+describe('PowerComponent', () => {
+  let component: PowerComponent;
+  let fixture: ComponentFixture<PowerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SolutionsComponent]
+      declarations: [PowerComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SolutionsComponent);
+    fixture = TestBed.createComponent(PowerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

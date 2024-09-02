@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BannerComponent } from './pages/banner/banner.component';
 import { CalloutComponent } from './pages/callout/callout.component';
@@ -22,6 +22,16 @@ import { UIComponent } from './pages/ui/ui.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import{MatExpansionModule} from '@angular/material/expansion';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
+import { ServiceeComponent } from './pages/service/service.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MissionComponent } from './pages/mission/mission.component';
+import { SolutionbanComponent } from './pages/solutionban/solutionban.component';
+import { PowerComponent } from './pages/power/power.component';
+import { CloudComponent } from './pages/cloud/cloud.component';
+import { StaffComponent } from './pages/staff/staff.component';
+import { StackComponent } from './pages/stack/stack.component';
+import { DesignComponent } from './pages/design/design.component';
+
 
 
 
@@ -30,7 +40,7 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SolutionsComponent,
+    SolutionbanComponent,
     BannerComponent,
     CalloutComponent,
     FooterComponent,
@@ -45,8 +55,14 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
     UIComponent,
     FullstackComponent,
     LeadershipComponent,
-  
-    
+    ServiceeComponent,
+    MissionComponent,
+    SolutionbanComponent,
+    PowerComponent,
+    CloudComponent,
+    StaffComponent,
+    StackComponent,
+    DesignComponent
     
     
   ],
@@ -56,11 +72,14 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonModule,
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

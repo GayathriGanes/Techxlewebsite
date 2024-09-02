@@ -1,11 +1,11 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component,Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-solutions',
-  templateUrl: './solutions.component.html',
-  styleUrl: './solutions.component.css'
+  selector: 'app-solutionban',
+  templateUrl: './solutionban.component.html',
+  styleUrl: './solutionban.component.css'
 })
-export class SolutionsComponent {
+export class SolutionbanComponent {
   constructor(private rndr2: Renderer2) {}
   onDownButtonClick(){
     const solutionCardOnTopDiv = document.getElementById('solutionCardOnTop') as HTMLDivElement | null;
@@ -18,5 +18,3 @@ export class SolutionsComponent {
     this.rndr2.addClass(solutionCardOnTopDiv, 'solution-card-to-bottom');
   }*/
 }
-
-

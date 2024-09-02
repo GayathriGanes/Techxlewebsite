@@ -24,7 +24,7 @@
       routerLink="/solutions"
       class="solutions"
       [ngClass]="{ 'active-link': activeLink === 'solutions' }"
-      (click)="setActiveLink('solutions'); toggleHomeVisibility()"
+      (click)="setActiveLink('solutions'); toggleHomeVisibility();checkurl()"
       >SOLUTIONS</a
     >
     <a
@@ -54,7 +54,9 @@
   </nav>
 </mat-toolbar>
 <div *ngIf="isHomeVisible">
-    <app-solutions></app-solutions>
+    <app-solutionban></app-solutionban>
     <app-banner></app-banner>
     <app-callout></app-callout>
+    <app-service></app-service>
+    <app-mission></app-mission>
 </div>

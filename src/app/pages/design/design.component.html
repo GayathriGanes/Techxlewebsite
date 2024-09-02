@@ -1,0 +1,139 @@
+<div class="banner-container">
+    <div class="banner-content">
+      <span class="heading">
+      <h4 class="solution" (click)="navigateToSolutions()">SOLUTIONS/</h4>
+      <h4 class="power">UI/UX designing</h4>
+      </span>
+      <h1>Business transformation through technology.</h1>
+      <a routerLink="/contact" class="cta-button">
+        <span class="text">Let's talk</span>
+        <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+      </a>
+    </div>
+</div>
+<mat-toolbar color="primary" class="nav-toolbar">
+<nav class="nav-container">
+    <a [routerLink]="['/solutions/design']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
+    <a [routerLink]="['/solutions/design']" fragment="challenges" [ngClass]="{'active-link': activeLink === 'challenges'}" (click)="setActiveLink('challenges')">Challenges</a>
+    <a [routerLink]="['/solutions/design']" fragment="solutions" [ngClass]="{'active-link': activeLink === 'solutions'}" (click)="setActiveLink('solutions')">Solutions</a>
+    <a [routerLink]="['/solutions/design']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
+    <a [routerLink]="['/solutions/design']" fragment="platforms" [ngClass]="{'active-link': activeLink === 'platform'}" (click)="setActiveLink('platform')">Platforms</a>
+</nav>
+</mat-toolbar>
+<section id="overview" class="overview">
+    <h2>Overview</h2>
+    <h3>Smart Assistant to Reduce Post-Discharge Readmissions</h3>
+
+    <p>At Techxle, we cover the entire design lifecycle from concept to delivery, ensuring our research-driven  and user-centered UI/UX designs exceed expectations. <br><br>
+        
+        Our expertise in product design, UI/UX, and  app development, combined with lean methodologies and thorough research, results in data-driven solutions that perfectly balance business objectives and user needs, fostering loyalty and maximizing ROI.</p>
+    <div class="box">
+        <img class="img1" src="assets/logo/banner.png" alt="Arrow Icon">
+        <img class="img2" src="assets/logo/banner.png" alt="Arrow Icon">
+        <img class="img3" src="assets/logo/banner.png" alt="Arrow Icon">
+    </div>
+</section>
+  
+<section id="challenges" class="challenges">
+    <h2>Challenges</h2>
+    <h3>Healthcare delivery needs to extend beyond hospital settings</h3>
+    <p>The complex process of transferring a patient from one care setting (e.g., a hospital or nursing facility) to another often leads to confusion about treatment plans, missed follow-up appointments, patient dissatisfaction, and non-adherence to medication schedules. These causes result in unnecessary readmissions.
+        
+        <br><br>At Techxle, we cover the entire design lifecycle from concept to delivery, ensuring our research-driven  
+        and user-centered UI/UX designs exceed expectations. 
+        
+        <br><br>Our expertise in product design, UI/UX, and  app development, combined with lean methodologies and thorough research, results in data-driven solutions that perfectly balance business objectives and user needs, fostering loyalty and maximizing ROI.</p>
+    
+</section>
+  
+<section id="solutions" class="solutions">
+    <h2>Solutions</h2>
+    <h3>Healthcare delivery needs to extend beyond hospital settings</h3>
+
+    <p>The complex process of transferring a patient from one care setting (e.g., a hospital or nursing facility) to another often leads to confusion about treatment plans, missed follow-up appointments, patient dissatisfaction, and non-adherence to medication schedules. These causes result in unnecessary readmissions.
+        
+        <br><br>At Techxle, we cover the entire design lifecycle from concept to delivery, ensuring our research-driven  
+        and user-centered UI/UX designs exceed expectations. 
+        
+        <br><br>Our expertise in product design, UI/UX, and  app development, combined with lean methodologies and thorough research, results in data-driven solutions that perfectly balance business objectives and user needs, fostering loyalty and maximizing ROI.</p>
+</section>
+  
+<section id="impact" class="impact">
+    <img class="imge1" src="assets/logo/banner.png" alt="Arrow Icon">
+    <div class="discharge">
+        <p>Post-Discharge
+            Readmissions</p>
+    </div>
+    <div class="para">
+    <h2>Impact</h2>
+    <p>&bull; 18% reduction in patient readmission rates recorded by 3 public hospitals.</p>
+    <p>&bull; 48% increase in post-discharge patient engagement helped relieve overburdened clinicians and elevate healthcare standards.</p>
+    </div>
+</section>
+  
+<section id="platforms" class="platforms">
+    <p>We Work With Advanced Technology</p>
+    <div class="div1">
+    <img  src="assets/logo/f1.png" alt="Arrow Icon"> 
+    <img  src="assets/logo/f2.png" alt="Arrow Icon">
+    <img  src="assets/logo/f3.png" alt="Arrow Icon">
+    <img  src="assets/logo/f4.png" alt="Arrow Icon">
+    <img  src="assets/logo/f5.png" alt="Arrow Icon">    
+    </div>
+    <div class="div2">
+    <img  src="assets/logo/f6.png" alt="Arrow Icon">
+    <img  src="assets/logo/f7.png" alt="Arrow Icon">
+    <img  src="assets/logo/f8.png" alt="Arrow Icon">
+    <img  src="assets/logo/f9.png" alt="Arrow Icon">
+    <img  src="assets/logo/f10.png" alt="Arrow Icon">
+    </div>
+</section>
+<div class="card-slider">
+  <div class="header">
+    <h2>Related Solutions</h2>
+    <div class="navigation-buttons">
+      <button mat-icon-button (click)="prev()">
+        <mat-icon fontSet="fa">&#8592;</mat-icon>
+      </button>
+      <button mat-icon-button (click)="next()">
+        <mat-icon fontSet="fa">&#8594;</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="cards-container" #container>
+   <mat-card class="card" *ngFor="let card of cards">    
+      <div class="image-box" (click)="navigateTo(card.route)">
+        <img [src]="card.image"  alt="{{card.title}}" />
+        <div class="header-box">
+          <span class="service-title">{{card.title}}</span>
+          <span class="read-more">Read More</span>
+        </div>
+      </div>
+   </mat-card>
+  </div>
+</div>
+
+<div class="project">
+ <h1>GET IN TOUCH</h1>
+ <p>Have a Project?
+  We Would Love to Hear
+  From You</p>
+  <div class="name">
+   <h2 class="h2">NAME</h2>
+   <h2 class="h1">EMAIL ID</h2>
+   <h2 class="h3">SERVICE TYPE</h2>
+   <h2 class="h4">MESSAGE</h2>
+   <button mat-button class="read-more-button">
+    <span class="button-text">Send Enquiry</span>
+    <span >
+      <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon">
+    </span>
+    </button>
+  </div>
+</div>
+  
+
+  
+  
+
+
