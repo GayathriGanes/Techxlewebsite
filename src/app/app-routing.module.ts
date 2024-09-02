@@ -16,6 +16,7 @@ import { CloudComponent } from './pages/cloud/cloud.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
+import { SolutionsComponent } from './pages/solutions/solutions.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:'solutions/staff',component:StaffComponent},
   {path:'solutions/stack',component:StackComponent},
   {path:'solutions/design',component:DesignComponent},
+  {path:'solutions',component:SolutionsComponent},
   {path: '', redirectTo: '', pathMatch: 'full' },
   
 ];

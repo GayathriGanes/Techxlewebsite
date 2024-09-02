@@ -11,6 +11,7 @@
     background: var(--header-background-color);
     margin: 0 auto; /* Center the header with equal left and right margins */
     position: absolute;
+    top:5px;
   }
    
   .logo {

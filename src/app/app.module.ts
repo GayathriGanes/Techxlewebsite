@@ -31,6 +31,7 @@ import { CloudComponent } from './pages/cloud/cloud.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
+import { SolutionsComponent } from './pages/solutions/solutions.component';
 
 
 
@@ -62,7 +63,8 @@ import { DesignComponent } from './pages/design/design.component';
     CloudComponent,
     StaffComponent,
     StackComponent,
-    DesignComponent
+    DesignComponent,
+    SolutionsComponent
     
     
   ],
