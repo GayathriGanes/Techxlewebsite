@@ -1,5 +1,5 @@
 .header-toolbar {
-    width: calc(100% - var(--side-gap) * 2); /* Ensure width adjusts to the viewport */
+    
     max-width: 1440px;
     height: 90px;
     display: flex;
@@ -10,7 +10,8 @@
     padding: 0 150px; /* Adjust padding to increase space between logo and nav-container */
     background: var(--header-background-color);
     margin: 0 auto; /* Center the header with equal left and right margins */
-    position: relative;
+    position: absolute;
+    top:5px;
   }
    
   .logo {

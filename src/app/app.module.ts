@@ -4,7 +4,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BannerComponent } from './pages/banner/banner.component';
 import { CalloutComponent } from './pages/callout/callout.component';
@@ -32,6 +31,7 @@ import { CloudComponent } from './pages/cloud/cloud.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
+import { SolutionsComponent } from './pages/solutions/solutions.component';
 
 
 
@@ -41,7 +41,7 @@ import { DesignComponent } from './pages/design/design.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SolutionsComponent,
+    SolutionbanComponent,
     BannerComponent,
     CalloutComponent,
     FooterComponent,
@@ -63,7 +63,8 @@ import { DesignComponent } from './pages/design/design.component';
     CloudComponent,
     StaffComponent,
     StackComponent,
-    DesignComponent
+    DesignComponent,
+    SolutionsComponent
     
     
   ],

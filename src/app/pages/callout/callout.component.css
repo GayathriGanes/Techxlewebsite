@@ -16,7 +16,6 @@
   
   .callout-text {
     position: absolute;
-    width: 745px;
     height: 46px;
     top: 70px;
     left: 120px;
@@ -33,7 +32,7 @@
   
   .callout-button {
     position:absolute;
-    width: 2398px;
+    width: 150px;
     height: 16px;
     font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 18px;
@@ -41,6 +40,7 @@
     line-height: 11;
     text-align: center;
     color: #FFFFFF;  
+    left:1120px;
   }
   .button{
     /* Bg */
