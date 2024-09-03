@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
+   
 .callout {
   position: absolute;
   width: 1440px;
@@ -5,7 +7,7 @@
   top: 2332px;
   background: linear-gradient(90deg, #34D7DF 0%, #2150D0 100%);
   background: linear-gradient(90deg, #11296A 0%, #2150D0 100%);
-  
+  left:20px;
 
 
 
@@ -16,7 +18,6 @@
   
   .callout-text {
     position: absolute;
-    width: 745px;
     height: 46px;
     top: 70px;
     left: 120px;
@@ -33,7 +34,7 @@
   
   .callout-button {
     position:absolute;
-    width: 2398px;
+    width: 150px;
     height: 16px;
     font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 18px;
@@ -41,6 +42,7 @@
     line-height: 11;
     text-align: center;
     color: #FFFFFF;  
+    left:1120px;
   }
   .button{
     /* Bg */

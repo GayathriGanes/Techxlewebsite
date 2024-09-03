@@ -1,6 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
+  
 .container {
   display: flex;
-  margin-top: 1920px;
+  margin-top: 2000px;
 }
 
 .move {  
@@ -9,11 +11,8 @@
   height: 400px;
   overflow: hidden;
   position: relative;
-width:38%;
-left:0;
-margin-left: 0;
-margin-right:70px;
-top: 0%;
+width:50%;
+left:-45px;
 bottom: 0%;
 
 
@@ -43,7 +42,7 @@ bottom: 0%;
 }
 
 .move > div:first-child {
-  flex: 4;
+  flex: 5;
 }
 .move .bac-1 .heading {
   display:none;
@@ -53,7 +52,7 @@ bottom: 0%;
 }
 
 .move:not(.locked):hover > div.hovered {
-  flex: 4;
+  flex: 5;
 }
 
 .heading {
@@ -93,7 +92,7 @@ margin-top:100px;
 width: 161px;
 height: 46px;
 
-font-family: 'Plus Jakarta Sans';
+font-family: 'Plus Jakarta Text', sans-serif;
 font-style: normal;
 font-weight: 600;
 font-size: 32px;
@@ -116,7 +115,7 @@ white-space: nowrap;
 width: 538px;
 height: 203px;
 
-font-family: 'Plus Jakarta Sans';
+font-family: 'Plus Jakarta Text', sans-serif;
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
@@ -155,7 +154,7 @@ flex-grow: 0;
 }
 
 .locked > div.expanded {
-  flex: 4 !important;
+  flex: 5 !important;
 }
 
 .move:not(.locked) > div:hover .heading {

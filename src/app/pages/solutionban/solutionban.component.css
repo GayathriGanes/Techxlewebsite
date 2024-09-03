@@ -3,7 +3,7 @@
     width: 1200px;
     height: 652px;
     top: 1560px;
-    left: 120px;
+    left: 20px;
   }
   h2 {
     position: absolute;
@@ -26,11 +26,12 @@
     left: 120px;
     border-radius: 10px;
     background: #edf1fc;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
   }
   
   .solution-card-on-top {
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     top: 700px;
     left: 160px;
     opacity: 0;
@@ -90,37 +91,44 @@
   .read-more {
     width: 146px;
     height: 48px;
-    top: 500px;
-    left: -45px;
+    top: 450px;
+    margin-left:25px;
     padding: 9px 0px 9px 16px;
     gap: 8px;
     border-radius: 4px;
-    position: absolute;
+    position:absolute;
     font-family: "Hauora", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
+    
+    
     line-height: 16px;
     text-align: center;
     color: #3564df;
+  }
+  .read{
+    font-size:16px;
+    font-weight:800;
+    
   }
   
   .icon-circle {
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 80px;
-    top: 500px;
+    left: 155px;
+    top: 452px;
     border-radius: 100px;
+
   }
   
   .left-arrow {
-    position: absolute;
     left: 1080px;
     top: -300px;
     position: absolute;
     width: 44px;
     height: 44px;
-    border: none;
+    border: none; /* Removes the default border */
+    background-color: transparent; /* Removes the default background color */
+    outline: none; /* Removes the default focus outline */
   }
   
   .right-arrow {
@@ -129,7 +137,9 @@
     position: absolute;
     width: 44px;
     height: 44px;
-    border: none;
+    border: none; /* Removes the default border */
+    background-color: transparent; /* Removes the default background color */
+    outline: none; /* Removes the default focus outline */
   }
   
   /*button:active {

@@ -6,9 +6,7 @@
     width: 1440px;
     height: 751px;
     top: 89px;
-    left: 120px;
-    overflow: hidden;
-  
+    left:20px;
   }
   
   /*.background-image {
@@ -50,6 +48,7 @@
   }
   
   h4 {
+    position:relative;
     font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -57,27 +56,30 @@
     width: 741px;
     height: 31px;
     text-align: left;
+    top:25px;
     
   }
 
   h5{
+    position:relative;
     font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 16px;
     text-align: left;
-    width: Fixed (196px)px;
-    height: Hug (48px)px;
+    width: 196px;
+    height: 48px;
     padding: 9px 0px 9px 16px;
     gap: 8px;
     border-radius: 4px 0px 0px 0px;
+    top:33px;
     
   }
   .icon {
     position: relative;
     width: 30px;
    height: 30px;
-   top: -40px;
+   top: -24px;
    left: 170px;
    gap: 0px;
    border-radius: 100px ;

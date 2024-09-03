@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
+
 .banner-container {
     display: flex;
     align-items: center;
@@ -52,7 +54,7 @@ margin-left:20px;
   .banner-content h1 {
    width: 621px;
    height: 100px;
-   font-family: 'Plus Jakarta Sans';
+   font-family: 'Plus Jakarta Text', sans-serif;
    font-style: normal;
    font-weight: 500;
    font-size: 40px;
@@ -77,7 +79,7 @@ margin-left:20px;
     margin-top: 100px;
     width: 107px; /* Adjust to fit content */
     height: 25px;
-    font-family: Plus Jakarta Sans;
+    font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 24.8px;
@@ -96,7 +98,7 @@ margin-left:20px;
   
   .cta-button .arrow {
     display: inline-block;
-    margin-top:10px;
+    margin-top:2px;
     transition: all 0.3s ease;
   }
   
@@ -117,12 +119,12 @@ margin-left:20px;
   gap: 16px;
   width: 1200px;
   height: 121px;
-  margin-top:490px;
+  margin-top:580px;
 }
 .belief-heading{
   width: 1200px;
   height: 45px;
-  font-family: Plus Jakarta Sans;
+  font-family: 'Plus Jakarta Text', sans-serif;
   font-size: 36px;
   font-weight: 600;
   line-height: 45.36px;
@@ -136,7 +138,7 @@ margin-left:20px;
    margin-left:145px;
    width: 1200px;
    height: 60px;
-   font-family: Plus Jakarta Sans;
+   font-family:'Plus Jakarta Text', sans-serif;
    font-size: 20px;
    font-weight: 400;
    line-height: 29.7px;
@@ -157,15 +159,14 @@ margin-left:20px;
   justify-content: left;   
   width: 1,199px;
   height: 751px;
-  top: 181px;
   margin-left:110px;
-  margin-top:80px;
+  margin-top:100px;
   gap: 20px;
 }
 .heading{
   width: 1199px;
   height: 45px;
-  font-family: Plus Jakarta Sans;
+  font-family: 'Plus Jakarta Text', sans-serif;
   font-size: 36px;
   font-weight: 600;
   line-height: 45.36px;
@@ -196,11 +197,11 @@ margin-left:20px;
 }
 
 .header-box {
-  position: absolute;  
+  position: absolute; 
   left: 15px;
   width: 334px;
   height:50px;  
-  bottom:-35px;
+  bottom:-30px;
   padding: 10px;   
   text-align: center;
   cursor: pointer;
@@ -239,5 +240,5 @@ margin-left:20px;
   text-align: center;
   color: rgba(10, 24, 62, 1);
 }
- 
+
   

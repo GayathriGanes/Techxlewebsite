@@ -1,4 +1,6 @@
 /* Base styles (Desktop) */
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
+
 .card-slider {
     display: flex;
     flex-direction: column;
@@ -9,6 +11,7 @@
     height: 640px;
     gap: 0;
     opacity: 1;
+    left:20px;
 }
 
 .header {
@@ -28,7 +31,7 @@
 .header h2 {   
     height: 45px;
     margin-left: 120px;
-    font-family: Plus Jakarta Sans;
+    font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 36px;
     font-weight: 600;
     line-height: 45.36px;
@@ -62,10 +65,10 @@
 
 .cards-container {
     position: absolute;
-    width: 1320px;
+    width: 1350px;
     height: 450px;
     margin-top: 200px;
-    left: 120px;
+    left: 90px;
     padding: 0px 0px 40px 0px;
     gap: 0px;
     opacity: 1;
@@ -120,7 +123,7 @@
 }
 
 .content-block mat-card-header {     
-    font-family: 'Plus Jakarta Sans';
+    font-family: 'Plus Jakarta Text', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -129,9 +132,15 @@
     letter-spacing: 0.02em;
     color: #0A183E;    
 }
-
+.title{
+    font-weight:600;
+    margin-top:-20px;
+}
+.content{
+    margin-top:-20px;
+}
 .content-block mat-card-content {
-    font-family: Plus Jakarta Sans;
+    font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 25.6px;
@@ -149,9 +158,6 @@
 }
 
 .button-text {
-    font-family: Hauora;
-    font-size: 18px;
-    font-weight: 700;
     text-align: left;
     color: rgba(53, 100, 223, 1);
     left: -50px;     
@@ -162,20 +168,24 @@
 }
 
 .read-more-button {
+    font-family: "Hauora", sans-serif;
     font-size: 16px;
+    width: 146px;
+    height: 48px;
+    font-weight: 700;
     cursor: pointer;
     position: absolute;
     overflow: hidden;
-    width: 146px;
-    height: 48px;
+    line-height: 16px;
     padding: 9px 0px 9px 16px;
     gap: 8px;
     border-radius: 4px 0px 0px 0px;
-    top: 180px;
+    top: 170px;
     opacity: 1;
     background-color: white;
     color: rgba(53, 100, 223, 1);
     transition: color 1s ease;
+    letter-spacing: -0.2px;
 }
 
 .read-more-button::before {
@@ -206,7 +216,7 @@
 }
 
 .read-more-button .icon {
-    margin-left: 8px;
-    top: -8px;
+    margin-left:-2px;
+    top: -10px;
 }
 

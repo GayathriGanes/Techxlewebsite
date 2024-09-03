@@ -187,6 +187,7 @@
     letter-spacing: 0.01em;
     text-align: left;
     color: #0A183E;
+    white-space: nowrap;
   }
   .archit{
     position:absolute;
@@ -289,6 +290,9 @@
   text-align: left;
   color: #060E23;
   right:50px;
+  top:-1px;
+  white-space:nowrap;
+  
  }
  .test{
   position:absolute;
