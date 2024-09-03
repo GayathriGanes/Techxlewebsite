@@ -84,7 +84,7 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
   

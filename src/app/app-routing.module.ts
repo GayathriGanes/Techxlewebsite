@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
 import { ServiceComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';

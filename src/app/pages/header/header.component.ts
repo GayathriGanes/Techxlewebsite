@@ -17,8 +17,10 @@ export class HeaderComponent implements OnInit {
         const url = this.router.url;
         if (url.includes('/contact')) {
           this.setActiveLink('contact');
+          this.toggleHomeVisibility();
         } else if (url.includes('/services')) {
           this.setActiveLink('services');
+          this.toggleHomeVisibility();
         } else if (url.includes('/solutions')) {
           this.setActiveLink('solutions');
         } else if (url.includes('/aboutus')) {
@@ -53,7 +55,6 @@ export class HeaderComponent implements OnInit {
     else if(url.includes('/solutions'))
     {
       this.router.navigate(['/solutions'])
-    }
-  
+    }  
   }
 }

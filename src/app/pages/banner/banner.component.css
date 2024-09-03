@@ -6,6 +6,7 @@
     width: 1440px;
     height: 751px;
     top: 89px;
+    left:20px;
   }
   
   /*.background-image {
@@ -78,7 +79,7 @@
     position: relative;
     width: 30px;
    height: 30px;
-   top: -40px;
+   top: -24px;
    left: 170px;
    gap: 0px;
    border-radius: 100px ;

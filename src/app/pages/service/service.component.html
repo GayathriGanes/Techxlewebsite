@@ -18,9 +18,9 @@
           </div>
           <div class="content-block">
             <mat-card-header>
-              <mat-card-title>{{ card.title }}</mat-card-title>
+              <mat-card-title class="title">{{ card.title }}</mat-card-title>
             </mat-card-header>
-            <mat-card-content>
+            <mat-card-content class="content">
               {{ card.content }}
             </mat-card-content>
             <button mat-button (click)="navigateTo(card.route)" class="read-more-button">

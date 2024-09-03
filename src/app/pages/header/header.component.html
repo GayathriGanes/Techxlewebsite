@@ -48,7 +48,7 @@
       routerLink="/contact"
       class="contact"
       [ngClass]="{ 'active-link': activeLink === 'contact' }"
-      (click)="setActiveLink('contact'); toggleHomeVisibility()"
+      (click)="setActiveLink('contact'); toggleHomeVisibility();checkurl()"
       >CONTACT</a
     >
   </nav>

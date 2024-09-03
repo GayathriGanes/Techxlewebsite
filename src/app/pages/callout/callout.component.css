@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
+   
 .callout {
   position: absolute;
   width: 1440px;
@@ -5,7 +7,7 @@
   top: 2332px;
   background: linear-gradient(90deg, #34D7DF 0%, #2150D0 100%);
   background: linear-gradient(90deg, #11296A 0%, #2150D0 100%);
-  
+  left:20px;
 
 
 
