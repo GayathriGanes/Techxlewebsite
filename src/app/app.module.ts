@@ -38,6 +38,7 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +65,8 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
     StaffComponent,
     StackComponent,
     DesignComponent,
-    SolutionsComponent
+    SolutionsComponent,
+    ContactComponent
     
     
   ],
@@ -77,6 +79,7 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
     MatExpansionModule,
     MatButtonModule,
     HttpClientModule,
+    
   ],
   providers: [
     provideClientHydration(),
@@ -84,5 +87,6 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
     provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

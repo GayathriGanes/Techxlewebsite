@@ -126,9 +126,13 @@
     position: absolute;
     width: 44px;
     height: 44px;
+
     border: none; /* Removes the default border */
     background-color: transparent; /* Removes the default background color */
     outline: none; /* Removes the default focus outline */
+
+
+
   }
   
   .right-arrow {
@@ -137,12 +141,10 @@
     position: absolute;
     width: 44px;
     height: 44px;
+
     border: none; /* Removes the default border */
     background-color: transparent; /* Removes the default background color */
     outline: none; /* Removes the default focus outline */
+
+    
   }
-  
-  /*button:active {
-    background-color: fuchsia;
-  }*/
-  
