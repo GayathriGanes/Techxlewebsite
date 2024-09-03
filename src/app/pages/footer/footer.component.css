@@ -1,10 +1,12 @@
 .footer {
   position: absolute;
-  width: 1440px;
+  width: 100%;
   height: 537px;
   top: 3172px;
   background: #0a183e;
   color: #ffffff;
+  bottom:0;
+  
 
   .footer-container {
     display: flex;
@@ -18,15 +20,16 @@
     height: 100px;
     gap: 40px;
     border-top: 1px solid #394867;
-    margin-top: 80px;
+    margin-top: 120px;
     background: #0a183e;
   }
 
   .logo-img {
     position: absolute;
-    top: 15px;
+    top: 30px;
     width: 206px;
     height: 54px;
+    left:80px;
   }
 
   .footer-section {
@@ -36,7 +39,7 @@
     margin: 10px;
 
     h2 {
-      width: 179px;
+      position:relative;
       height: 29px;
       font-family: "Plus Jakarta Text", sans-serif;
       font-size: 20px;
@@ -44,15 +47,20 @@
       line-height: 29px;
       text-align: left;
       color: #ffffff;
+      left:50px;
     }
 
     ul {
-      padding: 0;
+      
       color: #ffffff99;
       font-family: "Plus Jakarta Text", sans-serif;
+      position: absolute;
+      left: 30px;
+      line-height: 23.2px;
+
 
       li {
-        margin-bottom: 5px;
+        margin-bottom: 15px;
 
         a {
           color: #ffffff;
@@ -66,33 +74,37 @@
     }
 
     p {
-      margin: 16px;
+      margin: 20px;
       color: #ffffff99;
       font-family: "Plus Jakarta Text", sans-serif;
+      position:relative;
+      left:32px;
     }
 
     .connect-button {
+      position:relative;
       display: inline-block;
       color: #ffffff;
       text-decoration: none;
       border-radius: 5px;
-      width: 142px;
+      left:50px;
       height: 16px;
       font-family: "Plus Jakarta Text", sans-serif;
       font-size: 18px;
       font-weight: 500;
       line-height: 16px;
       text-align: center;
+      top:20px;
     }
 
     .Icon_image {
       position: absolute;
       width: 30px;
       height: 30px;
-      top: 38px;
+      top: 60px;
       gap: 0px;
       border-radius: 100px;
-      opacity: 0px;
+      left:200px;
     }
   }
 }
@@ -104,7 +116,7 @@
   flex-wrap: wrap;
   padding: 10px 20px;
   border-top: 1px solid #394867;
-  margin-top: -10px;
+  margin-top: 10px;
 
   .social-icons {
     a {
@@ -121,7 +133,7 @@
     }
   }
 
-  p {
+  .bottom-text1 {
     position: absolute;
     width: 265px;
     height: 23px;
@@ -131,6 +143,7 @@
     line-height: 23.2px;
     text-align: left;
     color: #ffffff99;
+    left:80px;
   }
 
   ul {
@@ -165,7 +178,7 @@
   line-height: 32.4px;
   text-align: left;
   color: #ffffff80;
-  top: 20px;
+  top: 45px;
   left: 800px;
 }
 .linkedin {
@@ -173,6 +186,45 @@
   width: 44px;
   height: 44px;
   border: 1px 0px 0px 0px;
-  top: 20px;
+  top: 44px;
   left: 950px;
 }
+.bottom-text{
+  position: relative;
+  width: 227px;
+  height: 23px;
+  left:-80px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.2px;
+  text-align: right;
+  color: #FFFFFF99;
+
+}
+.company{
+  position:relative;
+  height: 29px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23.2px;
+  text-align: left;
+  color: #ffffff;
+  left:70px;
+}
+.ourservice{
+  position:relative;
+  height: 29px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23.2px;
+  text-align: left;
+  color: #ffffff;
+  left:50px;
+}
+.footer {
+  top: var(--footer-top, 3172px); /* Use a CSS variable to set the top position */
+}
+#footer {            position: fixed;            padding: 10px 10px 0px 10px;            bottom: 0;            width: 100%;            height: 40px;            background: green;            color: white;        }

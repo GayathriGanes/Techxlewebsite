@@ -35,16 +35,15 @@
 }
 
 .input {
-  position: absolute;
+  position: relative; /* Changed from absolute to relative for container positioning */
   width: 587px;
   height: 461px;
-  gap: 24px;
 }
 
 .name, .email, .servicetype, .msg {
   position: absolute;
   width: 500px;
-  height: 23px;
+  height: 35px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -52,17 +51,19 @@
   letter-spacing: 0.06em;
   text-align: left;
   color: #545D78;
-  padding: 10px 0px 24px 0px;
-  gap: 10px;
-  border-bottom: 1px solid #0A183E3D;
+  border:none;
+  border-bottom: 1px solid #0A183E3D
+ 
 }
 
-.email { top: 80px; }
-.servicetype { top: 150px; }
+.email { top: 60px; }
+.servicetype { top: 170px; }
 .msg {
-  top: 220px;
-  padding: 10px 0px 104px 0px;
+  top: 230px;
+  height: 100px; /* Adjusted to provide enough space for the message input */
+  padding-bottom: 50px; /* Adjust to add more space if needed */
 }
+
 
 .send-text {
   position: absolute;
@@ -74,6 +75,7 @@
   text-align: center;
   color: #3564DF;
   top: 450px;
+  
 }
 
 .send-button {
@@ -367,4 +369,20 @@ p {
   .address, .p {
       width: 100
   }
+}
+.phone {
+  position: absolute;
+  width: 500px;
+  height: 35px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.68px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: #545D78;
+  top: 120px; /* Position this below the email */
+  border:none;
+  border-bottom: 1px solid #0A183E3D
+ 
 }
