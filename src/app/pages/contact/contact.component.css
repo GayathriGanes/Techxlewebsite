@@ -1,7 +1,7 @@
 /* Base Styles (Desktop) */
 .contact-form {
   position: absolute;
-  width: 1510px;
+  width: 100%;
   height: 806px;
   top: 90px;
   border: 1px solid rgba(6, 14, 35, 0.1);
@@ -187,7 +187,7 @@ p {
 
 .direction {
   position: absolute;
-  width: 120px;
+  
   height: 28px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
@@ -205,7 +205,7 @@ p {
   height: 24px;
   padding: 4.22px 4px 4.22px 4px;
   border: none;
-  top: 353px;
+  top: 350px;
   left: 125px;
 }
 
