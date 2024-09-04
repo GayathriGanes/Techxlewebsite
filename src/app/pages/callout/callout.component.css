@@ -8,12 +8,6 @@
   background: linear-gradient(90deg, #34D7DF 0%, #2150D0 100%);
   background: linear-gradient(90deg, #11296A 0%, #2150D0 100%);
   left:20px;
-
-
-
-  
-
-
   }
   
   .callout-text {
@@ -27,9 +21,6 @@
     line-height: 46.4px;
     text-align: left;
     color: #FFFFFF;
-
-
-
   }
   
   .callout-button {
@@ -72,6 +63,4 @@ background: #FFFFFF;
     left:-7px;
     color:#2150D0;
   }
-  
- 
   
