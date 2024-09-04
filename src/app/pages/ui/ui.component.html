@@ -12,46 +12,15 @@
       /></span>
     </a>
   </div>
-  <mat-toolbar color="primary" class="header-toolbar">
-    <span class="spacer"></span>
-    <nav class="nav-container">
-      <a
-        class="overview"
-        [routerLink]="['/services/ui']"
-        fragment="overview"
-        [ngClass]="{ 'active-link': activeLink === 'overview' }"
-        (click)="setActiveLink('overview'); scrollToContent('overview')"
-        >OVERVIEW</a
-      >
-      <a
-        class="ourapproach"
-        [routerLink]="['/services/ui']"
-        fragment="ourapproach"
-        [ngClass]="{ 'active-link': activeLink === 'ourapproach' }"
-        (click)="setActiveLink('ourapproach'); scrollToContent('ourapproach')"
-        >OUR APPROACH</a
-      >
-      <a
-        class="ourcapabilities"
-        [routerLink]="['/services/ui']"
-        fragment="ourcapabilities"
-        [ngClass]="{ 'active-link': activeLink === 'ourcapabilities' }"
-        (click)="
-          setActiveLink('ourcapabilities'); scrollToContent('ourcapabilities')
-        "
-        >OUR CAPABILITIES</a
-      >
-      <a
-        class="impact"
-        [routerLink]="['/services/ui']"
-        fragment="impact"
-        [ngClass]="{ 'active-link': activeLink === 'impact' }"
-        (click)="setActiveLink('impact'); scrollToContent('impact')"
-        >IMPACT</a
-      >
-    </nav>
+  <mat-toolbar color="primary" class="nav-toolbar">
+   <nav class="nav-container">
+        <a [routerLink]="['/services/ui']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
+        <a [routerLink]="['/services/ui']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
+        <a [routerLink]="['/services/ui']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
+        <a [routerLink]="['/services/ui']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
+  </nav>
   </mat-toolbar>
-  <section id="overview">
+  <section id="overview"  class="overview">
     <h1 class="menu">Overview</h1>
     <p class="text">
       At Techxle, we cover the entire design lifecycle from concept to delivery,
@@ -63,7 +32,7 @@
       loyalty and maximizing ROI.
     </p>
   </section>
-  <section id="ourapproach">
+  <section id="ourapproach" class="ourapproach">
     <h1 class="approach">Our Approach</h1>
     <div class="archit">
       <div class="design">
@@ -137,7 +106,7 @@
       <h2 class="project">Project Goals</h2>
     </div>
   </section>
-  <section id="ourcapabilities">
+  <section id="ourcapabilities" class="ourcapabilities">
     <div class="capability">
       <h1 class="cap">Our Capabilities</h1>
       <p class="content">
@@ -146,30 +115,6 @@
       </p>
      <div class="img-content">
         <img src="assets/images/capabilities.png" alt="Icon" />
-        <!--<div class="identity">
-          <h1 class="idnty">Brand Identity</h1>
-          <p class="brandtext">
-            We craft brands to convey precise messages, transforming them into
-            Symbols of clarity, excitement, quality, and global allure. Through
-            design language, we articulate targeted messages for audiences,
-            creating impactful, enjoyable, and visually stunning brand
-            experiences across multiple touch points.
-          </p>
-        </div>
-        <div class="digital">
-          <h1 class="digit">Digital Experiences</h1>
-          <p class="digittext">
-            We craft brands to convey precise messages, transforming them into
-            Symbols of clarity, excitement, quality, and global allure.
-          </p>
-        </div>
-        <div class="product">
-          <h1 class="designproduct">Product Design</h1>
-          <p class="protext">
-            We craft brands to convey precise messages, transforming them into
-            Symbols of clarity, excitement, quality, and global allure.
-          </p>
-        </div>-->
         <mat-accordion>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
@@ -199,7 +144,7 @@
       </div>
     </div>
   </section>
-  <section id="impact">
+  <section id="impact" class="impact">
     <div class="outcomes">
       <h1 class="outcome-head">Most desired outcomes</h1>
     </div>
