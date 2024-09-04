@@ -1,9 +1,9 @@
 .solution-container {
     position: absolute;
-    width: 100%;
+    width: 1200px;
     height: 652px;
     top: 1560px;
-  
+    left: 20px;
   }
   h2 {
     position: absolute;
@@ -127,24 +127,74 @@
     width: 44px;
     height: 44px;
 
-    border: none; /* Removes the default border */
-    background-color: transparent; /* Removes the default background color */
-    outline: none; /* Removes the default focus outline */
+  border: none; /* Removes the default border */
+  background-color: transparent; /* Removes the default background color */
+  outline: none; /* Removes the default focus outline */
+}
 
+.right-arrow {
+  top: -200px;
+  left: 1080px;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border: none; /* Removes the default border */
+  background-color: transparent; /* Removes the default background color */
+  outline: none; /* Removes the default focus outline */
+}
+.read-more-button {
+  font-family: "Hauora", sans-serif;
+  font-size: 16px;
+  width: 146px;
+  height: 48px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  line-height: 16px;
+  padding: 9px 0px 9px 16px;
+  gap: 8px;
+  border-radius: 4px 0px 0px 0px;
+  top:442px;
+  color: rgba(53, 100, 223, 1);
+  transition: color 1s ease;
+  letter-spacing: -0.2px;
+  text-decoration: none; /* Removes underline from the link */
+  display: inline-flex; /* Ensures the link acts like a button */
+  align-items: center; /* Centers text and icon vertically */
+  left:50px;
+}
 
+.read-more-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 100, 223, 1);
+  transition: right 1s ease;
+  z-index: 0;
+}
 
-  }
-  
-  .right-arrow {
-    top: -200px;
-    left: 1080px;
-    position: absolute;
-    width: 44px;
-    height: 44px;
+.read-more-button:hover::before {
+  right: 0;
+}
 
-    border: none; /* Removes the default border */
-    background-color: transparent; /* Removes the default background color */
-    outline: none; /* Removes the default focus outline */
+.read-more-button:hover .button-text {
+  color: white; 
+}
 
-    
-  }
+.read-more-button .button-text, 
+.read-more-button .icon {
+  position: relative;
+  transition: color 1s ease;
+}
+
+.read-more-button .icon {
+  margin-left: -2px;
+  top: 0px;
+  position: relative;
+  display: inline-block;
+}
+

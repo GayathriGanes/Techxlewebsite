@@ -7,9 +7,13 @@
   height: 400px;
   top: 90px;
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-    url("/assets/images/servicebanner.png");
+
+    
+   
+
+    url("https://techxle-my.sharepoint.com/:i:/r/personal/paripurana_g_techxle_com/Documents/Techxle%20website%20-%20SRC/servicebanner.png?csf=1&web=1&e=DB1amh");
     background-size:cover;
-}
+  }
 
 .banner-content {
   display: flex;

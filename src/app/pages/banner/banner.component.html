@@ -1,5 +1,5 @@
 <div class="hero-banner">
-  <img class="img"src="../assets/images/Image.png" alt="hero-banner" />
+  <img src="../assets/images/Image.png" alt="hero-banner" />
     <div class="overlay-text">
       <div class="-block">
         <div class="content-block">
@@ -11,12 +11,12 @@
           <!--<h5>Connect with us</h5>-->
         </div>
         <div class="component">
-          <h5>Connect with us</h5>
-          <a [routerLink]="['/contact']">
-            <img class="icon" src="assets/images/Icons.png">
+          <a class="read-more-button" (click)="navigateToContact()">
+            <h5>Connect with us</h5>
+            <img class="icon" src="assets/images/Icons.png" alt="Icon">
           </a>
-          
         </div>
+        
       </div>
     </div>
   </div>

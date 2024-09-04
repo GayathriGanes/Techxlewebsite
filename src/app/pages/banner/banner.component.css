@@ -78,6 +78,7 @@
     gap: 8px;
     border-radius: 4px 0px 0px 0px;
     top:33px;
+    color:white;
     
   }
   .icon {
@@ -91,24 +92,32 @@
    opacity: 0px;
    background-color: #FFFFFF;
   }
+  /* Icon Hover Effect */
+.component:hover .icon {
+  opacity: 1; /* Show the icon on hover */
+  transition: color 1s ease;
+}
 
-  /*p {
-    font-size: 1em;
-    margin-bottom: 1em;
-  }
+/* Button Hover Effect */
+.component:hover h5 {
+  color: rgba(53, 100, 223, 0.7); /* Lighten the text color on hover */
+  background-color: white; 
+  transition: background-color 0.5s ease, color 0.5s ease;
+ 
+}
+.read-more-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 196px;
+  height: 48px;
+}
+
   
-  button {
-    width: 30px;
-    height: 30px;
-    gap: 0px;
-    border-radius: 100px 0px 0px 0px;
-    background: #FFFFFF;
 
 
 
-  }
-  
-  button:hover {
-    background-color: rgba(0, 123, 255, 1);
-  }*/
+
+
+
   
