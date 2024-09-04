@@ -3,14 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 20px;
   position: absolute;
-  width: 1440px;
+  width: 100%;
   height: 400px;
-  left: 0px;
   top: 90px;
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
     url("/assets/images/servicebanner.png");
+    background-size:cover;
 }
 
 .banner-content {
@@ -90,16 +89,17 @@
 .content {
   position: absolute;
   top: 600px;
+  width:100%;
 }
 
 .Innovation {
-  width: 1200px;
+  width: 100%;
   height: 121px;
-  margin-left: 170px;
+  margin-left: 150px;
 }
 
 .belif {
-  width: 1200px;
+  width: 100%;
   height: 45px;
   font-family: 'Plus Jakarta Text', sans-serif;
   font-size: 36px;
@@ -111,7 +111,7 @@
 }
 .drives {
   position: absolute;
-  width: 1200px;
+  width: 100%;
   height: 60px;
   gap: 0px;
   opacity: 0px;

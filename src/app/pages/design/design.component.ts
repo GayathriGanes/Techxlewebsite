@@ -14,27 +14,27 @@ export class DesignComponent implements OnInit{
     {
       title: 'Power Platform Solution',
       image: 'assets/logo/banner.png',
-      route: 'powerflatform'
+      route: 'power'
     },
     {
       title: 'Cloud App Development',
       image: 'assets/logo/banner.png',
-      route: 'cloudappmanagement'
+      route: 'cloud'
     },
     {
       title: 'Staffing Service',
       image: 'assets/logo/banner.png',
-      route: 'staffingservice'
+      route: 'staff'
     },
     {
       title: 'Full Stack Development',
       image: 'assets/logo/banner.png',
-      route: 'fullstackdevelopment'
+      route: 'stack'
     },
     {
       title: 'UI/UX Designing',
       image: 'assets/logo/banner.png',
-      route: 'uidesigning'
+      route: 'design'
     }
   ];  
     @HostListener('window:scroll', ['$event'])

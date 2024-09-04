@@ -3,14 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
     position: absolute;
-    width: 1440px;
+    width: 100%;
     height: 400px;
-    left: 0px;
     top: 90px;
     background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
       url("/assets/images/servicebanner.png");
+    background-size:cover;  
   }
   
   .banner-content {
