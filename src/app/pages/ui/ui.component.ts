@@ -1,6 +1,6 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import{MatExpansionModule} from '@angular/material/expansion';
 
 @Component({
@@ -8,21 +8,55 @@ import{MatExpansionModule} from '@angular/material/expansion';
   templateUrl: './ui.component.html',
   styleUrl: './ui.component.css',
 })
-export class UIComponent {
-  title: any;
-  i: any;
-  isOpen: any;
-accordionItems: any;
-  toggle(arg0: any) {
-    throw new Error('Method not implemented.');
-  }
-  activeLink: string = '';
-  constructor(private viewportScroller: ViewportScroller) {}
+export class UIComponent implements OnInit {
+  @ViewChild('container', { read: ElementRef }) container!: ElementRef;
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const toolbar = document.querySelector('.nav-toolbar') as HTMLElement;
+    const sections = document.querySelectorAll('section');
+    let toolbarShouldBeFixed = false;
 
-  setActiveLink(link: string) {
-    this.activeLink = link;
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top<=90 && rect.bottom>=90) { // Adjust as needed
+        toolbarShouldBeFixed = true;
+      }
+    });
+
+    if (toolbarShouldBeFixed) {
+      toolbar.classList.add('fixed');
+    } else {
+      toolbar.classList.remove('fixed');
+    }
   }
-  scrollToContent(targetId: string) {
-    this.viewportScroller.scrollToAnchor(targetId);
-  }
+activeLink: string = '';
+constructor(private router: Router,private route: ActivatedRoute) {}
+ngOnInit(): void {
+  this.route.fragment.subscribe(fragment => {
+    if (fragment) {
+      document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  this.router.events.subscribe((event) => {
+    if (event instanceof NavigationEnd) {
+      const url = this.router.url;
+      if (url.includes('#overview')) {
+        this.setActiveLink('overview');
+      } else if (url.includes('#ourapproach')) {
+        this.setActiveLink('ourapproach');
+      } else if (url.includes('#ourcapabilities')) {
+        this.setActiveLink('ourcapabilities');
+      } else if (url.includes('#impact')) {
+        this.setActiveLink('impact');
+      } 
+      
+    }
+  });    
 }
+setActiveLink(link: string) {
+  this.activeLink = link;
+}
+}
+
+
