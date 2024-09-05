@@ -9,6 +9,9 @@ import{MatExpansionModule} from '@angular/material/expansion';
   styleUrl: './ui.component.css',
 })
 export class UIComponent implements OnInit {
+navigateToContact() {
+  this.router.navigate(['/contact']);
+}
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {

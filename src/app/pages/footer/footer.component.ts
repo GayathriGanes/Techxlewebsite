@@ -14,6 +14,9 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
+navigateToContact() {
+  this.router.navigate(['/contact']);
+}
   isBrowser: boolean; // To check if the platform is browser
 
   constructor(
@@ -57,4 +60,5 @@ export class FooterComponent implements OnInit {
     // Set the CSS variable to update dynamically
     document.documentElement.style.setProperty('--footer-top', topValue);
   }
+  
 }
