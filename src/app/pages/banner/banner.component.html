@@ -10,15 +10,13 @@
           </div>
   
           <h4>Client Centered. Associate Focused. Collaborative Minded.</h4>
-          <!--<h5>Connect with us</h5>-->
         </div>
-        <div class="component">
-          <a class="read-more-button" (click)="navigateToContact()">
-            <h5>Connect with us</h5>
-            <img class="icon" src="assets/images/Icons.png" alt="Icon">
-          </a>
-        </div>
-        
+        <button mat-button (click)="navigateToContact()" class="read-more-button">
+          <span class="button-text">Connect with us</span>
+          <span >
+            <img src="assets/images/Icons.png" alt="Techxle Logo" class="icon">
+          </span>
+      </button>
       </div>
     </div>
   </div>
