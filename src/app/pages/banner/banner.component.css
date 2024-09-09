@@ -15,11 +15,6 @@
     background-size:cover;
   }
   
-  /*.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }*/
   
   .overlay-text {
     position: absolute;
@@ -28,10 +23,7 @@
     height: 363px;
     width:741px;
     color:  #FFFFFF;
-    /*transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;*/
+   
   }
 
   .text-block {
@@ -47,7 +39,6 @@
     font-weight: 600;
     line-height: 75.6px;
     text-align: left;
-    /*height: 283px;*/
     gap: 24px;
     
 
