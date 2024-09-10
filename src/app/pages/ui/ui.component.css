@@ -770,7 +770,7 @@
   text-align: left;
   color: #060e23;
 }
-.inputfield {
+/*.inputfield {
   position: absolute;
   width: 587px;
   height: 380px;
@@ -871,7 +871,7 @@
   border:none;
   left:140px;
   top:1px;
-}
+}*/
 .mat-accordion {
   position: absolute;
   width: 680px;
@@ -983,3 +983,114 @@
   color: #3564df !important;
   position: relative;
 }
+.icon-arrow {
+  position:relative;
+  top: -10px;
+  gap: 0px;
+  margin-left: 8px ;
+  margin-right: -105px;
+}
+.button-text {
+  font-family: "Hauora";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(53, 100, 223, 1);
+  left: -68px;
+  margin-left: 25px;
+  width: 146px;
+  height: 16px;
+  top: 15px;
+  white-space: nowrap;
+}
+
+.read-more-button {
+  width: 160px;
+  height: 48px;
+  padding: 9px 0px 9px 16px;
+  gap: 8px;
+  opacity: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 1; /* Adjusted opacity */
+  color: rgba(53, 100, 223, 1); /* Ensure initial text color */
+  transition: color 1s ease;
+  position: relative;
+  top: -280px;
+  left: 100px;
+ 
+}
+
+.read-more-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%; /* Start position */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 100, 223, 1);
+  transition: right 1s ease; /* Transition for the animation */
+  z-index: 0;
+}
+.read-more-button:hover::before {
+  right: 0; /* End position */
+}
+.read-more-button:hover .button-text {
+  color: white;
+  font-weight: 200px; /* Maintain initial color on hover */
+}
+.read-more-button .button-text,
+.read-more-button .icon {
+  position: relative;
+  z-index: 1;
+
+  transition: color 1s ease;
+}
+.read-more-button .icon {
+  margin-left: 8px;
+  top: -8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 587px; /* Match your desired width */
+  margin: 0 auto; /* Center the form */
+  position: relative;
+  top: -270px;
+  left: 100px;
+}
+
+mat-form-field {
+  margin-bottom: 20px; /* Space between fields */
+}
+
+mat-form-field textarea {
+  height: 50px; /* Match the height for the message field */
+}
+mat-label{
+  position:relative;
+  font-family: "Plus Jakarta Text", sans-serif;
+  color: #545D78;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.68px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  width: 157px;
+  height: 23px;
+
+
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}
+::ng-deep .mdc-text-field {
+  position: relative !important;
+  padding: 0px !important;
+}
+
+
+

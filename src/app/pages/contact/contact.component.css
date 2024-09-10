@@ -11,7 +11,7 @@
   position: absolute;
   width: 587px;
   height: 634px;
-  top: 195px;
+  top: 150px;
   left: 731px;
   gap: 32px;
 }
@@ -24,7 +24,7 @@
   font-weight: 600;
   line-height: 62.7px;
   text-align: left;
-  color: #060E23;
+  color: #060e23;
 }
 
 .form {
@@ -34,13 +34,16 @@
   gap: 30px;
 }
 
-.input {
-  position: relative; /* Changed from absolute to relative for container positioning */
+/*.input {
+  position: relative; 
   width: 587px;
   height: 461px;
 }
 
-.name, .email, .servicetype, .msg {
+.name,
+.email,
+.servicetype,
+.msg {
   position: absolute;
   width: 500px;
   height: 35px;
@@ -50,20 +53,22 @@
   line-height: 22.68px;
   letter-spacing: 0.06em;
   text-align: left;
-  color: #545D78;
-  border:none;
-  border-bottom: 1px solid #0A183E3D
- 
+  color: #545d78;
+  border: none;
+  border-bottom: 1px solid #0a183e3d;
 }
 
-.email { top: 60px; }
-.servicetype { top: 170px; }
+.email {
+  top: 60px;
+}
+.servicetype {
+  top: 170px;
+}
 .msg {
   top: 230px;
-  height: 100px; /* Adjusted to provide enough space for the message input */
-  padding-bottom: 50px; /* Adjust to add more space if needed */
-}
-
+  height: 100px; 
+  padding-bottom: 50px; 
+}*/
 
 .send-text {
   position: absolute;
@@ -73,9 +78,8 @@
   font-weight: 700;
   line-height: 16px;
   text-align: center;
-  color: #3564DF;
+  color: #3564df;
   top: 450px;
-  
 }
 
 .send-button {
@@ -92,7 +96,7 @@
   position: absolute;
   width: 672px;
   height: 806px;
-  background: #EDF1FD;
+  background: #edf1fd;
 }
 
 .text-content {
@@ -121,7 +125,7 @@
   line-height: 22.68px;
   letter-spacing: 0.08em;
   text-align: left;
-  color: #3564DF;
+  color: #3564df;
   top: -50px;
 }
 
@@ -134,7 +138,7 @@
   font-weight: 600;
   line-height: 58.9px;
   text-align: left;
-  color: #060E23;
+  color: #060e23;
 }
 
 .frame-16 {
@@ -175,7 +179,7 @@ p {
   letter-spacing: 0.01em;
   text-align: left;
   top: 200px;
-  color: #545D78;
+  color: #545d78;
 }
 
 .contact-default {
@@ -187,7 +191,7 @@ p {
 
 .direction {
   position: absolute;
-  
+
   height: 28px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
@@ -195,7 +199,7 @@ p {
   line-height: 27.9px;
   letter-spacing: 0.01em;
   text-align: right;
-  color: #3564DF;
+  color: #3564df;
   top: 350px;
 }
 
@@ -224,7 +228,7 @@ p {
 }
 
 .address-text a {
-  color: #545D78;
+  color: #545d78;
 }
 
 .work {
@@ -242,7 +246,7 @@ p {
   position: absolute;
   font-weight: 500;
   top: 440px;
-  color: #545D78;
+  color: #545d78;
   width: 170px;
   height: 25px;
 }
@@ -262,195 +266,120 @@ p {
   position: absolute;
   font-weight: 500;
   top: 540px;
-  color: #545D78;
+  color: #545d78;
   width: 170px;
   height: 25px;
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .contact-form {
-      width: 100%;
-      height: auto;
-      top: 50px;
-      padding: 20px;
-  }
-
-  .form-content {
-      width: 100%;
-      left: 850px;
-      top: 150px;
-      padding: 0 15px;
-  }
-
-  .get-text {
-      font-size: 32px;
-      line-height: 48px;
-      text-align: center;
-  }
-
-  .form, .input {
-      width: 100%;
-      height: auto;
-  }
-
-  .name, .email, .servicetype, .msg {
-      width: 100%;
-      padding: 15px 0;
-  }
-
-  .text-form {
-      width: 100%;
-      height: auto;
-  }
-
-  .text-content {
-      width: 100%;
-      padding: 0 15px;
-  }
-
-  .project-text {
-      font-size: 32px;
-      line-height: 48px;
-  }
+.icon {
+  top: -15px;
+  gap: 0px;
+  margin-left: 60px;
+  margin-right: -105px;
+}
+.button-text {
+  font-family: "Hauora";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(53, 100, 223, 1);
+  left: -70px;
+  margin-left: 25px;
+  width: 146px;
+  height: 16px;
+  top: 15px;
+  white-space: nowrap;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .contact-form {
-      width: 100%;
-      height: auto;
-      top: 20px;
-  }
-
-  .form-content {
-      width: 100%;
-      left: 750px;
-      top: 100px;
-      padding: 0 10px;
-  }
-
-  .get-text {
-      font-size: 24px;
-      line-height: 36px;
-      text-align: center;
-  }
-
-  .form, .input {
-      width: 100%;
-      height: auto;
-  }
-
-  .name, .email, .servicetype, .msg {
-      width: 100%;
-      padding: 10px 0;
-  }
-
-  .send-text {
-      font-size: 16px;
-      top: 420px;
-  }
-
-  .text-form {
-      width: 100%;
-      height: auto;
-  }
-
-  .text-content {
-      width: 100%;
-      padding: 0 10px;
-  }
-
-  .project-text {
-      font-size: 24px;
-      line-height: 36px;
-  }
-
-  .address, .p {
-      width: 100
-  }
+.read-more-button {
+  width: 160px;
+  height: 48px;
+  padding: 9px 0px 9px 16px;
+  gap: 8px;
+  opacity: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 1; /* Adjusted opacity */
+  color: rgba(53, 100, 223, 1); /* Ensure initial text color */
+  transition: color 1s ease;
+ 
 }
-.phone {
+
+.read-more-button::before {
+  content: "";
   position: absolute;
-  width: 500px;
-  height: 35px;
+  top: 0;
+  right: -100%; /* Start position */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 100, 223, 1);
+  transition: right 1s ease; /* Transition for the animation */
+  z-index: 0;
+}
+.read-more-button:hover::before {
+  right: 0; /* End position */
+}
+.read-more-button:hover .button-text {
+  color: white;
+  font-weight: 200px; /* Maintain initial color on hover */
+}
+.read-more-button .button-text,
+.read-more-button .icon {
+  position: relative;
+  z-index: 1;
+
+  transition: color 1s ease;
+}
+.read-more-button .icon {
+  margin-left: 8px;
+  top: -8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 587px; /* Match your desired width */
+  margin: 0 auto; /* Center the form */
+}
+
+mat-form-field {
+  margin-bottom: 0px; /* Space between fields */
+}
+
+mat-form-field textarea {
+  height: 80px; /* Match the height for the message field */
+}
+mat-label{
+  position:relative;
   font-family: "Plus Jakarta Text", sans-serif;
+  color: #545D78;
   font-size: 18px;
   font-weight: 600;
   line-height: 22.68px;
   letter-spacing: 0.06em;
   text-align: left;
-  color: #545D78;
-  top: 120px; /* Position this below the email */
-  border:none;
-  border-bottom: 1px solid #0A183E3D
- 
+  width: 157px;
+  height: 23px;
+
+
 }
-.icon{
-  top: -15px;  
-  gap: 0px;
-  margin-left:60px;
-  margin-right:-105px;  
-  }
-  .button-text{
-      font-family:'Hauora';
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 16px;
-      text-align: left;
-      color: rgba(53, 100, 223, 1);
-       left:-70px;     
-  margin-left: 25px;
-  width: 146px;
-  height: 16px;
-  top:15px;
-  white-space: nowrap;  
-  }
-  
-  .read-more-button {
-    width: 160px;
-    height: 48px;
-    padding: 9px 0px 9px 16px;
-    gap: 8px;
-    border-radius: 4px 0px 0px 0px;
-    opacity: 0px;
-     cursor: pointer;
-      overflow: hidden;    
-     opacity: 1; /* Adjusted opacity */
-    
-      color: rgba(53, 100, 223, 1); /* Ensure initial text color */
-     transition: color 1s ease;
-     top:-100px;
-  }
-  
-  .read-more-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right:-100%; /* Start position */
-      width: 100%;
-      height: 100%;
-      background-color:rgba(53,100,223,1);
-      transition: right 1s ease; /* Transition for the animation */
-      z-index: 0;
-  }  
-  .read-more-button:hover::before {
-      right: 0; /* End position */
-  }   
-  .read-more-button:hover .button-text
-   {
-      color: white; 
-      font-weight: 200px;/* Maintain initial color on hover */
-  }   
-  .read-more-button .button-text,.read-more-button .icon
-   {
-      position: relative;
-      z-index: 1;
-  
-      transition: color 1s ease;
-  }      
-  .read-more-button .icon {
-      margin-left: 8px;
-      top:-8px;       
-  }  
-   
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}
+::ng-deep .mdc-text-field {
+  position: relative !important;
+  padding: 0px !important;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: white !important;
+}
+.mat-mdc-form-field-focus-overlay {
+  background-color: transparent !important;
+}
+.mdc-line-ripple mdc-line-ripple--active{
+
+  background-color: white !important;
+}
+

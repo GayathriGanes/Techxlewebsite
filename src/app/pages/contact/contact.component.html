@@ -3,14 +3,41 @@
   <div class="form-content">
     <h1 class="get-text">Get in Touch?</h1>
     <div class="form">
-      <div class="input">
+      <!--<div class="input">
         <input type="hidden" name="access_key" value="a48b7eec-3002-4072-8617-c3da5f755524">
         <input type="text" class="name" name="name" placeholder="NAME" required>
         <input type="email" class="email" name="email" placeholder="EMAIL ID" required>
         <input type="tel" class="phone" name="phone" placeholder="PHONE NUMBER" required>
         <input type="text" class="servicetype" name="servicetype" placeholder="SERVICE TYPE" required>
         <input type="text" class="msg" name="msg" placeholder="MESSAGE" required>
-      </div>
+      </div>-->
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>NAME</mat-label>
+          <input matInput placeholder="" >
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>EMAIL ID</mat-label>
+          <input matInput type="email" placeholder="" >
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>PHONE NUMBER</mat-label>
+          <input matInput type="tel" placeholder="" >
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>SERVICE TYPE</mat-label>
+          <input matInput placeholder="">
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>MESSAGE</mat-label>
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field>
+      
+      </form>
       <button mat-button class="read-more-button">
         <span class="button-text">Send Enquiry</span>
         <span >
