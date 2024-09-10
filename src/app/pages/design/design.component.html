@@ -118,7 +118,7 @@
  <p>Have a Project?
   We Would Love to Hear
   From You</p>
-  <div class="name">
+  <!--<div class="name">
    <h2 class="h2">NAME</h2>
    <h2 class="h1">EMAIL ID</h2>
    <h2 class="h3">SERVICE TYPE</h2>
@@ -129,7 +129,38 @@
       <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon">
     </span>
     </button>
-  </div>
+  </div>-->
+  <form action="https://api.web3forms.com/submit" method="POST" >
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>NAME</mat-label>
+        <input matInput placeholder="" >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>EMAIL ID</mat-label>
+        <input matInput type="email" placeholder="" >
+      </mat-form-field>
+    
+    
+      <mat-form-field appearance="fill">
+        <mat-label>SERVICE TYPE</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>MESSAGE</mat-label>
+        <textarea matInput placeholder=""></textarea>
+      </mat-form-field>
+    
+    </form>
+    <button mat-button class="read-more-button">
+      <span class="button-text">Send Enquiry</span>
+      <span >
+        <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon-arrow">
+      </span>
+      </button>
+    </form>
 </div>
   
 

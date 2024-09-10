@@ -29,7 +29,7 @@
     top: 30px;
     width: 206px;
     height: 54px;
-    left:80px;
+    left:50px;
   }
 
   .footer-section {
@@ -235,7 +235,6 @@
   line-height: 16px;
   padding: 9px 0px 9px 16px;
   gap: 8px;
-  border-radius: 4px 0px 0px 0px;
   top: 250px;
   left:1200px;
   opacity: 1;

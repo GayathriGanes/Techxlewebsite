@@ -32,6 +32,10 @@ import { StaffComponent } from './pages/staff/staff.component';
 import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
+
 
 
 
@@ -79,6 +83,8 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
     MatExpansionModule,
     MatButtonModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
     
   ],
   providers: [

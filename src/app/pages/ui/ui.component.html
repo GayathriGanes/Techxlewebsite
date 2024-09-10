@@ -160,7 +160,7 @@
     <img src="assets/images/Mask group.png" alt="Icon" />
     <h5 class="touch">GET IN TOUCH</h5>
     <h1 class="proj">Have a Project? We Would Love to Hear From You</h1>
-    <div class="inputfield">
+   <!-- <div class="inputfield">
       <h5 class="name">NAME</h5>
       <h5 class="email">EMAIL ID</h5>
       <h5 class="servicetype">SERVICE TYPE</h5>
@@ -169,7 +169,38 @@
     <div class="send">
       <h5 class="send-text">Send Enquiry</h5>
       <a class="send-button"  href='/contact'><img src="assets/images/arrow.png" alt="Icon" /></a>
-    </div>
+    </div>-->
+    <form action="https://api.web3forms.com/submit" method="POST" >
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>NAME</mat-label>
+        <input matInput placeholder="" >
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>EMAIL ID</mat-label>
+        <input matInput type="email" placeholder="" >
+      </mat-form-field>
+    
+    
+      <mat-form-field appearance="fill">
+        <mat-label>SERVICE TYPE</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>MESSAGE</mat-label>
+        <textarea matInput placeholder=""></textarea>
+      </mat-form-field>
+    
+    </form>
+    <button mat-button class="read-more-button">
+      <span class="button-text">Send Enquiry</span>
+      <span >
+        <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon-arrow">
+      </span>
+      </button>
+    </form>
     
   </div>
 </div>
