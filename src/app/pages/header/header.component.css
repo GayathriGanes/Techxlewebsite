@@ -7,27 +7,28 @@
     justify-content: space-between;
     align-items: center;
     gap: 0px;
-    opacity: 1; /* Setting opacity to 1 for visibility */
-    padding: 0 150px; /* Adjust padding to increase space between logo and nav-container */
+    opacity: 1; 
+    padding: 0 150px;
     background: var(--header-background-color);
-    margin: 0 auto; /* Center the header with equal left and right margins */
+    margin: 0 auto; 
     position: absolute;
     top:5px;
   }
-   
+  
   .logo {
     display: flex;
     align-items: center;
     gap: 0px;
     margin-right: -10px;
-    opacity: 1; /* Setting opacity to 1 for visibility */
+    opacity: 1; 
   }
    
   .logo-img {
+    position:relative;
     width: 153px;
     height: 41px;
-    top: 24px; /* Align with top position */
-    left: 120px; /* Align with left position */
+    
+    left: 15px; 
     margin-left: -40px;
     margin-right: -10px;
   }
@@ -41,8 +42,8 @@
     height: 22px;
     justify-content: space-between;
     gap: 30px;
-    opacity: 1; /* Setting opacity to 1 for visibility */
-    margin-left: auto; /* Move nav-container to the right */
+    opacity: 1; 
+    margin-left: auto;
     margin-right: -95px;
   }
    
@@ -59,9 +60,9 @@
     line-height: 21.7px;
     letter-spacing: 0.06em;
     text-align: left;
-    text-decoration: none; /* Remove underline from links */
-    color: var(--link-text-color); /* Use global variable for link color */
-    opacity: 1; /* Setting opacity to 1 for visibility */
+    text-decoration: none; 
+    color: var(--link-text-color);
+    opacity: 1; 
     gap: 10px;
     color: black;
   }
@@ -92,7 +93,7 @@
   .active-link::after {
     content: '';
     position: absolute;
-    bottom: -31px; /* Position this line above the toolbar's bottom border */
+    bottom: -31px; 
     left: 0;
     width: 100%;
     height: 2px;
@@ -112,4 +113,170 @@
     color: #3564DF !important;
     border-bottom: 2px solid #3564DF;
   }
+    .menu-button {
+  display: none; 
+}
+
+ 
+@media (min-width:300px) and (max-width:540px){
+  .header-toolbar {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-background-color);
+  padding: 0 20px;
+}
+
+.logo-img {
+  width: 120px;
+  left:8vw;
+}
+.active-link::after {
   
+  height: 0px;
+  
+}
+
+
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.mobile-nav {
+  display: block;
+  position: absolute;
+  top: 80px; 
+  left:0;
+  width: 100%;
+  height:300px;
+  background: var(--header-background-color);
+  text-align: center;
+  z-index: 1000;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 27px 10px 27px 0;
+  margin-left:10vw;
+  font-size: 18px;
+  color: var(--link-text-color);
+  text-decoration: none;
+}
+
+.mobile-nav a.active-link {
+  color: #3564DF;
+}
+
+
+
+  .menu-button {
+    display: block;
+    color:black;
+    left:25vw;
+  }
+  
+  .nav-container {
+    display: none; 
+  }
+  
+  .nav-container.mobile-nav {
+    display: block;
+}
+
+
+  
+}
+
+@media (min-width:1000px) and (max-width:1200px){
+ .logo-img{
+  left:-8vw;
+ }
+}
+@media (min-width:1201px) and (max-width:1535px){
+  .logo-img{
+    left:-6vw;
+  }
+}
+@media (min-width:541px) and (max-width:999px){
+  .logo-img{
+   left:-12vw;
+  }
+  @media (min-width:912px){
+    .logo-img{
+      left:-11vw;
+    }
+
+  }
+ }
+
+ 
+/*.header-toolbar {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-background-color);
+  padding: 0 20px;
+}
+
+.logo-img {
+  width: 120px;
+}
+
+
+.menu-button {
+  display: none; 
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.mobile-nav {
+  display: block;
+  position: absolute;
+  top: 100px; 
+  left: 0;
+  width: 100%;
+  background: var(--header-background-color);
+  text-align: center;
+  z-index: 1000; 
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--link-text-color);
+  text-decoration: none;
+}
+
+.mobile-nav a.active-link {
+  color: #3564DF;
+}
+
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+    color:pink;
+  }
+  
+  .nav-container {
+    display: none; 
+  }
+  
+  .nav-container.mobile-nav {
+    display: block; 
+  }
+}*/

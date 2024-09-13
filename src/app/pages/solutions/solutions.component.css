@@ -21,11 +21,11 @@ padding: 0px;
 gap: 24px;
 
 position: absolute;
-width: 621px;
+width: 800px;
 height: 181px;
-left: 120px;
+left:130px;
 top: 194px;
-margin-left:20px;
+
 
 
   }
@@ -52,7 +52,7 @@ margin-left:20px;
   }
   
   .banner-content h1 {
-   width: 621px;
+   width: 800px;
    height: 100px;
    font-family: 'Plus Jakarta Text', sans-serif;
    font-style: normal;
@@ -111,6 +111,11 @@ margin-left:20px;
     margin-right: 10px; /* Ensure spacing is consistent when interchanged */
     margin-left: 0;
   }
+  @media (min-width:999px) and (max-width:1535px){
+   .banner-content{
+     left:4vw;
+    }
+  }
 .belief-section{
   display: flex;
   flex-direction: column;
@@ -132,10 +137,13 @@ margin-left:20px;
   text-align: left;
   width: 1200px;
   color: rgba(10, 24, 62, 1);
-  margin-left:145px;
+  margin-left:-20px;
+  @media (min-width:999px) and (max-width:1535px){
+    margin-left:10px;
+  }
  }
  .belief-paragraph{
-   margin-left:145px;
+   margin-left:-20px;
    width: 1200px;
    height: 60px;
    font-family:'Plus Jakarta Text', sans-serif;
@@ -147,6 +155,9 @@ margin-left:20px;
    color: rgba(84, 93, 120, 1);
    margin-top:-15px;
    gap:10px;
+   @media (min-width:999px) and (max-width:1535px){
+    margin-left:10px;
+  }
  }
  .link-box {
   position: relative;
@@ -159,9 +170,12 @@ margin-left:20px;
   justify-content: left;   
   width:100%;
   height: 751px;
-  margin-left:110px;
+  margin-left:140px;
   margin-top:100px;
   gap: 20px;
+  @media (min-width:999px) and (max-width:1535px){
+    margin-left:4vw;
+  }
 }
 .heading{
   width: 1199px;
@@ -173,7 +187,7 @@ margin-left:20px;
   letter-spacing: 0.01em;
   text-align: left;
   color:rgba(10, 24, 62, 1);
-  margin-left:35px;
+  
 
 
 }
@@ -183,7 +197,7 @@ margin-left:20px;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
-  left:38px;  
+   
 }
 
 .image-box {  

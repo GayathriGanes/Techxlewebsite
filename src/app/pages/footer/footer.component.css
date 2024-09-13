@@ -273,5 +273,237 @@
   
   top: -10px;
 }
+@media (min-width:999px) and (max-width:1535px){
+ .footer{
+  height:600px;
+ }
+ .footer .logo-img{
+    left:2.5vw;
+  }
+  .connect-us{
+    left:52vw;
+  }
+  .linkedin{
+    left:68vw;
+  }
+  .footer-section.company-address{
+    left: -3vw;
+  }
+  .footer-section.company
+  {
+     left:-0.7vw;
+  }
+  .footer-section.services{
+    left:-5.5vw;
+  }
+  .footer-section.project{
+    left:-7.5vw;
+  }
+  .read-more-button{
+    left:73vw;
+  }
+  .footer-bottom{
+    margin-top:20px;
+  }
+  .footer-bottom .bottom-text1 {
+    position: absolute;
+    width: 300px;
+    height: 23px;
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23.2px;
+    text-align: left;
+    color: #ffffff99;
+    left: 5.3vw;
+  }
+  .bottom-text{
+    left:-4vw;
+  }
+ }
 
+@media (min-width:300px) and (max-width:400px){
+  .footer{
+    height:1000px;
+  }
+  .footer .logo-img {
+    position: absolute;
+    top: 30px;
+    width: 195px;
+    height: 50px;
+    left: 4vw;
+}
+.connect-us{
+  left:8vw;
+  top:125px;
+}
+.linkedin {
+  top: 120px;
+  left: 51vw;
+}
+.footer-section.company-address{  
+  left: -13vw;
+
+}
+.footer-section.company{
+  left:-13vw;
+}
+h2.ourservice{
+  white-space:nowrap;
+}
+.footer-section.services{
+  left:-13vw;
+  
+}
+
+.footer-section.project h2{
+  margin-top:210px;
+  margin-left:-10vw;
+}
+.footer .footer-section ul {
+  line-height: 17px;
+  width: 200px;
+}
+.read-more-button{
+  top: 730px;
+  left: 16vw;
+}
+
+.footer-bottom .bottom-text1 {
+  position: absolute;
+  width: 300px;
+  height: 23px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23.2px;
+  text-align: left;
+  color: #ffffff99;
+  left: 8vw;
+}
+.bottom-text{
+  margin-top:80px;
+  left:-17vw;
+}
+}
+@media (min-width:401px) and (max-width:600px){
+  .footer{
+    height:1000px;
+  }
+  .footer .logo-img {
+    position: absolute;
+    top: 30px;
+    width: 195px;
+    height: 50px;
+    left: 4vw;
+}
+.connect-us{
+  left:8vw;
+  top:125px;
+}
+.linkedin {
+  top: 120px;
+  left: 51vw;
+}
+.footer-section.company-address{  
+  left: -13vw;
+
+}
+.footer-section.company{
+  left:-13vw;
+}
+h2.ourservice{
+  white-space:nowrap;
+}
+.footer-section.services{
+  left:-13vw;
+  
+}
+
+.footer-section.project h2{
+  margin-top:280px;
+  margin-left:-60vw;
+}
+.footer .footer-section ul {
+  line-height: 17px;
+  width: 200px;
+}
+.read-more-button{
+  top: 780px;
+  left: 12vw;
+}
+
+.footer-bottom .bottom-text1 {
+  margin-top:-50px;
+  position: absolute;
+  width: 300px;
+  height: 23px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23.2px;
+  text-align: left;
+  color: #ffffff99;
+  left: 13vw;
+}
+.bottom-text{
+  margin-top:40px;
+  left:-20vw;
+}
+}
+
+
+@media (min-width:601px) and (max-width:998px){
+  .footer{
+    height:600px;
+   }
+   .footer .logo-img{
+      left:2.5vw;
+    }
+    .connect-us{
+      left:52vw;
+    }
+    .linkedin{
+      left:68vw;
+    }
+    .footer-section.company-address{
+      left: -7vw;
+    }
+    .footer-section.company
+    {
+       left:-8vw;
+    }
+    .footer .footer-section ul {
+      line-height: 17px;
+      width: 200px;
+    }
+    .footer-section.services{
+      left:-10vw;
+    }
+    .footer-section.project{
+      left:-7.5vw;
+      white-space:nowrap;
+    }
+    .read-more-button{
+      left:76vw;
+    }
+    .footer-bottom{
+      margin-top:20px;
+    }
+    .footer-bottom .bottom-text1 {
+      position: absolute;
+      width: 300px;
+      height: 23px;
+      font-family: "Plus Jakarta Text", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 23.2px;
+      text-align: left;
+      color: #ffffff99;
+      left: 5.3vw;
+    }
+    .bottom-text{
+      left:-4vw;
+    }
+}
 
