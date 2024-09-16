@@ -6,15 +6,15 @@
   background: #0a183e;
   color: #ffffff;
   bottom:0;
-  
-
+ 
+ 
   .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 20px;
   }
-
+ 
   .content {
     width: 100%;
     height: 100px;
@@ -23,7 +23,7 @@
     margin-top: 120px;
     background: #0a183e;
   }
-
+ 
   .logo-img {
     position: absolute;
     top: 30px;
@@ -31,16 +31,16 @@
     height: 54px;
     left:50px;
   }
-
+ 
   .footer-section {
     position: relative;
     top: -20px;
     flex: 1;
     margin: -10px;
-    
    
-
-
+   
+ 
+ 
     h2 {
       position:relative;
       height: 29px;
@@ -51,32 +51,32 @@
       text-align: left;
       color: #ffffff;
       left:50px;
-      
+     
     }
-
+ 
     ul {
-      
+     
       color: #ffffff99;
       font-family: "Plus Jakarta Text", sans-serif;
       position: absolute;
       left: 30px;
       line-height: 23.2px;
-
-
+ 
+ 
       li {
         margin-bottom: 15px;
-
+ 
         a {
           color: #ffffff99;
           text-decoration: none;
-
+ 
           &:hover {
             text-decoration: underline;
           }
         }
       }
     }
-
+ 
     p {
       margin: 20px;
       color: #ffffff99;
@@ -84,10 +84,10 @@
       position:relative;
       left:30px;
     }
-
+ 
   }
 }
-
+ 
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -96,22 +96,22 @@
   padding: 10px 20px;
   border-top: 1px solid #394867;
   margin-top: 40px;
-
+ 
   .social-icons {
     a {
       color: #ffffff;
       margin-right: 10px;
-
+ 
       &:hover {
         color: #007bff;
       }
-
+ 
       i {
         font-size: 18px;
       }
     }
   }
-
+ 
   .bottom-text1 {
     position: absolute;
     width: 300px;
@@ -124,16 +124,16 @@
     color: #ffffff99;
     left:60px;
   }
-
+ 
   ul {
     padding: 0;
     display: flex;
     color: #ffffff99;
     font-family: "Plus Jakarta Text", sans-serif;
-
+ 
     li {
       margin-left: 10px;
-
+ 
       a {
         width: 227px;
         height: 23px;
@@ -179,7 +179,7 @@
   line-height: 23.2px;
   text-align: right;
   color: #FFFFFF99;
-
+ 
 }
 .company{
   position:relative;
@@ -211,18 +211,18 @@
   margin-left: 20px;
   margin-right: -90px;
 }
-
+ 
 .button-text {
   text-align: left;
   color: white;
-  left: -50px;     
+  left: -50px;    
   width: 146px;
   height: 16px;
   top: 15px;
   white-space: nowrap;
   position:absolute;
 }
-
+ 
 .read-more-button {
   font-family: 'Plus Jakarta Text', sans-serif;
   font-size: 16px;
@@ -242,7 +242,7 @@
   transition: color 1s ease;
   letter-spacing: -0.2px;
 }
-
+ 
 .read-more-button::before {
   content: '';
   position: absolute;
@@ -254,29 +254,29 @@
   transition: right 1s ease;
   z-index: 0;
 }
-
+ 
 .read-more-button:hover::before {
   right: 0;
 }
-
+ 
 .read-more-button:hover .button-text {
   color:  rgba(53,100,223,1);
   font-weight: 200px;
 }
-
+ 
 .read-more-button .button-text, .read-more-button .icon {
   position: relative;
   z-index: 1;
   transition: color 1s ease;
 }
-
+ 
 .read-more-button .icon {
-  
+ 
   top: -10px;
 }
-
+ 
 .gotproj{
-  
+ 
  
   width: 300px;
   height: 160px;
@@ -289,10 +289,10 @@
   background: #FFFFFF08;
   left:-50px;
  
-
+ 
 }
 .project{
-
+ 
 height: 40px;
 gap: 0px;
 opacity: 0px;
@@ -302,7 +302,7 @@ font-weight: 600;
 line-height: 40px;
 text-align: left;
 color: #FFFFFF;
-
+ 
 }
 .frame{
   width: 24px;
@@ -310,6 +310,239 @@ color: #FFFFFF;
   position:relative;
   top: -3px;
   left:-8px;
-
+ 
 }
-
+@media (min-width:999px) and (max-width:1300px){
+  .footer{
+   height:600px;
+  }
+  .footer .logo-img{
+     left:2.5vw;
+   }
+   .connect-us{
+     left:52vw;
+   }
+   .linkedin{
+     left:68vw;
+   }
+   .footer-section.company-address{
+     left: -3vw;
+   }
+   .footer-section.company
+   {
+      left:-0.7vw;
+   }
+   .footer-section.services{
+     left:-5.5vw;
+   }
+   .footer-section.project{
+     left:-7.5vw;
+   }
+   .read-more-button{
+     left:73vw;
+   }
+   .footer-bottom{
+     margin-top:20px;
+   }
+   .footer-bottom .bottom-text1 {
+     position: absolute;
+     width: 300px;
+     height: 23px;
+     font-family: "Plus Jakarta Text", sans-serif;
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 23.2px;
+     text-align: left;
+     color: #ffffff99;
+     left: 5.3vw;
+   }
+   .bottom-text{
+     left:-4vw;
+   }
+  }
+  
+ @media (min-width:300px) and (max-width:400px){
+   .footer{
+     height:1000px;
+   }
+   .footer .logo-img {
+     position: absolute;
+     top: 30px;
+     width: 195px;
+     height: 50px;
+     left: 4vw;
+ }
+ .connect-us{
+   left:8vw;
+   top:125px;
+ }
+ .linkedin {
+   top: 120px;
+   left: 51vw;
+ }
+ .footer-section.company-address{  
+   left: -13vw;
+  
+ }
+ .footer-section.company{
+   left:-13vw;
+ }
+ h2.ourservice{
+   white-space:nowrap;
+ }
+ .footer-section.services{
+   left:-13vw;
+  
+ }
+  
+ .footer-section.project h2{
+   margin-top:210px;
+   margin-left:-10vw;
+ }
+ .footer .footer-section ul {
+   line-height: 17px;
+   width: 200px;
+ }
+ .read-more-button{
+   top: 730px;
+   left: 16vw;
+ }
+  
+ .footer-bottom .bottom-text1 {
+   position: absolute;
+   width: 300px;
+   height: 23px;
+   font-family: "Plus Jakarta Text", sans-serif;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 23.2px;
+   text-align: left;
+   color: #ffffff99;
+   left: 8vw;
+ }
+ .bottom-text{
+   margin-top:80px;
+   left:-17vw;
+ }
+ }
+ @media (min-width:401px) and (max-width:600px){
+   .footer{
+     height:1000px;
+   }
+   .footer .logo-img {
+     position: absolute;
+     top: 30px;
+     width: 195px;
+     height: 50px;
+     left: 4vw;
+ }
+ .connect-us{
+   left:8vw;
+   top:125px;
+ }
+ .linkedin {
+   top: 120px;
+   left: 51vw;
+ }
+ .footer-section.company-address{  
+   left: -13vw;
+  
+ }
+ .footer-section.company{
+   left:-13vw;
+ }
+ h2.ourservice{
+   white-space:nowrap;
+ }
+ .footer-section.services{
+   left:-13vw;
+  
+ }
+  
+ .footer-section.project h2{
+   margin-top:280px;
+   margin-left:-60vw;
+ }
+ .footer .footer-section ul {
+   line-height: 17px;
+   width: 200px;
+ }
+ .read-more-button{
+   top: 780px;
+   left: 12vw;
+ }
+  
+ .footer-bottom .bottom-text1 {
+   margin-top:-50px;
+   position: absolute;
+   width: 300px;
+   height: 23px;
+   font-family: "Plus Jakarta Text", sans-serif;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 23.2px;
+   text-align: left;
+   color: #ffffff99;
+   left: 13vw;
+ }
+ .bottom-text{
+   margin-top:40px;
+   left:-20vw;
+ }
+ }
+  
+  
+ @media (min-width:601px) and (max-width:998px){
+   .footer{
+     height:600px;
+    }
+    .footer .logo-img{
+       left:2.5vw;
+     }
+     .connect-us{
+       left:52vw;
+     }
+     .linkedin{
+       left:68vw;
+     }
+     .footer-section.company-address{
+       left: -7vw;
+     }
+     .footer-section.company
+     {
+        left:-8vw;
+     }
+     .footer .footer-section ul {
+       line-height: 17px;
+       width: 200px;
+     }
+     .footer-section.services{
+       left:-10vw;
+     }
+     .footer-section.project{
+       left:-7.5vw;
+       white-space:nowrap;
+     }
+     .read-more-button{
+       left:76vw;
+     }
+     .footer-bottom{
+       margin-top:20px;
+     }
+     .footer-bottom .bottom-text1 {
+       position: absolute;
+       width: 300px;
+       height: 23px;
+       font-family: "Plus Jakarta Text", sans-serif;
+       font-size: 16px;
+       font-weight: 500;
+       line-height: 23.2px;
+       text-align: left;
+       color: #ffffff99;
+       left: 5.3vw;
+     }
+     .bottom-text{
+       left:-4vw;
+     }
+ }
+  
