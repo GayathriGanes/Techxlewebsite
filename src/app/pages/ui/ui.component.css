@@ -991,7 +991,7 @@ mat-label{
 }
 
 
-@media (max-width:1440px)  {
+@media (max-width:1300px)  {
   
   .banner-container {
     height: auto; 
@@ -1004,7 +1004,7 @@ mat-label{
     max-width: 800px;
     position: relative;
     margin: 0 auto;
-    left: 50px;
+    left: -120px;
     gap: 16px;
     align-items: initial;
     text-align: left;
@@ -1031,19 +1031,18 @@ mat-label{
   }
   .nav-container a {
     position:relative;
-    left:-350px;
+    left:-120px;
   }
   .menu {
     width: 80%;
     font-size: 28px;
-    left: 10%;
-    top: 400px;
+    left: 100px;
+    top: 440px;
   }
 
   .text {
-    width: 80%;
+    width: auto;
     font-size: 16px;
-    left: 10%;
     top: 450px;
   }
 
@@ -1065,7 +1064,7 @@ mat-label{
 
   .archit,
   .design {
-    width: 100%;
+    width: 1150px;
     left: 30px;
     padding: 0 10px;
     top: 380px;
@@ -1082,7 +1081,7 @@ mat-label{
     width: 200px;
     font-size: 16px;
     top: 1020px;
-    left:600px;
+    left:1100px;
   }
   .goal{
     width: 200px;
@@ -1100,18 +1099,17 @@ mat-label{
 
   .iterate
    {
-    width: 50%;
-    height: 160px;
-    top: -160px;
-    left: -500px;
+    width: 180px;
+    top: -190px;
+    left: -80px;
     margin: 10px 0;
   }
 
   .iterate-text {
-    width: 80%;
-    top: auto;
+    width: 175px;
+    top: 1372px;
     left: 10%;
-    font-size: 8px;
+    font-size: medium;
   }
 
   .icon {
@@ -1122,18 +1120,17 @@ mat-label{
   }
   .prototype
   {
-   width: 50%;
-   height: 160px;
-   top: -160px;
-   left: -400px;
-   margin: 10px 0;
- }
+    width: 180px;
+    top: -190px;
+    left: -80px;
+    margin: 10px 0;
+  }
 
  .prototype-text {
-   width: auto;
-   top: auto;
-   left: 10%;
-   font-size: 8px;
+  width: 175px;
+  top: 1372px;
+  left: 10%;
+  font-size: medium;
  }
 
  .icon1 {
@@ -1144,18 +1141,17 @@ mat-label{
  }
  .idea
  {
-  width: 50%;
-  height: 160px;
-  top: -160px;
-  left: -300px;
+  width: 180px;
+  top: -190px;
+  left: -80px;
   margin: 10px 0;
 }
 
 .idea-text {
-  width: auto;
-  top: auto;
-  left: 10%;
-  font-size: 8px;
+  width: 175px;
+    top: 1372px;
+    left: 10%;
+    font-size: medium;
 }
 
 .icon2 {
@@ -1166,18 +1162,17 @@ mat-label{
 }
 .define
   {
-    width: 50%;
-    height: 160px;
-    top: -160px;
-    left: -200px;
+    width: 180px;
+    top: -190px;
+    left: -80px;
     margin: 10px 0;
  }
 
  .define-text {
-   width: auto;
-   top: auto;
-   left: 10%;
-   font-size: 8px;
+  width: 175px;
+  top: 1372px;
+  left: 10%;
+  font-size: medium;
  }
 
  .icon3 {
@@ -1188,18 +1183,17 @@ mat-label{
  }
  .discover
   {
-   width: 50%;
-   height: 160px;
-   top: -160px;
-   left: -100px;
-   margin: 10px 0;
+    width: 180px;
+    top: -190px;
+    left: -80px;
+    margin: 10px 0;
  }
 
  .discover-text {
-  width: auto;
-  top: auto;
+  width: 175px;
+  top: 1372px;
   left: 10%;
-  font-size: 8px;
+  font-size: medium;
  }
 
  .icon4 {
@@ -1209,56 +1203,64 @@ mat-label{
    left: -80px;
  }
  .text-define{
-  position:relative;
-  font-size: 10px;
-  left:-50px;
+  position: relative;
+  font-size: 18px;
+  left: 120px;
+  top: -40px;
  }
  .text-idea{
-  position:relative;
-  font-size: 10px;
-  left:-70px;
+  position: relative;
+        font-size: 18px;
+        left: 200px;
+        top: -10px;
  }
  .text-discover{
-  position:relative;
-  font-size: 10px;
-  left:-20px;
+  position: relative;
+        font-size: 18px;
+        left: 50px;
+        top: -10px;
  }
  .text-prototype{
-  position:relative;
-  font-size: 10px;
-  left:-90px;
+  position: relative;
+  font-size: 18px;
+  left: 280px;
+  top: -15px;
  }
  .text-test{
-  position:relative;
-  font-size: 10px;
-  left:-110px;
-  top:20px
+  position: relative;
+  font-size: 18px;
+  left: 360px;
+  top: -10px;
  }
  .test-img{
   position: relative;
   width: 100%;
-  left: -95px;
-  top:15px;
+  left: 370px;
+  top: -20px;
  }
  .pro-img{
   position: relative;
-  width: auto;
-  left: -80px;
+  width: 100%;
+  left: 300px;
+  top: -25px;
  }
  .ide-img{
   position: relative;
-  width: auto;
-  left: -65px;
+  width: 100%;
+  left: 200px;
+  top: -20px;
  }
  .def-img{
- position: relative;
-  width: auto;
-  left: -45px;
+  position: relative;
+        width: 100%;
+        left: 120px;
+        top: -40px;
  }
  .discover-img{
   position: relative;
-   width: auto;
-   left: -30px;
+  width: 100%;
+  left: 50px;
+  top: -20px;
   }
  .cap {
   font-size: 28px;
@@ -1271,7 +1273,7 @@ mat-label{
  
   height: 600px;
   padding: 30px;
-  top: 1250px;
+  top: 1300px;
   left: 0;
   width: 100%;
 }
@@ -1281,7 +1283,7 @@ mat-label{
   line-height: 24px;
   width: auto;
   top: 100px;
-  left: 50px;
+  left: 120px;
 }
 
 .idnty {
@@ -1303,8 +1305,8 @@ mat-label{
 .mat-accordion {
   position: relative;
   width: 85%;
-  left: -300px;
-  top: -280px;
+  left: -250px;
+  top: -450px;
 }
 
 .mat-expansion-panel {
@@ -1328,51 +1330,50 @@ mat-label{
   position: relative;
 }
 .image{
-  width: 80%;
   position: relative;
-  left: 180px;
-  top: -80px;
+  left: 450px;
+  top: -100px;
 }
 .enhance,
 .roi,
 .brand,
 .high {
-  width: 30%;
+  width: 285px;
   margin-bottom: 20px;
   margin-right: 5%;
-  top: 2050px;
+  top: 2200px;
 }
 
 .outcome-head {
   font-size: 20px;
-  top: -600px;
+  top: -500px;
   left: -50px;
 }
 
 .img-roi{
-  position:relative;
-  width:30%;
-  left:-470px;
+  position: relative;
+  width: 80%;
+  left: -65px;
 }
 .img-brand{
-  position:relative;
-  width:30%;
-  left:-260px;
+  position: relative;
+  width: 80%;
+  left: -30px;
 }
 .img-high{
-  width:30%;
   position: relative;
-  left: -50px;
+  width: 80%;
+  
 }
 .img-enhance{
-  position:relative;
-  width:30%;
-  left:-680px;
+  position: relative;
+  width: 80%;
+  left: -100px;
 }
 .img-tech{
-  width: 50%;
+  width: 80%;
   position: relative;
-  top: -350px;
+  top: -50px;
   left: -30px;
 }
 
@@ -1380,34 +1381,35 @@ mat-label{
   width: 100%;
   margin-left: 0;
   position: absolute;
-  top: 2500px;
+  top: 3050px;
 }
 .touch {
   font-size: 16px;
   margin-top: 0px;
   position: absolute;
-  left: 20px;
   top: 140px;
 }
 
 .proj {
   font-size: 35px;
   margin-top: 15px;
-  left: 10px;
+ 
 }
 form {
   padding: 15px;
   width: 70%;
   left: 80px;
-  top:-120px;
+  top:-250px;
+ 
 }
 .img-vector{
   width: 100%;
   position: relative;
-  top: 290px;
+  top:40px;
+  
 }
 .read-more-button{
-top:-160px;
+top:-300px;
 left:160px;
 }
 
