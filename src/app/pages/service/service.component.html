@@ -1,37 +1,36 @@
 <div class="card-slider">
-    <div class="header">
-      <h2>Explore Our Services</h2>
-      <div class="navigation-buttons">
-        <button mat-icon-button (click)="prev()">
-          <mat-icon fontSet="fa">&#8592;</mat-icon>
-        </button>
-        <button mat-icon-button (click)="next()">
-          <mat-icon fontSet="fa">&#8594;</mat-icon>
-        </button>
-      </div>
+  <div class="header">
+    <h2>Explore Our Services</h2>
+    <div class="navigation-buttons">
+      <button mat-icon-button (click)="prev()">
+        <mat-icon fontSet="fa">&#8592;</mat-icon>
+      </button>
+      <button mat-icon-button (click)="next()">
+        <mat-icon fontSet="fa">&#8594;</mat-icon>
+      </button>
     </div>
-    <div class="cards-container" #container>
-      <mat-card class="card" *ngFor="let card of cards">
-        <div class="card-blocks">
-          <div class="symbol-block">
-            <img [src]="card.symbol" alt="Card Symbol" />
-          </div>
-          <div class="content-block">
-            <mat-card-header>
-              <mat-card-title class="title">{{ card.title }}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content class="content">
-              {{ card.content }}
-            </mat-card-content>
-            <button mat-button (click)="navigateTo(card.route)" class="read-more-button">
-                <span class="button-text">Read More</span>
-                <span >
-                  <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon">
-                </span>   
-            </button>
-          </div>
+  </div>
+  <div class="cards-container" #container>
+    <mat-card class="card" *ngFor="let card of cards">
+      <div class="card-blocks">
+        <div class="symbol-block">
+          <img [src]="card.symbol" alt="Card Symbol" />
         </div>
-      </mat-card>
-    </div>    
+        <div class="content-block">
+          <mat-card-header>
+            <mat-card-title class="title">{{ card.title }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="content">
+            {{ card.content }}
+          </mat-card-content>
+          <button mat-button (click)="navigateTo(card.route)" class="read-more-button">
+              <span class="button-text">Read More</span>
+              <span >
+                <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon">
+              </span>  
+          </button>
+        </div>
+      </div>
+    </mat-card>
+  </div>    
 </div>
-  
