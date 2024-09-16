@@ -6,11 +6,17 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
+  isMenuOpen = false;
   isHomeVisible = true;
   activeLink: string = '';
+ 
   constructor(private router: Router) {}
  
   ngOnInit(): void {
+   
+ 
+ 
+ 
     // Update the active link based on the current URL
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -31,6 +37,7 @@ export class HeaderComponent implements OnInit {
       }
     });
   }
+ 
  
     toggleHomeVisibility() {
         this.isHomeVisible = false;
@@ -57,4 +64,13 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/solutions'])
     }  
   }
+ 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen; // Toggle menu open state
+  }
+  closeMenu()
+  {
+    this.isMenuOpen = false;
+  }
 }
+ 

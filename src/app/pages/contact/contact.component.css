@@ -1,122 +1,45 @@
-/* Base Styles (Desktop) */
+
+
+/* General Styles */
+body {
+  font-family: "Plus Jakarta Text", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #edf1fd;
+}
+
+/* Contact Form Container */
 .contact-form {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 806px;
   top: 90px;
   border: 1px solid rgba(6, 14, 35, 0.1);
+ 
 }
 
-.form-content {
-  position: absolute;
-  width: 587px;
-  height: 634px;
-  top: 150px;
-  left: 731px;
-  gap: 32px;
-}
-
-.get-text {
-  width: 587px;
-  height: 63px;
-  font-family: "Plus Jakarta Text", sans-serif;
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 62.7px;
-  text-align: left;
-  color: #060e23;
-}
-
-.form {
-  position: absolute;
-  width: 587px;
-  height: 539px;
-  gap: 30px;
-}
-
-/*.input {
-  position: relative; 
-  width: 587px;
-  height: 461px;
-}
-
-.name,
-.email,
-.servicetype,
-.msg {
-  position: absolute;
-  width: 500px;
-  height: 35px;
-  font-family: "Plus Jakarta Text", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22.68px;
-  letter-spacing: 0.06em;
-  text-align: left;
-  color: #545d78;
-  border: none;
-  border-bottom: 1px solid #0a183e3d;
-}
-
-.email {
-  top: 60px;
-}
-.servicetype {
-  top: 170px;
-}
-.msg {
-  top: 230px;
-  height: 100px; 
-  padding-bottom: 50px; 
-}*/
-
-.send-text {
-  position: absolute;
-  height: 16px;
-  font-family: "Hauora", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: center;
-  color: #3564df;
-  top: 450px;
-}
-
-.send-button {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  transition: color 1s ease;
-  border: none;
-  left: 120px;
-  top: 440px;
-}
-
+/* Text Form Section */
 .text-form {
-  position: absolute;
+  position: relative;
   width: 672px;
   height: 806px;
   background: #edf1fd;
+  top:-50px;
+
+
 }
 
 .text-content {
-  position: absolute;
+  position:relative;
   width: 422px;
   height: 550px;
-  top: 160px;
-  left: 120px;
+  left: 100px;
   gap: 24px;
 }
 
-.frame-19 {
-  position: absolute;
-  width: 422px;
-  height: 208px;
-  gap: 8px;
-}
-
+/* Contact Section Headings */
 .contact {
-  position: absolute;
+  position: relative;
   width: 422px;
   height: 23px;
   font-family: "Plus Jakarta Text", sans-serif;
@@ -130,7 +53,7 @@
 }
 
 .project-text {
-  position: absolute;
+  position: relative;
   width: 422px;
   height: 177px;
   font-family: "Plus Jakarta Text", sans-serif;
@@ -139,217 +62,80 @@
   line-height: 58.9px;
   text-align: left;
   color: #060e23;
+  top:-20px;
 }
 
-.frame-16 {
-  position: absolute;
-  width: 422px;
-  height: 318px;
-  gap: 30px;
-}
-
+/* Address and Contact Information */
 .txt {
-  position: absolute;
-  width: 422px;
-  height: 138px;
-  gap: 20px;
-}
-
-.address {
-  position: absolute;
-  width: 345px;
-  height: 90px;
-  font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
-  font-weight: 600;
-  line-height: 29.7px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  top: 200px;
-}
-
-p {
-  position: absolute;
-  width: 345px;
-  height: 90px;
-  font-family: "Plus Jakarta Text", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 29.7px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  top: 200px;
+  line-height: 1.6;
   color: #545d78;
-}
-
-.contact-default {
-  position: absolute;
-  width: 152px;
-  height: 28px;
-  gap: 8px;
+  margin-bottom: 24px;
+  position:relative;
 }
 
 .direction {
-  position: absolute;
-
-  height: 28px;
-  font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 27.9px;
-  letter-spacing: 0.01em;
-  text-align: right;
   color: #3564df;
-  top: 350px;
+  position: relative;
+  top: 17px;
+  width: 120px;
+  height: 28px;
 }
 
 .vector {
-  position: absolute;
   width: 24px;
   height: 24px;
-  padding: 4.22px 4px 4.22px 4px;
-  border: none;
-  top: 350px;
-  left: 125px;
+  padding: 4px;
 }
 
-.txt-1 {
-  position: absolute;
-  width: 170px;
-  height: 150px;
-  gap: 30px;
-}
-
-.address-text {
-  position: absolute;
-  width: 170px;
-  height: 60px;
-  gap: 16px;
-}
-
-.address-text a {
-  color: #545d78;
-}
-
-.work {
-  position: absolute;
-  font-family: "Plus Jakarta Text", sans-serif;
+/* Work and Career Information */
+.work, .career-text {
   font-size: 18px;
   font-weight: 600;
-  line-height: 29.7px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  top: 400px;
-}
-
-.work-content {
-  position: absolute;
-  font-weight: 500;
-  top: 440px;
-  color: #545d78;
-  width: 170px;
-  height: 25px;
-}
-
-.career-text {
-  position: absolute;
+  color: #060e23;
+  position:relative;
+  top:20px;
   font-family: "Plus Jakarta Text", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 29.7px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  top: 500px;
+  
 }
 
-.job {
-  position: absolute;
-  font-weight: 500;
-  top: 540px;
-  color: #545d78;
-  width: 170px;
-  height: 25px;
-}
-
-.icon {
-  top: -15px;
-  gap: 0px;
-  margin-left: 60px;
-  margin-right: -105px;
-}
-.button-text {
-  font-family: "Hauora";
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: left;
-  color: rgba(53, 100, 223, 1);
-  left: -70px;
-  margin-left: 25px;
-  width: 146px;
-  height: 16px;
-  top: 15px;
-  white-space: nowrap;
-}
-
-.read-more-button {
-  width: 160px;
-  height: 48px;
-  padding: 9px 0px 9px 16px;
-  gap: 8px;
-  opacity: 0px;
-  cursor: pointer;
-  overflow: hidden;
-  opacity: 1; /* Adjusted opacity */
-  color: rgba(53, 100, 223, 1); /* Ensure initial text color */
-  transition: color 1s ease;
- 
-}
-
-.read-more-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -100%; /* Start position */
-  width: 100%;
-  height: 100%;
-  background-color: rgba(53, 100, 223, 1);
-  transition: right 1s ease; /* Transition for the animation */
-  z-index: 0;
-}
-.read-more-button:hover::before {
-  right: 0; /* End position */
-}
-.read-more-button:hover .button-text {
-  color: white;
-  font-weight: 200px; /* Maintain initial color on hover */
-}
-.read-more-button .button-text,
-.read-more-button .icon {
+.work-content, .job {
   position: relative;
-  z-index: 1;
-
-  transition: color 1s ease;
+  top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #545d78 !important;
+  font-family: "Plus Jakarta Text", sans-serif;
 }
-.read-more-button .icon {
-  margin-left: 8px;
-  top: -8px;
+a{
+  color: #545d78;
 }
 
-form {
+/* Form Styles */
+.form-content {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 587px; /* Match your desired width */
-  margin: 0 auto; /* Center the form */
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
 }
 
+.get-text {
+  font-size: 38px;
+  font-weight: 600;
+  color: #060e23;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Bootstrap Overrides for Material Form Fields */
 mat-form-field {
-  margin-bottom: 0px; /* Space between fields */
+  margin-bottom: 0px; 
 }
 
 mat-form-field textarea {
-  height: 80px; /* Match the height for the message field */
+  height: 80px;
 }
 mat-label{
   position:relative;
@@ -383,3 +169,132 @@ mat-label{
   background-color: white !important;
 }
 
+/* Submit Button Styles */
+.icon {
+  top: -15px;
+  gap: 0px;
+  margin-left: 60px;
+  margin-right: -105px;
+}
+.button-text {
+  font-family: "Hauora";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  color: rgba(53, 100, 223, 1);
+  left: -70px;
+  margin-left: 25px;
+  width: 146px;
+  height: 16px;
+  top: 15px;
+  white-space: nowrap;
+}
+
+.read-more-button {
+  width: 160px;
+  height: 48px;
+  padding: 9px 0px 9px 16px;
+  gap: 8px;
+  opacity: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 1; 
+  color: rgba(53, 100, 223, 1); 
+  transition: color 1s ease;
+ 
+}
+
+.read-more-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 100, 223, 1);
+  transition: right 1s ease; 
+  z-index: 0;
+}
+.read-more-button:hover::before {
+  right: 0; 
+}
+.read-more-button:hover .button-text {
+  color: white;
+  font-weight: 200px; 
+}
+.read-more-button .button-text,
+.read-more-button .icon {
+  position: relative;
+  z-index: 1;
+
+  transition: color 1s ease;
+}
+.read-more-button .icon {
+  margin-left: 8px;
+  top: -8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  /* For tablets */
+  .contact-form {
+    padding: 20px;
+  }
+
+  .text-content,
+  .form-content {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* For phones */
+  .contact-form {
+    padding: 15px;
+  }
+
+  .text-form {
+    justify-content: flex-start;
+  }
+
+  .get-text {
+    font-size: 32px;
+  }
+
+  .project-text {
+    font-size: 30px;
+  }
+
+  .direction {
+    font-size: 16px;
+  }
+
+  .work,
+  .career-text {
+    font-size: 16px;
+  }
+
+  .work-content,
+  .job {
+    font-size: 16px;
+  }
+}
+
+.image-container {
+  text-align: center; /* Centers the image horizontally */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position:absolute;
+}
+.img-fluid{
+  position:relative;
+  width: 672px;
+  height: 806px;
+}

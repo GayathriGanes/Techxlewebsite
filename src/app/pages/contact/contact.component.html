@@ -1,88 +1,95 @@
-<div class="contact-form">
-  <form action="https://api.web3forms.com/submit" method="POST" >
-  <div class="form-content">
-    <h1 class="get-text">Get in Touch?</h1>
-    <div class="form">
-      <!--<div class="input">
-        <input type="hidden" name="access_key" value="a48b7eec-3002-4072-8617-c3da5f755524">
-        <input type="text" class="name" name="name" placeholder="NAME" required>
-        <input type="email" class="email" name="email" placeholder="EMAIL ID" required>
-        <input type="tel" class="phone" name="phone" placeholder="PHONE NUMBER" required>
-        <input type="text" class="servicetype" name="servicetype" placeholder="SERVICE TYPE" required>
-        <input type="text" class="msg" name="msg" placeholder="MESSAGE" required>
-      </div>-->
-      <form>
-        <mat-form-field appearance="fill">
-          <mat-label>NAME</mat-label>
-          <input matInput placeholder="" >
-        </mat-form-field>
-      
-        <mat-form-field appearance="fill">
-          <mat-label>EMAIL ID</mat-label>
-          <input matInput type="email" placeholder="" >
-        </mat-form-field>
-      
-        <mat-form-field appearance="fill">
-          <mat-label>PHONE NUMBER</mat-label>
-          <input matInput type="tel" placeholder="" >
-        </mat-form-field>
-      
-        <mat-form-field appearance="fill">
-          <mat-label>SERVICE TYPE</mat-label>
-          <input matInput placeholder="">
-        </mat-form-field>
-      
-        <mat-form-field appearance="fill">
-          <mat-label>MESSAGE</mat-label>
-          <textarea matInput placeholder=""></textarea>
-        </mat-form-field>
-      
-      </form>
-      <button mat-button class="read-more-button">
-        <span class="button-text">Send Enquiry</span>
-        <span >
-          <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon">
-        </span>
-        </button>
-    </div>
-  </div>
-</form>
-  <div class="text-form"> <img src="assets/images/Mask group (1).png" alt="Icon" />
-    <div class="text-content">
-      <div class="frame-19">
-        <h5 class="contact">CONTACT US</h5>
-        <h1 class="project-text">
-          Have a Project? We Would Love to Hear From You
-        </h1>
-      </div>
-      <div class="frame-16">
-        <div class="txt">
-          <p><strong>Address:</strong> SF4, Prabhatham Apartment, 
-            Chinnamettupalayam, Saravanampatti, 
-            Coimbatore - 641035 Tamilnadu</p>
-          <div class="contact-default">
-            <h5 class="direction">Get Direction</h5>
-            <a href="https://www.google.co.in/maps/place/Prabhatham+Apartment/@11.094768,76.9693951,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8f7aef7287abf:0x2a494549f722d5a6!8m2!3d11.094768!4d76.97197!16s%2Fg%2F11c6prp_2_?entry=ttu" target="_blank">
-            <a class="vector">
-              <img src="assets/images/Vector (1).png" alt="Icon" />
-            </a>
-            </a>
+
+
+<div class="container-fluid contact-form py-5">
+  <div class="row">
+    <!-- Right Column: Contact Information (Now on the Left) -->
+    <div class="col-lg-6 text-form d-flex align-items-center">
+      <div class="text-content p-4">
+        <div class="image-container mb-4" >
+  
+        </div>
+        <div class="frame-19 mb-4">
+          <h5 class="contact mb-2">CONTACT US</h5>
+          <h1 class="project-text">
+            Have a Project? We Would Love to Hear From You
+          </h1>
+        </div>
+        <div class="frame-16">
+          <div class="txt mb-4">
+            <p><strong>Address:</strong> SF4, Prabhatham Apartment, Chinnamettupalayam, Saravanampatti, Coimbatore - 641035 Tamilnadu</p>
+            <div class="contact-default d-flex align-items-center">
+              <h5 class="direction me-2">Get Direction</h5>
+              <a href="https://www.google.co.in/maps/place/Prabhatham+Apartment/@11.094768,76.9693951,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8f7aef7287abf:0x2a494549f722d5a6!8m2!3d11.094768!4d76.97197!16s%2Fg%2F11c6prp_2_?entry=ttu" target="_blank" class="vector">
+                <img src="assets/images/Vector (1).png" alt="Icon" />
+              </a>
+            </div>
+          </div>
+
+          <div class="txt-1">
+            <div class="address-text mb-4">
+              <h5 class="work">Work with us:</h5>
+              <p class="work-content"><a href="mailto:hello@techxle.com">hello&#64;techxle.com</a></p>
+              <h5 class="career-text">Careers:</h5>
+              <p class="job"><a href="mailto:jobs@techxle.com">jobs&#64;techxle.com</a></p>
+            </div>
           </div>
         </div>
-        <div class="txt-1">
-          <div class="address-text">
-            <h5 class="work">Work with us:</h5>
-            <p class="work-content">
-                <a href="mailto:hello@techxle.com">hello&#64;techxle.com</a>
-            </p>
-            <h5 class="career-text">Careers:</h5>
-            <p class="job">
-                <a href="mailto:jobs@techxle.com">jobs&#64;techxle.com</a>
-            </p>
-        </div>
-        </div>
+      </div>
+    </div>
+    
+
+    <!-- Left Column: Form Section (Now on the Right) -->
+    <div class="col-lg-6 d-flex justify-content-center align-items-start form-content">
+      <div class="w-100 p-4">
+        <h1 class="get-text mb-4">Get in Touch?</h1>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <!-- Name Input -->
+          <div class="mb-3">
+            <mat-form-field appearance="fill"class="w-100">
+              <mat-label>NAME</mat-label>
+              <input matInput placeholder="" >
+            </mat-form-field>
+          </div>
+          <!-- Email Input -->
+          <div class="mb-3">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>EMAIL ID</mat-label>
+              <input matInput placeholder="" >
+            </mat-form-field>
+          </div>
+          <!-- Phone Number Input -->
+          <div class="mb-3">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>PHONE NUMBER</mat-label>
+              <input matInput placeholder="" />
+            </mat-form-field>
+          </div>
+          <!-- Service Type Input -->
+          <div class="mb-3">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>SERVICE TYPE</mat-label>
+              <input matInput  placeholder="" />
+            </mat-form-field>
+          </div>
+          <!-- Message Input -->
+          <div class="mb-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>MESSAGE</mat-label>
+              <textarea matInput  rows="4" placeholder=""></textarea>
+            </mat-form-field>
+          </div>
+          <!-- Submit Button -->
+          <button mat-button type="submit" class="btn btn-primary read-more-button">
+            <span class="button-text">Send Enquiry</span>
+            <span><img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon" /></span>
+          </button>
+        </form>
       </div>
     </div>
   </div>
 </div>
 
+
+
+
+   

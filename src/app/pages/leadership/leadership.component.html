@@ -1,14 +1,13 @@
-<div class="banner-container">
+<!--<div class="banner-container">
     <div class="banner-content">
       <div class="banner-content-header">
         <a routerLink="/aboutus">ABOUT US</a>
         <span>/ LEADERSHIP</span>
       </div>
       <h1>Business transformation through technology.</h1>
-      <a routerLink="/contact" class="cta-button"
-        >Let's talk
-        <span class="arrow"
-          ><img src="assets/images/vectorarrow.png" alt="Techxle Logo" /></span>
+      <a routerLink="/contact" class="cta-button">
+        <span class="text">Let's talk</span>
+        <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
       </a>
     </div>
     <div class="team">
@@ -27,6 +26,41 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
+    <div class="container-fluid banner-container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-6 banner-content">
+          <div class="banner-content-header">
+            <a routerLink="/aboutus">ABOUT US</a>
+            <span>/ LEADERSHIP</span>
+          </div>
+          <h1>Business transformation through technology.</h1>
+          <a routerLink="/contact" class="cta-button d-inline-flex align-items-center">
+            <span class="text">Let's talk</span>
+            <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+          </a>
+        </div>
+      </div>
+      <div class="team">
+        <h1 class="team-text">Meet Our Team</h1>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let row of rows">
+            <div class="pic-4 d-flex flex-column align-items-center">
+              <div class="comp">
+                <span class="image1">
+                  <img class="bottom-img img-fluid" src="assets/images/image 92.png" alt="Image">
+                  <img class="top-img img-fluid" src="assets/images/image 93.png" alt="Image">
+                </span>
+                <div class="frame-8 text-center">
+                  <h1 class="name-ceo">{{ row.name }}</h1>
+                  <p class="founder">{{ row.title }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+       
 
