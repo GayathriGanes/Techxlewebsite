@@ -23,7 +23,7 @@
     <h1 class="belif">Explore Our Services</h1>
     <div class="row gx-0">
       <div class="col-12 col-sm-6 col-md-4 mb-4 conta" *ngFor="let card of cards">
-      <mat-card class="card" [style]="card.style">
+      <mat-card class="card">
         <div class="card-blocks">
           <div class="symbol-block">
             <img [src]="card.symbol" alt="Card Symbol" />
@@ -57,4 +57,3 @@
   </div>
 </div>
 <router-outlet></router-outlet>
- 
