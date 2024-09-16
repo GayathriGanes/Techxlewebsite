@@ -8,13 +8,10 @@
   height: 400px;
   top: 90px;
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-
-    
-
-    url("https://techxle-my.sharepoint.com/:i:/r/personal/paripurana_g_techxle_com/Documents/Techxle%20website%20-%20SRC/servicebanner.png?csf=1&web=1&e=DB1amh");
+  url("https://techxle-my.sharepoint.com/:i:/r/personal/paripurana_g_techxle_com/Documents/Techxle%20website%20-%20SRC/servicebanner.png?csf=1&web=1&e=DB1amh");
     background-size:cover;
 }
-
+ 
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -28,7 +25,7 @@
   top: 194px;
   margin-left: 20px;
 }
-
+ 
 .banner-content h4 {
   margin-top: -90px;
   width: 621px;
@@ -49,7 +46,7 @@
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
+ 
 .banner-content h1 {
   width: 621px;
   height: 100px;
@@ -67,16 +64,13 @@
   flex-grow: 0;
   margin-top: -174px;
 }
-
-
-
+ 
 .cta-button {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   text-decoration: none;
   padding-bottom: 2px;
   margin-top: 100px;
-  width: 107px; /* Adjust to fit content */
+  width: 107px;
   height: 25px;
   font-family: 'Plus Jakarta Text', sans-serif;
   font-size: 16px;
@@ -86,44 +80,27 @@
   text-align: right;
   color: rgba(255, 255, 255, 1);
   white-space: nowrap;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
-
-.cta-button .text {
-  margin-right: 10px;
-  transition: all 0.3s ease;
-}
-
+ 
 .cta-button .arrow {
-  display: inline-block;
-  margin-top:2px;
-  transition: all 0.3s ease;
+  margin-left: 10px;
 }
-
-.cta-button:hover .text {
-  order: 2;
-}
-
-.cta-button:hover .arrow {
-  order: 1;
-  margin-right: 10px; /* Ensure spacing is consistent when interchanged */
-  margin-left: 0;
-}
-
+ 
 .content {
   position: absolute;
   top: 600px;
   width:100%;
 }
-
+ 
 .Innovation {
   width: 100%;
   height: 121px;
   margin-left: 150px;
+ 
 }
-
+ 
 .belif {
+  position:relative;
   width: 100%;
   height: 45px;
   font-family: 'Plus Jakarta Text', sans-serif;
@@ -133,6 +110,7 @@
   letter-spacing: 0.01em;
   text-align: left;
   color: #0a183e;
+  left:-60px;
 }
 .drives {
   position: absolute;
@@ -151,29 +129,40 @@
 .Explore {
   margin-top: 50px;
 }
-
+.conta{
+  top:-240px;
+  margin-right:-80px;
+}
 .card {
+ 
   position: absolute;
-  min-width: 386px;
+  width:100%;
+  max-width: 360px;
   height: 410px;
-  gap: 0px;
+  /*gap: 0px;
   border-radius: 4px 0px 0px 0px;
   border: 1px 0px 0px 0px;
   opacity: 1;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(6, 14, 35, 0.1);
-  margin-left: 0px;
+  margin-left: 0px;*/
+  border-radius: 4px 0px 0px 0px;
+  opacity: 1;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(6, 14, 35, 0.1);
+  margin: 0; /* Center the card horizontally */
+   /* Add padding inside the card for better spacing */
 }
-
-/* Hide scrollbar for Chrome, Safari and Opera */
+ 
+ 
 .cards-container::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge and Firefox */
+ 
+ 
 .cards-container {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .symbol-block {
   position: absolute;
@@ -220,7 +209,7 @@
   gap: 0px;
   opacity: 0px;
 }
-
+ 
 .icon {
   top: -15px;
   gap: 0px;
@@ -243,7 +232,7 @@
   white-space: nowrap;
   letter-spacing:-0.3px;
 }
-
+ 
 .read-more-button {
   font-size: 16px;
   cursor: pointer;
@@ -252,6 +241,7 @@
   width: 146px;
   height: 48px;
   gap: 8px;
+  border-radius: 4px 0px 0px 0px;
   top: 190px;
   opacity: 1; /* Adjusted opacity */
   background-color: white; /* Ensure initial background color */
@@ -259,7 +249,7 @@
   transition: color 1s ease;
   border:none;
 }
-
+ 
 .read-more-button::before {
   content: "";
   position: absolute;
@@ -271,25 +261,37 @@
   transition: right 1s ease; /* Transition for the animation */
   z-index: 0;
 }
-
+ 
 .read-more-button:hover::before {
   right: 0; /* End position */
 }
-
+ 
 .read-more-button:hover .button-text {
   color: white;
   font-weight: 200px; /* Maintain initial color on hover */
 }
-
+ 
 .read-more-button .button-text,
 .read-more-button .icon {
   position: relative;
   z-index: 1;
-
+ 
   transition: color 1s ease;
 }
-
+ 
 .read-more-button .icon {
   margin-left: 8px;
   top: -7px;
 }
+@media (min-width:999px) and (max-width:1535px)
+{
+  .conta{
+    margin-right:30px;
+    margin-left:-70px;
+  }
+  .drives{
+    position:relative;
+    width: 90%;
+    left: -60px;
+  }
+} 

@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
+/*@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
   
 .banner-container {
     display: flex;
@@ -11,7 +11,7 @@
     
     top: 90px;
     background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-      url("https://techxle-my.sharepoint.com/:i:/r/personal/paripurana_g_techxle_com/Documents/Techxle%20website%20-%20SRC/servicebanner.png?csf=1&web=1&e=DB1amh");
+        url("/assets/images/servicebanner.png");
     background-size:cover;
   }
   
@@ -68,14 +68,16 @@
     margin-top: -174px;
   }
   
+
   .cta-button {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
     padding-bottom: 2px;
     margin-top: 100px;
-    width: 107px;
+    width: 107px; 
     height: 25px;
-    font-family: Plus Jakarta Sans;
+    font-family: 'Plus Jakarta Text', sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 24.8px;
@@ -83,10 +85,29 @@
     text-align: right;
     color: rgba(255, 255, 255, 1);
     white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button .text {
+    margin-right: 10px;
+    transition: all 0.3s ease;
   }
   
   .cta-button .arrow {
-    margin-left: 10px;
+    display: inline-block;
+    margin-top:2px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover .text {
+    order: 2;
+  }
+  
+  .cta-button:hover .arrow {
+    order: 1;
+    margin-right: 10px; 
+    margin-left: 0;
   }
 
   .banner-content-header a, .banner-content-header span{
@@ -213,5 +234,198 @@
     letter-spacing: -0.01em;
     text-align: center;
     color: #545D78;
-  }
-  
+  }*/
+
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  top: 90px;
+  background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
+    url("/assets/images/servicebanner.png");
+  background-size: cover;
+}
+
+.banner-content-header a,
+.banner-content-header span {
+  margin-top: -90px;
+  width: 621px;
+  height: 22px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.8) !important;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.banner-content h1 {
+  width: 700px;
+  height: 100px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  position: relative;
+  top: 20px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding-bottom: 2px;
+  margin-top: 100px;
+  width: 107px;
+  height: 25px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24.8px;
+  letter-spacing: 0.02em;
+  text-align: right;
+  color: rgba(255, 255, 255, 1);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  top: -75px;
+}
+
+.cta-button .text {
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta-button .arrow {
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover .text {
+  order: 2;
+}
+
+.cta-button:hover .arrow {
+  order: 1;
+  margin-right: 10px;
+}
+
+.team {
+  position: absolute;
+  width: 1155px;
+  height: 710px;
+  top: 630px;
+  left: 120px;
+  color: #060e23;
+}
+
+.team-text {
+  position:absolute;
+  height: 56px;
+  top:-100px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 55.8px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #060e23;
+}
+
+.pic-4 {
+  position: static;
+  width: 100px;
+  height: 350px;
+  top: 706px;
+  left: 1075px;
+}
+
+.image1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.top-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.image1:hover .top-img {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.bottom-img {
+  border-radius: 50%;
+}
+
+.frame-8 {
+  position: absolute;
+  width: 200px;
+  height: 51px;
+  gap: 10px;
+  top: 200px;
+}
+
+.name-ceo {
+  width: 210px;
+  height: 25px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.2px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #060e23;
+  margin-top: 20px;
+}
+
+.founder {
+  width: 200px;
+  height: 20px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.16px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #545d78;
+}
+
+.banner-content {
+  position: absolute;
+  left: 120px;
+  top: 100px;
+}

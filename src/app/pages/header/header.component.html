@@ -9,14 +9,18 @@
       />
     </a>
   </span>
+   
+  <button mat-icon-button class="menu-button" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
   <span class="spacer"></span>
-  <nav class="nav-container">
+  <nav class="nav-container" [ngClass]="{'mobile-nav': isMenuOpen}">
     <a
       mat-button
       routerLink="/services"
       class="services"
       [ngClass]="{ 'active-link': activeLink === 'services' }"
-      (click)="setActiveLink('services'); toggleHomeVisibility()"
+      (click)="setActiveLink('services'); toggleHomeVisibility();closeMenu()"
       >SERVICES</a
     >
     <a
@@ -24,7 +28,7 @@
       routerLink="/solutions"
       class="solutions"
       [ngClass]="{ 'active-link': activeLink === 'solutions' }"
-      (click)="setActiveLink('solutions'); toggleHomeVisibility();checkurl()"
+      (click)="setActiveLink('solutions'); toggleHomeVisibility();checkurl();closeMenu()"
       >SOLUTIONS</a
     >
     <a
@@ -32,7 +36,7 @@
       routerLink="/aboutus"
       class="about-us"
       [ngClass]="{ 'active-link': activeLink === 'aboutus' }"
-      (click)="setActiveLink('aboutus'); toggleHomeVisibility()"
+      (click)="setActiveLink('aboutus'); toggleHomeVisibility();closeMenu()"
       >ABOUT US</a
     >
     <a
@@ -40,7 +44,7 @@
       routerLink="/career"
       class="career"
       [ngClass]="{ 'active-link': activeLink === 'career' }"
-      (click)="setActiveLink('career'); toggleHomeVisibility()"
+      (click)="setActiveLink('career'); toggleHomeVisibility();closeMenu()"
       >CAREER</a
     >
     <a
@@ -48,7 +52,7 @@
       routerLink="/contact"
       class="contact"
       [ngClass]="{ 'active-link': activeLink === 'contact' }"
-      (click)="setActiveLink('contact'); toggleHomeVisibility();checkurl()"
+      (click)="setActiveLink('contact'); toggleHomeVisibility();checkurl();closeMenu()"
       >CONTACT</a
     >
   </nav>
