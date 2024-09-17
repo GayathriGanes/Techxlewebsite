@@ -64,6 +64,21 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/solutions'])
     }  
   }
+  checkkurl(){
+    const url=this.router.url
+    if(url.includes('/services/powerplatform'))
+    {
+      this.router.navigate(['/services/powerplatform']);  
+    }
+    else if(url.includes('/services/ui'))
+      {
+        this.router.navigate(['/services/ui'])
+      }
+    else if(url.includes('/services'))
+    {
+      this.router.navigate(['/services'])
+    }  
+  }
  
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen; // Toggle menu open state

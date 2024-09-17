@@ -18,6 +18,7 @@ import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 
 
+
 const routes: Routes = [
   { path: 'services', component: ServiceComponent} ,
   {path:'services/powerplatform',component:PowerplatformComponent},
