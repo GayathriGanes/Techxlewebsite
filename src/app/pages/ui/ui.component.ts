@@ -10,6 +10,9 @@ import{MatExpansionModule} from '@angular/material/expansion';
   styleUrl: './ui.component.css',
 })
 export class UIComponent implements OnInit {
+  navigateToSolutions() {
+    this.router.navigate(['/services']); // Adjust the path as needed
+  }
 navigateToContact() {
   this.router.navigate(['/contact']);
 }
