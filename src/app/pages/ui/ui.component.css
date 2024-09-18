@@ -1,18 +1,19 @@
-
-
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/plus-jakarta-text.min.css");
 .banner-container {
   display: flex;
   align-items: center;
   justify-content: center;
+ 
   position: absolute;
   width: 100%;
   height: 400px;
+ 
   top: 90px;
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-  url("https://drive.google.com/thumbnail?id=1VerECnU9-Iwrsz4TxoBnvTnZWFFozRes");
+    url("https://techxle-my.sharepoint.com/:i:/r/personal/paripurana_g_techxle_com/Documents/Techxle%20website%20-%20SRC/servicebanner.png?csf=1&web=1&e=DB1amh");
   background-size: cover;
 }
-
+ 
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -20,16 +21,16 @@
   padding: 0px;
   gap: 24px;
   position: absolute;
-  width: auto;
+  width: 621px;
   height: 181px;
   left: 120px;
-  top: 114px;
+  top: 194px;
   margin-left: 20px;
 }
-
-.banner-content h4 {
+ 
+.headingg {
   margin-top: -90px;
-  width: auto;
+  width: 621px;
   height: 22px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-style: normal;
@@ -46,8 +47,12 @@
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
-
+.power {
+  margin-left: 105px;
+  margin-top: -40px;
+}
 .banner-content h1 {
   width: 621px;
   height: 100px;
@@ -65,13 +70,14 @@
   flex-grow: 0;
   margin-top: -174px;
 }
-
+ 
 .cta-button {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   padding-bottom: 2px;
   margin-top: 100px;
-  width: 107px;
+  width: 107px; /* Adjust to fit content */
   height: 25px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 16px;
@@ -81,39 +87,95 @@
   text-align: right;
   color: rgba(255, 255, 255, 1);
   white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-
+ 
+.cta-button .text {
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+ 
 .cta-button .arrow {
-  margin-left: 10px;
+  display: inline-block;
+  margin-top: 2px;
+  transition: all 0.3s ease;
 }
-
-.banner-content-header a,
-.banner-content-header span {
-  margin-top: -90px;
-  width: 621px;
-  height: 22px;
+ 
+.cta-button:hover .text {
+  order: 2;
+}
+ 
+.cta-button:hover .arrow {
+  order: 1;
+  margin-right: 10px; /* Ensure spacing is consistent when interchanged */
+  margin-left: 0;
+}
+.nav-toolbar {
+  /* Ensure width adjusts to the viewport */
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  opacity: 1;
+ 
+  background: var(--header-background-color);
+  position: absolute;
+ 
+  top: 450px;
+  box-shadow: 0px 4px 20px 0px rgba(10, 24, 62, 0.1);
+  z-index: 1000;
+  transition: top 0.3s;
+}
+.nav-toolbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 20px 0px rgba(10, 24, 62, 0.1);
+  background: var(--header-background-color);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  opacity: 1;
+  margin-right: 30px;
+  margin-left: 375px;
+}
+.nav-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px 0px 10px;
+  height: 25px;
   font-family: "Plus Jakarta Text", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 155%;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.8) !important;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 600;
+  line-height: 155%;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-decoration: none; /* Remove underline from links */
+  color: var(--link-text-color); /* Use global variable for link color */
+  opacity: 1; /* Setting opacity to 1 for visibility */
+  gap: 10px;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  text-decoration: none;
+}
+.active-link {
+  color: #3564df !important;
+  position: relative;
+}
+.overview{
+  position:relative;
+  top:600px;
 }
 .menu {
-  position: absolute;
+  position:absolute;
   width: 171px;
   height: 45px;
-  top: 580px;
   left: 120px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 36px;
@@ -123,11 +185,11 @@
   text-align: left;
   color: #0a183e;
 }
-.text {
+.overview .text {
   position: absolute;
-  width: auto;
+  top:10px;
+  width: 70vw;
   height: 180px;
-  top: 580px;
   left: 352px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
@@ -138,45 +200,14 @@
   color: #545d78;
   position: absolute;
 }
-.nav-container {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  top: 39px;
-  left: 400px;
-  width: 594px;
-  height: 22px;
-  justify-content: space-between;
-  gap: 30px;
-  opacity: 1; /* Setting opacity to 1 for visibility */
-  margin-left: auto; /* Move nav-container to the right */
-  margin-right: -95px;
-}
-
-.nav-container a {
-  text-decoration: none;
-}
-.header-toolbar {
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-  opacity: 1; /* Setting opacity to 1 for visibility */
-  padding: 0 150px; /* Adjust padding to increase space between logo and nav-container */
-  background: var(--header-background-color);
-  margin: 0 auto; /* Center the header with equal left and right margins */
-  position: absolute;
-  top: 400px;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(6, 14, 35, 0.1);
+.ourapproach{
+  position:relative;
+  top:820px;
 }
 .approach {
   position: absolute;
   width: auto;
   height: 45px;
-  top: 800px;
   left: 120px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 36px;
@@ -190,8 +221,8 @@
 .archit {
   position: absolute;
   width: auto;
+  margin-top:70px;
   height: 457px;
-  top: 1067px;
   left: 120px;
   gap: 0px;
   border: 1px 0px 0px 0px;
@@ -200,8 +231,7 @@
 .design {
   position: absolute;
   width: 1200px;
-  height: 53px;
-  top: -200px;
+  height: 53px;  
   left: 0px;
   gap: 10px;
   border-radius: 4px 0px 0px 0px;
@@ -225,7 +255,7 @@
   position: absolute;
   width: 213px;
   height: 53px;
-  top: 1200px;
+  top: 350px;
   left: 1200px;
   gap: 10px;
   border-radius: 4px 0px 0px 0px;
@@ -246,29 +276,13 @@
   color: #060e23;
   right: 50px;
 }
-
-.active-link {
-  position: relative;
-}
-
-.active-link::after {
-  content: "";
-  position: absolute;
-  bottom: -28px; /* Position this line above the toolbar's bottom border */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  visibility: visible;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
-}
-.active-link {
-  color: #3564df !important;
-}
+ 
+ 
 .goal {
   position: absolute;
   width: 213px;
   height: 25px;
-  top: 1200px;
+  top: 350px;
   left: 10px;
   padding: 14px 10px 14px 10px;
   gap: 10px;
@@ -295,7 +309,7 @@
   position: absolute;
   width: 180px;
   height: 200px;
-  top: 1130px;
+  top: 280px;
   left: 1050px;
 }
 .icon {
@@ -344,7 +358,7 @@
   position: absolute;
   width: 180px;
   height: 200px;
-  top: 1130px;
+  top: 280px;
   left: 840px;
 }
 .icon {
@@ -393,7 +407,7 @@
   position: absolute;
   width: 180px;
   height: 200px;
-  top: 1130px;
+  top: 280px;
   left: 630px;
 }
 .icon {
@@ -442,7 +456,7 @@
   position: absolute;
   width: 180px;
   height: 200px;
-  top: 1130px;
+  top: 280px;
   left: 420px;
 }
 .icon {
@@ -491,7 +505,7 @@
   position: absolute;
   width: 180px;
   height: 200px;
-  top: 1130px;
+  top: 280px;
   left: 210px;
 }
 .icon,.icon1,.icon2,.icon3,.icon4 {
@@ -536,6 +550,10 @@
   text-align: center;
   color: #545d78;
 }
+.ourcapabilities{
+  top:1420px;
+  position:relative;
+}
 .cap {
   position: absolute;
   font-family: "Plus Jakarta Text", sans-serif;
@@ -569,7 +587,7 @@
   width: 100%;
   height: 700px;
   background: #edf1fd;
-  top: 1400px;
+ 
   left: 1px;
   display: flex;
 }
@@ -680,96 +698,7 @@
   text-align: left;
   color: #545d78;
 }
-.outcomes {
-  position: absolute;
-  width: 100%;
-  height: 370px;
-  top: 2530px;
-  left: 120px;
-}
-.outcome-head {
-  position: absolute;
-  width: 1201px;
-  height: 30px;
-  font-family: "Plus Jakarta Text", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 30.24px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  color: #0a183e;
-  top: -350px;
-}
-.enhance {
-  position: absolute;
-  width: 285px;
-  height: 300px;
-  top: 2290px;
-  left: 1035px;
-}
-.roi {
-  position: absolute;
-  left: 730px;
-  width: 100%;
-  height: 300px;
-  top: 2290px;
-}
-.brand {
-  position: absolute;
-  width: 100%;
-  height: 300px;
-  top: 2290px;
-  left: 425px;
-}
-.high {
-  position: absolute;
-  width:100%;
-  height: 300px;
-  top: 2290px;
-  left: 120px;
-}
-.tech {
-  position: absolute;
-  width: 100%;
-  height: 272px;
-  top: 2650px;
-  left: 120px;
-}
-.form {
-  position: absolute;
-  width: 100%;
-  height: 630px;
-  top: 3000px;
-  background: #edf1fd;
-  background-size: cover;
-}
-.touch {
-  position: absolute;
-  width: 394px;
-  height: 23px;
-  top: 140px;
-  left: 120px;
-  font-family: "Plus Jakarta Text", sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 22.68px;
-  letter-spacing: 0.08em;
-  text-align: left;
-  color: #3564df;
-}
-.proj {
-  position: absolute;
-  width: 422px;
-  height: 189px;
-  top: 180px;
-  left: 120px;
-  font-family: "Plus Jakarta Text", sans-serif;
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 62.7px;
-  text-align: left;
-  color: #060e23;
-}
+ 
 .mat-accordion {
   position: absolute;
   width: 680px;
@@ -823,64 +752,102 @@
 .mat-expansion-panel:not([class*="mat-elevation-z"]) {
   box-shadow: none;
 }
-.nav-toolbar {
-  /* Ensure width adjusts to the viewport */
-  width: 100%;
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0px;
-  opacity: 1;
-
-  background: var(--header-background-color);
+ 
+.impact{
+  position:relative;
+  top:2200px;
+}
+.outcomes {
   position: absolute;
-
-  top: 400px;
-  box-shadow: 0px 4px 20px 0px rgba(10, 24, 62, 0.1);
-  z-index: 1000;
-  transition: top 0.3s;
+  width: 100%;
+  height: 370px;
+  top: 360px;
+  left: 120px;
 }
-.nav-toolbar.fixed {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0px 4px 20px 0px rgba(10, 24, 62, 0.1);
-  background: var(--header-background-color);
-}
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  opacity: 1;
-  margin-right: 30px;
-  margin-left: 375px;
-  left: 50px;
-}
-.nav-container a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 10px 0px 10px;
-  height: 25px;
-  font-family: Plus Jakarta Sans;
-  font-size: 16px;
+.outcome-head {
+  position: absolute;
+  width: 1201px;
+  height: 30px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 155%;
-  letter-spacing: 0.06em;
+  line-height: 30.24px;
+  letter-spacing: 0.01em;
   text-align: left;
-  text-decoration: none; /* Remove underline from links */
-  color: var(--link-text-color); /* Use global variable for link color */
-  opacity: 1; /* Setting opacity to 1 for visibility */
-  gap: 10px;
-  text-transform: uppercase;
+  color: #0a183e;
+  top: -350px;
 }
-.active-link {
-  color: #3564df !important;
-  position: relative;
+.enhance {
+  position: absolute;
+  width: 285px;
+  height: 300px;
+  top: 120px;
+  left: 1035px;
 }
+.roi {
+  position: absolute;
+  left: 730px;
+  width: 100%;
+  height: 300px;
+  top: 120px;
+}
+.brand {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 120px;
+  left: 425px;
+}
+.high {
+  position: absolute;
+  width:100%;
+  height: 300px;
+  top: 120px;
+  left: 120px;
+}
+.tech {
+  position: absolute;
+  width: 100%;
+  height: 272px;
+  top: 500px;
+  left: 120px;
+}
+.form {
+  position: absolute;
+  width: 100%;
+  height: 630px;
+  top: 3130px;
+  background: #edf1fd;
+  background-size: cover;
+}
+.touch {
+  position: absolute;
+  width: 394px;
+  height: 23px;
+  top: 140px;
+  left: 120px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22.68px;
+  letter-spacing: 0.08em;
+  text-align: left;
+  color: #3564df;
+}
+.proj {
+  position: absolute;
+  width: 422px;
+  height: 189px;
+  top: 180px;
+  left: 120px;
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 62.7px;
+  text-align: left;
+  color: #060e23;
+}
+ 
 .icon-arrow {
   position:relative;
   top: -10px;
@@ -902,7 +869,7 @@
   top: 15px;
   white-space: nowrap;
 }
-
+ 
 .read-more-button {
   width: 160px;
   height: 48px;
@@ -919,7 +886,7 @@
   left: 100px;
  
 }
-
+ 
 .read-more-button::before {
   content: "";
   position: absolute;
@@ -942,14 +909,14 @@
 .read-more-button .icon {
   position: relative;
   z-index: 1;
-
+ 
   transition: color 1s ease;
 }
 .read-more-button .icon {
   margin-left: 8px;
   top: -8px;
 }
-
+ 
 form {
   display: flex;
   flex-direction: column;
@@ -960,11 +927,11 @@ form {
   top: -270px;
   left: 100px;
 }
-
+ 
 mat-form-field {
   margin-bottom: 20px; /* Space between fields */
 }
-
+ 
 mat-form-field textarea {
   height: 50px; /* Match the height for the message field */
 }
@@ -979,8 +946,8 @@ mat-label{
   text-align: left;
   width: 157px;
   height: 23px;
-
-
+ 
+ 
 }
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: transparent !important;
@@ -989,12 +956,9 @@ mat-label{
   position: relative !important;
   padding: 0px !important;
 }
-
-
 @media (max-width:1300px)  {
   
-  .banner-container {
-    height: auto; 
+  .banner-container { 
     padding: 40px 20px; 
     background-position: center; 
   }
@@ -1009,11 +973,11 @@ mat-label{
     align-items: initial;
     text-align: left;
     position:relative;
-    top: 10px;
+    top: 90px;
   }
 
   .banner-content h4 {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .banner-content h1 {
@@ -1033,17 +997,20 @@ mat-label{
     position:relative;
     left:-120px;
   }
+  .overview{
+    top:650px
+  }
   .menu {
     width: 80%;
     font-size: 28px;
     left: 100px;
-    top: 440px;
+  
   }
 
   .text {
     width: auto;
     font-size: 16px;
-    top: 450px;
+    
   }
 
   .header-toolbar {
@@ -1051,14 +1018,14 @@ mat-label{
     padding: 0 40px;
     top: 50px;
   }
-  .nav-toolbar{
-    position:absolute;
-    top: 270px;
+  .ourapproach{
+   
+    top:900px;
   }
+
   .approach {
     width: 200px;
     font-size: 24px;
-    top: 700px;
     left: 80px;
   }
 
@@ -1067,7 +1034,7 @@ mat-label{
     width: 1150px;
     left: 30px;
     padding: 0 10px;
-    top: 380px;
+    
   }
 
   .heading {
@@ -1080,13 +1047,13 @@ mat-label{
   .title{
     width: 200px;
     font-size: 16px;
-    top: 1020px;
+    
     left:1100px;
   }
   .goal{
     width: 200px;
     font-size: 16px;
-    top: 1020px;
+    
     left: -20px;
   }
  
@@ -1100,7 +1067,7 @@ mat-label{
   .iterate
    {
     width: 180px;
-    top: -190px;
+    top: -29px;
     left: -80px;
     margin: 10px 0;
   }
@@ -1121,7 +1088,7 @@ mat-label{
   .prototype
   {
     width: 180px;
-    top: -190px;
+    top: -29px;
     left: -80px;
     margin: 10px 0;
   }
@@ -1142,7 +1109,7 @@ mat-label{
  .idea
  {
   width: 180px;
-  top: -190px;
+  top: -29px;
   left: -80px;
   margin: 10px 0;
 }
@@ -1163,7 +1130,7 @@ mat-label{
 .define
   {
     width: 180px;
-    top: -190px;
+    top: -29px;
     left: -80px;
     margin: 10px 0;
  }
@@ -1184,7 +1151,7 @@ mat-label{
  .discover
   {
     width: 180px;
-    top: -190px;
+    top: -29px;
     left: -80px;
     margin: 10px 0;
  }
@@ -1206,61 +1173,65 @@ mat-label{
   position: relative;
   font-size: 18px;
   left: 120px;
-  top: -40px;
+  top: 120px;
  }
  .text-idea{
   position: relative;
         font-size: 18px;
         left: 200px;
-        top: -10px;
+        top: 150px;
  }
  .text-discover{
   position: relative;
         font-size: 18px;
         left: 50px;
-        top: -10px;
+        top: 150px;
  }
  .text-prototype{
   position: relative;
   font-size: 18px;
   left: 280px;
-  top: -15px;
+  top: 140px;
  }
  .text-test{
   position: relative;
   font-size: 18px;
   left: 360px;
-  top: -10px;
+  top: 160px;
  }
  .test-img{
   position: relative;
   width: 100%;
   left: 370px;
-  top: -20px;
+  top: 150px;
  }
  .pro-img{
   position: relative;
   width: 100%;
   left: 300px;
-  top: -25px;
+  top: 140px;
  }
  .ide-img{
   position: relative;
   width: 100%;
   left: 200px;
-  top: -20px;
+  top: 150px;
  }
  .def-img{
   position: relative;
         width: 100%;
         left: 120px;
-        top: -40px;
+        top: 120px;
  }
  .discover-img{
   position: relative;
   width: 100%;
   left: 50px;
-  top: -20px;
+  top: 150px;
+  }
+  .ourcapabilities{
+    top:1540px;
+    
   }
  .cap {
   font-size: 28px;
@@ -1273,7 +1244,6 @@ mat-label{
  
   height: 600px;
   padding: 30px;
-  top: 1300px;
   left: 0;
   width: 100%;
 }
@@ -1334,6 +1304,10 @@ mat-label{
   left: 450px;
   top: -100px;
 }
+.impact{
+
+  top:2250px;
+}
 .enhance,
 .roi,
 .brand,
@@ -1341,12 +1315,11 @@ mat-label{
   width: 285px;
   margin-bottom: 20px;
   margin-right: 5%;
-  top: 2200px;
+ 
 }
 
 .outcome-head {
   font-size: 20px;
-  top: -500px;
   left: -50px;
 }
 
@@ -1373,7 +1346,7 @@ mat-label{
 .img-tech{
   width: 80%;
   position: relative;
-  top: -50px;
+  top: 40px;
   left: -30px;
 }
 
@@ -1381,7 +1354,7 @@ mat-label{
   width: 100%;
   margin-left: 0;
   position: absolute;
-  top: 3050px;
+  top: 3140px;
 }
 .touch {
   font-size: 16px;

@@ -1,15 +1,13 @@
 <div class="banner-container">
   <div class="banner-content">
-    <div class="banner-content-header">
-      <a routerLink="/services">SERVICES</a>
-      <span>/ UI/UX DESIGNING</span>
-    </div>
+    <span class="headingg">
+    <h4 class="solution" (click)="navigateToSolutions()">SERVICES/</h4>
+    <h4 class="power">UI/UX designing</h4>
+    </span>
     <h1>Business transformation through technology.</h1>
-    <a routerLink="/contact" class="cta-button"
-      >Let's talk
-      <span class="arrow"
-        ><img src="assets/images/vectorarrow.png" alt="Techxle Logo"
-      /></span>
+    <a routerLink="/contact" class="cta-button">
+      <span class="text">Let's talk</span>
+      <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
     </a>
   </div>
 </div>
@@ -21,7 +19,7 @@
       <a [routerLink]="['/services/ui']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
 </nav>
 </mat-toolbar>
-  <section id="overview" >
+  <section id="overview" class="overview">
     <h1 class="menu">Overview</h1>
     <p class="text">
       At Techxle, we cover the entire design lifecycle from concept to delivery,
@@ -33,7 +31,7 @@
       loyalty and maximizing ROI.
     </p>
   </section>
-  <section id="ourapproach" >
+  <section id="ourapproach" class="ourapproach" >
     <h1 class="approach">Our Approach</h1>
     <div class="archit">
       <div class="design">
@@ -106,9 +104,9 @@
     <div class="goal">
       <h2 class="project">Project Goals</h2>
     </div>
-
+ 
   </section>
-  <section id="ourcapabilities">
+  <section id="ourcapabilities" class="ourcapabilities">
     <div class="capability">
       <h1 class="cap">Our Capabilities</h1>
       <p class="content">
@@ -146,7 +144,7 @@
       </div>
     </div>
   </section>
-  <section id="impact" >
+  <section id="impact" class="impact" >
     <div class="outcomes">
       <h1 class="outcome-head">Most desired outcomes</h1>
     </div>
@@ -168,23 +166,23 @@
         <mat-label>NAME</mat-label>
         <input matInput placeholder="" >
       </mat-form-field>
-    
+   
       <mat-form-field appearance="fill">
         <mat-label>EMAIL ID</mat-label>
         <input matInput type="email" placeholder="" >
       </mat-form-field>
-    
-    
+   
+   
       <mat-form-field appearance="fill">
         <mat-label>SERVICE TYPE</mat-label>
         <input matInput placeholder="">
       </mat-form-field>
-    
+   
       <mat-form-field appearance="fill">
         <mat-label>MESSAGE</mat-label>
         <textarea matInput placeholder=""></textarea>
       </mat-form-field>
-    
+   
     </form>
     <button mat-button class="read-more-button">
       <span class="button-text">Send Enquiry</span>
@@ -194,4 +192,4 @@
       </button>
     </form>
   </div>
-
+ 
