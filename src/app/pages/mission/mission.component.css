@@ -29,17 +29,17 @@ bottom: 0%;
 }
  
 .bac-1 {
-  background:linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("/assets/logo/mission.png"); 
+  background:linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("https://drive.google.com/thumbnail?id=1luHqR1i_j_Yoo8s_CMXeoUqTe60Jvz6K"); 
   border-radius: 15px;
 }
 
 .bac-2 {
-  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("/assets/logo/mission.png"); 
+  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("https://drive.google.com/thumbnail?id=1luHqR1i_j_Yoo8s_CMXeoUqTe60Jvz6K"); 
   border-radius: 15px;
 }
 
 .bac-3 {
-  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("/assets/logo/mission.png"); 
+  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("https://drive.google.com/thumbnail?id=1luHqR1i_j_Yoo8s_CMXeoUqTe60Jvz6K"); 
   border-radius: 15px;
 }
 .move > div:first-child {
