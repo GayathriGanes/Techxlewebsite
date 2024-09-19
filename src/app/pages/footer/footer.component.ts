@@ -14,8 +14,42 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
+  navigateToAboutus() {
+    this.router.navigate(['/aboutus']);
+  }
+
+  navigateToServices() {
+    this.router.navigate(['/services']);
+  }
+
+  navigateToSolutions() {
+    this.router.navigate(['/solutions']);
+  }
+
+  navigateToCareer() {
+    this.router.navigate(['/career']);
+  }
 navigateToContact() {
   this.router.navigate(['/contact']);
+}
+navigateToPowerPlatform() {
+  this.router.navigate(['/services/powerplatform']);
+}
+
+navigateToCloudApp() {
+  this.router.navigate(['/services/cloudapp']);
+}
+
+navigateToStaffing() {
+  this.router.navigate(['/services/staffing']);
+}
+
+navigateToFullStack() {
+  this.router.navigate(['/services/fullstack']);
+}
+
+navigateToUIUX() {
+  this.router.navigate(['/services/ui']);
 }
   isBrowser: boolean; // To check if the platform is browser
 

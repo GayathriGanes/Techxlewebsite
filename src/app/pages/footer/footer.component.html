@@ -13,7 +13,7 @@
         <div class="icon">
           <h5 class="connect-us">Connect with us</h5>
           <a
-            href="https://www.linkedin.com/company/techxle-consulting-services-pvt-ltd/mycompany/"
+            href="https://www.linkedin.com/company/techxle-consulting-services-pvt-ltd/mycompany/" target="_blank" 
             class="linkedin"
           >
             <img src="assets/images/Linked in.png" alt="" />
@@ -37,34 +37,35 @@
     <div class="footer-section company">
       <h2 class="company">Company</h2>
       <ul>
-        <li><a href="/aboutus">About us</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/solutions">Solutions</a></li>
-        <li><a href="/career">Career</a></li>
-        <li><a href="/contact">Contact us</a></li>
+        <li><a (click)="navigateToAboutus()">About us</a></li>
+        <li><a (click)="navigateToServices()">Services</a></li>
+        <li><a (click)="navigateToSolutions()">Solutions</a></li>
+        <li><a (click)="navigateToCareer()">Career</a></li>
+        <li><a (click)="navigateToContact()">Contact us</a></li>
       </ul>
     </div>
     
     <div class="footer-section services">
       <h2 class="ourservice">Our Services</h2>
       <ul>
-        <li><a href="/services/powerplatform">Power Platform Solution</a></li>
-        <li><a href="/services/cloudapp">Cloud App Development</a></li>
-        <li><a href="/services/staffing">Staffing Service</a></li>
-        <li><a href="/services/fullstack">Full Stack Development</a></li>
-        <li><a href="/services/ui">UI/UX Designing</a></li>
+        <li><a (click)="navigateToPowerPlatform()">Power Platform Solution</a></li>
+        <li><a  (click)="navigateToCloudApp()">Cloud App Development</a></li>
+        <li><a (click)="navigateToStaffing()">Staffing Service</a></li>
+        <li><a (click)="navigateToFullStack()">Full Stack Development</a></li>
+        <li><a (click)="navigateToUIUX()">UI/UX Designing</a></li>
       </ul>
       
     </div>
   
     <div class="gotproj">
-      <h2 class="project">Got a project?</h2></div>
+      <h2 class="project">Got a project?</h2>
       <button mat-button (click)="navigateToContact()" class="read-more-button">
       <span class="button-text">Connect with us</span>
       <span >
         <img src="assets/images/Icons.png" alt="Techxle Logo" class="icon">
       </span>
       </button>
+    </div>
     </div>
   
   <div class="footer-bottom">

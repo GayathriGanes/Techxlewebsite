@@ -75,7 +75,6 @@ bottom: 0%;
 }
  .vision{
   position:relative;
-  left:45px;
   top:-10px;
  }
 .content {
@@ -187,7 +186,7 @@ flex-grow: 0;
     font-size: 25px;
   }
   .content{
-    margin-top:0px;    
+    margin-top:-50px;    
   }
   .para{
     width:95vw;

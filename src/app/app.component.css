@@ -14,10 +14,17 @@
     transition: background-color 0.3s ease; /* Smooth transition */
     z-index: 1000;             /* Ensures button is on top */
     border:none;
+    outline: none !important;
+   
   }
   
   /* Hover Effect */
   .scroll-to-top-button:hover {
     background-color: #0c5adb; /* Dark slate color on hover */
   }
+ 
+ 
+    
+   
   
+ 

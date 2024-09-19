@@ -226,17 +226,15 @@
 .read-more-button {
   font-family: 'Plus Jakarta Text', sans-serif;
   font-size: 16px;
-  width: 172px;
+  width: 200px;
   height: 48px;
   font-weight: 700;
   cursor: pointer;
   position: absolute;
   overflow: hidden;
   line-height: 16px;
-  padding: 9px 0px 9px 16px;
+  padding: 9px 0px 9px 10px;
   gap: 8px;
-  top: 250px;
-  left:1200px;
   opacity: 1;
   color:white;
   transition: color 1s ease;
@@ -272,7 +270,7 @@
  
 .read-more-button .icon {
  
-  top: -10px;
+  top: -7px;
 }
  
 .gotproj{
@@ -338,9 +336,6 @@ color: #FFFFFF;
    .footer-section.project{
      left:-7.5vw;
    }
-   .read-more-button{
-     left:73vw;
-   }
    .footer-bottom{
      margin-top:20px;
    }
@@ -363,7 +358,7 @@ color: #FFFFFF;
   
  @media (min-width:300px) and (max-width:400px){
    .footer{
-     height:1000px;
+     height:1100px;
    }
    .footer .logo-img {
      position: absolute;
@@ -403,10 +398,7 @@ color: #FFFFFF;
    line-height: 17px;
    width: 200px;
  }
- .read-more-button{
-   top: 730px;
-   left: 16vw;
- }
+
   
  .footer-bottom .bottom-text1 {
    position: absolute;
@@ -423,6 +415,12 @@ color: #FFFFFF;
  .bottom-text{
    margin-top:80px;
    left:-17vw;
+ }
+ .gotproj{
+  top:180px;
+ }
+ .footer-bottom{
+  margin-top: 180px;
  }
  }
  @media (min-width:401px) and (max-width:600px){
@@ -467,10 +465,7 @@ color: #FFFFFF;
    line-height: 17px;
    width: 200px;
  }
- .read-more-button{
-   top: 780px;
-   left: 12vw;
- }
+
   
  .footer-bottom .bottom-text1 {
    margin-top:-50px;
