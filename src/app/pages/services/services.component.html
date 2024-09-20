@@ -2,11 +2,10 @@
   <div class="banner-content">
     <h4>SERVICES</h4>
     <h1>Business transformation through technology.</h1>
-    <a routerLink="/contact" class="cta-button"
-      >Let's talk
-      <span class="arrow"
-        ><img src="assets/images/vectorarrow.png" alt="Techxle Logo" /></span
-    ></a>
+    <a routerLink="/contact" class="cta-button">
+      <span class="text">Let's talk</span>
+      <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+    </a>
   </div>
 </div>
 <div class="content">
@@ -19,10 +18,11 @@
       and transformative change.
     </p>
   </div>
-  <div class="container-fluid p-0 Innovation Explore">
+</div>
+  <div class="explore">
     <h1 class="belif">Explore Our Services</h1>
-    <div class="row gx-0">
-      <div class="col-12 col-sm-6 col-md-4 mb-4 conta" *ngFor="let card of cards">
+    <div class="row d-flex justify-content-start">
+      <div class="conta" *ngFor="let card of cards">
       <mat-card class="card">
         <div class="card-blocks">
           <div class="symbol-block">
@@ -55,5 +55,3 @@
     </div>
     </div>
   </div>
-</div>
-<router-outlet></router-outlet>

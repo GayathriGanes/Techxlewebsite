@@ -8,10 +8,9 @@
   height: 400px;
   top: 90px;
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-  url("https://drive.google.com/thumbnail?id=1VerECnU9-Iwrsz4TxoBnvTnZWFFozRes");
+  url("/assets/images/servicebanner.png");
     background-size:cover;
 }
- 
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -64,15 +63,15 @@
   flex-grow: 0;
   margin-top: -174px;
 }
- 
 .cta-button {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
   padding-bottom: 2px;
   margin-top: 100px;
-  width: 107px;
+  width: 107px; /* Adjust to fit content */
   height: 25px;
-  font-family: 'Plus Jakarta Text', sans-serif;
+  font-family: "Plus Jakarta Text", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 24.8px;
@@ -80,12 +79,30 @@
   text-align: right;
   color: rgba(255, 255, 255, 1);
   white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+ 
+.cta-button .text {
+  margin-right: 10px;
+  transition: all 0.3s ease;
 }
  
 .cta-button .arrow {
-  margin-left: 10px;
+  display: inline-block;
+  margin-top: 2px;
+  transition: all 0.3s ease;
 }
  
+.cta-button:hover .text {
+  order: 2;
+}
+ 
+.cta-button:hover .arrow {
+  order: 1;
+  margin-right: 10px; /* Ensure spacing is consistent when interchanged */
+  margin-left: 0;
+}
 .content {
   position: absolute;
   top: 600px;
@@ -126,46 +143,26 @@
   text-align: left;
   color: #545d78;
 }
-.Explore {
-  margin-top: 50px;
+.explore {
+  margin-top: 790px;
+  margin-left:145px;
 }
-.conta{
-  right:0vw;
-  margin-right:-8vw;
-  right:2vw;
-}
+ 
 .card {
- 
-  position: relative;
-  width:100%;
-  max-width: 360px;
+  margin-left:18px;
+  margin-right:60px;
+  margin-top:30px;
+  width: 360px;
   height: 410px;
-  /*gap: 0px;
-  border-radius: 4px 0px 0px 0px;
-  border: 1px 0px 0px 0px;
+  border-radius: 4px;
   opacity: 1;
   background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(6, 14, 35, 0.1);
-  margin-left: 0px;*/
-  border-radius: 4px 0px 0px 0px;
-  opacity: 1;
- 
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(6, 14, 35, 0.1);
-  margin-right:-9vw; /* Center the card horizontally */
-   /* Add padding inside the card for better spacing */
+  box-shadow:none;  
+  border: 1px solid rgba(6, 14, 35, 0.1);      
 }
  
  
-.cards-container::-webkit-scrollbar {
-  display: none;
-}
  
- 
-.cards-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
 .symbol-block {
   position: absolute;
   left: 39.12%;
@@ -243,12 +240,12 @@
   width: 146px;
   height: 48px;
   gap: 8px;
-  border-radius: 4px 0px 0px 0px;
+  border-radius: 4px;
   top: 190px;
-  opacity: 1; /* Adjusted opacity */
-  background-color: white; /* Ensure initial background color */
-  color: rgba(53, 100, 223, 1); /* Ensure initial text color */
-  transition: color 1s ease;
+  opacity: 1;
+  background-color: white;
+  color: rgba(53, 100, 223, 1);
+    transition: color 1s ease;
   border:none;
 }
  
@@ -256,21 +253,21 @@
   content: "";
   position: absolute;
   top: 0;
-  right: -100%; /* Start position */
+  right: -100%;
   width: 100%;
   height: 100%;
   background-color: rgba(53, 100, 223, 1);
-  transition: right 1s ease; /* Transition for the animation */
+  transition: right 1s ease;
   z-index: 0;
 }
  
 .read-more-button:hover::before {
-  right: 0; /* End position */
+  right: 0;
 }
  
 .read-more-button:hover .button-text {
   color: white;
-  font-weight: 200px; /* Maintain initial color on hover */
+  font-weight: 200px;
 }
  
 .read-more-button .button-text,
@@ -285,7 +282,7 @@
   margin-left: 8px;
   top: -7px;
 }
-@media (min-width:1100px) and (max-width:1400px)
+/*@media (min-width:1100px) and (max-width:1400px)
 {
   .card{
     width:330px;
@@ -327,6 +324,4 @@
   mat-card-header{
     white-space: nowrap;
   }
-}
- 
- 
+}*/
