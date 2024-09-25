@@ -13,11 +13,11 @@ throw new Error('Method not implemented.');
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
  
   cards = [
-    { title: 'Power Platform Solution', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/images/power.png',route: '/powerplatform'},
-    { title: 'Cloud App Development', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/images/cloud.png',route: '/cloudapp'},
-    { title: 'Staffing Service', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/images/Staffing.png',route: '/staffing'},
-    { title: 'Full Stack Development', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/images/fullstack.png',route: '/fullstack' },
-    { title: 'UI/UX Designing', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/images/UI.png',route: '/ui' },
+    { title: 'Power Platform Solution', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/logo/1.svg',route: '/powerplatform'},
+    { title: 'Cloud App Development', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/logo/2.svg',route: '/cloudapp'},
+    { title: 'Staffing Service', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/logo/3.svg',route: '/staffing'},
+    { title: 'Full Stack Development', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/logo/4.svg',route: '/fullstack' },
+    { title: 'UI/UX Designing', content: 'The mechanism for implementing application lifecycle management (ALM) in Power Apps', symbol: 'assets/logo/5.svg',route: '/ui' },
   ];
  
   constructor(private router: Router){}
