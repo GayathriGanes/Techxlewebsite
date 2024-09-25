@@ -152,7 +152,7 @@
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 40px;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 65px;
   text-align: left;
   gap: 24px;
 }
@@ -161,12 +161,16 @@ h4 {
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 19px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 30px;
   width: 320px;
   text-align: left;
-  top: 10px;
+  top: 140px;
 }
 .read-more-button{
-  top:300px;
+  top:450px;
 }
+span.mat-mdc-button-touch-target {
+  background-color: none !important;
+}
+
 }

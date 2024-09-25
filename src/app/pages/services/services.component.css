@@ -129,6 +129,19 @@
   color: #0a183e;
  
 }
+.belif1 {
+  position:relative;
+  width: auto;
+  height: 45px;
+  font-family: 'Plus Jakarta Text', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45.36px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #0a183e;
+ 
+}
 .drives {
   position: absolute;
   width: auto;
@@ -282,46 +295,38 @@
   margin-left: 8px;
   top: -9.5px;
 }
-/*@media (min-width:1100px) and (max-width:1400px)
-{
-  .card{
-    width:330px;
-  }
-  .conta{
-    right:0;
-    left:-8vw;
-    margin-right:-5vw;
-  }
+
+@media (min-width :340px) and (max-width:540px){
   .banner-content{
-    left:2vw;
+    left:10px;
+  }
+  .banner-content h1{
+    font-size: 25px;
+     width: 350px;
   }
   .belif{
-    left:-8vw;
+    left: -120px;
+    top: -50px;
+    font-size: 20px;
+  }
+  .belif1{
+    left: -120px;
+    font-size: 20px;
+    top:20px;
+    width:500px;
   }
   .drives{
-    left:4vw;
-    width:auto;
+    top: 10px;
+    margin-left: -120px;
+    font-size: 15px;
+    line-height: 25px;
   }
-  mat-card-header{
-    white-space: nowrap;
+  .card{
+    margin-left: -100px;
+    top: 30px;
+    width: 300px;
+  }
+  .content-block mat-card-content {
+    line-height: 20px;
   }
 }
-@media (min-width:700px) and (max-width:1099px){
-  .conta{
-  left: -12vw;
-  margin-right: -2vw;
-  }
-  .belif{
-    left:-12vw;
-  }
-  .drives{
-    left:3vw;
-  }
-  .banner-content{
-    left:1vw;
-  }
- 
-  mat-card-header{
-    white-space: nowrap;
-  }
-}*/

@@ -194,6 +194,13 @@ flex-grow: 0;
     margin-left:3vw;
     margin-top:-20px;
   }
+  .heading{
+    left:-5px;
+  }
+  .vision{
+    left: 10px;
+    top: 10px;
+  }
 }
 @media (min-width:1000px) and (max-width:1535px){
   .move {

@@ -178,6 +178,7 @@
     display: block;
     color:black;
     left:25vw;
+    outline: none;
   }
  
   .nav-container {
