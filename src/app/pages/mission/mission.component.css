@@ -223,6 +223,9 @@ flex-grow: 0;
     margin-left:3.2vw;
     font-size:22px;
   }
+  .vision{
+    left: 40px;
+   }
   
 }
 @media (min-width:541px) and (max-width:999px){

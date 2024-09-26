@@ -2065,7 +2065,7 @@ mat-label{
     }
  
 }
-@media (min-width:601px) and (max-width:1050px){
+@media (min-width:601px) and (max-width:1000px){
   .discover,.define,.idea,.prototype,.iterate{
     width:120px;
   }
@@ -2120,9 +2120,9 @@ mat-label{
   position: relative;
   left: 30px;
  }
-
+  
 }
-@media (min-width:1000px) and (max-width:1300px){
+@media (min-width:1100px) and (max-width:1300px){
   .discover,.define,.idea,.prototype,.iterate{
     width:160px;
   }
@@ -2262,5 +2262,70 @@ mat-label{
       font-size:25px;
     }
   }
+  @media (min-width:1001px) and (max-width:1099px){
+    .discover,.define,.idea,.prototype,.iterate{
+      width:160px;
+      margin-left: -70px;
+    }
+    
+    .title{
+      margin-top: -130px;
+        margin-left: 870px;
+        padding: 0px 37px 0px 37px;
+     
+    }
+    .goal{
+      padding: 0px 15px 0px 15px;
+    }
+    .discover-text,.define-text,.idea-text,.prototype-text,.iterate-text{
+      width: auto;
+      font-size: 12px;
+     
+    }
+    .text-test{
+      position: relative;
+      left:-20px;
+    }
+    .def-img{
+      left: -20px;
+      position: relative;
+    }
+    .text-idea{
+      position: relative;
+      left: -20px;
+    }
+    .text-discover{
+      position: relative;
+      left: -30px;
+    }
+    .text-prototype{
+      position: relative;
+      left: -30px;
+    }
+    .text-define{
+      position: relative;
+      left: -10px;
+    }
+   .test-img{
+    position: relative;
+    left: -30px;
+   }
+   .pro-img{
+    position: relative;
+    left: -10px;
+   }
+   .ide-img{
+    position: relative;
+    left: -25px;
+   }
+   
+   .discover-img{
+    position: relative;
+    left: -30px;
+    top: 5px;
+   }
+   
+  }
+
 
 
