@@ -37,7 +37,7 @@
     position: relative;
     top: -20px;
     flex: 1;
-    margin: -10px;
+   
    
    
  
@@ -149,9 +149,7 @@
   }
 }
 .connect-us {
-  margin-top:-90px;
-  margin-left:1150px;
-  width: 500px;
+
   height: 32px;
   font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
@@ -159,16 +157,22 @@
   line-height: 32.4px;
   text-align: left;
   color: #ffffff80;
-  top: 45px;
-  left: 1150px;
+  
 }
 .linkedin {
-  position: relative;
-  width: 44px;
+ 
+ 
   height: 44px;
   border: 1px ;
-  top: -45px;
-  left: 1310px;
+ 
+}
+.socialmedia{
+  margin-top: -80px;
+  margin-left: 1000px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  gap:20px;
 }
 .bottom-text{
   position: relative;
@@ -322,9 +326,10 @@ color: #FFFFFF;
    }
    .connect-us{
      left:52vw;
+     margin-left: 800px;
    }
    .linkedin{
-     left:68vw;
+     left:75vw;
    }
    .footer-section.company-address{
      left: -3vw;
@@ -357,6 +362,10 @@ color: #FFFFFF;
    .bottom-text{
      left:-4vw;
    }
+   .socialmedia{
+    
+    margin-left: 10px;
+   }
   }
   
  @media (min-width:300px) and (max-width:400px){
@@ -369,13 +378,17 @@ color: #FFFFFF;
      height: 50px;
      left: 4vw;
  }
- .connect-us{
-   left:8vw;
-   top:125px;
+ /*.connect-us{
+  margin-left: 10px;
+  margin-top: 0px;
  }
  .linkedin {
    left: 51vw;
-   top:40px;
+  
+ }*/
+ .socialmedia{
+  margin-top: 0px;
+  margin-left: 10px;
  }
  .footer-section.company-address{  
    left: -13vw;
@@ -425,6 +438,18 @@ color: #FFFFFF;
  .footer-bottom{
   margin-top: 210px;
  }
+ .footer[_ngcontent-ng-c1874554964] .footer-section[_ngcontent-ng-c1874554964] p[_ngcontent-ng-c1874554964] {
+  margin: 20px;
+  color: #ffffff99;
+  font-family: "Plus Jakarta Text", sans-serif;
+  position: relative;
+  left: 30px;
+  width:300px;
+  white-space:nowrap;
+}
+.email{
+  white-space: nowrap;
+}
  /*.company{
   top:300px;
  }*/
@@ -490,6 +515,13 @@ color: #FFFFFF;
    margin-top:40px;
    left:-20vw;
  }
+ .email{
+  white-space: nowrap;
+}
+.socialmedia{
+  margin-top: 0px;
+  margin-left: 10px;
+ }
  }
   
   
@@ -544,5 +576,9 @@ color: #FFFFFF;
      }
      .bottom-text{
        left:-4vw;
+     }
+     .socialmedia{
+    
+      margin-left: 300px;
      }
  }
