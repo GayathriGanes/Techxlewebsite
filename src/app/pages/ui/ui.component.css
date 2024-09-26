@@ -2174,8 +2174,26 @@ mat-label{
   .text-prototype{
     margin-left: 30vw;
   }
-  .discover-text,.define-text,.idea-text,.prototype-text,.iterate-text{
-    margin-top: 15vw;
+  
+  .touch{
+    top: 20px;
+    left: 50px;
+  }
+  .proj{
+    font-size: 25px;
+    line-height: 40px;
+    top: 15px;
+    left: 50px;
+    width: 300px;
+  }
+  form{
+    left: 10px;
+    top: -30px;
+    width: 300px;
+  }
+  .read-more-button{
+    left:10px;
+    top:-60px;
   }
 }
   @media(min-width:601px) and (max-width:1199px){
@@ -2199,6 +2217,20 @@ mat-label{
     .div2{
       margin-left:8vw;
       gap:20px;
+    }
+    .touch{
+      
+      left: 50px;
+    }
+    .proj{
+      font-size: 25px;
+      line-height: 40px;
+      left: 50px;
+      width: 300px;
+    }
+    form{
+      width: 350px;
+        left: 80px;
     }
   }
   @media (min-width:300px) and (max-width:600px)
