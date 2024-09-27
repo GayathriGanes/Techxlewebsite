@@ -35,7 +35,7 @@
  
   .footer-section {
     position: relative;
-    top: -20px;
+    top: -40px;
     flex: 1;
    
    
@@ -61,7 +61,7 @@
       font-family: "Plus Jakarta Text", sans-serif;
       position: absolute;
       left: 30px;
-      line-height: 23.2px;
+      /*line-height: 23.2px;*/
  
  
       li {
@@ -432,11 +432,11 @@ color: #FFFFFF;
    left:-17vw;
  }
  .gotproj{
-  top:210px;
+  top:250px;
   left:10px;
  }
  .footer-bottom{
-  margin-top: 210px;
+  margin-top: 270px;
  }
  .footer[_ngcontent-ng-c1874554964] .footer-section[_ngcontent-ng-c1874554964] p[_ngcontent-ng-c1874554964] {
   margin: 20px;

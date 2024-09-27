@@ -157,6 +157,7 @@ button.mdc-icon-button.mat-mdc-icon-button.mat-unthemed.mat-mdc-button-base:focu
     width: 268px;
     height: 78px;
     opacity: 0px;
+    padding: 0px 0px 0px 0px;
 }
  
 .icon {
@@ -188,7 +189,7 @@ button.mdc-icon-button.mat-mdc-icon-button.mat-unthemed.mat-mdc-button-base:focu
     padding: 9px 0px 9px 16px;
     gap: 8px;
     border-radius: 4px;
-    top: 170px;
+    top: 190px;
     opacity: 1;
     background-color:transparent !important;
     color: rgba(53, 100, 223, 1);
@@ -287,5 +288,7 @@ button.mdc-icon-button.mat-mdc-icon-button.mat-unthemed.mat-mdc-button-base:focu
     .read-more-button{
         top:180px;
     }
-   
+    .content-block[_ngcontent-ng-c2490990986] mat-card-content[_ngcontent-ng-c2490990986]{
+        font-size: 13px;
+    }
 }

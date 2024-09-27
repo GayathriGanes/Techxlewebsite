@@ -35,6 +35,8 @@ import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
+import { AiComponent } from './pages/ai/ai.component';
+import { DevopsComponent } from './pages/devops/devops.component';
 
 
 
@@ -71,7 +73,9 @@ import { RouterModule } from '@angular/router';
     StackComponent,
     DesignComponent,
     SolutionsComponent,
-    ContactComponent
+    ContactComponent,
+    AiComponent,
+    DevopsComponent
     
     
   ],
