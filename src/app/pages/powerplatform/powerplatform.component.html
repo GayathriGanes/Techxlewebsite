@@ -1,15 +1,227 @@
-<div class="banner-container">
-  <div class="banner-content">
-    <div class="banner-content-header">
-      <a routerLink="/services">SERVICES</a>
-      <span>/ POWER PLATFORM SOLUTION</span>
+
+  <div class="banner-container container-fluid">  
+    <div class="banner-content container-fluid ml-xl-10">
+      <span class="headingg">
+      <h4 class="solution" (click)="navigateToSolutions()">SERVICES/</h4>
+      <h4 class="power">Power Platform Solutions</h4>
+      </span>
+      <h1>Efficiency Unleashed: Power Platform Solutions.</h1>
+      <a routerLink="/contact" class="cta-button">
+        <span class="text">Let's talk</span>
+        <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+      </a>
     </div>
-    <h1>Business transformation through technology.</h1>
-    <a routerLink="/contact" class="cta-button"
-      >Let's talk
-      <span class="arrow"
-        ><img src="assets/images/vectorarrow.png" alt="Techxle Logo"
-      /></span>
-    </a>
   </div>
-</div>
+  <mat-toolbar color="primary" class="nav-toolbar container-fluid d-flex justify-content-center">
+  <nav class="nav-container">
+        <a [routerLink]="['/services/powerplatform']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
+        <a [routerLink]="['/services/powerplatform']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
+        <a [routerLink]="['/services/powerplatform']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
+        <a [routerLink]="['/services/powerplatform']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
+  </nav>
+  </mat-toolbar>
+  <section id="overview" class="overview container-fluid">
+      <div class="row">
+      <h1 class="menu col-xl-2 ml-xl-10 col-md-3 px-md-4 col-sm-12">Overview</h1>
+      <p class="text col-xl-9 col-md-9 col-sm-12 ">
+        Revolutionize your business operations with Techxle’s Power Platform solutions. Our expert team specializes in crafting low-code, no-code solutions using Microsoft’s Power Platform, enabling your organization to automate processes, integrate systems, and develop custom applications without extensive coding knowledge. <br>
+        <br>
+        By streamlining workflows and boosting productivity, we help businesses rapidly adapt to new challenges and seize opportunities.
+      </p>
+      </div>
+    </section>
+    <section id="ourapproach" class="ourapproach container-fluid" >
+      <div class="row">
+        <h1 class="menu col-xl-2 ml-xl-10 col-md-3 px-md-4 col-sm-12">Approach</h1>
+        <p class="text col-xl-9 col-md-9 col-sm-12 ">
+          We begin by understanding your business processes and pain points. Our team then designs a tailored solution, utilizing the Power Platform to automate tasks, improve workflows, and develop applications that fit your specific needs. We ensure continuous support and optimization throughout the entire lifecycle of your solution.
+        </p>
+        </div>
+   
+  <div class="row">
+      <!--<div class="ml-xl-5 px-xl-3 ml-md-n5 goal">
+        <h2 class="mt-2 px-md-3 project">Project Goals</h2>
+      </div>
+      <div class="test-4 ml-xl-n5 col-sm-12 col-md-2 col-xl-2 ">
+          <span class="icon4 ml-xl-5"
+          ><img src="assets/images/Discover.svg" alt="Icon" class="discover-img"/>
+          <h5 class="text-discover mx-xl-5">Discover</h5>
+        </span>
+        <div class="discover">
+          <h5 class="discover-text">
+            Gain insight into the business domain and digital ecosystem.<br>Identify /
+            Understand the audience
+          </h5>
+        </div>
+      </div>-->
+      <div class="test-3 ml-xl-n5 pl-xl-4 col-sm-12 col-md-2 col-xl-2">
+       <!-- <span class="icon3 ml-xl-5 pl-xl-2"
+          ><img src="assets/images/Define.svg" alt="Icon" class="def-img" />
+          <h5 class="text-define mx-xl-5 pl-xl-1">Define</h5>
+        </span>-->
+        <div class="define">
+          <img src="assets/images/Frame 10409.svg" alt="Icon" class="def-img" />
+          <h5 class="define-text">
+            Insight-driven Requirement Gathering
+          </h5>
+        </div>
+      </div>
+      <div class="test-2 ml-xl-n4 pl-xl-2 col-sm-12 col-md-2 col-xl-2">
+        <!-- <span class="icon2 pl-xl-5"
+          ><img src="assets/images/Ideate.svg" alt="Icon" class="ide-img" />
+          <h5 class="text-idea pl-xl-5">Ideate</h5>
+        </span>-->
+        <div class="idea">
+          <img src="assets/images/Test.svg" alt="Icon" class="test-img" />
+          <h5 class="idea-text">
+            Data-powered Application Development
+          </h5>
+        </div>
+      </div>
+      <div class="test-1 ml-xl-n5 col-sm-12 col-md-2 col-xl-2">
+       <!-- <span class="icon1 pl-xl-5"
+          ><img src="assets/images/Prototype.svg" alt="Icon" class="pro-img" />
+          <h5 class="pl-xl-4 text-prototype">Prototype</h5>
+        </span>-->
+        <div class="prototype">
+          <img src="assets/images/Prototype.svg" alt="Icon" class="pro-img" />
+          <h5 class="prototype-text">
+            Ecosystem- integrated App Integration
+          </h5>
+        </div>
+      </div>
+      <div class="test ml-xl-n5 pl-xl-4 col-sm-12 col-md-2 col-xl-2">
+       <!-- <span class="icon pl-xl-5"
+          ><img src="assets/images/Test.svg" alt="Icon" class="test-img" />
+          <h5 class="text-test pl-xl-5 ml-xl-2">Test</h5>
+        </span>-->
+        <div class="iterate">
+          <img src="assets/images/Group 10405.svg" alt="Icon" class="ide-img" />
+          <h5 class="iterate-text">
+            Responsible Deployment
+          </h5>
+        </div>
+      </div>
+      <!--<div class="title pl-xl-n5 ">
+        <h2 class="devop">Development</h2>
+      </div>-->
+    </div>
+    </section>
+    <section id="ourcapabilities" class=" container-fluid ourcapabilities">
+      <h1 class="cap ml-xl-10">Our Capabilities</h1>
+      <p class="content ml-xl-10">
+        By focusing on employee development, we create a vibrant work
+        environment filled with engaging activities.
+      </p>
+    <div class="row">
+      <div class="order-2 order-md-1 order-xl-1 col-md-7 py-md-4 col-xl-7 ml-xl-5 px-xl-5 py-xl-5">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="changeImage(1)" >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                App Development
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="brand-text">Create custom apps with ease using Power Apps to meet unique business needs.</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="changeImage(2)" [expanded]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Process Automation
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="brand-text">Automate repetitive tasks with Power Automate, reducing manual effort and minimizing errors.</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="changeImage(3)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Data Visualization
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="brand-text">  Use Power BI to build dynamic dashboards that provide actionable insights for better decision-making.</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="changeImage(4)">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Integration
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="brand-text"> Seamlessly integrate with other Microsoft services and third-party applications to unify your tech stack.</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <div class="img-content order-1 order-md-2 order-xl-2  col-md-4 py-md-3 ml-xl-n5 py-xl-2 col-xl-4">
+         <img [src]="currentImage" alt="Icon" class="image" />
+      </div>
+      </div>    
+  </section>
+  <section id="impact" class="impact" >
+    <div class="outcomes">
+      <h1 class="outcome-head ml-xl-6 pl-xl-3">Most desired outcomes</h1>
+    </div>
+ 
+      <div class="row ml-xl-10 pl-xl-3 col-sm-12">    
+          <div class="high mt-5  mr-xl-5"><img src="assets/images/1.png" alt="Icon" class="img-high" /></div>
+          <div class="brand mt-5  mr-xl-5"><img src="assets/images/2 (1).png" alt="Icon" class="img-brand" /></div>
+          <div class="roi mt-5  mr-xl-5"><img src="assets/images/3.png" alt="Icon" class="img-roi"/></div>
+          <div class="enhance mt-5  mr-xl-5"><img src="assets/images/4.png" alt="Icon" class="img-enhance" />
+          </div>            
+      </div>
+   
+   <div class="row">
+   <h1 class="tech col-sm-12 col-md-4 col-xl-4 ml-xl-10 px-xl-5">We Work With Advanced Technology</h1>
+   <div class="col-sm-12 col-md-4 col-xl-4 ml-xl-10 px-xl-5 mt-xl-5">
+   <div class="div1  mt-xl-5 px-xl-5 ml-xl-5 d-flex justify-content-around">
+   <div class="ar1"><img  src="assets/images/Power Apps.png" alt="Arrow Icon"></div>
+   <div class="ar2"><img  src="assets/images/Power Automation.png" alt="Arrow Icon"></div>
+   <div class="ar3"><img  src="assets/images/Power Bi.png" alt="Arrow Icon"></div>
+   <div class="ar2"><img  src="assets/images/Power Pages.png" alt="Arrow Icon"></div>
+   <div class="ar3"><img  src="assets/images/image 103.png" alt="Arrow Icon"></div>
+   </div>
+   <div class="div2 mt-md-3 mt-xl-3 px-xl-5 ml-xl-5 d-flex justify-content-around">
+    <div class="ar3"><img  src="assets/images/Group 10410.png" alt="Arrow Icon"></div>
+    <div class="ar3"><img  src="assets/images/Group 10411.png" alt="Arrow Icon"></div>
+    <div class="ar3"><img  src="assets/images/clipart191043 1.png" alt="Arrow Icon"></div>
+    <div class="ar4"><img  src="assets/images/image 104.png" alt="Arrow Icon"></div>
+    <div class="ar4"><img  src="assets/images/Frame (3).png" alt="Arrow Icon"></div>
+   </div>
+   </div>
+   </div>
+  </section>
+  <div class="form">
+     <h5 class="touch">GET IN TOUCH</h5>
+     <h1 class="proj">Have a Project? We Would Love to Hear From You</h1>
+     <form action="https://api.web3forms.com/submit" method="POST" >
+     <form>
+       <mat-form-field appearance="fill">
+         <mat-label>NAME</mat-label>
+         <input matInput placeholder="" >
+       </mat-form-field>
+    
+       <mat-form-field appearance="fill">
+         <mat-label>EMAIL ID</mat-label>
+         <input matInput type="email" placeholder="" >
+       </mat-form-field>
+    
+    
+       <mat-form-field appearance="fill">
+         <mat-label>SERVICE TYPE</mat-label>
+         <input matInput placeholder="">
+       </mat-form-field>
+    
+       <mat-form-field appearance="fill">
+         <mat-label>MESSAGE</mat-label>
+         <textarea matInput placeholder=""></textarea>
+       </mat-form-field>
+    
+     </form>
+     <button mat-button class="read-more-button">
+       <span class="button-text">Send Enquiry</span>
+       <span >
+         <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon-arrow">
+       </span>
+       </button>
+     </form>
+   </div>
+   
+ 

@@ -1,20 +1,40 @@
-<div class="hero-banner row mx-0">
-  <img class="img col-12" src="https://drive.google.com/thumbnail?id=1Vn_bHR8zBN1kLptIzWqfQBvGq-i_tWb5" alt="hero-banner" />
-  <!--<img class="img col-12" src="assets/images/Image.png" alt="hero-banner" />-->
-  <div class="overlay-text col-12 col-sm-12 col-md-10 col-lg-5">
-    <div class="text-block">
-      <div class="content-block">
-        <div id="top-header">
-          Pioneering New Approaches to Advance Research and Technologies
+<div class="banner-container">
+  <!-- First Banner -->
+  <section class="banner banner-1">
+    <div class="overlay-text col-12 col-sm-12 col-md-10 col-lg-5">
+      <div class="text-block">
+        <div class="content-block">
+          <div id="top-header">
+            Pioneering New Approaches to Advance Research and Technologies
+          </div>
+          <h4>Client Centered. Associate Focused. Collaborative Minded.</h4>
         </div>
-        <h4>Client Centered. Associate Focused. Collaborative Minded.</h4>
+        <button mat-button (click)="navigateToContact()" class="read-more-button d-flex align-items-center">
+          <span class="button-text">Connect with us</span>
+          <span>
+            <img src="assets/images/Icons.png" alt="Techxle Logo" class="icon">
+          </span>
+        </button>
       </div>
-      <button mat-button (click)="navigateToContact()" class="read-more-button d-flex align-items-center">
-        <span class="button-text">Connect with us</span>
-        <span>
-          <img src="assets/images/Icons.svg" alt="Techxle Logo" class="icon">
-        </span>
-      </button>
     </div>
-  </div>
-</div>
+  </section>
+ 
+  <!-- Second Banner -->
+  <section class="banner banner-2" [class.visible]="isSecondBannerVisible">
+    <div class="overlay-text col-12 col-sm-12 col-md-10 col-lg-5">
+      <div class="text-block">
+        <div class="content-block">
+          <div id="top-header">
+            Shaping The Future of Healthcare with Advanced Technologies
+          </div>
+          <h4>Client Centered. Associate Focused. Collaborative Minded.</h4>
+        </div>
+        <button mat-button (click)="navigateToContact()" class="read-more-button d-flex align-items-center">
+          <span class="button-text">Connect with us</span>
+          <span>
+            <img src="assets/images/Icons.png" alt="Techxle Logo" class="icon">
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>

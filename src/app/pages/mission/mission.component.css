@@ -34,12 +34,12 @@ bottom: 0%;
 }
 
 .bac-2 {
-  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("https://drive.google.com/thumbnail?id=1luHqR1i_j_Yoo8s_CMXeoUqTe60Jvz6K"); 
+  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("/assets/images/2.png"); 
   border-radius: 15px;
 }
 
 .bac-3 {
-  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("https://drive.google.com/thumbnail?id=1luHqR1i_j_Yoo8s_CMXeoUqTe60Jvz6K"); 
+  background: linear-gradient(360deg, #060E23 -10.83%, rgba(23, 55, 137, 0) 100%),url("/assets/images/Mask group (2).png"); 
   border-radius: 15px;
 }
 .move > div:first-child {
@@ -90,7 +90,7 @@ order: 2;
 align-self: stretch;
 flex-grow: 0;
 margin-left: 0px;
-margin-top:0px;
+margin-top:50px;
 }
 .title{
  
@@ -225,6 +225,7 @@ flex-grow: 0;
   }
   .vision{
     left: 40px;
+    top:-30px;
    }
   
 }

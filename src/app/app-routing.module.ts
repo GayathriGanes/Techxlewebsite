@@ -16,6 +16,8 @@ import { StaffComponent } from './pages/staff/staff.component';
 import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
+import { AiComponent } from './pages/ai/ai.component';
+import { DevopsComponent } from './pages/devops/devops.component';
 
 
 
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path:'services/staffing',component:StaffingComponent},
   {path:'services/fullstack',component:FullstackComponent},
   {path:'services/ui',component:UIComponent},
+  {path:'services/ai',component:AiComponent},
+  {path:'services/devops',component:DevopsComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'leader',component:LeadershipComponent},
   {path:'career',component:CareerComponent},

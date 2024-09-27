@@ -30,6 +30,12 @@ navigateToAboutus() {
 navigateToCareer() {
   this.router.navigate(['/career']);
 }
+navigateToAi() {
+  this.router.navigate(['/services/ai']);
+}
+navigateToDevops() {
+  this.router.navigate(['/services/devops']);
+}
 navigateToPowerPlatform() {
 this.router.navigate(['/services/powerplatform']);
 }
