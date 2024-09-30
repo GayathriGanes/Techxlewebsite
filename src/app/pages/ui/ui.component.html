@@ -1,205 +1,4 @@
-<!--<div class="banner-container">
-  <div class="banner-content">
-    <span class="headingg">
-    <h4 class="solution" (click)="navigateToSolutions()">SERVICES/</h4>
-    <h4 class="power">UI/UX designing</h4>
-    </span>
-    <h1>Business transformation through technology.</h1>
-    <a routerLink="/contact" class="cta-button">
-      <span class="text">Let's talk</span>
-      <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
-    </a>
-  </div>
-</div>
-<mat-toolbar color="primary" class="nav-toolbar">
-<nav class="nav-container">
-      <a [routerLink]="['/services/ui']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
-      <a [routerLink]="['/services/ui']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
-      <a [routerLink]="['/services/ui']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
-      <a [routerLink]="['/services/ui']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
-</nav>
-</mat-toolbar>
-  <section id="overview" class="overview">
-    <h1 class="menu">Overview</h1>
-    <p class="text">
-      At Techxle, we cover the entire design lifecycle from concept to delivery,
-      ensuring our research-driven and user-centered UI/UX designs exceed
-      expectations. <br />
-      Our expertise in product design, UI/UX, and app development, combined with
-      lean methodologies and thorough research, results in data-driven solutions
-      that perfectly balance business objectives and user needs, fostering
-      loyalty and maximizing ROI.
-    </p>
-  </section>
-  <section id="ourapproach" class="ourapproach" >
-    <h1 class="approach">Our Approach</h1>
-    <div class="archit">
-      <div class="design">
-        <h2 class="heading">Design Thinking Process</h2>
-      </div>
-    </div>
-    <div class="title">
-      <h2 class="devop">Development</h2>
-    </div>
-    <div class="test">
-      <span class="icon"
-        ><img src="assets/images/Test.svg" alt="Icon" class="test-img" />
-        <h5 class="text-test">Test</h5>
-      </span>
-      <div class="iterate">
-        <h5 class="iterate-text">
-          Iterate on testing and validating ideas by learning from the target
-          audience
-        </h5>
-      </div>
-    </div>
-    <div class="test-1">
-      <span class="icon1"
-        ><img src="assets/images/Prototype.svg" alt="Icon" class="pro-img" />
-        <h5 class="text-prototype">Prototype</h5>
-      </span>
-      <div class="prototype">
-        <h5 class="prototype-text">
-          Convert concepts into practical and testable products that meet
-          customer needs
-        </h5>
-      </div>
-    </div>
-    <div class="test-2">
-      <span class="icon2"
-        ><img src="assets/images/Ideate.svg" alt="Icon" class="ide-img" />
-        <h5 class="text-idea">Ideate</h5>
-      </span>
-      <div class="idea">
-        <h5 class="idea-text">
-          Collaborate with the team to generate and evaluate ideas for potential
-          features and/or solutions.
-        </h5>
-      </div>
-    </div>
-    <div class="test-3">
-      <span class="icon3"
-        ><img src="assets/images/Define.svg" alt="Icon" class="def-img" />
-        <h5 class="text-define">Define</h5>
-      </span>
-      <div class="define">
-        <h5 class="define-text">
-          Develop a UX roadmap and strategy that aligns with the business
-          objectives.
-        </h5>
-      </div>
-    </div>
-    <div class="test-4">
-      <span class="icon4"
-        ><img src="assets/images/Discover.svg" alt="Icon" class="discover-img"/>
-        <h5 class="text-discover">Discover</h5>
-      </span>
-      <div class="discover">
-        <h5 class="discover-text">
-          Gain insight into the business domain and digital ecosystem.Identify /
-          Understand the audience
-        </h5>
-      </div>
-    </div>
-    <div class="goal">
-      <h2 class="project">Project Goals</h2>
-    </div>
- 
-  </section>
-  <section id="ourcapabilities" class="ourcapabilities">
-    <div class="capability">
-      <h1 class="cap">Our Capabilities</h1>
-      <p class="content">
-        By focusing on employee development, we create a vibrant work
-        environment filled with engaging activities.
-      </p>
-     <div class="img-content">
-        <img src="assets/images/capabilities.png" alt="Icon" class="image" />
-        <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Brand Identity
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p class="brand-text"> We craft brands to convey precise messages, transforming them into Symbols of clarity, excitement, quality, and global allure.</p>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Digital Experiences
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p class="brand-text"> We craft brands to convey precise messages, transforming them into Symbols of clarity, excitement, quality, and global allure.</p>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Product Design
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p class="brand-text"> We craft brands to convey precise messages, transforming them into Symbols of clarity, excitement, quality, and global allure.</p>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </div>
-    </div>
-  </section>
-  <section id="impact" class="impact" >
-    <div class="outcomes">
-      <h1 class="outcome-head">Most desired outcomes</h1>
-    </div>
-    <div class="enhance"><img src="assets/images/enhance.png" alt="Icon" class="img-enhance" /> </div>
-    <div class="roi"><img src="assets/images/ROI.png" alt="Icon" class="img-roi"/></div>
-    <div class="brand"><img src="assets/images/brand.png" alt="Icon" class="img-brand" /></div>
-    <div class="high"><img src="assets/images/high.png" alt="Icon" class="img-high" /></div>
-  <h1 class="tech">We Work With Advanced Technology</h1>
-   <div class="div1">
-   <img  src="assets/logo/f1.png" alt="Arrow Icon"> 
-   <img  src="assets/logo/f2.png" alt="Arrow Icon">
-   <img  src="assets/logo/f3.png" alt="Arrow Icon">
-   </div>
-   <div class="div2">
-   <img  src="assets/logo/f4.png" alt="Arrow Icon">
-   <img  src="assets/logo/f7.png" alt="Arrow Icon">
-   <img  src="assets/logo/f8.png" alt="Arrow Icon">
-   </div>
-  </section>
-  <div class="form">
-   <img src="assets/images/Mask group.png" alt="Icon" class="img-vector" />
-    <h5 class="touch">GET IN TOUCH</h5>
-    <h1 class="proj">Have a Project? We Would Love to Hear From You</h1>
-    <form action="https://api.web3forms.com/submit" method="POST" >
-    <form>
-      <mat-form-field appearance="fill">
-        <mat-label>NAME</mat-label>
-        <input matInput placeholder="" >
-      </mat-form-field>
-   
-      <mat-form-field appearance="fill">
-        <mat-label>EMAIL ID</mat-label>
-        <input matInput type="email" placeholder="" >
-      </mat-form-field>
-   
-   
-      <mat-form-field appearance="fill">
-        <mat-label>SERVICE TYPE</mat-label>
-        <input matInput placeholder="">
-      </mat-form-field>
-   
-      <mat-form-field appearance="fill">
-        <mat-label>MESSAGE</mat-label>
-        <textarea matInput placeholder=""></textarea>
-      </mat-form-field>
-   
-    </form>
-    <button mat-button class="read-more-button">
-      <span class="button-text">Send Enquiry</span>
-      <span >
-        <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon-arrow">
-      </span>
-      </button>
-    </form>
-  </div>-->
+
 
   <div class="banner-container container-fluid">  
     <div class="banner-content container-fluid ml-xl-10">
@@ -207,7 +6,7 @@
       <h4 class="solution" (click)="navigateToSolutions()">SERVICES/</h4>
       <h4 class="power">UI/UX designing</h4>
       </span>
-      <h1>Business transformation through technology.</h1>
+      <h1>User-Centric Design, Business Impact</h1>
       <a routerLink="/contact" class="cta-button">
         <span class="text">Let's talk</span>
         <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
@@ -226,13 +25,7 @@
       <div class="row">
       <h1 class="menu col-xl-2 ml-xl-10 col-md-3 px-md-4 col-sm-12">Overview</h1>
       <p class="text col-xl-9 col-md-9 col-sm-12 ">
-        At Techxle, we cover the entire design lifecycle from concept to delivery,
-        ensuring our research-driven and user-centered UI/UX designs exceed
-        expectations. <br />
-        Our expertise in product design, UI/UX, and app development, combined with
-        lean methodologies and thorough research, results in data-driven solutions
-        that perfectly balance business objectives and user needs, fostering
-        loyalty and maximizing ROI.
+        Elevate your digital products with Techxle’s expert UI/UX Designing services. We create intuitive and visually appealing interfaces that provide a seamless user experience, ensuring that your applications are both functional and engaging. Our design approach focuses on understanding user needs and behaviors to craft experiences that delight and drive user satisfaction.
       </p>
       </div>
     </section>
@@ -255,8 +48,7 @@
         </span>
         <div class="discover">
           <h5 class="discover-text">
-            Gain insight into the business domain and digital ecosystem.<br>Identify /
-            Understand the audience
+            Understand user needs, business goals, and market trends through comprehensive research.
           </h5>
         </div>
       </div>
@@ -291,8 +83,7 @@
         </span>
         <div class="prototype">
           <h5 class="prototype-text">
-            Convert concepts into practical and testable products that meet
-            customer needs
+            Develop wireframes and interactive prototypes to visualize the user journey.
           </h5>
         </div>
       </div>
@@ -303,8 +94,7 @@
         </span>
         <div class="iterate">
           <h5 class="iterate-text">
-            Iterate on testing and validating ideas by learning from the target
-            audience
+            Conduct usability testing to ensure the design meets user expectations and refine as needed
           </h5>
         </div>
       </div>
@@ -322,34 +112,34 @@
     <div class="row">
       <div class="order-2 order-md-1 order-xl-1 col-md-7 py-md-4 col-xl-7 ml-xl-5 px-xl-5 py-xl-5">
         <mat-accordion>
-          <mat-expansion-panel>
+          <mat-expansion-panel (opened)="changeImage(1)" [expanded]="true">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Brand Identity
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p class="brand-text"> We craft brands to convey precise messages, transforming them into Symbols of clarity, excitement, quality, and global allure.</p>
+            <p class="brand-text">Craft cohesive brand identities that align with your business vision and values. Develop strategic brand guidelines for consistent communication across all platforms. Create impactful visual branding elements, including logos, typography, and color schemes</p>
           </mat-expansion-panel>
-          <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel (opened)="changeImage(2)">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Digital Experiences
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p class="brand-text"> We craft brands to convey precise messages, transforming them into Symbols of clarity, excitement, quality, and global allure.</p>
+            <p class="brand-text">Build responsive, user-friendly websites and applications with seamless navigation. Leverage data analytics to optimize digital experiences and drive customer engagement.Integrate emerging technologies such as AI and AR for enhanced user interaction</p>
           </mat-expansion-panel>
-          <mat-expansion-panel>
+          <mat-expansion-panel (opened)="changeImage(3)">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Product Design
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p class="brand-text"> We craft brands to convey precise messages, transforming them into Symbols of clarity, excitement, quality, and global allure.</p>
+            <p class="brand-text">Design intuitive and visually appealing interfaces that enhance usability. Develop wireframes, prototypes, and user flows that align with user behavior. Incorporate user feedback into iterative design processes for continuous product improvement.</p>
           </mat-expansion-panel>
         </mat-accordion>
       </div>
       <div class="img-content order-1 order-md-2 order-xl-2  col-md-4 py-md-3 ml-xl-n5 py-xl-2 col-xl-4">
-         <img src="assets/images/capabilities.png" alt="Icon" class="image" />
+        <img [src]="currentImage" alt="Icon" class="image" />
       </div>
       </div>    
   </section>
@@ -359,11 +149,11 @@
     </div>
  
       <div class="row ml-xl-10 pl-xl-3 col-sm-12">    
-          <div class="high mt-5  mr-xl-5"><img src="assets/images/high.png" alt="Icon" class="img-high" /></div>
-          <div class="brand mt-5  mr-xl-5"><img src="assets/images/brand.png" alt="Icon" class="img-brand" /></div>
-          <div class="roi mt-5  mr-xl-5"><img src="assets/images/ROI.png" alt="Icon" class="img-roi"/></div>
+          <div class="high mt-5  mr-xl-5"><img src="assets/images/transform.png" alt="Icon" class="img-high" /></div>
+          <div class="brand mt-5  mr-xl-5"><img src="assets/images/process-card.png" alt="Icon" class="img-brand" /></div>
+          <div class="roi mt-5  mr-xl-5"><img src="assets/images/boost.png" alt="Icon" class="img-roi"/></div>
           <div class="enhance mt-5  mr-xl-5">
-            <img src="assets/images/enhance.png" alt="Icon" class="img-enhance" />
+            <img src="assets/images/ensure.png" alt="Icon" class="img-enhance" />
           </div>            
       </div>
    

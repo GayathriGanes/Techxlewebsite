@@ -12,7 +12,7 @@
  
   top: 90px;
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-    url("/assets/images/servicebanner.png");
+    url("/assets/images/Mask group (5).png");
   background-size: cover;
 }
  
@@ -279,6 +279,7 @@ text-align: left;
   margin-top:45px;
   border-radius: 4px;
   border: 1px solid #545d78;
+  border-style: dashed;
   margin-left:550px;
   
 }
@@ -333,6 +334,7 @@ text-align: left;
   margin-top:45px;
   border-radius: 4px;
   border: 1px solid #545d78;
+  border-style: dashed;
   margin-left: 500px;
 }
 .prototype-text {
@@ -370,6 +372,7 @@ text-align: left;
   height: 213px;
   border-radius: 4px ;
   border: 1px solid #545d78;
+  border-style: dashed;
   margin-left: 450px;
 }
 .idea-text {
@@ -407,6 +410,7 @@ text-align: left;
   height: 213px;
   border-radius: 4px;
   border: 1px solid #545d78;
+  border-style: dashed;
   margin-left: 400px;
 }
 .define-text {
@@ -444,6 +448,7 @@ text-align: left;
   margin-top:45px;
   border-radius: 4px;
   border: 1px solid #545d78;
+  border-style: dashed;
 }
 .discover-text {
   padding: 30px 5px 5px 5px;
