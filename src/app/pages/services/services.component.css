@@ -336,4 +336,20 @@
     margin-right: 80px;
   }
   
+  @media (min-width:1000px) and (max-width:1400px){
+    .banner-content{
+      left:0px;
+      margin-left:40px;
+    }
+    .Innovation{
+      margin-left:40px;
+    }
+    .explore{
+      margin-left:40px;
+    }
+    .card{
+      margin-left:10px;
+      margin-right:40px;
+    }
+  }
 }

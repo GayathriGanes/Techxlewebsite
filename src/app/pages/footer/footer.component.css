@@ -1,4 +1,4 @@
-.footer {
+/*.footer {
   margin-top:130px;
   width: 100%;
   height: 537px;
@@ -61,7 +61,7 @@
       font-family: "Plus Jakarta Text", sans-serif;
       position: absolute;
       left: 30px;
-      /*line-height: 23.2px;*/
+      
  
  
       li {
@@ -241,7 +241,7 @@
   line-height: 16px;
   padding: 9px 0px 9px 16px;
   gap: 8px;
-  left:60px;
+  left:40px;
   opacity: 1;
   color:white;
   transition: color 1s ease;
@@ -378,14 +378,7 @@ color: #FFFFFF;
      height: 50px;
      left: 4vw;
  }
- /*.connect-us{
-  margin-left: 10px;
-  margin-top: 0px;
- }
- .linkedin {
-   left: 51vw;
-  
- }*/
+
  .socialmedia{
   margin-top: 0px;
   margin-left: 10px;
@@ -450,9 +443,7 @@ color: #FFFFFF;
 .email{
   white-space: nowrap;
 }
- /*.company{
-  top:300px;
- }*/
+
  }
  @media (min-width:401px) and (max-width:600px){
    .footer{
@@ -590,4 +581,180 @@ color: #FFFFFF;
   .footer{
     height: 650px;
   }
- }
+ }*/
+ .footer {
+  margin-top:130px;
+  width: 100%;
+  background: #0a183e;
+  color: #ffffff;
+}
+ 
+ 
+  .content {
+    border-bottom: 1px solid #394867;
+    padding:0 0 30px 0;
+    margin-top: 40px;
+    background: #0a183e;
+  }
+  .logo{
+    margin-top:20px;
+  }
+  .socialmedia{
+    margin-top:20px;
+    display:flex;
+    gap:40px;
+    white-space:nowrap;
+ 
+  }
+ 
+ 
+ 
+  .footer-section {    
+   h2 {
+      font-family: "Plus Jakarta Text", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 29px;
+      color: #ffffff;    
+    }
+ 
+    ul {
+     
+      color: #ffffff99;
+      font-family: "Plus Jakarta Text", sans-serif;
+       margin-left:-20px;
+       line-height:35px;
+ 
+ 
+      li {
+ 
+        a {
+          color: #ffffff99;
+          text-decoration: none;
+       
+ 
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+ 
+    p {
+      color: #ffffff99;
+      font-family: "Plus Jakarta Text", sans-serif;
+    }
+    strong {
+      color:white;
+    }
+ 
+  }
+.email{
+  white-space:nowrap;
+}
+ 
+.footer-bottom {
+  border-top: 1px solid #394867;
+  margin-top: 40px;
+}
+ 
+  .bottom-text1 {
+    font-family: "Plus Jakarta Text", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23.2px;
+    color: #ffffff99;    
+  }
+.connect-us {
+ 
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32.4px;
+ 
+  color: #ffffff80;
+ 
+}
+ 
+.bottom-text{
+  font-family: "Plus Jakarta Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.2px;
+  color: #FFFFFF99;
+ 
+}
+ 
+ 
+.button-text {
+  color: white;    
+  white-space: nowrap;
+  margin-right:10px;
+}
+ 
+.read-more-button {
+  font-family: 'Plus Jakarta Text', sans-serif;
+  font-size: 16px;
+  width: 200px;
+  height: 48px;
+  font-weight: 700;
+  cursor: pointer;
+  position: absolute;
+  overflow: hidden;
+  line-height: 16px;
+  padding: 0px 0px 0px 0px;
+  opacity: 1;
+  color:white;
+  transition: color 1s ease;
+  letter-spacing: -0.2px;
+}
+ 
+.read-more-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color:white;
+  transition: right 1s ease;
+  z-index: 0;
+}
+ 
+.read-more-button:hover::before {
+  right: 0;
+}
+ 
+.read-more-button:hover .button-text {
+  color:  rgba(53,100,223,1);
+  font-weight: 200px;
+}
+ 
+.read-more-button .button-text, .read-more-button .icon {
+  position: relative;
+  z-index: 1;
+  transition: color 1s ease;
+}
+ 
+ 
+ 
+ 
+.project{
+font-family:'Plus Jakarta Text', sans-serif;
+font-size: 26px;
+font-weight: 600;
+line-height: 40px;
+color: #FFFFFF;
+ 
+}
+.gotproj{
+  background: #FFFFFF08;
+  width: 276px;
+  height: 160px;
+  padding: 24px 40px 24px 40px;
+  gap: 24px;
+  border-radius: 6px 0px 0px 0px;
+  opacity: 0px;
+  
+
+}
