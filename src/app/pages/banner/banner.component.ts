@@ -1,40 +1,45 @@
-import { Component,AfterViewInit,HostListener } from '@angular/core';
+import { Component, AfterViewInit, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
- 
+import { isPlatformBrowser } from '@angular/common';
+
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.css'
+  styleUrls: ['./banner.component.css'] 
 })
-export class BannerComponent implements AfterViewInit{
- 
+export class BannerComponent implements AfterViewInit {
   isSecondBannerVisible = false;
-  constructor(private router: Router) {}
- 
-navigateToContact() {
-  this.router.navigate(['/contact']);
-}
- 
-ngAfterViewInit(): void {
-  this.updateBannerVisibility();
-}
- 
-@HostListener('window:scroll', ['$event'])
-onScroll(): void {
-  this.updateBannerVisibility();
-}
- 
-private updateBannerVisibility(): void {
-  const scrollY = window.scrollY;
-  console.log(`Current scroll position: ${scrollY}px`);
-  const threshold = window.innerHeight / 9; // Trigger change halfway through the viewport
- 
-  if (scrollY > threshold) {
-    this.isSecondBannerVisible = true;
-  } else {
-    this.isSecondBannerVisible = false;
+
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object 
+  ) {}
+
+  navigateToContact() {
+    this.router.navigate(['/contact']);
   }
-}
- 
- 
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateBannerVisibility(); 
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.updateBannerVisibility(); 
+    }
+  }
+
+  private updateBannerVisibility(): void {
+    const scrollY = window.scrollY;
+    const threshold = window.innerHeight / 9; 
+
+    if (scrollY > threshold) {
+      this.isSecondBannerVisible = true;
+    } else {
+      this.isSecondBannerVisible = false;
+    }
+  }
 }

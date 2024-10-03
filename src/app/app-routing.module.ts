@@ -18,6 +18,7 @@ import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { AiComponent } from './pages/ai/ai.component';
 import { DevopsComponent } from './pages/devops/devops.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 
@@ -40,7 +41,7 @@ const routes: Routes = [
   {path:'solutions/stack',component:StackComponent},
   {path:'solutions/design',component:DesignComponent},
   {path:'solutions',component:SolutionsComponent},
-  {path: '', redirectTo: '', pathMatch: 'full' },
+  {path: '', component:HomeComponent },
   
 ];
 

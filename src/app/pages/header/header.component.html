@@ -1,66 +1,29 @@
-<mat-toolbar color="primary" class="header-toolbar">
-  <span class="logo">
-    <a routerLink="/">
-      <img
-        src="assets/images/logo.svg"
-        alt="Techxle Logo"
-        class="logo-img"
-        (click)="ttoggleHomeVisibility()"
-      />
-    </a>
-  </span>
-   
-  <button mat-icon-button class="menu-button" (click)="toggleMenu()">
-    <mat-icon>menu</mat-icon>
+<nav class="navbar navbar-expand-lg navbar-light">
+ <div class="container">
+  <a class="navbar-brand d-flex justify-content-start" href="#"><img
+    src="assets/images/logo.svg"
+    alt="Techxle Logo"
+    class="logo-img">
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    (click)="toggleNavbar()"
+    [attr.aria-expanded]="isNavbarCollapsed ? 'false' : 'true'"
+    aria-label="Toggle navigation">
+    <span *ngIf="isNavbarCollapsed" class="navbar-toggler-icon"></span>
+    <span *ngIf="!isNavbarCollapsed" class="close-icon">&times;</span>
   </button>
-  <span class="spacer"></span>
-  <nav class="nav-container" [ngClass]="{'mobile-nav': isMenuOpen}">
-    <a
-      mat-button
-      routerLink="/services"
-      class="services"
-      [ngClass]="{ 'active-link': activeLink === 'services' }"
-      (click)="setActiveLink('services'); toggleHomeVisibility();checkkurl();closeMenu()"
-      >SERVICES</a
-    >
-   <!-- <a
-      mat-button
-      routerLink="/solutions"
-      class="solutions"
-      [ngClass]="{ 'active-link': activeLink === 'solutions' }"
-      (click)="setActiveLink('solutions'); toggleHomeVisibility();checkurl();closeMenu()"
-      >SOLUTIONS</a
-    >
-    <a
-      mat-button
-      routerLink="/aboutus"
-      class="about-us"
-      [ngClass]="{ 'active-link': activeLink === 'aboutus' }"
-      (click)="setActiveLink('aboutus'); toggleHomeVisibility();closeMenu()"
-      >ABOUT US</a
-    >
-    <a
-      mat-button
-      routerLink="/career"
-      class="career"
-      [ngClass]="{ 'active-link': activeLink === 'career' }"
-      (click)="setActiveLink('career'); toggleHomeVisibility();closeMenu()"
-      >CAREER</a
-    >-->
-    <a
-      mat-button
-      routerLink="/contact"
-      class="contact"
-      [ngClass]="{ 'active-link': activeLink === 'contact' }"
-      (click)="setActiveLink('contact'); toggleHomeVisibility();checkurl();closeMenu()"
-      >CONTACT</a
-    >
-  </nav>
-</mat-toolbar>
-<div *ngIf="isHomeVisible">
-    <!--<app-solutionban></app-solutionban>-->
-    <app-banner></app-banner>
-    <app-callout></app-callout>
-    <app-service></app-service>
-    <app-mission></app-mission>
-</div>
+
+  <div class="collapse navbar-collapse d-lg-flex justify-content-end" [ngbCollapse]="isNavbarCollapsed">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/services"   [ngClass]="{'active': selectedLink === 'services'}"   (click)="selectLink('services')" (click)="closeNavbar()">SERVICES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact"   [ngClass]="{'active': selectedLink === 'contact'}"   (click)="selectLink('contact')" (click)="closeNavbar()">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+ </div>
+</nav>

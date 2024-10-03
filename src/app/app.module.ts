@@ -37,7 +37,8 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { AiComponent } from './pages/ai/ai.component';
 import { DevopsComponent } from './pages/devops/devops.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './pages/home/home.component';
 
 
 
@@ -75,12 +76,14 @@ import { DevopsComponent } from './pages/devops/devops.component';
     SolutionsComponent,
     ContactComponent,
     AiComponent,
-    DevopsComponent
+    DevopsComponent,
+    HomeComponent
     
     
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     AppRoutingModule,
     MatIconModule,
     MatToolbarModule,
@@ -90,7 +93,8 @@ import { DevopsComponent } from './pages/devops/devops.component';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    RouterModule
+    RouterModule,
+
     
   ],
   providers: [
@@ -98,7 +102,7 @@ import { DevopsComponent } from './pages/devops/devops.component';
     provideAnimationsAsync(),
     provideHttpClient(withFetch()),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
   
 })
 export class AppModule { }
