@@ -794,9 +794,18 @@ mat-label{
     left: -10px;
     position: relative;
   }
-  
- 
- 
+  .pro-img{
+    margin-left: 45px;
+    margin-top: 25px;
+  }
+  .test-img {
+    margin-left: 40px;
+    margin-top: 25px;
+  }
+  .ide-img {
+    margin-left: 40px;
+    margin-top: 25px;
+}
 }
 @media (min-width:300px) and (max-width:600px){
   .nav-container a{
