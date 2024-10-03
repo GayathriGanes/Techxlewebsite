@@ -792,11 +792,21 @@ mat-label{
     left:5px;
   }
   .def-img{
-    left: -10px;
+    left: -13px;
     position: relative;
   }
-  
- 
+  .test-img{
+    margin-left: 55px;
+    margin-top: 25px;
+}
+.pro-img{
+  margin-left: 55px;
+  margin-top: 25px;
+}
+.ide-img{
+  margin-left: 45px;
+  margin-top: 25px;
+}
  
 }
 @media (min-width:300px) and (max-width:600px){
