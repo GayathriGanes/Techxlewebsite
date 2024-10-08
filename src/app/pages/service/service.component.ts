@@ -1,5 +1,4 @@
 import { Component,ViewChild,ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
@@ -18,11 +17,9 @@ export class ServiceeComponent {
     { title: 'Devops', content: 'Our team specializes in streamlining development and operations to ensure faster, more reliable software delivery.', symbol: 'assets/images/Group 10405.svg',route: '/services/devops' },
   
   ];
-  constructor(private router: Router) {}
+  constructor() {}
 
-  navigateTo(route: string) {
-    this.router.navigate([route]);
-  }
+
   next() {
     this.container.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
   }
@@ -30,4 +27,7 @@ export class ServiceeComponent {
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
+ 
+ 
+ 
 }

@@ -1,22 +1,13 @@
-<div class="container-fluid p-0">
-  <div class="callout">
-    <div class="row">
-      <!-- Text Section -->
-      <div class="col-lg-8 col-md-6 col-sm-12">
-        <div class="callout-text">
-          <p>Need any expert business & consulting services?</p>
-        </div>
-      </div>
-      <!-- Button Section -->
-      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-lg-end justify-content-md-center justify-content-sm-center">
-        <button mat-button (click)="navigateToContact()" class="read-more-button">
-          <span class="button-text">Connect with us</span>
-          <span>
-            <img src="assets/images/Icons.svg" alt="Techxle Logo" class="icon">
-          </span>
-        </button>
-      </div>
+<section class="banner">
+  <div class="callout container d-flex flex-column flex-md-row justify-content-between align-items-md-center py-4 py-md-0 ">
+    <h1 class="callout-text m-0">Need any expert business & consulting services?</h1>
+    <div class="d-sm-flex align-items-start">
+    <button mat-button  routerLink="/contact"  class="read-more-button">
+      <span class="button-text">Connect with us</span>
+      <span>
+        <img src="assets/images/Icons.svg" alt="Techxle Logo" class="icon">
+      </span>
+    </button>
     </div>
   </div>
-</div>
-  
+</section>

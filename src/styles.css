@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x:hidden;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -9,4 +10,41 @@ h1, h2, h3, h4, h5, h6 {
 p, a, span {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
+.read-more-button {
+  transition: color 1s ease;
+  letter-spacing: -0.2px !important;
+  overflow: hidden !important;
+  line-height: 16px;
+  font-weight: 700 !important;
+  cursor: pointer;
+  padding: 10px 20px;
+  white-space: nowrap;
+  height: 48px !important;
+  font-size: 18px !important;
+}
+.icon {
+  padding: 0 0 0 10px;
+}
+.read-more-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  transition: right 1s ease;
+  z-index: 0;
+}
+.read-more-button:hover::before {
+  right: 0;
+}
+.read-more-button:hover .button-text {
+  font-weight: 200px !important;
+}
+.read-more-button .button-text,
+.read-more-button .icon {
+  z-index: 1;
+  transition: color 1s ease;
+}
+
 

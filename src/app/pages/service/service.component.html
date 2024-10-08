@@ -1,36 +1,41 @@
 <div class="card-slider">
   <div class="header">
-    <h2>Explore Our Services</h2>
-    <div class="navigation-buttons">
-      <button mat-icon-button (click)="prev()">
-        <mat-icon fontSet="fa">&#8592;</mat-icon>
-      </button>
-      <button mat-icon-button (click)="next()">
-        <mat-icon fontSet="fa">&#8594;</mat-icon>
-      </button>
+    <div class="hea container  d-flex align-items-center justify-content-between">
+      <div>
+        <h2>Explore Our Services</h2>
+      </div>
+      <div class="navigation-buttons">
+        <img src="assets/images/L-Arrow.svg" (click)="prev()" alt="Techxle Logo">
+        <img src="assets/images/R-Arrow.svg" (click)="next()" class="ms-2">
+      </div>
     </div>
   </div>
-  <div class="cards-container" #container>
-    <mat-card class="card" *ngFor="let card of cards">
-      <div class="card-blocks">
-        <div class="symbol-block">
-          <img [src]="card.symbol" alt="Card Symbol" />
-        </div>
-        <div class="content-block">
-          <mat-card-header>
-            <mat-card-title class="title">{{ card.title }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="content">
-            {{ card.content }}
-          </mat-card-content>
-          <button mat-button (click)="navigateTo(card.route)" class="read-more-button">
-              <span class="button-text">Read More</span>
-              <span >
-                <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
-              </span>  
-          </button>
-        </div>
+  <div class="cards-container">
+    <div class="container" #container>
+      <div class="row flex-nowrap">
+        <mat-card class="card d-flex flex-column justify-content-center align-items-center me-3"
+          *ngFor="let card of cards">
+          <div class="card-blocks">
+            <div class="symbol-block d-flex justify-content-center mb-3">
+              <img [src]="card.symbol" alt="Card Symbol" />
+            </div>
+            <div class="content-block text-center">
+              <mat-card-header class="justify-content-center mb-3">
+                <mat-card-title class="title">{{ card.title }}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content class="content mb-3">
+                {{ card.content }}
+              </mat-card-content>
+              <button mat-button routerLink={{card.route}} class="read-more-button">
+                <span class="button-text">Read More</span>
+                <span>
+                  <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
+                </span>
+              </button>
+            </div>
+          </div>
+        </smat-card>
       </div>
-    </mat-card>
-  </div>    
+    </div>
+  </div>
 </div>
