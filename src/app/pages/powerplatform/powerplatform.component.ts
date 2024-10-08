@@ -10,12 +10,7 @@ import{MatExpansionModule} from '@angular/material/expansion';
   styleUrl: './powerplatform.component.css'
 })
 export class PowerplatformComponent implements OnInit {
-  navigateToSolutions() {
-    this.router.navigate(['/services']); // Adjust the path as needed
-  }
-navigateToContact() {
-  this.router.navigate(['/contact']);
-}
+ 
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
