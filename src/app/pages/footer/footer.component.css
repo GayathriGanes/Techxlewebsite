@@ -5,11 +5,19 @@
 .content {
   border-bottom: 1px solid #394867;
   height: 120px;
+
 }
 .socialmedia {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   white-space: nowrap;
+}
+.company-address{
+  gap:8px;
+}
+.em{
+  text-decoration:none;
+  color: #ffffff99;
 }
 .footer-section {
   h2 {
@@ -99,6 +107,9 @@
   .content {
     height: 170px;
     padding-top: 30px;
+  }
+  .connect-us{
+    line-height:40.4px;
   }
   .socialmedia {
     position: relative;

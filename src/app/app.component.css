@@ -1,26 +1,24 @@
-/* Button Container */
 .scroll-to-top-button {
-    position: fixed;           /* Fixes the button position */
-    bottom: 1.25rem;           /* 5 units from the bottom */
-    right: 1.25rem;            /* 5 units from the right */
-    width: 2.5rem;             /* Width of 10 units */
-    height: 2.5rem;            /* Height of 10 units */
-    background-color: #0c5adb; /* Blue background color */
-    color: white;              /* White text color */
-    display: flex;             /* Center the icon inside */
-    align-items: center;       /* Vertical centering */
-    justify-content: center;   /* Horizontal centering */
-    border-radius: 50%;        /* Full circle shape */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    z-index: 1000;             /* Ensures button is on top */
+    position: fixed;           
+    bottom: 1.25rem;           
+    right: 1.25rem;            
+    width: 2.5rem;             
+    height: 2.5rem;            
+    background-color: #0c5adb;
+    color: white;             
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    border-radius: 50%;        
+    transition: background-color 0.3s ease;
+    z-index: 1000;             
     border:none;
     outline: none !important;
    
   }
   
-  /* Hover Effect */
   .scroll-to-top-button:hover {
-    background-color: #0c5adb; /* Dark slate color on hover */
+    background-color: #0c5adb; 
   }
   @media (min-width:300px)and (max-width:600px){
     .scroll-to-top-button{

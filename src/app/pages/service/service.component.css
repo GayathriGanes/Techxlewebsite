@@ -12,14 +12,16 @@ font-weight: 600;
 line-height: 45.36px;
 letter-spacing: 0.01em;
 color: rgba(255, 255, 255, 1);
+margin-top:-40px;
 }
 .navigation-buttons{
     white-space:nowrap;
+    margin-top:-40px;
 } 
 .cards-container {
     position:relative;
     z-index:2;
-    top:-90px;
+    top:-108px;
 } 
 .card {  
     width: 386px;
