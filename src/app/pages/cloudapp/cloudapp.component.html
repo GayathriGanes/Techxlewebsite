@@ -1,225 +1,261 @@
-
-<div class="banner-container container-fluid">  
-  <div class="banner-content container-fluid ml-xl-10">
-    <span class="headingg">
-    <h4 class="solution" (click)="navigateToSolutions()">SERVICES/</h4>
-    <h4 class="power">Cloud App Development</h4>
-    </span>
-    <h1>Innovate Fearlessly, Deploy Seamlessly</h1>
-    <a routerLink="/contact" class="cta-button">
-      <span class="text1">Let's talk</span>
-      <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
-    </a>
+<section class="hero-section d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-12">
+        <div class="hero-content">
+          <p class="text-uppercase mb-2">
+            <a routerLink="/services" class="text-decoration-none">Services</a> /Cloud App Development
+          </p>
+         
+          <h1 class="mb-3">Innovate Fearlessly, Deploy Seamlessly</h1>
+          <a routerLink="/contact" class="cta-button">
+            <span class="text">Let's talk</span>
+            <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<mat-toolbar color="primary" class="nav-toolbar container-fluid d-flex justify-content-center">
+</section>
+ <mat-toolbar class="nav-toolbar container-fluid d-flex justify-content-center">
 <nav class="nav-container">
-      <a [routerLink]="['/services/cloudapp']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
-      <a [routerLink]="['/services/cloudapp']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
-      <a [routerLink]="['/services/cloudapp']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
-      <a [routerLink]="['/services/cloudapp']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
+      <a [routerLink]="['/cloudapp']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
+      <a [routerLink]="['/cloudapp']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
+      <a [routerLink]="['/cloudapp']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
+      <a [routerLink]="['/cloudapp']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
 </nav>
 </mat-toolbar>
-<section id="overview" class="overview container-fluid">
-    <div class="row">
-    <h1 class="menu col-xl-2 ml-xl-10 col-md-3 px-md-4 col-sm-12">Overview</h1>
-    <p class="text col-xl-9 col-md-9 col-sm-12 ">
+<section id="overview" class="overview container">
+  <div class="row">
+    <h1 class="menu   col-md-3 col-sm-12 mb-4">Overview</h1>
+    <p class="text1 col-md-9 col-sm-12">
       Empower your business to thrive in the digital age with scalable and secure cloud application development. Techxle provides end-to-end cloud development services that transform your operations by moving business-critical applications to the cloud. Whether you are modernizing legacy systems or building new applications, our cloud solutions drive efficiency and innovation while ensuring robust security and compliance.
     </p>
-    </div>
-  </section>
-  <section id="ourapproach" class="ourapproach container-fluid" >
-    <div class="row">
-      <h1 class="menu col-xl-2 ml-xl-10 col-md-3 px-md-4 col-sm-12">Approach</h1>
-      <p class="text col-xl-9 col-md-9 col-sm-12 ">
-        From strategy to deployment, our team works closely with you to assess your needs, design a cloud architecture, and implement secure, scalable cloud applications. We follow industry best practices to ensure that your applications are future-proof and cost-efficient.
-      </p>
-      </div>
- 
-<div class="row">
-    <!--<div class="ml-xl-5 px-xl-3 ml-md-n5 goal">
-      <h2 class="mt-2 px-md-3 project">Project Goals</h2>
-    </div>
-    <div class="test-4 ml-xl-n5 col-sm-12 col-md-2 col-xl-2 ">
-        <span class="icon4 ml-xl-5"
-        ><img src="assets/images/Discover.svg" alt="Icon" class="discover-img"/>
-        <h5 class="text-discover mx-xl-5">Discover</h5>
-      </span>
-      <div class="discover">
-        <h5 class="discover-text">
-          Gain insight into the business domain and digital ecosystem.<br>Identify /
-          Understand the audience
-        </h5>
-      </div>
-    </div>-->
-    <div class="test-3 ml-xl-n5 pl-xl-4 col-sm-12 col-md-2 col-xl-2">
-     <!-- <span class="icon3 ml-xl-5 pl-xl-2"
-        ><img src="assets/images/Define.svg" alt="Icon" class="def-img" />
-        <h5 class="text-define mx-xl-5 pl-xl-1">Define</h5>
-      </span>-->
-      <div class="define">
-        <img src="assets/images/Frame 10412.svg" alt="Icon" class="def-img" />
-        <h5 class="define-text">
-          Enterprise-wide Assessment
-        </h5>
-      </div>
-    </div>
-    <div class="test-2 ml-xl-n4 pl-xl-2 col-sm-12 col-md-2 col-xl-2">
-      <!-- <span class="icon2 pl-xl-5"
-        ><img src="assets/images/Ideate.svg" alt="Icon" class="ide-img" />
-        <h5 class="text-idea pl-xl-5">Ideate</h5>
-      </span>-->
-      <div class="idea">
-        <img src="assets/images/Frame.svg" alt="Icon" class="test-img" />
-        <h5 class="idea-text">
-          Data and Cloud-driven Migration
-        </h5>
-      </div>
-    </div>
-    <div class="test-1 ml-xl-n5 col-sm-12 col-md-2 col-xl-2">
-     <!-- <span class="icon1 pl-xl-5"
-        ><img src="assets/images/Prototype.svg" alt="Icon" class="pro-img" />
-        <h5 class="pl-xl-4 text-prototype">Prototype</h5>
-      </span>-->
-      <div class="prototype">
-        <img src="assets/images/Group 10405.svg" alt="Icon" class="pro-img" />
-        <h5 class="prototype-text">
-          Optimization with Ecosystem Enablement
-        </h5>
-      </div>
-    </div>
-    <div class="test ml-xl-n5 pl-xl-4 col-sm-12 col-md-2 col-xl-2">
-     <!-- <span class="icon pl-xl-5"
-        ><img src="assets/images/Test.svg" alt="Icon" class="test-img" />
-        <h5 class="text-test pl-xl-5 ml-xl-2">Test</h5>
-      </span>-->
-      <div class="iterate">
-        <img src="assets/images/Frame 10412 (1).svg" alt="Icon" class="ide-img" />
-        <h5 class="iterate-text">
-          Responsible Cloud Management
-        </h5>
-      </div>
-    </div>
-    <!--<div class="title pl-xl-n5 ">
-      <h2 class="devop">Development</h2>
-    </div>-->
   </div>
-  </section>
-  <section id="ourcapabilities" class=" container-fluid ourcapabilities">
-    <h1 class="cap ml-xl-10">Our Capabilities</h1>
-    <p class="content ml-xl-10">
-      By focusing on employee development, we create a vibrant work
-      environment filled with engaging activities.
-    </p>
-  <div class="row">
-    <div class="order-2 order-md-1 order-xl-1 col-md-7 py-md-4 col-xl-7 ml-xl-5 px-xl-5 py-xl-5">
-      <mat-accordion>
-        <mat-expansion-panel (opened)="changeImage(1)" [expanded]="true" >
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Cloud Strategy
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="brand-text">Develop a cloud strategy aligned with your business goals.</p>
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="changeImage(2)" >
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Cloud-Native Development
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="brand-text">Build applications designed to leverage the full power of cloud platforms such as AWS, Microsoft Azure, and Google Cloud.</p>
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="changeImage(3)">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Migration Services
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="brand-text"> Seamlessly migrate your existing applications to the cloud with minimal disruption.</p>
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="changeImage(4)">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Cloud Security
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="brand-text">Implement security best practices to protect your cloud environment.</p>
-        </mat-expansion-panel>
-      </mat-accordion>
-    </div>
-    <div class="img-content order-1 order-md-2 order-xl-2  col-md-4 py-md-3 ml-xl-n5 py-xl-2 col-xl-4">
-       <img [src]="currentImage" alt="Icon" class="image" />
-    </div>
-    </div>    
 </section>
-<section id="impact" class="impact" >
-  <div class="outcomes">
-    <h1 class="outcome-head ml-xl-6 pl-xl-3">Most desired outcomes</h1>
+<section id="ourapproach" class="ourapproach container">
+  <div class="row">
+    <h1 class="menu  col-md-3 col-sm-12 mb-4">Approach</h1>
+    <p class="text1 col-md-9 col-sm-12">
+      From strategy to deployment, our team works closely with you to assess your needs, design a cloud architecture, and implement secure, scalable cloud applications. We follow industry best practices to ensure that your applications are future-proof and cost-efficient.
+    </p>
   </div>
 
-    <div class="row ml-xl-10 pl-xl-3 col-sm-12">    
-        <div class="high mt-5  mr-xl-5"><img src="assets/images/1 (1).png" alt="Icon" class="img-high" /></div>
-        <div class="brand mt-5  mr-xl-5"><img src="assets/images/2 (2).png" alt="Icon" class="img-brand" /></div>
-        <div class="roi mt-5  mr-xl-5"><img src="assets/images/3 (1).png" alt="Icon" class="img-roi"/></div>
-        <div class="enhance mt-5  mr-xl-5"><img src="assets/images/4 (1).png" alt="Icon" class="img-enhance" />
-        </div>            
+ 
+  <div class="row text-center">
+    <div class="col-md-3"></div>
+    <div class="test-3 col-sm-12 col-md-9 mb-4 d-flex flex-wrap justify-content-xs-between justify-content-sm-between  justify-content-center">
+ 
+      <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center">
+        <img src="assets/images/Frame 10412.svg" alt="Icon" class="def-img mb-3" />
+        <h5 class="define-text">Enterprise-wide Assessment</h5>
+      </div>
+ 
+      <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center">
+        <img src="assets/images/Frame.svg" alt="Icon" class="test-img mb-3" />
+        <h5 class="idea-text">Data and Cloud-driven Migration</h5>
+      </div>
+ 
+ 
+      <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center">
+        <img src="assets/images/Group 10405.svg" alt="Icon" class="pro-img mb-3" />
+        <h5 class="prototype-text">Optimization with Ecosystem Enablement</h5>
+      </div>
+ 
+     
+      <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center">
+        <img src="assets/images/Frame 10412 (1).svg" alt="Icon" class="ide-img mb-3" />
+        <h5 class="iterate-text">Responsible Cloud Management</h5>
+      </div>
+ 
+    </div>
+  </div>
+
+
+
+ 
+</section>
+<div class="banner">
+<section id="ourcapabilities" class="container py-5 ourcapabilities">
+  <div class="row">
+    <div class="col-12  text-start mb-4">
+      <h1 class="cap">Our Capabilities</h1>
+      <p class="content">By focusing on employee development, we create a vibrant work environment filled with engaging activities.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Accordion Section -->
+    <div class="col-md-7 col-12 order-2 order-md-1">
+      <div class="accordion" id="accordionExample">
+        <!-- App Development -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" (click)="changeImage(1)">
+              Cloud Strategy
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="brand-text">Develop a cloud strategy aligned with your business goals.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Process Automation -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)="changeImage(2)">
+              Cloud-Native Development
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="brand-text">Build applications designed to leverage the full power of cloud platforms such as AWS, Microsoft Azure, and Google Cloud.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Data Visualization -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)="changeImage(3)">
+              Migration Services
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="brand-text">Seamlessly migrate your existing applications to the cloud with minimal disruption.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Integration -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" (click)="changeImage(4)">
+              Cloud Security
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p class="brand-text">Implement security best practices to protect your cloud environment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
  
- <div class="row">
- <h1 class="tech col-sm-12 col-md-4 col-xl-4 ml-xl-10 px-xl-5">We Work With Advanced Technology</h1>
- <div class="col-sm-12 col-md-4 col-xl-4 ml-xl-10 px-xl-5 mt-xl-5">
- <div class="div1  mt-xl-5 px-xl-5 ml-xl-5 d-flex justify-content-around">
- <div class="ar1"><img  src="assets/images/756775c0e4483c74bc9ffbb730e3fab2 1.png" alt="Arrow Icon"></div>
- <div class="ar2"><img  src="assets/images/db2310455dd76b2cd290f67635f6fa78 1.png" alt="Arrow Icon"></div>
- <div class="ar3"><img  src="assets/images/28d4d195750b99bdbac908ef4b035a01 1.png" alt="Arrow Icon"></div>
- <div class="ar2"><img  src="assets/images/pngwing.com (14).png" alt="Arrow Icon"></div>
- <div class="ar3"><img  src="assets/images/pngegg (3).png" alt="Arrow Icon"></div>
- </div>
- <div class="div2 mt-md-3 mt-xl-3 px-xl-5 ml-xl-5 d-flex justify-content-around">
-  <div class="ar3"><img  src="assets/images/Group 10410.png" alt="Arrow Icon"></div>
-  <div class="ar3"><img  src="assets/images/pngwing.com (17) 1.png" alt="Arrow Icon"></div>
-  <div class="ar3"><img  src="assets/images/pngwing.com (18) 1.png" alt="Arrow Icon"></div>
-  <div class="ar4"><img  src="assets/images/pngwing.com (15).png" alt="Arrow Icon"></div>
-  <div class="ar4"><img  src="assets/images/pngwing.com (16).png" alt="Arrow Icon"></div>
- </div>
- </div>
- </div>
+    <!-- Image Section -->
+    <div class="col-md-5 col-12 order-1 order-md-2 text-center text-md-start mb-4">
+      <img [src]="currentImage" alt="Icon" class="image"/>
+    </div>
+  </div>
 </section>
-<div class="form">
-   <h5 class="touch">GET IN TOUCH</h5>
-   <h1 class="proj">Have a Project? We Would Love to Hear From You</h1>
-   <form action="https://api.web3forms.com/submit" method="POST" >
-   <form>
-     <mat-form-field appearance="fill">
-       <mat-label>NAME</mat-label>
-       <input matInput placeholder="" >
-     </mat-form-field>
-  
-     <mat-form-field appearance="fill">
-       <mat-label>EMAIL ID</mat-label>
-       <input matInput type="email" placeholder="" >
-     </mat-form-field>
-  
-  
-     <mat-form-field appearance="fill">
-       <mat-label>SERVICE TYPE</mat-label>
-       <input matInput placeholder="">
-     </mat-form-field>
-  
-     <mat-form-field appearance="fill">
-       <mat-label>MESSAGE</mat-label>
-       <textarea matInput placeholder=""></textarea>
-     </mat-form-field>
-  
-   </form>
-   <button mat-button class="read-more-button">
-     <span class="button-text">Send Enquiry</span>
-     <span >
-       <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon-arrow">
-     </span>
-     </button>
-   </form>
- </div>
- 
+</div>
+<section id="impact" class="impact container">
+  <div class="outcomes">
+    <h1 class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
+  </div>
+
+  <!-- Image row -->
+  <div class="row justify-content-center mt-5">
+    <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+      <img src="assets/images/1 (1).png" alt="Icon" class="img-fluid" />
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+      <img src="assets/images/2 (2).png" alt="Icon" class="img-fluid" />
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+      <img src="assets/images/3 (1).png" alt="Icon" class="img-fluid" />
+    </div>
+    <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+      <img src="assets/images/4 (1).png" alt="Icon" class="img-fluid" />
+    </div>
+  </div>
+
+  <!-- Text and technology section -->
+  <div class="row mt-5">
+    <h1 class="tech col-sm-12 col-md-4 col-xl-4 text-start text-md-left mt-5">We Work With Advanced Technology</h1>
+
+    <div class="col-sm-12 col-md-8 col-xl-8">
+      <div class="row justify-content-center mt-5">
+        <!-- First row of tech icons -->
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/756775c0e4483c74bc9ffbb730e3fab2 1.png" alt="Power Apps" class="img-fluid" ngbTooltip=" Azure" placement="bottom" >
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/db2310455dd76b2cd290f67635f6fa78 1.png" alt="Power Automation" class="img-fluid" ngbTooltip=" Google Cloud" placement="bottom" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/28d4d195750b99bdbac908ef4b035a01 1.png" alt="Power Bi" class="img-fluid" ngbTooltip=" AWS" placement="bottom"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/pngwing.com (14).png" alt="Power Pages" class="img-fluid" ngbTooltip="Docker" placement="bottom"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/pngegg (3).png" alt="Advanced Icon" class="img-fluid" ngbTooltip=" Kubernetes" placement="bottom"/>
+        </div>
+      </div>
+
+      <!-- Second row of tech icons -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/Group 10410.png" alt="Group 10410" class="img-fluid" ngbTooltip=" Azure Functions" placement="bottom"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/pngwing.com (17) 1.png" alt="Group 10411" class="img-fluid" ngbTooltip=" Firebase" placement="bottom"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/pngwing.com (18) 1.png" alt="Clipart" class="img-fluid" ngbTooltip=" Jenkins" placement="bottom"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/pngwing.com (15).png" alt="Image 104" class="img-fluid" ngbTooltip="AWS Lambda" placement="bottom"/>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <img src="assets/images/pngwing.com (16).png" alt="Frame 3" class="img-fluid" ngbTooltip=" Dynamo DB" placement="bottom"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="banner1">
+<div class="container py-5">
+  <div class="row align-items-start mt-5">
+    <!-- Left Section: Get In Touch Header -->
+    <div class="col-md-6 text-left">
+      <h5 class="text-get">GET IN TOUCH</h5>
+      <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
+    </div>
+
+    <!-- Right Section: Form -->
+    <div class="col-md-6">
+      <form (ngSubmit)="onSubmit()" class="p-3">
+        <div class="form-group">
+          <label for="name">NAME</label>
+          <input type="text" class="form-control" id="name" name="name" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="email">EMAIL ID</label>
+          <input type="email" class="form-control" id="email" name="email" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="service">SERVICE TYPE</label>
+          <input type="text" class="form-control" id="service" name="service" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="message">MESSAGE</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required ngModel></textarea>
+        </div>
+        <button mat-button class="read-more-button">
+          <span class="button-text">Send Enquiry</span>
+          <span >
+            <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon-arrow">
+          </span>
+          </button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
 
