@@ -1,85 +1,47 @@
-
-
-<div class="container-fluid contact-form py-5">
+<div class="container">
   <div class="row">
-    <!-- Right Column: Contact Information (Now on the Left) -->
-    <div class="col-lg-6 text-form d-flex align-items-center">
-      <div class="text-content p-4">
-        <div class="image-container mb-4" >
-  
-        </div>
-        <div class="frame-19 mb-4">
-          <h5 class="contact mb-2">CONTACT US</h5>
-          <h1 class="project-text">
-            Have a Project? We Would Love to Hear From You
-          </h1>
-        </div>
-        <div class="frame-16">
-          <div class="txt mb-4">
-            <p><strong>Address:</strong> No# G33. 626-1, Thudiyalur Saravanampatti Road, Coimbatore, Tamilnadu 641049, India</p>
-            <div class="contact-default d-flex align-items-center">
-              <h5 class="direction me-2">Get Direction</h5>
+    <div class="col-lg-6 col-md-12 mb-4" style="background-color:#EDF1FD;">
+      <div class="contact-info p-4" style=" border-radius: 8px;">
+        <h4 class="text-contact mt-5">CONTACT US</h4>
+        <h2 class="font">Have a Project?  We Would Love to Hear From You</h2>
+        <p class="address">
+          <strong>Address:</strong> SF4, Prabhatham Apartment, <br> Chinnamettupalayam, Saravanampatti, <br> Coimbatore – 641035 Tamilnadu.
+        </p>
+        <h5 class="direction">Get Direction</h5>
               <a href="https://www.google.co.in/maps/place/Prabhatham+Apartment/@11.094768,76.9693951,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba8f7aef7287abf:0x2a494549f722d5a6!8m2!3d11.094768!4d76.97197!16s%2Fg%2F11c6prp_2_?entry=ttu" target="_blank" class="vector">
-                <img src="assets/images/Vector (1).png" alt="Icon" />
+                <img src="assets/images/Vector (1).png" alt="Icon" class="vector"/>
               </a>
-            </div>
-          </div>
-
-          <div class="txt-1">
-            <div class="address-text mb-4">
               <h5 class="work">Work with us:</h5>
               <p class="work-content"><a href="mailto:hello@techxle.com">contact&#64;techxle.com</a></p>
-              <h5 class="career-text">Careers:</h5>
+              <h5 class="career-text mt-5">Careers:</h5>
               <p class="job"><a href="mailto:jobs@techxle.com">contact&#64;techxle.com</a></p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-    
-
-    <!-- Left Column: Form Section (Now on the Right) -->
-    <div class="col-lg-6 d-flex justify-content-center align-items-start form-content">
-      <div class="w-100 p-4">
-        <h1 class="get-text mb-4">Get in Touch?</h1>
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <!-- Name Input -->
-          <div class="mb-3">
-            <mat-form-field appearance="fill"class="w-100">
-              <mat-label>NAME</mat-label>
-              <input matInput placeholder="" >
-            </mat-form-field>
+    <div class="col-lg-6 col-md-12">
+      <div class="contact-form p-4" >
+        <h3 class="font mt-5">Get in Touch?</h3>
+        <form>
+          <div class="form-group mt-5">
+            <label for="name">Name</label>
+            <input type="text" class="form-control mt-2" id="name" />
           </div>
-          <!-- Email Input -->
-          <div class="mb-3">
-            <mat-form-field appearance="fill" class="w-100">
-              <mat-label>EMAIL ID</mat-label>
-              <input matInput placeholder="" >
-            </mat-form-field>
+          <div class="form-group mt-4">
+            <label for="email">Email ID</label>
+            <input type="email" class="form-control mt-2" id="email" />
           </div>
-          <!-- Phone Number Input -->
-          <div class="mb-3">
-            <mat-form-field appearance="fill" class="w-100">
-              <mat-label>PHONE NUMBER</mat-label>
-              <input matInput placeholder="" />
-            </mat-form-field>
+          <div class="form-group mt-4">
+            <label for="phone">Phone Number</label>
+            <input type="text" class="form-control mt-2" id="phone" />
           </div>
-          <!-- Service Type Input -->
-          <div class="mb-3">
-            <mat-form-field appearance="fill" class="w-100">
-              <mat-label>SERVICE TYPE</mat-label>
-              <input matInput  placeholder="" />
-            </mat-form-field>
+          <div class="form-group mt-4">
+            <label for="service-type">Service Type</label>
+            <input type="text" class="form-control mt-2" id="service-type" />
           </div>
-          <!-- Message Input -->
-          <div class="mb-4">
-            <mat-form-field appearance="fill" class="w-100">
-              <mat-label>MESSAGE</mat-label>
-              <textarea matInput  rows="4" placeholder=""></textarea>
-            </mat-form-field>
+          <div class="form-group mt-4">
+            <label for="message">Message</label>
+            <textarea class="form-control mt-2" id="message" rows="4" ></textarea>
           </div>
-          <!-- Submit Button -->
-          <button mat-button type="submit" class="btn btn-primary read-more-button">
+          <button mat-button type="submit" class=" read-more-button mt-4">
             <span class="button-text">Send Enquiry</span>
             <span><img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
           </button>
@@ -88,8 +50,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-   

@@ -79,10 +79,7 @@ setActiveLink(link: string) {
         this.currentImage = 'assets/images/capabilities.png';
     }
   }
-  onSubmit() {
-    // Handle form submission logic here
-    alert('Form submitted!');
-  }
+
  
 }
  
