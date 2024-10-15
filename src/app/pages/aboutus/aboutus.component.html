@@ -1,126 +1,104 @@
-<div class="container-fluid banner-container d-flex justify-content-center align-items-center">
-  <div class="row w-100">
-    <div class="col-lg-6 col-md-8 col-sm-10 banner-content text-start">
-      <h4 class="text-uppercase">ABOUT US</h4>
-      <h1>Business transformation through technology.</h1>
-      <a routerLink="/contact" class="cta-button">
-        <span class="text">Let's talk</span>
-        <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
-      </a>
+<section class="hero-section d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-12">
+        <div class="hero-content">
+          <p class="text-uppercase text-decoration-none mb-2">
+            about us
+          </p>
+         
+          <h1 class="mb-3">Business transformation through
+            technology.</h1>
+          <a routerLink="/contact" class="cta-button">
+            <span class="text">Let's talk</span>
+            <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-mission></app-mission>
+
+<div class="card-slider">
+  <div class="header">
+    <div class="hea container  d-flex align-items-center justify-content-between">
+      <div>
+        <h2>Our Leadership Team</h2>
+      </div>
+      <div class="navigation-buttons">
+        <svg (click)="prev()" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+          <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(108,116,139,1)" stroke-width="2" />
+          <path d="M15 25H30M15 25L25 15M15 25L25 35" stroke="rgba(108,116,139,1)" stroke-width="3" fill="none" />
+        </svg>
+        <svg (click)="next()" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+          <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(108,116,139,1)" stroke-width="2" />
+          <path d="M35 25H20M35 25L25 15M35 25L25 35" stroke="rgba(108,116,139,1)" stroke-width="3" fill="none" />
+        </svg>        
+      </div>
+    </div>
+  </div>
+  <div class="cards-container">
+    <div class="container" #container>
+      <div class="row flex-nowrap">
+        <mat-card class="card d-flex flex-column justify-content-center align-items-center me-3"
+          *ngFor="let card of cards">
+          <div class="row imag">
+            <div class="col-md-3 py-3">
+              <img src={{card.image}} class="img-fluid h-100 w-100 rounded-start">
+            </div>
+            <div class="col-md-9 py-4">
+              <h3>{{card.name}}</h3>
+              <h5>{{card.role}}</h5>
+              <p>{{card.para}}</p>
+              <img src={{card.ima}}>
+            </div>
+          </div>        
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-    <div class="move" [ngClass]="{'locked': lockedContent}">
-      <div class="bac-1" [ngClass]="{'expanded': expandedContent === 'bac-1-content', 'hovered': hoveredContent === 'bac-1-content'}" (mouseover)="handleMouseOver('bac-1-content')" (mouseout)="handleMouseOut()" (click)="handleClick('bac-1-content')">
-        <div class="heading" *ngIf="activeContent !== 'bac-1-content'">Our Vision</div>
-      </div>
-      <div class="bac-2" [ngClass]="{'expanded': expandedContent === 'bac-2-content', 'hovered': hoveredContent === 'bac-2-content'}" (mouseover)="handleMouseOver('bac-2-content')" (mouseout)="handleMouseOut()" (click)="handleClick('bac-2-content')">
-        <div class="heading" *ngIf="!lockedContent || expandedContent !== 'bac-2-content'">Our Mission</div>
-      </div>
-      <div class="bac-3" [ngClass]="{'expanded': expandedContent === 'bac-3-content', 'hovered': hoveredContent === 'bac-3-content'}" (mouseover)="handleMouseOver('bac-3-content')" (mouseout)="handleMouseOut()" (click)="handleClick('bac-3-content')">
-        <div class="heading" *ngIf="!lockedContent || expandedContent !== 'bac-3-content'">Why Choose Us</div>
-      </div>
-    </div>
-    <div class="content">
-      <img src="assets/images/vision.png" alt="Techxle Logo" class="vision">
-      <div class="content-item bac-1-content" *ngIf="activeContent === 'bac-1-content'">
-        
-        <h2 class="title">Our Vision</h2>
-        <p class="para">At Techxle we provide comprehensive solutions in no code, 
-          low code, full stack, and DevOps. Whether you need a simple 
-          no code solution or a complex system, our team has the 
-          expertise to deliver. <br>
-          <br>      
-          Let us help you take your software development to the
-          next level.</p>
-      </div>
-      <div class="content-item bac-2-content" *ngIf="activeContent === 'bac-2-content'">
-        
-        <h2 class="title">Our Mission</h2>
-        <p class="para">At Techxle we provide comprehensive solutions in no code, 
-          low code, full stack, and DevOps. Whether you need a simple 
-          no code solution or a complex system, our team has the 
-          expertise to deliver. <br><br>
-          
-          Let us help you take your software development to the
-          next level.</p>
-      </div>
-      <div class="content-item bac-3-content" *ngIf="activeContent === 'bac-3-content'">
-       
-        <h2 class="title">Why Choose Us</h2>
-        <p class="para">At Techxle we provide comprehensive solutions in no code, 
-          low code, full stack, and DevOps. Whether you need a simple 
-          no code solution or a complex system, our team has the 
-          expertise to deliver. <br><br>
-          
-          Let us help you take your software development to the
-          next level.</p>  
-      </div>
-    </div>
-  </div>
-
-  
-
-  
-
-  
-
-  <div class="card-slider">
-    <div class="header">
-      <h2>Our Leadership Team</h2>
-      <div class="navigation-buttons">
-        <button mat-icon-button (click)="prev()">
-          <mat-icon fontSet="fa">&#8592;</mat-icon>
-        </button>
-        <button mat-icon-button (click)="next()">
-          <mat-icon fontSet="fa">&#8594;</mat-icon>
-        </button>
-      </div>
-    </div>
-    <div class="cards-container" #container>
-     <mat-card *ngFor="let card of cards">    
-        <div class="card">
-          <img [src]="card.image">
-          <h2>{{card.name}}</h2>
-          <h3>{{card.role}}</h3>
-          <p>{{card.para}}</p>
-          <img class="li" [src]="card.ima">
-        </div>
-     </mat-card>
-    </div>
-  </div>
-
-
- <div class="work">
-    <div class="work1">
+<div class="work container">
+    <div class="work1 d-flex flex-column align-items-center">
        <h2>Establishing an Inspiring Work Environment</h2>
        <p>By focusing on employee development, we create a vibrant work environment filled with engaging activities.</p>
     </div>
-    <div class="ima">
-        <img class="img1" src="assets/logo/banner.png" alt="Arrow Icon">
-        <img class="img2" src="assets/logo/banner.png" alt="Arrow Icon">
-        <img class="img3" src="assets/logo/banner.png" alt="Arrow Icon">
-        <img class="img4" src="assets/logo/banner.png" alt="Arrow Icon">
+    <div class="row mt-4">
+      <div class="col-md-6 py-3">
+        <img src="assets/logo/banner.png" class="img-fluid cu-he1 w-100  rounded-start">
+      </div>
+      <div class="col-md-3 py-3 d-flex flex-column">
+        <img src="assets/logo/banner.png" class="img-fluid cu-he w-100 pb-3 rounded-start">
+        <img src="assets/logo/banner.png" class="img-fluid cu-he w-100 rounded-start">
+      </div>
+      <div class="col-md-3 py-3">
+        <img src="assets/logo/banner.png" class="img-fluid cu-he1 w-100  rounded-start">
+      </div>
+    </div>  
+</div>
+
+  <div class="learn container">
+    <h2 class="d-flex justify-content-center">Learn more about Techxle</h2>
+    <div class="row">
+    <div class="col-md-4 mt-4">
+      <button class="button1 w-100 d-flex ps-3 justify-content-start align-items-center" routerLink="/leader">
+        <img  src="assets/logo/Icon.png">
+        <h2>Meet Our Team</h2>
+      </button>
     </div>
-  </div>
-
- 
-
-
-  <div class="learn">
-    <h2>Learn more about Techxle</h2>
-    <button class="button1" (click)="navigateToleader()">
-      <img src="assets/logo/Icon.png">
-      <h2>Meet Our Team</h2>
-    </button>
-    <button class="button2" (click)="navigateToService()">
-      <img src="assets/logo/Icon (1).png" >
-      <h2>Expore Our Services</h2>
-    </button>
-    <button class="button3" (click)="navigateToContact()">
-      <img src="assets/logo/Icon (2).png">
-      <h2>Join Our Crew</h2>
-    </button>
+    <div class="col-md-4 mt-4">
+      <button class="button1 w-100 d-flex ps-3 justify-content-start align-items-center" routerLink="/services">
+        <img src="assets/logo/Icon (1).png" >
+        <h2>Expore Our Services</h2>
+      </button>
+    </div>
+    <div class="col-md-4 mt-4">
+      <button class="button1 w-100 ps-3 d-flex align-items-center justify-content-start" routerLink="/contact">
+        <img src="assets/logo/Icon (2).png">
+        <h2>Join Our Crew</h2>
+      </button>
+    </div>
+    </div>
   </div>

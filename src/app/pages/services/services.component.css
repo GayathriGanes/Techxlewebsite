@@ -87,6 +87,7 @@
   letter-spacing: 0.01em;
   color: #0a183e;
 }
+
 .read-more-button {
   color: rgba(53, 100, 223, 1);
 } 
@@ -99,6 +100,7 @@
 .card-body {
   height: 410px;
   border-radius: 4px;
+  gap:20px;
   border: 1px;
   border: 1px solid #060e231a;
 }
@@ -115,13 +117,11 @@
   line-height: 25.6px;
   letter-spacing: 0.02em;
   text-align: center;
-  height: 120px;
  
 }
 .service-icon{
  
   height: 60px;
-  margin-top: 30px;
  
  
 }

@@ -1,66 +1,35 @@
-<!--<div class="banner-container">
-    <div class="banner-content">
-      <div class="banner-content-header">
-        <a routerLink="/aboutus">ABOUT US</a>
-        <span>/ LEADERSHIP</span>
-      </div>
-      <h1>Business transformation through technology.</h1>
-      <a routerLink="/contact" class="cta-button">
-        <span class="text">Let's talk</span>
-        <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
-      </a>
-    </div>
-    <div class="team">
-        <h1 class="team-text">Our Leadership Team</h1>
-        <div class="row"  *ngFor="let row of rows" [style]="row.style">
-            <div class="pic-4">
-                <div class="comp">
-                    <span class="image1">
-                      <img class="bottom-img" src="assets/images/image 92.png" alt="Techxle Logo" id="img1"/>
-                      <img class="top-img" src="assets/images/image 93.png" alt="Techxle Logo" id="img2" />
-                    </span>
-                    <div class="frame-8">
-                      <h1 class="name-ceo">Krishna Sudheendra</h1>
-                      <p class="founder">Founder & CEO</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
+<section class="hero-section d-flex justify-content-center align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-12">
+        <div class="hero-content">
+          <p class="text-uppercase mb-2">
+            <a routerLink="/aboutus" class="text-decoration-none">about us</a> / Leadership
+          </p>
 
-    <div class="container-fluid banner-container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-6 banner-content">
-          <div class="banner-content-header">
-            <a routerLink="/aboutus">ABOUT US</a>
-            <span>/ LEADERSHIP</span>
-          </div>
-          <h1>Business transformation through technology.</h1>
-          <a routerLink="/contact" class="cta-button d-inline-flex align-items-center">
+          <h1 class="mb-3">Business transformation through
+            technology.</h1>
+          <a routerLink="/contact" class="cta-button">
             <span class="text">Let's talk</span>
             <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
           </a>
         </div>
       </div>
-      <div class="team">
-        <h1 class="team-text">Meet Our Team</h1>
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let row of rows">
-            <div class="pic-4 d-flex flex-column align-items-center">
-              <div class="comp">
-                <span class="image1">
-                  <img class="bottom-img img-fluid" src="assets/images/image 92.png" alt="Image">
-                  <img class="top-img img-fluid" src="assets/images/image 93.png" alt="Image">
-                </span>
-                <div class="frame-8 text-center">
-                  <h1 class="name-ceo">{{ row.name }}</h1>
-                  <p class="founder">{{ row.title }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
+  </div>
+</section>
+<div class="lea container text-center mt-5 pt-5">
+  <h2 class="mb-5 d-flex justify-content-start">Meet Our Team</h2>
+  <div class="row justify-content-center mt-3">
+    <div class="col-md-3 mb-5" *ngFor="let member of teamMembers">
+      <div class="team-member">
+        <div class="image-container">
+          <img [src]="member.imageBW" alt="{{member.name}}" class="img-fluid bw-image" />
+          <img [src]="member.imageColor" alt="{{member.name}}" class="img-fluid color-image" />
         </div>
+        <h5>{{member.name}}</h5>
+        <p>{{member.role}}</p>
       </div>
     </div>
-       
-
+  </div>
+</div>

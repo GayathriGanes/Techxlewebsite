@@ -95,6 +95,11 @@ color: #545D78;
 .move:not(.locked) > div:not(.hovered) .heading {
   display: block;
 }
+.vision {
+  height: 42px; 
+  width: 42px; 
+  object-fit: contain; 
+}
 @media (max-width:767.98px)
 {
   .container{

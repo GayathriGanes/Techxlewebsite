@@ -1,9 +1,8 @@
-
 import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import{MatExpansionModule} from '@angular/material/expansion';
-
+ 
 @Component({
   selector: 'app-powerplatform',
   templateUrl: './powerplatform.component.html',
@@ -17,14 +16,14 @@ export class PowerplatformComponent implements OnInit {
     const toolbar = document.querySelector('.nav-toolbar') as HTMLElement;
     const sections = document.querySelectorAll('section');
     let toolbarShouldBeFixed = false;
-
+ 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
       if (rect.top<=90 && rect.bottom>=90) { // Adjust as needed
         toolbarShouldBeFixed = true;
       }
     });
-
+ 
     if (toolbarShouldBeFixed) {
       toolbar.classList.add('fixed');
     } else {
@@ -39,7 +38,7 @@ ngOnInit(): void {
       document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
     }
   });
-
+ 
   this.router.events.subscribe((event) => {
     if (event instanceof NavigationEnd) {
       const url = this.router.url;
@@ -51,17 +50,17 @@ ngOnInit(): void {
         this.setActiveLink('ourcapabilities');
       } else if (url.includes('#impact')) {
         this.setActiveLink('impact');
-      } 
-      
+      }
+     
     }
   });    
 }
 setActiveLink(link: string) {
   this.activeLink = link;
 }
-
-  currentImage: string = ""; // default image path
-
+ 
+  currentImage: string = "assets/images/app.png"; // default image path
+ 
   changeImage(panelNumber: number) {
     switch (panelNumber) {
       case 1:
@@ -81,9 +80,6 @@ setActiveLink(link: string) {
     }
   }
 
+ 
 }
-
-
-
-
-
+ 

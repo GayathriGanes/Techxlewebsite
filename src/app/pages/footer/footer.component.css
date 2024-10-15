@@ -5,11 +5,19 @@
 .content {
   border-bottom: 1px solid #394867;
   height: 120px;
+
 }
 .socialmedia {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   white-space: nowrap;
+}
+.company-address{
+  gap:8px;
+}
+.em{
+  text-decoration:none;
+  color: #ffffff99;
 }
 .footer-section {
   h2 {
@@ -100,6 +108,9 @@
     height: 170px;
     padding-top: 30px;
   }
+  .connect-us{
+    line-height:40.4px;
+  }
   .socialmedia {
     position: relative;
     padding-top: 30px;
@@ -115,5 +126,12 @@
   }
   .read-more-button {
     width: 147px;
+  }
+}
+@media (min-width:992px)
+{
+  .services li
+  {
+     white-space:nowrap;
   }
 }
