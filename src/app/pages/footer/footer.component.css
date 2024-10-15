@@ -128,3 +128,10 @@
     width: 147px;
   }
 }
+@media (min-width:992px)
+{
+  .services li
+  {
+     white-space:nowrap;
+  }
+}

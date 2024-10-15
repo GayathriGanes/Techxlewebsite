@@ -16,5 +16,6 @@ export class BannerComponent {
         } else {
           this.isScrolled = false;
         }
-      }    
+      }   
 }
+

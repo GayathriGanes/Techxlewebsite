@@ -59,12 +59,12 @@ setActiveLink(link: string) {
   this.activeLink = link;
 }
  
-  currentImage: string = "assets/images/image 107.png"; 
+  currentImage: string = "assets/images/pen.png"; 
  
   changeImage(panelNumber: number) {
     switch (panelNumber) {
       case 1:
-        this.currentImage = 'assets/images/image 107.png';
+        this.currentImage = 'assets/images/pen.png';
         break;
       case 2:
         this.currentImage = 'assets/images/augmented-reality-integration-enhanced-interactive-experiences-digital-platforms_972075-45024-transformed 1.png';
