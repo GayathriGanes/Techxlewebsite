@@ -18,14 +18,13 @@
     </div>
   </div>
 </section>
-<div class="lea container text-center mt-5 pt-5">
+<div class="lea container text-center mt-5 pt-5 mb-5">
   <h2 class="mb-5 d-flex justify-content-start">Meet Our Team</h2>
-  <div class="row justify-content-center mt-3">
-    <div class="col-md-3 mb-5" *ngFor="let member of teamMembers">
+  <div class="row justify-content-start mt-3">
+    <div class="col-md-4 col-lg-3 mb-5" *ngFor="let member of teamMembers">
       <div class="team-member">
         <div class="image-container">
-          <img [src]="member.imageBW" alt="{{member.name}}" class="img-fluid bw-image" />
-          <img [src]="member.imageColor" alt="{{member.name}}" class="img-fluid color-image" />
+          <img [src]="member.image" alt="{{member.name}}" class="img-fluid hover-image" />
         </div>
         <h5>{{member.name}}</h5>
         <p>{{member.role}}</p>
