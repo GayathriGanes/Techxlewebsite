@@ -59,6 +59,15 @@ label{
     height:48px;
     border-radius: 4px;
   }
+  .read-more-button {
+    color: rgba(53, 100, 223, 1);
+}
+.read-more-button::before {  
+    background-color: rgba(53,100,223,1);  
+}
+.read-more-button:hover .button-text {
+    color: white;
+}
 @media (max-width:797.98px)
 {
    .font{
