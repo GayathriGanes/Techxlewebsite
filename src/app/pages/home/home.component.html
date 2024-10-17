@@ -1,4 +1,81 @@
-<app-banner></app-banner>
-<app-service></app-service>
-<app-callout></app-callout>
+<div class="hero-section">
+    <div id="parallax-bg" class="bg1 d-flex" [ngClass]="{ 'bg2': isScrolled }">
+      <div class="container d-flex justify-content-start align-items-center">
+        <div class="hero-content" id="content1" [ngClass]="{ 'd-none': isScrolled }">
+          <h1>Pioneering New Approaches to Advance Research and Technologies</h1>
+          <h2>Client Centered. Associate Focused. Collaborative Minded.</h2>
+          <button mat-button routerLink="/contact" class="read-more-button bt">
+            <span class="button-text">Connect with us</span>
+            <span>
+              <img src="./assets/images/Icons.svg" alt="Techxle Logo" class="icon">
+            </span>
+          </button>
+        </div>
+        <div class="hero-content" id="content2" [ngClass]="{ 'd-none': !isScrolled }">
+          <h1>Shaping The Future of Healthcare with Advanced Technologies</h1>
+          <h2>Client Centered. Associate Focused. Collaborative Minded.</h2>
+          <button mat-button routerLink="/contact" class="read-more-button bt">
+            <span class="button-text">Connect with us</span>
+            <span>
+              <img src="./assets/images/Icons.svg" alt="Techxle Logo" class="icon">
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="card-slider">
+    <div class="header">
+      <div class="hea container  d-flex align-items-center justify-content-between">
+        <div>
+          <h2>Explore Our Services</h2>
+        </div>
+        <div class="navigation-buttons">
+          <img src="./assets/images/L-Arrow.svg" (click)="prev()" alt="Techxle Logo">
+          <img src="./assets/images/R-Arrow.svg" (click)="next()" class="ms-2">
+        </div>
+      </div>
+    </div>
+    <div class="cards-container">
+      <div class="container" #container>
+        <div class="row flex-nowrap">
+          <mat-card class="card d-flex flex-column justify-content-center align-items-center me-3"
+            *ngFor="let card of cards">
+            <div class="card-blocks">
+              <div class="symbol-block d-flex justify-content-center mb-3">
+                <img [src]="card.symbol" alt="Card Symbol" />
+              </div>
+              <div class="content-block text-center">
+                <mat-card-header class="justify-content-center mb-3">
+                  <mat-card-title class="title">{{ card.title }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="content mb-3">
+                  {{ card.content }}
+                </mat-card-content>
+                <button mat-button routerLink={{card.route}} class="read-more-button">
+                  <span class="button-text">Read More</span>
+                  <span>
+                    <img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
+                  </span>
+                </button>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+</div>
+<section class="banner">
+    <div class="callout container d-flex flex-column flex-md-row justify-content-between align-items-md-center py-4 py-md-0 ">
+      <h1 class="callout-text m-0">Need any expert business & consulting services?</h1>
+      <div class="d-sm-flex align-items-start">
+      <button mat-button  routerLink="/contact"  class="read-more-button bt">
+        <span class="button-text">Connect with us</span>
+        <span>
+          <img src="./assets/images/Icons.svg" alt="Techxle Logo" class="icon">
+        </span>
+      </button>
+      </div>
+    </div>
+  </section>  
 <app-mission></app-mission>

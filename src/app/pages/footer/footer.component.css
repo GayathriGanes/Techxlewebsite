@@ -1,6 +1,5 @@
 .footer {
   background: #0a183e;
-  color: #ffffff;
 }
 .content {
   border-bottom: 1px solid #394867;
@@ -28,7 +27,6 @@
   }
   ul {
     color: #ffffff99;
-    font-family: "Plus Jakarta Text", sans-serif;
     line-height: 35px;
     list-style-position: inside;
     padding-left: 0;
@@ -45,7 +43,6 @@
   }
   p {
     color: #ffffff99;
-    font-family: "Plus Jakarta Text", sans-serif;
   }
   strong {
     color: white;
@@ -58,21 +55,13 @@
   border-top: 1px solid #394867;
   margin-top: 40px;
 }
-.bottom-text1 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 23.2px;
-  color: #ffffff99;
-}
 .connect-us {
-  font-family: "Plus Jakarta Text", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 32.4px;
   color: #ffffff80;
 }
 .bottom-text {
-  font-family: "Plus Jakarta Text", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 23.2px;
@@ -88,20 +77,16 @@
   color: rgba(53, 100, 223, 1);
 }
 .project {
-  font-family: 'Plus Jakarta Text', sans-serif;
   font-size: 26px;
   font-weight: 600;
   line-height: 40px;
   color: #FFFFFF;
-  white-space: nowrap;
 }
 .gotproj {
   background: #FFFFFF08;
   height: 160px;
   padding: 24px 15px 24px 15px;
-  gap: 24px;
   border-radius: 6px;
-  opacity: 0px;
 }
 @media (max-width:767.98px) {
   .content {
@@ -112,7 +97,6 @@
     line-height:40.4px;
   }
   .socialmedia {
-    position: relative;
     padding-top: 30px;
   }
 }

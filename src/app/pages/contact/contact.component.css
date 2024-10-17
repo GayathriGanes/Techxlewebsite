@@ -5,6 +5,11 @@
   letter-spacing: 0.08em;
   color: #3564DF;
 }
+.banner2
+{
+  background-color:#EDF1FD;
+  margin-top:90px;
+}
 .font{
 font-size: 38px;
 font-weight: 600;

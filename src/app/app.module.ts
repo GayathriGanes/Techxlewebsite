@@ -5,8 +5,6 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { BannerComponent } from './pages/banner/banner.component';
-import { CalloutComponent } from './pages/callout/callout.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { ServiceComponent } from './pages/services/services.component';
 import { HeaderComponent } from './pages/header/header.component';
@@ -22,7 +20,6 @@ import { UIComponent } from './pages/ui/ui.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import{MatExpansionModule} from '@angular/material/expansion';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
-import { ServiceeComponent } from './pages/service/service.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MissionComponent } from './pages/mission/mission.component';
 import { SolutionbanComponent } from './pages/solutionban/solutionban.component';
@@ -51,8 +48,6 @@ import { HomeComponent } from './pages/home/home.component';
   declarations: [
     AppComponent,
     SolutionbanComponent,
-    BannerComponent,
-    CalloutComponent,
     FooterComponent,
     ServiceComponent,
     HeaderComponent,
@@ -65,7 +60,6 @@ import { HomeComponent } from './pages/home/home.component';
     UIComponent,
     FullstackComponent,
     LeadershipComponent,
-    ServiceeComponent,
     MissionComponent,
     SolutionbanComponent,
     PowerComponent,
