@@ -59,24 +59,24 @@ setActiveLink(link: string) {
   this.activeLink = link;
 }
  
-  currentImage: string = "assets/images/app.png"; // default image path
+  currentImage: string = "./assets/images/app.png"; // default image path
  
   changeImage(panelNumber: number) {
     switch (panelNumber) {
       case 1:
-        this.currentImage = 'assets/images/app.png';
+        this.currentImage = './assets/images/app.png';
         break;
       case 2:
-        this.currentImage = 'assets/images/process.png';
+        this.currentImage = './assets/images/process.png';
         break;
       case 3:
-        this.currentImage = 'assets/images/data.png';
+        this.currentImage = './assets/images/data.png';
         break;
         case 4:
-        this.currentImage = 'assets/images/integration.png';
+        this.currentImage = './assets/images/integration.png';
         break;
       default:
-        this.currentImage = 'assets/images/capabilities.png';
+        this.currentImage = './assets/images/capabilities.png';
     }
   }
 

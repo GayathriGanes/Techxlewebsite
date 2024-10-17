@@ -5,7 +5,7 @@
 .content {
   border-bottom: 1px solid #394867;
   height: 120px;
-
+  margin-top:0;
 }
 .socialmedia {
   display: flex;

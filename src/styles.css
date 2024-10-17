@@ -50,6 +50,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top:90px;
 }
  
 .hero-content {
@@ -204,23 +205,23 @@ body {
   margin-top: 25px;
 }
 .iterate-text {
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-weight: 600 !important;
-  line-height: 23.1px !important;
+  line-height: 26.1px !important;
   color: #060e23;  
 }
  
 .prototype-text {
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-weight: 600 !important;
-  line-height: 23.1px !important;
+  line-height: 26.1px !important;
   color: #060e23;
 }
  
 .idea-text {
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-weight: 600 !important;
-  line-height: 23.1px !important;
+  line-height: 26.1px !important;
   color: #060e23;
 }
  
@@ -233,9 +234,9 @@ body {
   border-style: dashed;
 }
 .define-text {
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-weight: 600 !important;
-  line-height: 23.1px !important;  
+  line-height: 26.1px !important;  
   color: #060e23;
 }
  

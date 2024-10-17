@@ -10,42 +10,42 @@ export class LeadershipComponent {
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       {
         name: 'Krishna Sudheendra',
         role: 'Founder & CEO',
-        image: 'assets/images/image 92.png',
+        image: './assets/images/image 92.png',
       },
       
     ];
