@@ -8,33 +8,33 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './design.component.css'
 })
 export class DesignComponent implements OnInit{
-  @ViewChild('container', { read: ElementRef }) container!: ElementRef;
+  /*@ViewChild('container', { read: ElementRef }) container!: ElementRef;
 
   cards = [
     {
       title: 'Power Platform Solution',
       image: 'assets/logo/banner.png',
-      route: 'power'
+      route: '/power'
     },
     {
       title: 'Cloud App Development',
       image: 'assets/logo/banner.png',
-      route: 'cloud'
+      route: '/cloud'
     },
     {
       title: 'Staffing Service',
       image: 'assets/logo/banner.png',
-      route: 'staff'
+      route: '/staff'
     },
     {
       title: 'Full Stack Development',
       image: 'assets/logo/banner.png',
-      route: 'stack'
+      route: '/stack'
     },
     {
       title: 'UI/UX Designing',
       image: 'assets/logo/banner.png',
-      route: 'design'
+      route: '/design'
     }
   ];  
     @HostListener('window:scroll', ['$event'])
@@ -59,9 +59,7 @@ export class DesignComponent implements OnInit{
   activeLink: string = '';
   constructor(private router: Router,private route: ActivatedRoute) {}
 
-  navigateToSolutions() {
-    this.router.navigate(['/solutions']); // Adjust the path as needed
-  }
+ 
   
   ngOnInit(): void {
     this.route.fragment.subscribe(fragment => {
@@ -91,14 +89,80 @@ export class DesignComponent implements OnInit{
   setActiveLink(link: string) {
     this.activeLink = link;
   }
-  navigateTo(route: string) {
-    this.router.navigate([`solutions/${route}`]);
-  }
+ 
   next() {
     this.container.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
   }
 
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
-  }
+  }*/
+    
+      currentSection: string = 'overview'; // Default section
+      currentSectionTitle: string = 'Overview'; // Default section title for mobile
+      isNavbarCollapsed: boolean = false; // Ensure the navbar is initially collapsed (menu closed)
+    
+      ngOnInit() {
+        // Restore the section on page reload using local storage
+        const savedSection = localStorage.getItem('currentSection');
+        if (savedSection) {
+          this.scrollToSection(savedSection);
+        }
+      }
+    
+      // Function to toggle the navbar on mobile
+      toggleNavbar() {
+        this.isNavbarCollapsed = !this.isNavbarCollapsed;
+      }
+    
+      // Scroll to the section when a navbar link is clicked
+      scrollToSection(section: string) {
+        const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          this.updateSectionTitle(section);
+          this.currentSection = section;
+    
+          // Save current section in local storage to restore on refresh
+          localStorage.setItem('currentSection', section);
+    
+          // Close the navbar toggler after clicking a link (for mobile)
+          if (this.isNavbarCollapsed) {
+            this.isNavbarCollapsed = false;
+          }
+        }
+      }
+    
+      // Update the mobile navbar title to reflect the clicked section
+      updateSectionTitle(section: string) {
+        const sectionTitles: any = {
+          overview: 'Overview',
+          solutions: 'Solutions',
+          impact: 'Impact',
+        };
+        this.currentSectionTitle = sectionTitles[section];
+      }
+    
+      @HostListener('window:scroll', [])
+      onWindowScroll() {
+        const sections = ['overview', 'solutions', 'impact'];
+        sections.forEach(section => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight + 100) {
+              this.currentSection = section;
+              this.updateSectionTitle(section);
+              // Save current section in local storage when scrolling
+              localStorage.setItem('currentSection', section);
+            }
+          }
+        });
+      }
+    
+    
+    
+    
+    
+    
 }

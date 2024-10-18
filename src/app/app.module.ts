@@ -3,6 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms'; 
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FooterComponent } from './pages/footer/footer.component';
@@ -88,7 +89,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatFormFieldModule,
     MatInputModule,
     RouterModule,
-
+    ReactiveFormsModule,
     
   ],
   providers: [
