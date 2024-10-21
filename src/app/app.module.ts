@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FooterComponent } from './pages/footer/footer.component';
@@ -35,7 +35,7 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { AiComponent } from './pages/ai/ai.component';
 import { DevopsComponent } from './pages/devops/devops.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
 
 
@@ -73,8 +73,8 @@ import { HomeComponent } from './pages/home/home.component';
     AiComponent,
     DevopsComponent,
     HomeComponent
-    
-    
+
+
   ],
   imports: [
     BrowserModule,
@@ -90,7 +90,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatInputModule,
     RouterModule,
     ReactiveFormsModule,
-    
+    NgbScrollSpyModule
   ],
   providers: [
     provideClientHydration(),
@@ -98,6 +98,6 @@ import { HomeComponent } from './pages/home/home.component';
     provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }
