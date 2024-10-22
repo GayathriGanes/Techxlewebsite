@@ -1,3 +1,4 @@
+<div ngbScrollSpy #spy="ngbScrollSpy" class="d-block overflow-auto vh-100 ">
 <section class="hero-section d-flex justify-content-center align-items-center">
   <div class="container">
     <div class="row">
@@ -17,17 +18,20 @@
     </div>
   </div>
 </section>
- <mat-toolbar class="nav-toolbar container-fluid d-flex justify-content-center">
-<nav class="nav-container">
-      <a [routerLink]="['/ui']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
-      <a [routerLink]="['/ui']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
-      <a [routerLink]="['/ui']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
-      <a [routerLink]="['/ui']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
-</nav>
+<mat-toolbar class="nav-toolbar sticky-top custom-sticky container-fluid d-flex justify-content-center">
+  <nav class="nav-container">
+        <a fragment="overview" class="sub-page-nav" [ngbScrollSpyItem]="[spy, 'overview']">Overview</a>
+        <a fragment="ourapproach" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Our Approach</a>
+        <a fragment="ourcapabilities" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Our Capabilities</a>
+        <a fragment="impact" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Impact</a>
+  </nav>
 </mat-toolbar>
 <section id="overview" class="overview container">
   <div class="row">
-    <h1 class="menu   col-md-3 col-sm-12 mb-4">Overview</h1>
+    <div class=" col-md-3 col-sm-12 mb-4">
+      <h1 ngbScrollSpyFragment="overview" class="menu">Overview</h1>
+    </div>
+   
     <p class="text col-md-9 col-sm-12">
       Elevate your digital products with Techxle’s expert UI/UX Designing services. We create intuitive and visually appealing interfaces that provide a seamless user experience, ensuring that your applications are both functional and engaging. Our design approach focuses on understanding user needs and behaviors to craft experiences that delight and drive user satisfaction.
     </p>
@@ -36,7 +40,7 @@
 
 <section id="ourapproach" class="ourapproach container" >
   <div class="row">
-   <h1 class="approach col-12 col-md-3">Approach</h1>
+   <h1 ngbScrollSpyFragment="ourapproach" class="approach col-12 col-md-3">Approach</h1>
    <p class="para1 col-12 col-md-9">We follow a user-centered design process that involves collaborating with stakeholders and users to create intuitive and aesthetically pleasing interfaces. Our design team uses the latest tools and techniques to build experiences that are not only functional but also enjoyable to use</p>
   </div>
   <div class="archit col-12 justify-content-center">
@@ -83,7 +87,7 @@
 <section id="ourcapabilities" class="container py-5 ourcapabilities">
   <div class="row">
     <div class="col-12  text-start mb-4">
-      <h1 class="cap">Our Capabilities</h1>
+      <h1 ngbScrollSpyFragment="ourcapabilities" class="cap">Our Capabilities</h1>
     </div>
   </div>
 
@@ -147,7 +151,7 @@
 </div>
 <section id="impact" class="impact container">
   <div class="outcomes">
-    <h1 class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
+    <h1 ngbScrollSpyFragment="impact" class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
   </div>
 
   <!-- Image row -->
@@ -237,6 +241,7 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>
 </div>
 
 

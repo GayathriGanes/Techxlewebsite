@@ -26,9 +26,10 @@
   letter-spacing: 0.01em;
   color:rgba(10, 24, 62, 1);
 }
+
 .service-image {
-  height: 273px;
-  border-radius:4px;  
+  height: 273px;   
+  border-radius:4px;   
 }
 .content-box {
   background-color: white;

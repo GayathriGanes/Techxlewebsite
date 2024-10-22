@@ -24,10 +24,6 @@ import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MissionComponent } from './pages/mission/mission.component';
 import { SolutionbanComponent } from './pages/solutionban/solutionban.component';
-import { PowerComponent } from './pages/power/power.component';
-import { CloudComponent } from './pages/cloud/cloud.component';
-import { StaffComponent } from './pages/staff/staff.component';
-import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -35,9 +31,17 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { AiComponent } from './pages/ai/ai.component';
 import { DevopsComponent } from './pages/devops/devops.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
-
+import { InventoryComponent } from './pages/inventory/inventory.component';
+import { AcquisComponent } from './pages/acquis/acquis.component';
+import { SampleComponent } from './pages/sample/sample.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { ReviewComponent } from './pages/review/review.component';
+import { GrantComponent } from './pages/grant/grant.component';
+import { HealthcareComponent } from './pages/healthcare/healthcare.component';
+import { PsComponent } from './pages/ps/ps.component';
+import { SaleComponent } from './pages/sale/sale.component';
+import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -63,16 +67,21 @@ import { HomeComponent } from './pages/home/home.component';
     LeadershipComponent,
     MissionComponent,
     SolutionbanComponent,
-    PowerComponent,
-    CloudComponent,
-    StaffComponent,
-    StackComponent,
     DesignComponent,
     SolutionsComponent,
     ContactComponent,
     AiComponent,
     DevopsComponent,
-    HomeComponent
+    HomeComponent,
+    InventoryComponent,
+    AcquisComponent,
+    SampleComponent,
+    ProjectComponent,
+    ReviewComponent,
+    GrantComponent,
+    HealthcareComponent,
+    PsComponent,
+    SaleComponent
     
     
   ],
@@ -90,7 +99,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatInputModule,
     RouterModule,
     ReactiveFormsModule,
-    
+    NgbScrollSpyModule
   ],
   providers: [
     provideClientHydration(),

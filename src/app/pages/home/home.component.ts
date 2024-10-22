@@ -29,6 +29,20 @@ export class HomeComponent {
       
       ];
       constructor() {}
+      services = [
+        { name: 'Lab Automation & Reservation', image: './assets/images/m11.png', isHovered: false,route:'/lab-automation-&-reservation' },
+        { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/inventory-management' },
+        { name: 'Acquisition Support for Labs', image: './assets/images/m13.png', isHovered: false,route:'/acquisition-support-for-labs' },
+       
+      ];
+     
+      hoverIn(service:any) {
+        service.isHovered = true;
+      }
+     
+      hoverOut(service:any) {
+        service.isHovered = false;
+      }
     
     
       next() {

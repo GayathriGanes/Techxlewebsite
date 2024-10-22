@@ -58,6 +58,56 @@
   .read-more-button.bt:hover .button-text {
     color:  rgba(53,100,223,1);
   }
+  .heading{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 45.36px;
+    letter-spacing: 0.01em;
+    color:rgba(10, 24, 62, 1);
+  }
+  .service-image {
+    height: 273px;
+    border-radius:4px;  
+  }
+  .content-box {
+    background-color: white;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:4px;
+    box-shadow: 0px 4px 30px 0px rgba(6, 14, 35, 0.1);
+   
+  }
+  .content-box h5 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height:29px;
+    color:rgba(10,24,62,1);
+  }
+  .card{
+    height:auto !important;
+  }
+  .read-more {
+    font-size: 0.9rem;
+    color: #0056b3;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+  .read-more-button {
+    color: rgba(53, 100, 223, 1);
+  }
+  .read-more-button::before {  
+    background-color: rgba(53,100,223,1);  
+  }
+  .read-more-button:hover .button-text {
+    color: white;
+  }
+  
+
   @media (max-width: 767.98px) {
     .callout-text {
       font-size: 25px;
@@ -92,11 +142,11 @@
         
     } 
     .card{
-        width:280px;
-        height:450px;
+        width:280px !important;
+        height:450px !important;
     }
     .hea h2{
-        font-size:30px;
+        font-size:30px !important;
     }
   }
   @media (min-width:768px) and (max-width:991.98px) {

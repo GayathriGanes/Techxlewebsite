@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-md navbar-light">
   <div class="container">
     <a class="navbar-brand d-flex justify-content-start" href="#"><img src="./assets/images/logo.svg" alt="Techxle Logo"
@@ -8,12 +9,16 @@
       <span *ngIf="isNavbarCollapsed" class="navbar-toggler-icon"></span>
       <span *ngIf="!isNavbarCollapsed" class="close-icon">&times;</span>
     </button>
-
+ 
     <div class="collapse navbar-collapse d-md-flex justify-content-end" [ngbCollapse]="isNavbarCollapsed">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" routerLink="/services" [ngClass]="{'active': selectedLink === 'services'}"
             (click)="selectLink('services')" (click)="closeNavbar()">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/solutions" [ngClass]="{'active': selectedLink === 'solutions'}"
+            (click)="selectLink('solutions')" (click)="closeNavbar()">SOLUTIONS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact" [ngClass]="{'active': selectedLink === 'contact'}"

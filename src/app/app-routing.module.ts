@@ -10,16 +10,20 @@ import { StaffingComponent } from './pages/staffing/staffing.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import { UIComponent } from './pages/ui/ui.component';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
-import { PowerComponent } from './pages/power/power.component';
-import { CloudComponent } from './pages/cloud/cloud.component';
-import { StaffComponent } from './pages/staff/staff.component';
-import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { AiComponent } from './pages/ai/ai.component';
 import { DevopsComponent } from './pages/devops/devops.component';
 import { HomeComponent } from './pages/home/home.component';
-
+import { InventoryComponent } from './pages/inventory/inventory.component';
+import { AcquisComponent } from './pages/acquis/acquis.component';
+import { SampleComponent } from './pages/sample/sample.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { ReviewComponent } from './pages/review/review.component';
+import { GrantComponent } from './pages/grant/grant.component';
+import { HealthcareComponent } from './pages/healthcare/healthcare.component';
+import { PsComponent } from './pages/ps/ps.component';
+import { SaleComponent } from './pages/sale/sale.component';
 
 
 const routes: Routes = [
@@ -35,12 +39,17 @@ const routes: Routes = [
   {path:'leader',component:LeadershipComponent},
   {path:'career',component:CareerComponent},
   {path:'contact',component:ContactComponent},
-  {path:'power',component:PowerComponent},
-  {path:'cloud',component:CloudComponent},
-  {path:'staff',component:StaffComponent},
-  {path:'stack',component:StackComponent},
-  {path:'design',component:DesignComponent},
+  {path:'lab-automation-&-reservation',component:DesignComponent},
   {path:'solutions',component:SolutionsComponent},
+  {path:'inventory-management',component:InventoryComponent},
+  {path:'acquisition-support-for-labs',component:AcquisComponent},
+  {path:'sample-tracking',component:SampleComponent},
+  {path:'project-portfolio-management',component:ProjectComponent},
+  {path:'review-board-management',component:ReviewComponent},
+  {path:'grant-applications',component:GrantComponent},
+  {path:'healthcare-portal',component:HealthcareComponent},
+  {path:'psr',component:PsComponent},
+  {path:'custom-sales-crm-platform',component:SaleComponent},
   {path: '', component:HomeComponent },
   
 ];

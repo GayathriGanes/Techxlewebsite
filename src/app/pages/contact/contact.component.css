@@ -4,11 +4,13 @@
   line-height: 22.68px;
   letter-spacing: 0.08em;
   color: #3564DF;
+ 
 }
-.banner2
-{
-  background-color:#EDF1FD;
-  margin-top:90px;
+.container{
+  margin-top: 90px;
+}
+.banner2{
+  background-color:#EDF1FD
 }
 .font{
 font-size: 38px;
@@ -76,7 +78,7 @@ label{
 @media (max-width:797.98px)
 {
    .font{
-    font-size:30px;
-    width:100%;
-   } 
+    font-size:30px !important;
+    width:100% !important;
+   }
 }

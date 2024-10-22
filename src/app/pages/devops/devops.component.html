@@ -1,260 +1,265 @@
-<section class="hero-section d-flex justify-content-center align-items-center">
-    <div class="container">
+<div ngbScrollSpy #spy="ngbScrollSpy" class="d-block overflow-auto vh-100 ">
+  <section class="hero-section d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-8 col-12">
+            <div class="hero-content">
+              <p class="text-uppercase mb-2">
+                <a routerLink="/services" class="text-decoration-none">Services</a> / DEVOPS
+              </p>
+             
+              <h1 class="mb-3">Unify Development and Operations for Seamless Delivery</h1>
+              <a routerLink="/contact" class="cta-button">
+                <span class="text">Let's talk</span>
+                <span class="arrow"><img src="./assets/logo/arrow.png" alt="Arrow Icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <mat-toolbar class="nav-toolbar sticky-top custom-sticky container-fluid d-flex justify-content-center">
+      <nav class="nav-container">
+            <a fragment="overview" class="sub-page-nav" [ngbScrollSpyItem]="[spy, 'overview']">Overview</a>
+            <a fragment="ourapproach" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Our Approach</a>
+            <a fragment="ourcapabilities" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Our Capabilities</a>
+            <a fragment="impact" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Impact</a>
+      </nav>
+      </mat-toolbar>
+    <section id="overview" class="overview container">
       <div class="row">
-        <div class="col-lg-6 col-md-8 col-12">
-          <div class="hero-content">
-            <p class="text-uppercase mb-2">
-              <a routerLink="/services" class="text-decoration-none">Services</a> / DEVOPS
-            </p>
-           
-            <h1 class="mb-3">Unify Development and Operations for Seamless Delivery</h1>
-            <a routerLink="/contact" class="cta-button">
-              <span class="text">Let's talk</span>
-              <span class="arrow"><img src="./assets/logo/arrow.png" alt="Arrow Icon"></span>
-            </a>
+        <div class=" col-md-3 col-sm-12 mb-4">
+          <h1 ngbScrollSpyFragment="overview" class="menu">Overview</h1>
           </div>
+        <p class="text1 col-md-9 col-sm-12">
+          Transform your software development lifecycle with Techxle’s comprehensive DevOps services. We integrate development and operations to create a unified pipeline that enhances collaboration, accelerates time-to-market, and improves software quality. By automating workflows, enabling continuous integration and deployment (CI/CD), and fostering a culture of collaboration, we help your business achieve faster innovation with fewer risks. Our DevOps solutions are customized to align with your organization’s specific needs, ensuring agility, scalability, and continuous improvement
+        </p>
+      </div>
+    </section>
+    <section id="ourapproach" class="ourapproach container">
+      <div class="row">
+        <h1 ngbScrollSpyFragment="ourapproach" class="menu col-md-3 col-sm-12 mb-4">Approach</h1>
+        <p class="text1 col-md-9 col-sm-12">
+          We follow a systematic, collaborative approach to DevOps, aligning your business objectives with cutting-edge tools and processes. Our DevOps experts work closely with your teams to design and implement solutions that foster agility and innovation.
+        </p>
+      </div>
+   
+     
+      <div class="row text-center">
+        <div class="col-md-3"></div>
+        <div class="test-3 col-sm-12 col-md-9 mb-4 d-flex flex-wrap justify-content-xs-between justify-content-sm-between  justify-content-center">
+     
+          <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
+            <img src="./assets/images/Frame 10409.svg" alt="Icon" class="def-img mb-3" />
+            <h5 class="define-text">Collaborative Planning & Assessment</h5>
+          </div>
+     
+          <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
+            <img src="./assets/logo/1.svg" alt="Icon" class="test-img mb-3" />
+            <h5 class="idea-text">Agile Development Methodologies</h5>
+          </div>
+     
+     
+          <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
+            <img src="./assets/images/Group 10405.svg" alt="Icon" class="pro-img mb-3" />
+            <h5 class="prototype-text">Continuous Integration & Automation</h5>
+          </div>
+     
+         
+          <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
+            <img src="./assets/images/Frame 10412 (1).svg" alt="Icon" class="ide-img mb-3" />
+            <h5 class="iterate-text">Security-First Mindset(DevOps)</h5>
+          </div>
+     
         </div>
       </div>
-    </div>
-  </section>
-   <mat-toolbar class="nav-toolbar container-fluid d-flex justify-content-center">
-  <nav class="nav-container">
-        <a [routerLink]="['/devops']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
-        <a [routerLink]="['/devops']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
-        <a [routerLink]="['/devops']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
-        <a [routerLink]="['/devops']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
-  </nav>
-  </mat-toolbar>
-  <section id="overview" class="overview container">
-    <div class="row">
-      <h1 class="menu   col-md-3 col-sm-12 mb-4">Overview</h1>
-      <p class="text1 col-md-9 col-sm-12">
-        Transform your software development lifecycle with Techxle’s comprehensive DevOps services. We integrate development and operations to create a unified pipeline that enhances collaboration, accelerates time-to-market, and improves software quality. By automating workflows, enabling continuous integration and deployment (CI/CD), and fostering a culture of collaboration, we help your business achieve faster innovation with fewer risks. Our DevOps solutions are customized to align with your organization’s specific needs, ensuring agility, scalability, and continuous improvement
-      </p>
-    </div>
-  </section>
-  <section id="ourapproach" class="ourapproach container">
-    <div class="row">
-      <h1 class="menu  col-md-3 col-sm-12 mb-4">Approach</h1>
-      <p class="text1 col-md-9 col-sm-12">
-        We follow a systematic, collaborative approach to DevOps, aligning your business objectives with cutting-edge tools and processes. Our DevOps experts work closely with your teams to design and implement solutions that foster agility and innovation.
-      </p>
-    </div>
- 
-   
-    <div class="row text-center">
-      <div class="col-md-3"></div>
-      <div class="test-3 col-sm-12 col-md-9 mb-4 d-flex flex-wrap justify-content-xs-between justify-content-sm-between  justify-content-center">
-   
-        <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
-          <img src="./assets/images/Frame 10409.svg" alt="Icon" class="def-img mb-3" />
-          <h5 class="define-text">Collaborative Planning & Assessment</h5>
+    </section>
+    <div class="banner">
+    <section id="ourcapabilities" class="container py-5 ourcapabilities">
+      <div class="row">
+        <div class="col-12  text-start mb-4">
+          <h1 ngbScrollSpyFragment="ourcapabilities" class="cap">Our Capabilities</h1>
+         
         </div>
-   
-        <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
-          <img src="./assets/logo/1.svg" alt="Icon" class="test-img mb-3" />
-          <h5 class="idea-text">Agile Development Methodologies</h5>
-        </div>
-   
-   
-        <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
-          <img src="./assets/images/Group 10405.svg" alt="Icon" class="pro-img mb-3" />
-          <h5 class="prototype-text">Continuous Integration & Automation</h5>
-        </div>
-   
-       
-        <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-center">
-          <img src="./assets/images/Frame 10412 (1).svg" alt="Icon" class="ide-img mb-3" />
-          <h5 class="iterate-text">Security-First Mindset(DevOps)</h5>
-        </div>
-   
       </div>
-    </div>
-  </section>
-  <div class="banner">
-  <section id="ourcapabilities" class="container py-5 ourcapabilities">
-    <div class="row">
-      <div class="col-12  text-start mb-4">
-        <h1 class="cap">Our Capabilities</h1>
-        
-      </div>
-    </div>
- 
-    <div class="row">
-      <!-- Accordion Section -->
-      <div class="col-md-7 col-12 order-2 order-md-1 p-0">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" (click)="changeImage(1)">
-                CI/CD Pipeline Implementation
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p class="brand-text">Set up continuous integration and continuous deployment pipelines to automate the build, test, and release processes</p>
+   
+      <div class="row">
+        <!-- Accordion Section -->
+        <div class="col-md-7 col-12 order-2 order-md-1 p-0">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" (click)="changeImage(1)">
+                  CI/CD Pipeline Implementation
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p class="brand-text">Set up continuous integration and continuous deployment pipelines to automate the build, test, and release processes</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)="changeImage(2)">
-                Infrastructure as Code (IaC)
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p class="brand-text">Implement infrastructure automation using tools like Terraform, Ansible, or Cloud Formation, enabling scalable and repeatable deployments.</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)="changeImage(2)">
+                  Infrastructure as Code (IaC)
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p class="brand-text">Implement infrastructure automation using tools like Terraform, Ansible, or Cloud Formation, enabling scalable and repeatable deployments.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)="changeImage(3)">
-                Security Integration
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p class="brand-text">Incorporate DevSecOps practices to ensure security is embedded into every stage of your development pipeline.</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)="changeImage(3)">
+                  Security Integration
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p class="brand-text">Incorporate DevSecOps practices to ensure security is embedded into every stage of your development pipeline.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" (click)="changeImage(4)">
-                Automated Testing
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p class="brand-text">Implement automated testing to improve code quality and reduce bugs, ensuring faster and more reliable releases.</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" (click)="changeImage(4)">
+                  Automated Testing
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p class="brand-text">Implement automated testing to improve code quality and reduce bugs, ensuring faster and more reliable releases.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" (click)="changeImage(5)">
-                Cloud DevOps
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <p class="brand-text">Utilize cloud platforms (AWS, Azure, Google Cloud) to manage, deploy, and monitor applications, ensuring high availability and scalability.</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" (click)="changeImage(5)">
+                  Cloud DevOps
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p class="brand-text">Utilize cloud platforms (AWS, Azure, Google Cloud) to manage, deploy, and monitor applications, ensuring high availability and scalability.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+     
+        <!-- Image Section -->
+        <div class="col-md-5 col-12 order-1 order-md-2 text-center text-md-start mb-4">
+          <img [src]="currentImage" alt="Icon" class="image"/>
+        </div>
+      </div>
+    </section>
+    </div>
+    <section id="impact" class="impact container">
+      <div class="outcomes">
+        <h1 ngbScrollSpyFragment="impact" class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
       </div>
    
-      <!-- Image Section -->
-      <div class="col-md-5 col-12 order-1 order-md-2 text-center text-md-start mb-4">
-        <img [src]="currentImage" alt="Icon" class="image"/>
-      </div>
-    </div>
-  </section>
-  </div>
-  <section id="impact" class="impact container">
-    <div class="outcomes">
-      <h1 class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
-    </div>
- 
-    <!-- Image row -->
-    <div class="row justify-content-center mt-5">
-      <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-        <img src="./assets/images/d1.svg" alt="Icon" class="img-fluid" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-        <img src="./assets/images/d2.svg" alt="Icon" class="img-fluid" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-        <img src="./assets/images/d3.svg" alt="Icon" class="img-fluid" />
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-        <img src="./assets/images/d4.svg" alt="Icon" class="img-fluid" />
-      </div>
-    </div>
-    <div class="row mt-5">
-      <h1 class="tech col-sm-12 col-md-4 col-xl-4 text-start text-md-left mt-5">We Work With Advanced Technology</h1>
- 
-      <div class="col-sm-12 col-md-8 col-xl-8">
-        <div class="row justify-content-center mt-5">
-          <!-- First row of tech icons -->
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo1.png" alt="Power Apps" class="img-fluid" ngbTooltip="Jenkins" placement="bottom" >
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo2.png" alt="Power Automation" class="img-fluid" ngbTooltip="Circle CI" placement="bottom" />
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo3.png" alt="Power Bi" class="img-fluid" ngbTooltip="Gitlab CI" placement="bottom"/>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo4.png" alt="Power Pages" class="img-fluid" ngbTooltip="Travis CI" placement="bottom"/>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo5.png" alt="Advanced Icon" class="img-fluid" ngbTooltip="Ansible" placement="bottom"/>
-          </div>
+      <!-- Image row -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+          <img src="./assets/images/d1.svg" alt="Icon" class="img-fluid" />
         </div>
- 
-        <!-- Second row of tech icons -->
-        <div class="row justify-content-center mt-5">
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo6.png" alt="Group 10410" class="img-fluid" ngbTooltip="Puppet" placement="bottom"/>
+        <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+          <img src="./assets/images/d2.svg" alt="Icon" class="img-fluid" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+          <img src="./assets/images/d3.svg" alt="Icon" class="img-fluid" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
+          <img src="./assets/images/d4.svg" alt="Icon" class="img-fluid" />
+        </div>
+      </div>
+      <div class="row mt-5">
+        <h1 class="tech col-sm-12 col-md-4 col-xl-4 text-start text-md-left mt-5">We Work With Advanced Technology</h1>
+   
+        <div class="col-sm-12 col-md-8 col-xl-8">
+          <div class="row justify-content-center mt-5">
+            <!-- First row of tech icons -->
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo1.png" alt="Power Apps" class="img-fluid" ngbTooltip="Jenkins" placement="bottom" >
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo2.png" alt="Power Automation" class="img-fluid" ngbTooltip="Circle CI" placement="bottom" />
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo3.png" alt="Power Bi" class="img-fluid" ngbTooltip="Gitlab CI" placement="bottom"/>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo4.png" alt="Power Pages" class="img-fluid" ngbTooltip="Travis CI" placement="bottom"/>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo5.png" alt="Advanced Icon" class="img-fluid" ngbTooltip="Ansible" placement="bottom"/>
+            </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo7.png" alt="Group 10411" class="img-fluid" ngbTooltip="Terraform" placement="bottom"/>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="assets/images/devo8.png" alt="Clipart" class="img-fluid" ngbTooltip="Docker" placement="bottom"/>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo9.png" alt="Image 104" class="img-fluid" ngbTooltip="Kubernetes" placement="bottom"/>
-          </div>
-          <div class="col-6 col-sm-4 col-md-2 text-center">
-            <img src="./assets/images/devo10.png" alt="Frame 3" class="img-fluid" ngbTooltip="Git" placement="bottom"/>
+   
+          <!-- Second row of tech icons -->
+          <div class="row justify-content-center mt-5">
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo6.png" alt="Group 10410" class="img-fluid" ngbTooltip="Puppet" placement="bottom"/>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo7.png" alt="Group 10411" class="img-fluid" ngbTooltip="Terraform" placement="bottom"/>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="assets/images/devo8.png" alt="Clipart" class="img-fluid" ngbTooltip="Docker" placement="bottom"/>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo9.png" alt="Image 104" class="img-fluid" ngbTooltip="Kubernetes" placement="bottom"/>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2 text-center">
+              <img src="./assets/images/devo10.png" alt="Frame 3" class="img-fluid" ngbTooltip="Git" placement="bottom"/>
+            </div>
           </div>
         </div>
       </div>
-    </div>
- 
-  </section>
-  <div class="banner1">
-  <div class="container py-5">
-    <div class="row align-items-start mt-5">
-      <!-- Left Section: Get In Touch Header -->
-      <div class="col-md-6 text-left">
-        <h5 class="text-get">GET IN TOUCH</h5>
-        <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
+   
+    </section>
+    <div class="banner1">
+    <div class="container py-5">
+      <div class="row align-items-start mt-5">
+        <!-- Left Section: Get In Touch Header -->
+        <div class="col-md-6 text-left">
+          <h5 class="text-get">GET IN TOUCH</h5>
+          <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
+        </div>
+   
+        <!-- Right Section: Form -->
+        <div class="col-md-6">
+          <form >
+            <div class="form-group">
+              <label for="name">NAME</label>
+              <input type="text" class="form-control mt-2" id="name" name="name">
+            </div>
+            <div class="form-group mt-3">
+              <label for="email">EMAIL ID</label>
+              <input type="email" class="form-control mt-2" id="email"  placeholder="name@example.com" name="email">
+            </div>
+            <div class="form-group mt-3">
+              <label for="service">SERVICE TYPE</label>
+              <input type="text" class="form-control mt-2" id="service" name="service">
+            </div>
+            <div class="form-group mt-3">
+              <label for="message">MESSAGE</label>
+              <textarea class="form-control mt-2" id="message" name="message" rows="4"></textarea>
+            </div>
+            <button mat-button class="read-more-button mt-3">
+              <span class="button-text">Send Enquiry</span>
+              <span >
+                <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
+              </span>
+              </button>
+          </form>
+        </div>
       </div>
- 
-      <!-- Right Section: Form -->
-      <div class="col-md-6">
-        <form >
-          <div class="form-group">
-            <label for="name">NAME</label>
-            <input type="text" class="form-control mt-2" id="name" name="name">
-          </div>
-          <div class="form-group mt-3">
-            <label for="email">EMAIL ID</label>
-            <input type="email" class="form-control mt-2" id="email"  placeholder="name@example.com" name="email">
-          </div>
-          <div class="form-group mt-3">
-            <label for="service">SERVICE TYPE</label>
-            <input type="text" class="form-control mt-2" id="service" name="service">
-          </div>
-          <div class="form-group mt-3">
-            <label for="message">MESSAGE</label>
-            <textarea class="form-control mt-2" id="message" name="message" rows="4"></textarea>
-          </div>
-          <button mat-button class="read-more-button mt-3">
-            <span class="button-text">Send Enquiry</span>
-            <span >
-              <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
-            </span>
-            </button>
-        </form>
-      </div>
     </div>
-  </div>
+    </div>
+    <app-footer></app-footer>
   </div>

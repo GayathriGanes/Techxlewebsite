@@ -1,0 +1,139 @@
+<div ngbScrollSpy #spy="ngbScrollSpy" class="d-block overflow-auto vh-100 ">
+<section class="hero-section d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-12">
+          <div class="hero-content">
+            <p class="text-uppercase mb-2">
+              <a routerLink="/solutions" class="text-decoration-none">Solutions</a> / A Healthcare portal
+            </p>        
+            <h1 class="mb-3">Business transformation through technology.</h1>
+            <a routerLink="/contact" class="cta-button">
+              <span class="text">Let's talk</span>
+              <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <mat-toolbar class="nav-toolbar sticky-top custom-sticky container-fluid d-flex justify-content-center">
+    <nav class="nav-container">
+      <a fragment="challenges" class="sub-page-nav" [ngbScrollSpyItem]="[spy, 'challenges']">Challenges</a>
+      <a fragment="solutions" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Solutions</a>
+      <a fragment="impact" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Impact</a>
+    </nav>
+  </mat-toolbar>
+  <section id="challenges" class="content-section container d-flex justify-content-between">
+    <div class="row mt-5 pt-4">
+      <div class="col-md-4 col-lg-3">
+        <h2 ngbScrollSpyFragment="challenges">Challenges</h2>
+      </div>
+      <div class="col-md-8 col-lg-9">
+       <p>Thrizer’s existing healthcare portal lacked scalability and efficiency, impeding their ability to manage increased user demands and integrate new features. They required a robust solution that could enhance performance and support business growth. </p>
+      </div>
+    </div>
+  </section>
+  <section id="solutions" class="content-section container">
+    <div class="row mt-5 pt-2">
+      <div class="col-md-4 col-lg-3">
+        <h2 ngbScrollSpyFragment="solutions">Solutions</h2>
+      </div>
+      <div class="col-md-8 col-lg-9">
+       <p> We developed a full-stack application using Angular and Node.js. Angular provided a modern, user-friendly interface, while Node.js offered a scalable back-end. This combination ensured that the portal could efficiently handle higher user volumes and adapt to future needs. </p>
+      </div>
+    </div>
+    <div class="row pt-3 pb-3">
+      <div class="col-md-6">
+       <img class="log img-fluid" src="./assets/images/m29.png">
+      </div>
+      <div class="col-md-6">
+        <img class="log img-fluid pt-4 pt-md-0" src="./assets/images/m30.png">
+      </div>
+    </div>
+  </section>
+   
+  <section id="impact" class="content-section container">
+    <div class="row mt-5 pt-4">
+      <div class="col-md-4 col-lg-3">
+        <h2 ngbScrollSpyFragment="impact">Impact</h2>
+      </div>
+      <div class="col-md-8 col-lg-9">
+       <p>The scalable application led to a <span class="high"> 30% increase in sales within six months.  </span>   Enhanced performance and user capacity enabled Thrizer to significantly boost their sales. This result highlights the effectiveness of a well-designed, scalable solution in fostering business growth.  </p>
+      </div>
+    </div>
+  </section>
+   
+  <section id="card" class="card-slider1">
+    <div class="header">
+      <div class="hea container  d-flex align-items-center justify-content-between">
+        <div>
+          <h2>Related solutions</h2>
+        </div>
+        <div class="navigation-buttons">
+          <svg (click)="prev()" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(108,116,139,1)" stroke-width="2" />
+            <path d="M15 25H30M15 25L25 15M15 25L25 35" stroke="rgba(108,116,139,1)" stroke-width="3" fill="none" />
+          </svg>
+          <svg (click)="next()" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(108,116,139,1)" stroke-width="2" />
+            <path d="M35 25H20M35 25L25 15M35 25L25 35" stroke="rgba(108,116,139,1)" stroke-width="3" fill="none" />
+          </svg>        
+        </div>
+      </div>
+    </div>
+    <div class="cards-container">
+     <div class="container" #container>
+      <div class="row flex-nowrap">
+        <mat-card class="card1 d-flex flex-column justify-content-center align-items-center pb-5 me-3"
+          *ngFor="let service of services">
+          <div class="card service-box" (mouseenter)="hoverIn(service)" (mouseleave)="hoverOut(service)">
+            <img [src]="service.image" alt="{{ service.name }}" class="card-img-top service-image">
+            <div class="card-body content-box text-center" routerLink={{service.route}}>
+              <h5 class="card-title pt-2">{{ service.name }}</h5>
+              <p *ngIf="service.isHovered" class="read-more">Read More</p>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+     </div>
+    </div>
+  </section>
+  <div class="container py-5">
+      <div class="row align-items-start mt-5">
+        <!-- Left Section: Get In Touch Header -->
+        <div class="col-md-6 text-left">
+          <h5 class="text-get">GET IN TOUCH</h5>
+          <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
+        </div>
+   
+        <!-- Right Section: Form -->
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="name">NAME</label>
+              <input type="text" class="form-control mt-2" id="name" name="name">
+            </div>
+            <div class="form-group mt-3">
+              <label for="email">EMAIL ID</label>
+              <input type="email" class="form-control mt-2" id="email"  placeholder="name@example.com" name="email">
+            </div>
+            <div class="form-group mt-3">
+              <label for="service">SERVICE TYPE</label>
+              <input type="text" class="form-control mt-2" id="service" name="service">
+            </div>
+            <div class="form-group mt-3">
+              <label for="message">MESSAGE</label>
+              <textarea class="form-control mt-2" id="message" name="message" rows="4"></textarea>
+            </div>
+            <button mat-button class="read-more-button mt-3">
+              <span class="button-text">Send Enquiry</span>
+              <span >
+                <img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
+              </span>
+              </button>
+          </form>
+        </div>
+      </div>
+  </div>
+  <app-footer></app-footer>

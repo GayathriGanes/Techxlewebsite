@@ -1,66 +1,12 @@
-/*.hero-section {   
+.hero-section {   
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-    url("/assets/images/ui-banner.png");
+    url("/assets/images/m1.png");
 }
-
-.hero-section {
-  height: 400px;
-  background-color: #f8f9fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container{
+  overflow-x:scroll;
+  scroll-behavior:smooth;  
+} 
+.container::-webkit-scrollbar{
+  display:none;
 }
-
-.content-section {
-  padding: 100px 0;
-  background-color: #f1f1f1;
-  margin: 20px 0;
-}
-
-#overview {
-  background-color: #dfe6e9;
-}
-#solutions {
-  background-color: #b2bec3;
-}
-#impact {
-  background-color: #636e72;
-  color: white;
-}
-
-#sticky-navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 90px;
-  z-index: 1000;
-  background-color: white;
-}
-
-
-.nav-link.active {
-  color: blue !important;
-}
-
-.current-section {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-left: auto;
-}
-
-@media (max-width: 768px) {
-  .navbar-collapse {
-    display: flex;
-    flex-direction: column;
-  }
-
-  
-  .current-section {
-    display: block;
-  }
-}
-
-
-.navbar-toggler {
-  margin-right: 15px;
-}*/
 

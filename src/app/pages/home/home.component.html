@@ -65,6 +65,26 @@
       </div>
     </div>
 </div>
+<div class="container  mb-5 pb-2">
+  <h2 class="heading pb-4 d-flex justify-content-start">Discover Our Impacts</h2>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-5 pb-4" *ngFor="let service of services">
+      <div class="card service-box" (mouseenter)="hoverIn(service)" (mouseleave)="hoverOut(service)">
+        <img [src]="service.image" alt="{{ service.name }}" class="card-img-top service-image">
+        <div class="card-body content-box text-center" routerLink={{service.route}}>
+          <h5 class="card-title pt-2">{{ service.name }}</h5>
+          <p *ngIf="service.isHovered" class="read-more">Read More</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center" >
+    <button mat-button  routerLink="/solutions"  class=" read-more-button mb-4">
+      <span class="button-text">View More</span>
+      <span><img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
+    </button>
+  </div>
+</div>
 <section class="banner">
     <div class="callout container d-flex flex-column flex-md-row justify-content-between align-items-md-center py-4 py-md-0 ">
       <h1 class="callout-text m-0">Need any expert business & consulting services?</h1>
@@ -79,3 +99,4 @@
     </div>
   </section>  
 <app-mission></app-mission>
+<app-footer></app-footer>

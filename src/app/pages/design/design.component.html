@@ -1,13 +1,13 @@
+<div ngbScrollSpy #spy="ngbScrollSpy" class="d-block overflow-auto vh-100 ">
 <section class="hero-section d-flex justify-content-center align-items-center">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-8 col-12">
         <div class="hero-content">
           <p class="text-uppercase mb-2">
-            <a routerLink="/solutions" class="text-decoration-none">Solutions</a> / UI/UX designing
-          </p>
-         
-          <h1 class="mb-3">User-Centric Design, Business Impact</h1>
+            <a routerLink="/solutions" class="text-decoration-none">Solutions</a> / lab automation and reservation
+          </p>         
+          <h1 class="mb-3">Business transformation through technology.</h1>
           <a routerLink="/contact" class="cta-button">
             <span class="text">Let's talk</span>
             <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
@@ -16,240 +16,136 @@
       </div>
     </div>
   </div>
+</section>  
+<mat-toolbar class="nav-toolbar sticky-top custom-sticky container-fluid d-flex justify-content-center">
+  <nav class="nav-container">
+    <a fragment="challenges" class="sub-page-nav" [ngbScrollSpyItem]="[spy, 'challenges']">Challenges</a>
+    <a fragment="solutions" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Solutions</a>
+    <a fragment="impact" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Impact</a>
+  </nav>
+</mat-toolbar> 
+<section id="challenges" class="content-section container d-flex justify-content-between">
+  <div class="row mt-5 pt-4">
+    <div class="col-md-4 col-lg-3">
+      <h2 ngbScrollSpyFragment="challenges">Challenges</h2>
+    </div>
+    <div class="col-md-8 col-lg-9">
+     <p>The company struggled with scheduling and utilizing lab equipment efficiently. Research teams faced frequent delays due to equipment overbooking, manual scheduling conflicts, and underutilized instruments</p>
+    </div> 
+  </div>
 </section>
-<!--<mat-toolbar color="primary" class="nav-toolbar">
-<nav class="nav-container container d-flex justify-content-center">
-    <a [routerLink]="['/design']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
-    <a [routerLink]="['/design']" fragment="challenges" [ngClass]="{'active-link': activeLink === 'challenges'}" (click)="setActiveLink('challenges')">Challenges</a>
-    <a [routerLink]="['/design']" fragment="solutions" [ngClass]="{'active-link': activeLink === 'solutions'}" (click)="setActiveLink('solutions')">Solutions</a>
-    <a [routerLink]="['/design']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
-    <a [routerLink]="['/design']" fragment="platforms" [ngClass]="{'active-link': activeLink === 'platform'}" (click)="setActiveLink('platform')">Platforms</a>
-</nav>
-</mat-toolbar>
-<section id="overview" class="overview">
-    <h2>Overview</h2>
-    <h3>Smart Assistant to Reduce Post-Discharge Readmissions</h3>
+<section id="solutions" class="content-section container">
+  <div class="row mt-5 pt-2">
+    <div class="col-md-4 col-lg-3">
+      <h2 ngbScrollSpyFragment="solutions">Solutions</h2>
+    </div>
+    <div class="col-md-8 col-lg-9">
+     <p>The company implemented a Lab Automation and Reservations system to automate equipment reservations and streamline lab operations. The system allowed researchers to:</p>
+     <ul class="pt-2">
+       <li>View real-time availability of lab equipment.</li>
+       <li>Automatically schedule and reserve instruments.</li>
+       <li>Integrate lab schedules with project timelines to optimize equipment usage.</li>
+     </ul>
+    </div> 
+  </div>
+  <div class="row pt-3 pb-3">
+    <div class="col-md-6">
+     <img class="log img-fluid" src="./assets/images/m11.png">
+    </div>
+    <div class="col-md-6">
+      <img class="log img-fluid pt-4 pt-md-0" src="./assets/images/m10.png">
+    </div> 
+  </div>
+</section>
 
-    <p>At Techxle, we cover the entire design lifecycle from concept to delivery, ensuring our research-driven  and user-centered UI/UX designs exceed expectations. <br><br>
-        
-        Our expertise in product design, UI/UX, and  app development, combined with lean methodologies and thorough research, results in data-driven solutions that perfectly balance business objectives and user needs, fostering loyalty and maximizing ROI.</p>
-    <div class="box">
-        <img class="img1" src="assets/logo/banner.png" alt="Arrow Icon">
-        <img class="img2" src="assets/logo/banner.png" alt="Arrow Icon">
-        <img class="img3" src="assets/logo/banner.png" alt="Arrow Icon">
+<section id="impact" class="content-section container">
+  <div class="row mt-5 pt-4">
+    <div class="col-md-4 col-lg-3">
+      <h2 ngbScrollSpyFragment="impact">Impact</h2>
     </div>
+    <div class="col-md-8 col-lg-9">
+     <p>The system significantly reduced scheduling conflicts and <span class="high">increased equipment utilization by 30%.</span> Lab downtime dropped, allowing the company to accelerate research timelines, <span class="high">improve productivity, and reduce operational costs by 20%.</span></p>
+    </div> 
+  </div>
 </section>
-  
-<section id="challenges" class="challenges">
-    <h2>Challenges</h2>
-    <h3>Healthcare delivery needs to extend beyond hospital settings</h3>
-    <p>The complex process of transferring a patient from one care setting (e.g., a hospital or nursing facility) to another often leads to confusion about treatment plans, missed follow-up appointments, patient dissatisfaction, and non-adherence to medication schedules. These causes result in unnecessary readmissions.
-        
-        <br><br>At Techxle, we cover the entire design lifecycle from concept to delivery, ensuring our research-driven  
-        and user-centered UI/UX designs exceed expectations. 
-        
-        <br><br>Our expertise in product design, UI/UX, and  app development, combined with lean methodologies and thorough research, results in data-driven solutions that perfectly balance business objectives and user needs, fostering loyalty and maximizing ROI.</p>
-    
-</section>
-  
-<section id="solutions" class="solutions">
-    <h2>Solutions</h2>
-    <h3>Healthcare delivery needs to extend beyond hospital settings</h3>
 
-    <p>The complex process of transferring a patient from one care setting (e.g., a hospital or nursing facility) to another often leads to confusion about treatment plans, missed follow-up appointments, patient dissatisfaction, and non-adherence to medication schedules. These causes result in unnecessary readmissions.
-        
-        <br><br>At Techxle, we cover the entire design lifecycle from concept to delivery, ensuring our research-driven  
-        and user-centered UI/UX designs exceed expectations. 
-        
-        <br><br>Our expertise in product design, UI/UX, and  app development, combined with lean methodologies and thorough research, results in data-driven solutions that perfectly balance business objectives and user needs, fostering loyalty and maximizing ROI.</p>
-</section>
-  
-<section id="impact" class="impact">
-    <img class="imge1" src="assets/logo/banner.png" alt="Arrow Icon">
-    <div class="discharge">
-        <p>Post-Discharge
-            Readmissions</p>
-    </div>
-    <div class="para">
-    <h2>Impact</h2>
-    <p>&bull; 18% reduction in patient readmission rates recorded by 3 public hospitals.</p>
-    <p>&bull; 48% increase in post-discharge patient engagement helped relieve overburdened clinicians and elevate healthcare standards.</p>
-    </div>
-</section>
-  
-<section id="platforms" class="platforms">
-    <p>We Work With Advanced Technology</p>
-    <div class="div1">
-    <img  src="assets/logo/f1.png" alt="Arrow Icon"> 
-    <img  src="assets/logo/f2.png" alt="Arrow Icon">
-    <img  src="assets/logo/f3.png" alt="Arrow Icon">
-    <img  src="assets/logo/f4.png" alt="Arrow Icon">
-    <img  src="assets/logo/f5.png" alt="Arrow Icon">    
-    </div>
-    <div class="div2">
-    <img  src="assets/logo/f6.png" alt="Arrow Icon">
-    <img  src="assets/logo/f7.png" alt="Arrow Icon">
-    <img  src="assets/logo/f8.png" alt="Arrow Icon">
-    <img  src="assets/logo/f9.png" alt="Arrow Icon">
-    <img  src="assets/logo/f10.png" alt="Arrow Icon">
-    </div>
-</section>
-<div class="card-slider">
+<section id="card" class="card-slider1">
   <div class="header">
-    <h2>Related Solutions</h2>
-    <div class="navigation-buttons">
-      <button mat-icon-button (click)="prev()">
-        <mat-icon fontSet="fa">&#8592;</mat-icon>
-      </button>
-      <button mat-icon-button (click)="next()">
-        <mat-icon fontSet="fa">&#8594;</mat-icon>
-      </button>
-    </div>
-  </div>
-  <div class="cards-container" #container>
-   <mat-card class="card" *ngFor="let card of cards">    
-      <div class="image-box" routerLink={{card.route}}>
-        <img [src]="card.image"  alt="{{card.title}}" />
-        <div class="header-box">
-          <span class="service-title">{{card.title}}</span>
-          <span class="read-more">Read More</span>
-        </div>
+    <div class="hea container  d-flex align-items-center justify-content-between">
+      <div>
+        <h2>Related solutions</h2>
       </div>
-   </mat-card>
+      <div class="navigation-buttons">
+        <svg (click)="prev()" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+          <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(108,116,139,1)" stroke-width="2" />
+          <path d="M15 25H30M15 25L25 15M15 25L25 35" stroke="rgba(108,116,139,1)" stroke-width="3" fill="none" />
+        </svg>
+        <svg (click)="next()" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+          <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(108,116,139,1)" stroke-width="2" />
+          <path d="M35 25H20M35 25L25 15M35 25L25 35" stroke="rgba(108,116,139,1)" stroke-width="3" fill="none" />
+        </svg>        
+      </div>
+    </div>
   </div>
-</div>
-
-<div class="project">
- <h1>GET IN TOUCH</h1>
- <p>Have a Project?
-  We Would Love to Hear
-  From You</p>
+  <div class="cards-container">
+   <div class="container" #container>
+    <div class="row flex-nowrap">
+      <mat-card class="card1 d-flex flex-column justify-content-center align-items-center pb-5 me-3"
+        *ngFor="let service of services">
+        <div class="card service-box" (mouseenter)="hoverIn(service)" (mouseleave)="hoverOut(service)">
+          <img [src]="service.image" alt="{{ service.name }}" class="card-img-top service-image">
+          <div class="card-body content-box text-center" routerLink={{service.route}}>
+            <h5 class="card-title pt-2">{{ service.name }}</h5>
+            <p *ngIf="service.isHovered" class="read-more">Read More</p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+   </div>
+  </div>
+</section>
+<div class="container py-5">
+    <div class="row align-items-start mt-5">
+      <!-- Left Section: Get In Touch Header -->
+      <div class="col-md-6 text-left">
+        <h5 class="text-get">GET IN TOUCH</h5>
+        <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
+      </div>
  
-  <form action="https://api.web3forms.com/submit" method="POST" >
-    <form>
-      <mat-form-field appearance="fill">
-        <mat-label>NAME</mat-label>
-        <input matInput placeholder="" >
-      </mat-form-field>
-    
-      <mat-form-field appearance="fill">
-        <mat-label>EMAIL ID</mat-label>
-        <input matInput type="email" placeholder="" >
-      </mat-form-field>
-    
-    
-      <mat-form-field appearance="fill">
-        <mat-label>SERVICE TYPE</mat-label>
-        <input matInput placeholder="">
-      </mat-form-field>
-    
-      <mat-form-field appearance="fill">
-        <mat-label>MESSAGE</mat-label>
-        <textarea matInput placeholder=""></textarea>
-      </mat-form-field>
-    
-    </form>
-    <button mat-button class="read-more-button">
-      <span class="button-text">Send Enquiry</span>
-      <span >
-        <img src="assets/logo/Icons.png" alt="Techxle Logo" class="icon-arrow">
-      </span>
-      </button>
-    </form>
-</div>-->
-<!-- 
-<nav id="sticky-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container d-flex justify-content-between align-items-center">
-    
-    
-    <div class="current-section d-lg-none me-auto">
-      {{ currentSectionTitle }}
+      <!-- Right Section: Form -->
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="name">NAME</label>
+            <input type="text" class="form-control mt-2" id="name" name="name">
+          </div>
+          <div class="form-group mt-3">
+            <label for="email">EMAIL ID</label>
+            <input type="email" class="form-control mt-2" id="email"  placeholder="name@example.com" name="email">
+          </div>
+          <div class="form-group mt-3">
+            <label for="service">SERVICE TYPE</label>
+            <input type="text" class="form-control mt-2" id="service" name="service">
+          </div>
+          <div class="form-group mt-3">
+            <label for="message">MESSAGE</label>
+            <textarea class="form-control mt-2" id="message" name="message" rows="4"></textarea>
+          </div>
+          <button mat-button class="read-more-button mt-3">
+            <span class="button-text">Send Enquiry</span>
+            <span >
+              <img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
+            </span>
+            </button>
+        </form>
+      </div>
     </div>
-    
-    
-    <button class="navbar-toggler ms-auto" type="button" (click)="toggleNavbar()"
-      aria-controls="navbarNav" aria-expanded="isNavbarCollapsed" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    
-    <div class="collapse navbar-collapse justify-content-center" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'overview'" href="/design#overview" (click)="scrollToSection('overview')">Overview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'solutions'" (click)="scrollToSection('solutions')">Solutions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'impact'" (click)="scrollToSection('impact')">Impact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+</div>
+<app-footer></app-footer>
 
 
-<section id="overview" class="content-section">
-  <h2>Overview</h2>
-  <p>This is the overview section content.</p>
-</section>
-
-<section id="solutions" class="content-section">
-  <h2>Solutions</h2>
-  <p>This is the solutions section content.</p>
-</section>
-
-<section id="impact" class="content-section">
-  <h2>Impact</h2>
-  <p>This is the impact section content.</p>
-</section>-->
-<!--<nav id="sticky-navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container d-flex justify-content-between align-items-center">
-    
-    
-    <div class="current-section d-lg-none me-auto">
-      {{ currentSectionTitle }}
-    </div>
-    
-    
-    <button class="navbar-toggler ms-auto" type="button" (click)="toggleNavbar()" [ngClass]="{'collapsed': !isNavbarCollapsed}" aria-controls="navbarNav" aria-expanded="isNavbarCollapsed" aria-label="Toggle navigation">
-      <span *ngIf="!isNavbarCollapsed" class="navbar-toggler-icon"></span>
-      <span *ngIf="isNavbarCollapsed" class="close-icon">&times;</span>
-    </button>
-
-  
-    <div class="collapse navbar-collapse justify-content-center" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'overview'" (click)="scrollToSection('overview')">Overview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'solutions'" (click)="scrollToSection('solutions')">Solutions</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'impact'" (click)="scrollToSection('impact')">Impact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 
-<section id="overview" class="content-section">
-  <h2>Overview</h2>
-  <p>This is the overview section content.</p>
-</section>
-
-<section id="solutions" class="content-section">
-  <h2>Solutions</h2>
-  <p>This is the solutions section content.</p>
-</section>
-
-<section id="impact" class="content-section">
-  <h2>Impact</h2>
-  <p>This is the impact section content.</p>
-</section>-->
 
 
 
