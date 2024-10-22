@@ -52,17 +52,17 @@ body {
   align-items: center;
   margin-top:90px;
 }
- 
+
 .hero-content {
   border-radius: 8px;
 }
- 
+
 .hero-section h1 {
   font-size: 40px;
   font-weight: 500;
   line-height: 50.4px;
 }
- 
+
 .hero-section p {
   font-size: 14px;
   font-weight: 700;
@@ -87,22 +87,22 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
- 
+
 .cta-button .text {
   margin-right: 10px;
   transition: all 0.3s ease;
 }
- 
+
 .cta-button .arrow {
   display: inline-block;
   margin-top: 2px;
   transition: all 0.3s ease;
 }
- 
+
 .cta-button:hover .text {
   order: 2;
 }
- 
+
 .cta-button:hover .arrow {
   order: 1;
   margin-right: 10px;
@@ -129,7 +129,7 @@ body {
   gap: 30px;
   opacity: 1;
 }
- 
+
 .nav-container a {
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@ body {
   color: #0a183e;
   white-space: nowrap;
 }
- 
+
 .test-img {
   margin-top: 25px;
 }
@@ -197,23 +197,23 @@ body {
   font-size: 18px !important;
   font-weight: 600 !important;
   line-height: 26.1px !important;
-  color: #060e23;  
+  color: #060e23;
 }
- 
+
 .prototype-text {
   font-size: 18px !important;
   font-weight: 600 !important;
   line-height: 26.1px !important;
   color: #060e23;
 }
- 
+
 .idea-text {
   font-size: 18px !important;
   font-weight: 600 !important;
   line-height: 26.1px !important;
   color: #060e23;
 }
- 
+
 .define {
   margin-top: 45px;
   width: 180px;
@@ -225,15 +225,15 @@ body {
 .define-text {
   font-size: 18px !important;
   font-weight: 600 !important;
-  line-height: 26.1px !important;  
+  line-height: 26.1px !important;
   color: #060e23;
 }
- 
- 
+
+
 .ourcapabilities{
   margin-top:70px;
- 
- 
+
+
 }
 .banner{
   background: #edf1fd;
@@ -244,26 +244,26 @@ body {
   line-height: 45.36px !important;
   letter-spacing: 0.01em !important;
   color: #0a183e;
- 
+
 }
 .content {
- 
+
   font-size: 18px;
   font-weight: 400;
   line-height: 27.9px;
   letter-spacing: 0.02em;
-  color: #545d78;  
+  color: #545d78;
   margin-top:65px;
 }
-.brand-text {  
+.brand-text {
   font-size: 18px;
   font-weight: 400;
   line-height: 29.7px;
   letter-spacing: 0.01em;
   color: #545d78;
 }
- 
- 
+
+
 .accordion-button:not(.collapsed){
 background-color: transparent !important;
 }
@@ -279,18 +279,18 @@ background-color: transparent !important;
   font-weight: 600;
   line-height: 46.2px;
   letter-spacing: 0.01em;
- 
+
 }
 .image{
   width:100%;
 }
- 
+
 .outcome-head {
- 
+
 font-weight: 600 !important;
 line-height: 30.24px !important;
 letter-spacing: 0.01em !important;
- 
+
 }
 .tech {
 line-height:45px !important;
@@ -298,7 +298,7 @@ font-size: 32px !important;
 font-weight: 600 !important;
 }
 .text-get{
- 
+
 font-size: 18px !important;
 font-weight: 800 !important;
 line-height: 22.68px !important;
@@ -329,7 +329,12 @@ label{
 background: #edf1fd;
 margin-top: 100px;
 }
-
+.custom-sticky {
+  top:90px;
+}
+.sub-page-nav.active{
+  color: var(--bs-link-color);
+}
 
 .content-section h2
 {

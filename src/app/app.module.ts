@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FooterComponent } from './pages/footer/footer.component';
@@ -83,7 +83,6 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
     PsComponent,
     SaleComponent
     
-    
   ],
   imports: [
     BrowserModule,
@@ -107,6 +106,6 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
     provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }
