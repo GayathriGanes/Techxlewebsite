@@ -47,10 +47,9 @@
     font-weight: 600;
     line-height: 46.4px;
   }
-  .read-more-button.bt {
+  .mat-mdc-button.read-more-button.bt:not(:disabled) {
     color:white;
-  }
-   
+}   
   .read-more-button.bt::before {
     background-color:white;
   }
@@ -97,9 +96,10 @@
     font-weight: bold;
     transition: opacity 0.3s ease;
   }
-  .read-more-button {
-    color: rgba(53, 100, 223, 1);
-  }
+  .mat-mdc-button.read-more-button:not(:disabled) {
+    color: rgba(53,100,223,1);
+}
+ 
   .read-more-button::before {  
     background-color: rgba(53,100,223,1);  
   }
@@ -207,15 +207,7 @@ margin-top:-40px;
     color: rgba(84, 93, 120, 1);
     margin-top:0;
 }  
-.read-more-button {
-    color: rgba(53, 100, 223, 1);
-} 
-.read-more-button::before {  
-    background-color: rgba(53,100,223,1);   
-} 
-.read-more-button:hover .button-text {
-    color: white;
-}
+
  
 
 

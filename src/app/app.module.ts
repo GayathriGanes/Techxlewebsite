@@ -23,7 +23,6 @@ import{MatExpansionModule} from '@angular/material/expansion';
 import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MissionComponent } from './pages/mission/mission.component';
-import { SolutionbanComponent } from './pages/solutionban/solutionban.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -52,7 +51,6 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
-    SolutionbanComponent,
     FooterComponent,
     ServiceComponent,
     HeaderComponent,
@@ -66,7 +64,6 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
     FullstackComponent,
     LeadershipComponent,
     MissionComponent,
-    SolutionbanComponent,
     DesignComponent,
     SolutionsComponent,
     ContactComponent,

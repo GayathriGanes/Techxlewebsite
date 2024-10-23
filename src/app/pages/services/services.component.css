@@ -24,15 +24,7 @@
   color: #0a183e;
 }
 
-.read-more-button {
-  color: rgba(53, 100, 223, 1);
-} 
-.read-more-button::before {  
-  background-color: rgba(53,100,223,1);   
-} 
-.read-more-button:hover .button-text {
-  color: white;
-}
+
 .card-body {
   height: 410px;
   border-radius: 4px;
