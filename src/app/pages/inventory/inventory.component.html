@@ -1,5 +1,4 @@
-<div ngbScrollSpy #spy="ngbScrollSpy" class="d-block overflow-auto vh-100 ">
-  <section class="hero-section d-flex justify-content-center align-items-center">
+<section class="hero-section d-flex justify-content-center align-items-center">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-8 col-12">
@@ -17,17 +16,39 @@
       </div>
     </div>
   </section>  
-  <mat-toolbar class="nav-toolbar sticky-top custom-sticky container-fluid d-flex justify-content-center">
-    <nav class="nav-container">
-      <a fragment="challenges" class="sub-page-nav" [ngbScrollSpyItem]="[spy, 'challenges']">Challenges</a>
-      <a fragment="solutions" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Solutions</a>
-      <a fragment="impact" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Impact</a>
-    </nav>
-  </mat-toolbar>
+  <nav id="sticky-navbar" class="navbar navbar-expand-md navbar-light">
+    <div class="nav container">
+      <div class="current-section d-md-none text-start flex-grow-1">
+        {{ currentSectionTitle }}
+      </div>
+      <button class="navbar-toggler me-0 p-0" type="button" (click)="toggleNavbar()" aria-controls="navbarNav"
+        [attr.aria-expanded]="isNavbarCollapsed" aria-label="Toggle navigation">
+        <span *ngIf="!isNavbarCollapsed">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 10l6 6 6-6"/>
+          </svg>
+        </span>
+        <span *ngIf="isNavbarCollapsed" class="close-icon">&times;</span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="currentSection === 'challenges'" (click)="scrollToSection('challenges')">CHALLENGES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="currentSection === 'solutions'"  (click)="scrollToSection('solutions')">SOLUTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [class.active]="currentSection === 'impact'" (click)="scrollToSection('impact')">IMPACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <section id="challenges" class="content-section container d-flex justify-content-between">
     <div class="row mt-5 pt-4">
       <div class="col-md-4 col-lg-3">
-        <h2 ngbScrollSpyFragment="challenges">Challenges</h2>
+        <h2>Challenges</h2>
       </div>
       <div class="col-md-8 col-lg-9">
        <p>The company experienced inefficiencies in managing lab supplies, resulting in frequent stockouts, over-ordering, and delays in research projects due to the unavailability of critical materials.</p>
@@ -37,7 +58,7 @@
   <section id="solutions" class="content-section container">
     <div class="row mt-5 pt-2">
       <div class="col-md-4 col-lg-3">
-        <h2 ngbScrollSpyFragment="solutions">Solutions</h2>
+        <h2>Solutions</h2>
       </div>
       <div class="col-md-8 col-lg-9">
        <p>An Inventory Management system was introduced to centralize and automate stock tracking for lab supplies. Features included:</p>
@@ -61,7 +82,7 @@
   <section id="impact" class="content-section container">
     <div class="row mt-5 pt-4">
       <div class="col-md-4 col-lg-3">
-        <h2 ngbScrollSpyFragment="impact">Impact</h2>
+        <h2>Impact</h2>
       </div>
       <div class="col-md-8 col-lg-9">
        <p>The company saw a<span class="high"> 40% reduction in stockouts and a 25% decrease in over-ordering.</span> Researchers had access to the supplies they needed, reducing project delays and enabling more accurate financial forecasting for lab expenses. </p>
@@ -114,31 +135,53 @@
    
         <!-- Right Section: Form -->
         <div class="col-md-6">
-          <form>
-            <div class="form-group">
-              <label for="name">NAME</label>
-              <input type="text" class="form-control mt-2" id="name" name="name">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group mt-5">
+              <label for="name">Name</label>
+              <input type="text" class="form-control mt-2" id="name" formControlName="name" />
+              <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+                Name is required
+              </div>
+            </div>         
+            <div class="form-group mt-4">
+              <label for="email">Email ID</label>
+              <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
+              <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+                <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
+                <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
+              </div>            
+            </div>         
+            <div class="form-group mt-4">
+              <label for="service-type">Service Type</label>
+              <select class="form-control mt-2" id="service-type" formControlName="service_type">
+                <option value="" disabled selected>Select a service type</option>
+                <option value="Power Platform Development">Power Platform Development</option>
+                <option value="Cloud App Development">Cloud App Development</option>
+                <option value="Staffing Service">Staffing Service</option>
+                <option value="UI/UX Designing">UI/UX Designing</option>
+                <option value="Full Stack Development">Full Stack Development</option>
+                <option value="AI Application">AI Application</option>
+                <option value="Devops">Devops</option>
+                <option value="Other">Other</option>
+              </select>
+              <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
+                Service type is required
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <label for="email">EMAIL ID</label>
-              <input type="email" class="form-control mt-2" id="email"  placeholder="name@example.com" name="email">
+            <div class="form-group mt-4">
+              <label for="message">Message</label>
+              <textarea class="form-control mt-2" id="message" rows="4" formControlName="message"></textarea>
+              <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+                Message is required
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <label for="service">SERVICE TYPE</label>
-              <input type="text" class="form-control mt-2" id="service" name="service">
-            </div>
-            <div class="form-group mt-3">
-              <label for="message">MESSAGE</label>
-              <textarea class="form-control mt-2" id="message" name="message" rows="4"></textarea>
-            </div>
-            <button mat-button class="read-more-button mt-3">
+            <button mat-button type="submit" class=" read-more-button mt-4">
               <span class="button-text">Send Enquiry</span>
-              <span >
-                <img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
-              </span>
-              </button>
+              <span><img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
+            </button>
+            <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
           </form>
         </div>
       </div>
   </div>
-  <app-footer></app-footer>

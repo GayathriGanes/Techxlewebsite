@@ -11,7 +11,6 @@ import { ServiceComponent } from './pages/services/services.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
-import { CareerComponent } from './pages/career/career.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MatCardModule } from "@angular/material/card";
 import { PowerplatformComponent } from './pages/powerplatform/powerplatform.component';
@@ -55,7 +54,6 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
     ServiceComponent,
     HeaderComponent,
     AboutusComponent,
-    CareerComponent,
     ContactComponent,
     PowerplatformComponent,
     CloudappComponent,

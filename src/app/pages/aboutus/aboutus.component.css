@@ -3,152 +3,25 @@
   background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
     url("/assets/images/servicebanner.png");
 }
-.card-slider{
-  background: rgba(237, 241, 253, 1);
-
-}
-.header{
-  z-index:1;
-  position:relative;    
-}
-.hea{
-  height:300px;
-}
-.hea h2{
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 55.8px;
-  letter-spacing: 0.01em;  
-margin-top:-40px;
-color: rgba(6, 14, 35, 1);
-
-}
-.navigation-buttons{
-  white-space:nowrap;
-  margin-top:-40px;
-} 
-.cards-container {
-  position:relative;
-  z-index:2;
-  top:-108px;
-} 
-.card {  
-  width: 100%;  
-  border-radius: 4px;
-  border: 1px solid rgba(6, 14, 35, 0.1);    
-}
-.container{
-  overflow-x:scroll;
-  scroll-behavior:smooth;  
-} 
-.container::-webkit-scrollbar{
-  display:none;
-}
-.imag{
-  background: linear-gradient(90deg, #11296A 0%, #2150D0 119.88%);
-  border-radius:20px;
-}
-.imag h3{
-font-size: 28px;
-font-weight: 600;
-line-height: 35.28px;
-letter-spacing: 0.01em;
-color: rgba(255, 255, 255, 1);
-}
-.imag h5
+.client
 {
-font-size: 18px;
-font-weight: 600;
-line-height: 22.68px;
-letter-spacing: 0.01em;
-color: rgba(255, 255, 255, 1);
+  background-color:rgba(237,241,253,1);
 }
-.imag p{
-font-size: 16px;
-font-weight: 400;
-line-height: 27.2px;
-letter-spacing: 0.01em;
-color: rgba(255, 255, 255, 1);
-padding-bottom:20px;
-border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+.client h2{
+  font-weight:600;
+  font-size:36px;
+  letter-spacing:1%;
+  color:rgba(6,14,35,1);
+  line-height:55.8px;
 }
-
-@media (max-width:767.98px)
+.card
 {
-  .cards-container .container{
-      width:calc(100% - 20px);
-      
-  }
-  .hea h2{
-      font-size:30px;
-      line-height:40px;
-  }
-  .cu-he1
-  {
-    height:200px !important;
-  }
-}
-.work{
-  margin-top:80px;
-}
-.cu-he
-{
+  background-color:rgba(255,255,255,1);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
   height:200px;
 }
-.cu-he1
+.card-img
 {
-  height:400px;
+  width:80%;
+  height:80%;
 }
-.work .work1 h2{
-font-size: 36px;
-font-weight: 600;
-line-height: 55.8px;
-letter-spacing: 0.01em;
-color: rgba(6, 14, 35, 1);
-}
-.work .work1 p{
-font-size: 18px;
-font-weight: 400;
-line-height: 27.9px;
-letter-spacing: 0.02em;
-color: rgba(84, 93, 120, 1);
-}
-.learn{
-margin-top: 80px;
-margin-bottom:100px;
-}
-.learn h2{
-font-size: 24px;
-font-weight: 600;
-line-height: 37.2px;
-letter-spacing: 0.01em;
-color: rgba(6, 14, 35, 1);
-}
-.button1{
-height: 100px;
-border: 1px solid rgba(6, 14, 35, 0.1);
-background:transparent;
-gap:20px;
-transition:background-color 0.3s,box-shadow 0.3s,border-color 0.3s;
-}
-.button1 h2{
-font-size: 20px;
-font-weight: 600;
-line-height: 31px;
-letter-spacing: 0.01em;
-text-decoration:none;
-margin:0;
-color: rgba(6, 14, 35, 1);
-transition:text-decoration 0.3s;
-}
-
-.button1:hover{
-background-color: rgba(255, 255, 255, 1);  
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-border-color:rgba(0,0,0,0.2);
-}
-
-.button1 h2:hover{
-text-decoration: underline; 
-}
-

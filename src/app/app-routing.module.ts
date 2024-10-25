@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ServiceComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { CareerComponent } from './pages/career/career.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { PowerplatformComponent } from './pages/powerplatform/powerplatform.component';
 import { CloudappComponent } from './pages/cloudapp/cloudapp.component';
@@ -28,28 +27,27 @@ import { SaleComponent } from './pages/sale/sale.component';
 
 const routes: Routes = [
   { path: 'services', component: ServiceComponent} ,
-  {path:'powerplatform',component:PowerplatformComponent},
-  {path:'cloudapp',component:CloudappComponent},
-  {path:'staffing',component:StaffingComponent},
-  {path:'fullstack',component:FullstackComponent},
-  {path:'ui',component:UIComponent},
-  {path:'ai',component:AiComponent},
-  {path:'devops',component:DevopsComponent},
+  {path:'services/power-platform-solution',component:PowerplatformComponent},
+  {path:'services/cloud-app-development',component:CloudappComponent},
+  {path:'services/staffing-service',component:StaffingComponent},
+  {path:'services/full-stack-development',component:FullstackComponent},
+  {path:'services/ui-ux-designing',component:UIComponent},
+  {path:'services/ai-application',component:AiComponent},
+  {path:'services/devops',component:DevopsComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'leader',component:LeadershipComponent},
-  {path:'career',component:CareerComponent},
   {path:'contact',component:ContactComponent},
-  {path:'lab-automation-&-reservation',component:DesignComponent},
+  {path:'solutions/lab-automation-&-reservation',component:DesignComponent},
   {path:'solutions',component:SolutionsComponent},
-  {path:'inventory-management',component:InventoryComponent},
-  {path:'acquisition-support-for-labs',component:AcquisComponent},
-  {path:'sample-tracking',component:SampleComponent},
-  {path:'project-portfolio-management',component:ProjectComponent},
-  {path:'review-board-management',component:ReviewComponent},
-  {path:'grant-applications',component:GrantComponent},
-  {path:'healthcare-portal',component:HealthcareComponent},
-  {path:'psr',component:PsComponent},
-  {path:'custom-sales-crm-platform',component:SaleComponent},
+  {path:'solutions/inventory-management',component:InventoryComponent},
+  {path:'solutions/acquisition-support-for-labs',component:AcquisComponent},
+  {path:'solutions/sample-tracking',component:SampleComponent},
+  {path:'solutions/project-portfolio-management',component:ProjectComponent},
+  {path:'solutions/review-board-management',component:ReviewComponent},
+  {path:'solutions/grant-applications',component:GrantComponent},
+  {path:'solutions/healthcare-portal',component:HealthcareComponent},
+  {path:'solutions/psr',component:PsComponent},
+  {path:'solutions/custom-sales-crm-platform',component:SaleComponent},
   {path: '', component:HomeComponent },
   
 ];

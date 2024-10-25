@@ -1,5 +1,4 @@
-<div ngbScrollSpy #spy="ngbScrollSpy" class="d-block overflow-auto vh-100 ">
-  <section class="hero-section d-flex justify-content-center align-items-center">
+<section class="hero-section d-flex justify-content-center align-items-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-8 col-12">
@@ -18,27 +17,51 @@
         </div>
       </div>
     </section>
-    <mat-toolbar class="nav-toolbar sticky-top custom-sticky container-fluid d-flex justify-content-center">
-      <nav class="nav-container">
-            <a fragment="overview" class="sub-page-nav" [ngbScrollSpyItem]="[spy, 'overview']">Overview</a>
-            <a fragment="ourapproach" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Our Approach</a>
-            <a fragment="ourcapabilities" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Our Capabilities</a>
-            <a fragment="impact" class="sub-page-nav"  [ngbScrollSpyItem]="spy">Impact</a>
-      </nav>
-      </mat-toolbar>
+    <nav id="sticky-navbar" class="navbar navbar-expand-md navbar-light">
+      <div class="nav container">
+        <div class="current-section d-md-none text-start flex-grow-1">
+          {{ currentSectionTitle }}
+        </div>
+        <button class="navbar-toggler me-0 p-0" type="button" (click)="toggleNavbar()" aria-controls="navbarNav"
+          [attr.aria-expanded]="isNavbarCollapsed" aria-label="Toggle navigation">
+          <span *ngIf="!isNavbarCollapsed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M6 10l6 6 6-6"/>
+            </svg>
+          </span>
+          <span *ngIf="isNavbarCollapsed" class="close-icon">&times;</span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" [class.active]="currentSection === 'overview'" (click)="scrollToSection('overview')">OVERVIEW</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [class.active]="currentSection === 'approach'"  (click)="scrollToSection('approach')">OUR APPROACH</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [class.active]="currentSection === 'capabilities'" (click)="scrollToSection('capabilities')">OUR CAPABILITIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [class.active]="currentSection === 'impact'" (click)="scrollToSection('impact')">IMPACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <section id="overview" class="overview container">
       <div class="row">
         <div class=" col-md-3 col-sm-12 mb-4">
-          <h1 ngbScrollSpyFragment="overview" class="menu">Overview</h1>
+          <h1  class="menu">Overview</h1>
           </div>
         <p class="text1 col-md-9 col-sm-12">
           Maximize your business potential with Techxle’s cutting-edge AI application services. Our solutions are designed to help you harness the power of artificial intelligence to automate routine tasks, analyse large data sets, and provide actionable insights that drive business growth. We tailor AI solutions to fit your unique business needs, ensuring smarter operations, enhanced decision-making, and competitive advantage. Whether it’s AI-powered automation or advanced analytics, our solutions enable your organization to thrive in the age of digital transformation.
         </p>
       </div>
     </section>
-    <section id="ourapproach" class="ourapproach container">
+    <section id="approach" class="ourapproach container">
       <div class="row">
-        <h1 ngbScrollSpyFragment="ourapproach" class="menu col-md-3 col-sm-12 mb-4">Approach</h1>
+        <h1 class="menu col-md-3 col-sm-12 mb-4">Approach</h1>
         <p class="text1 col-md-9 col-sm-12">
           We follow a comprehensive, client-centric approach that involves collaborating closely with your team to identify areas where AI can deliver the most impact. Our AI specialists design, develop, and implement solutions that are scalable, secure, and aligned with your strategic goals.
         </p>
@@ -75,10 +98,10 @@
       </div>
     </section>
     <div class="banner">
-    <section id="ourcapabilities" class="container py-5 ourcapabilities">
+    <section id="capabilities" class="container py-5 ourcapabilities">
       <div class="row">
         <div class="col-12  text-start mb-4">
-          <h1 ngbScrollSpyFragment="ourcapabilities" class="cap">Our Capabilities</h1>
+          <h1 class="cap">Our Capabilities</h1>
         </div>
       </div>
    
@@ -158,7 +181,7 @@
     </div>
     <section id="impact" class="impact container">
       <div class="outcomes">
-        <h1 ngbScrollSpyFragment="impact" class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
+        <h1 class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
       </div>
    
       <!-- Image row -->
@@ -212,34 +235,57 @@
    
         <!-- Right Section: Form -->
         <div class="col-md-6">
-          <form>
-            <div class="form-group">
-              <label for="name">NAME</label>
-              <input type="text" class="form-control mt-2" id="name" name="name">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group mt-5">
+              <label for="name">Name</label>
+              <input type="text" class="form-control mt-2" id="name" formControlName="name" />
+              <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+                Name is required
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <label for="email">EMAIL ID</label>
-              <input type="email" class="form-control mt-2" id="email"  placeholder="name@example.com" name="email">
+         
+            <div class="form-group mt-4">
+              <label for="email">Email ID</label>
+              <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
+              <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+                <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
+                <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
+              </div>            
             </div>
-            <div class="form-group mt-3">
-              <label for="service">SERVICE TYPE</label>
-              <input type="text" class="form-control mt-2" id="service" name="service">
+         
+            <div class="form-group mt-4">
+              <label for="service-type">Service Type</label>
+              <select class="form-control mt-2" id="service-type" formControlName="service_type">
+                <option value="" disabled selected>Select a service type</option>
+                <option value="Power Platform Development">Power Platform Development</option>
+                <option value="Cloud App Development">Cloud App Development</option>
+                <option value="Staffing Service">Staffing Service</option>
+                <option value="UI/UX Designing">UI/UX Designing</option>
+                <option value="Full Stack Development">Full Stack Development</option>
+                <option value="AI Application">AI Application</option>
+                <option value="Devops">Devops</option>
+                <option value="Other">Other</option>
+              </select>
+              <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
+                Service type is required
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <label for="message">MESSAGE</label>
-              <textarea class="form-control mt-2" id="message" name="message" rows="4"></textarea>
+            <div class="form-group mt-4">
+              <label for="message">Message</label>
+              <textarea class="form-control mt-2" id="message" rows="4" formControlName="message"></textarea>
+              <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+                Message is required
+              </div>
             </div>
-            <button mat-button class="read-more-button mt-3">
+            <button mat-button type="submit" class=" read-more-button mt-4">
               <span class="button-text">Send Enquiry</span>
-              <span >
-                <img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
-              </span>
-              </button>
+              <span><img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
+            </button>
+            <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+            <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
           </form>
         </div>
       </div>
     </div>
     </div>
-    <app-footer></app-footer>
-  </div>
   
