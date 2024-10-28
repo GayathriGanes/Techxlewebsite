@@ -19,7 +19,6 @@ import { StaffingComponent } from './pages/staffing/staffing.component';
 import { UIComponent } from './pages/ui/ui.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import{MatExpansionModule} from '@angular/material/expansion';
-import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MissionComponent } from './pages/mission/mission.component';
 import { DesignComponent } from './pages/design/design.component';
@@ -60,7 +59,6 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
     StaffingComponent,
     UIComponent,
     FullstackComponent,
-    LeadershipComponent,
     MissionComponent,
     DesignComponent,
     SolutionsComponent,

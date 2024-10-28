@@ -8,7 +8,6 @@ import { CloudappComponent } from './pages/cloudapp/cloudapp.component';
 import { StaffingComponent } from './pages/staffing/staffing.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import { UIComponent } from './pages/ui/ui.component';
-import { LeadershipComponent } from './pages/leadership/leadership.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { AiComponent } from './pages/ai/ai.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
   {path:'services/ai-application',component:AiComponent},
   {path:'services/devops',component:DevopsComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'leader',component:LeadershipComponent},
   {path:'contact',component:ContactComponent},
   {path:'solutions/lab-automation-&-reservation',component:DesignComponent},
   {path:'solutions',component:SolutionsComponent},

@@ -316,6 +316,7 @@ color: rgba(84, 93, 120, 1);
 .log
 {
   height:500px;
+  width:800px;
 }
 .high
 {
@@ -388,7 +389,7 @@ margin-top:-40px;
 } 
 .card1 {  
   width: 386px;
-  height:300px;  
+  height:100%;  
   background:transparent !important;  
   box-shadow:none !important;
   padding:0;  
@@ -409,7 +410,7 @@ margin-top:-40px;
 }
 .nav
 {
-  background-color:whitesmoke;
+  background-color:rgba(242,245,253,1);
 }
  #sticky-navbar {
    position: -webkit-sticky;
@@ -417,8 +418,8 @@ margin-top:-40px;
    top: 90px;
    z-index: 90;
    height:90px;
-   background-color: whitesmoke;
-   box-shadow: 0px 4px 20px 0px rgba(10, 24, 62, 0.1);
+   background-color: rgba(242,245,253,1);
+   /*box-shadow: 0px 4px 20px 0px rgba(10, 24, 62, 0.1);*/
  }
  .nav-link{
    color: rgba(84, 93, 120, 1);
