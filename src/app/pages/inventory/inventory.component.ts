@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
- 
-
+import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-inventory',
   templateUrl: './inventory.component.html',
@@ -73,15 +71,13 @@ export class InventoryComponent implements OnInit  {
           closestSection = section;
         }
       }
-    });
- 
+    }); 
     if (closestSection && closestSection !== this.currentSection) {
       this.currentSection = closestSection;
       this.updateSectionTitle(closestSection);
       localStorage.setItem('currentSection', closestSection);
     }
   }
-
   services = [
     { name: 'Lab Automation & Reaservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
     { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/solutions/inventory-management' },
@@ -94,29 +90,23 @@ export class InventoryComponent implements OnInit  {
     { name: 'PSR', image: './assets/images/m21.png', isHovered: false,route:'/solutions/psr' },
     { name: 'Custom Sales CRM Platform ', image: './assets/images/Group 10412.png', isHovered: false,route:'/solutions/custom-sales-crm-platform' },
   ];
-
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
  
   hoverIn(service:any) {
     service.isHovered = true;
   }
-
   hoverOut(service:any) {
     service.isHovered = false;
   }
-
-
   next() {
     this.container.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
   }
-
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -125,8 +115,7 @@ export class InventoryComponent implements OnInit  {
       service_type: ['', Validators.required]
      
     });
-  }
- 
+  } 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;

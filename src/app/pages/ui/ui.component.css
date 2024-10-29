@@ -2,9 +2,8 @@
   .hero-section {   
       background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
         url("/assets/images/ui-banner.png");
-    }    
-  
-    .ourapproach{
+    } 
+   .ourapproach{
       margin-top:50px;
     }
     .approach{
@@ -41,8 +40,7 @@
   letter-spacing: 0.01em;
   color: rgba(6, 14, 35, 1);
   background: rgba(10, 24, 62, 0.1);
-  padding:5px;
-  
+  padding:5px;  
   }
   .step {
       text-align: center;
@@ -68,7 +66,6 @@
   .ima{
       margin-bottom:120px;
   }
-
   @media (max-width: 767.98px) {
       .rotate-heading {
           display:none;

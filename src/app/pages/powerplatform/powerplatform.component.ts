@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
- 
+import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-powerplatform',
   templateUrl: './powerplatform.component.html',
@@ -73,15 +72,13 @@ export class PowerplatformComponent implements OnInit {
           closestSection = section;
         }
       }
-    });
- 
+    }); 
     if (closestSection && closestSection !== this.currentSection) {
       this.currentSection = closestSection;
       this.updateSectionTitle(closestSection);
       localStorage.setItem('currentSection', closestSection);
     }
   }
-
   currentImage: string = "./assets/images/app.png"; // default image path
   imageArray:string[] = ["app.png", "process.png", "data.png", "integration.png", "capabilities.png"]; 
   changeImage(panelNumber: number) {
@@ -89,18 +86,15 @@ export class PowerplatformComponent implements OnInit {
   }
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       message: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      service_type: ['', Validators.required]
-     
+      service_type: ['', Validators.required]     
     });
-  }
- 
+  } 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;

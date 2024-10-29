@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-solutions',
   templateUrl: './solutions.component.html',
   styleUrl: './solutions.component.css'
 })
 export class SolutionsComponent {
-
   services = [
     { name: 'Lab Automation & Reaservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
     { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/solutions/inventory-management' },
@@ -19,11 +17,9 @@ export class SolutionsComponent {
     { name: 'PSR', image: './assets/images/m21.png', isHovered: false,route:'/solutions/psr' },
     { name: 'Custom Sales CRM Platform ', image: './assets/images/Group 10412.png', isHovered: false,route:'/solutions/custom-sales-crm-platform' },
   ];
-
   hoverIn(service:any) {
     service.isHovered = true;
   }
-
   hoverOut(service:any) {
     service.isHovered = false;
   }

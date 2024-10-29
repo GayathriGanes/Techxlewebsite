@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
- 
-
 @Component({
   selector: 'app-design',
   templateUrl: './design.component.html',
@@ -73,16 +71,13 @@ export class DesignComponent implements OnInit  {
           closestSection = section;
         }
       }
-    });
- 
+    }); 
     if (closestSection && closestSection !== this.currentSection) {
       this.currentSection = closestSection;
       this.updateSectionTitle(closestSection);
       localStorage.setItem('currentSection', closestSection);
     }
   }
-
-
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   services = [
     { name: 'Lab Automation & Reaservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
@@ -99,24 +94,18 @@ export class DesignComponent implements OnInit  {
   hoverIn(service:any) {
     service.isHovered = true;
   }
-
   hoverOut(service:any) {
     service.isHovered = false;
   }
-  
-
-
   next() {
     this.container.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
   }
-
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -125,8 +114,7 @@ export class DesignComponent implements OnInit  {
       service_type: ['', Validators.required]
      
     });
-  }
- 
+  } 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;

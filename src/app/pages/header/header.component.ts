@@ -7,15 +7,12 @@ import { Component} from '@angular/core';
 export class HeaderComponent {
   isNavbarCollapsed = true;
   selectedLink: string = '';
-
   toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
-
   closeNavbar() {
     this.isNavbarCollapsed = true;
   }
-
   selectLink(link: string) {
     this.selectedLink = link; 
   }

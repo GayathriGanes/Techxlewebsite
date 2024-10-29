@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
- 
+import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-ps',
   templateUrl: './ps.component.html',
@@ -72,8 +71,7 @@ export class PsComponent implements OnInit  {
           closestSection = section;
         }
       }
-    });
- 
+    }); 
     if (closestSection && closestSection !== this.currentSection) {
       this.currentSection = closestSection;
       this.updateSectionTitle(closestSection);
@@ -96,31 +94,26 @@ export class PsComponent implements OnInit  {
   hoverIn(service:any) {
     service.isHovered = true;
   }
-
   hoverOut(service:any) {
     service.isHovered = false;
   }
   next() {
     this.container.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
   }
-
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       message: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      service_type: ['', Validators.required]
-     
+      service_type: ['', Validators.required]     
     });
   }
- 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;

@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
- 
+import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-fullstack',
   templateUrl: './fullstack.component.html',
@@ -73,8 +72,7 @@ export class FullstackComponent implements OnInit {
           closestSection = section;
         }
       }
-    });
- 
+    }); 
     if (closestSection && closestSection !== this.currentSection) {
       this.currentSection = closestSection;
       this.updateSectionTitle(closestSection);
@@ -83,14 +81,12 @@ export class FullstackComponent implements OnInit {
   } 
   currentImage: string = "./assets/images/turned-gray-laptop-computer 1.png"; // default image path
   imageArray:string[] = ["turned-gray-laptop-computer 1.png", "programming-background-with-person-working-with-codes-computer (1) 1.png", "repairman-doing-annual-system-servicing 1.png", "application-programming-interface-hologram (1) 1.png","image_1054-transformed 1.png"];
-
   changeImage(panelNumber: number) {
     this.currentImage = './assets/images/'+this.imageArray[panelNumber-1];
   }
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -99,8 +95,7 @@ export class FullstackComponent implements OnInit {
       service_type: ['', Validators.required]
      
     });
-  }
- 
+  } 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
@@ -120,5 +115,4 @@ export class FullstackComponent implements OnInit {
       this.errorMessage = 'Please fill out all required fields.';
     }
   }
-
 }

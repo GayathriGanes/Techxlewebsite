@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
- 
+import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-cloudapp',
   templateUrl: './cloudapp.component.html',
@@ -73,8 +72,7 @@ export class CloudappComponent implements OnInit {
           closestSection = section;
         }
       }
-    });
- 
+    }); 
     if (closestSection && closestSection !== this.currentSection) {
       this.currentSection = closestSection;
       this.updateSectionTitle(closestSection);
@@ -89,8 +87,7 @@ export class CloudappComponent implements OnInit {
   }
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -99,8 +96,7 @@ export class CloudappComponent implements OnInit {
       service_type: ['', Validators.required]
      
     });
-  }
- 
+  } 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;

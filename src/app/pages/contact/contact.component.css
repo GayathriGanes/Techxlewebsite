@@ -3,8 +3,7 @@
   font-weight: 800;
   line-height: 22.68px;
   letter-spacing: 0.08em;
-  color: #3564DF;
- 
+  color: #3564DF; 
 }
 .container{
   margin-top: 90px;
@@ -26,8 +25,7 @@ letter-spacing: 0.01em;
 color: #0A183E99;
 }
 strong{
-  color: #060E23;
- 
+  color: #060E23; 
 }
 .direction{
 font-size: 18px;
@@ -44,8 +42,7 @@ margin-left: 65px;
   font-size: 18px;
   font-weight: 600;
   color: #060e23;  
-}
- 
+} 
 .work-content, .job {
   font-size: 18px;
   font-weight: 500;
@@ -66,7 +63,6 @@ label{
     height:48px;
     border-radius: 4px;
   }
-
 @media (max-width:797.98px)
 {
    .font{

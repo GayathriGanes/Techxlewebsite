@@ -31,8 +31,7 @@
               <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
                 Name is required
               </div>
-            </div>
-         
+            </div>         
             <div class="form-group mt-4">
               <label for="email">Email ID</label>
               <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
@@ -40,8 +39,7 @@
                 <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
                 <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
               </div>            
-            </div>
-         
+            </div>         
             <div class="form-group mt-4">
               <label for="phone">Phone Number</label>
               <input type="text" class="form-control mt-2" id="phone" formControlName="phone_no" />
@@ -51,8 +49,7 @@
                 <div *ngIf="contactForm.get('phone_no')?.errors?.['minlength']">Phone number must be at least 10 digits</div>
                 <div *ngIf="contactForm.get('phone_no')?.errors?.['pattern']">Phone number must be numeric</div>
               </div>
-            </div>
-         
+            </div>         
             <div class="form-group mt-4">
               <label for="service-type">Service Type</label>
               <select class="form-control mt-2" id="service-type" formControlName="service_type">

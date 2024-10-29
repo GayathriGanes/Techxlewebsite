@@ -6,23 +6,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent {
- 
+export class ContactComponent { 
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       phone_no: ['', [Validators.required, Validators.maxLength(13), Validators.minLength(10),Validators.pattern("^[0-9]*$")]],
       message: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      service_type: ['', Validators.required]
-     
+      service_type: ['', Validators.required]     
     });
-  }
- 
+  } 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
@@ -41,7 +37,5 @@ export class ContactComponent {
     } else {
       this.errorMessage = 'Please fill out all required fields.';
     }
-  }
- 
- 
+  }  
 }

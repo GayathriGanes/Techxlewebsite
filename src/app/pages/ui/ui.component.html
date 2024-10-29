@@ -5,8 +5,7 @@
         <div class="hero-content">
           <p class="text-uppercase mb-2">
             <a routerLink="/services" class="text-decoration-none">Services</a> / UI/UX designing
-          </p>
-         
+          </p>         
           <h1 class="mb-3">User-Centric Design, Business Impact</h1>
           <a routerLink="/contact" class="cta-button">
             <span class="text">Let's talk</span>
@@ -53,14 +52,12 @@
   <div class="row">
     <div class=" col-md-3 col-sm-12 mb-4">
       <h1 class="menu">Overview</h1>
-    </div>
-   
+    </div>   
     <p class="text col-md-9 col-sm-12">
       Elevate your digital products with Techxle’s expert UI/UX Designing services. We create intuitive and visually appealing interfaces that provide a seamless user experience, ensuring that your applications are both functional and engaging. Our design approach focuses on understanding user needs and behaviors to craft experiences that delight and drive user satisfaction.
     </p>
   </div>
 </section>
-
 <section id="approach" class="ourapproach container" >
   <div class="row">
    <h1 class="approach col-12 col-md-3">Approach</h1>
@@ -105,7 +102,6 @@
       </div>
   </div>   
 </section>
-
 <div class="banner">
 <section id="capabilities" class="container py-5 ourcapabilities">
   <div class="row">
@@ -113,12 +109,9 @@
       <h1 class="cap">Our Capabilities</h1>
     </div>
   </div>
-
   <div class="row">
-    <!-- Accordion Section -->
     <div class="col-md-7 col-12 order-2 order-md-1 p-0">
       <div class="accordion" id="accordionExample">
-        <!-- App Development -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" (click)="changeImage(1)">
@@ -128,12 +121,10 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <p class="brand-text">Craft cohesive brand identities that align with your business vision and values.
-                Develop strategic brand guidelines for consistent communication across all platforms. Create impactful visual branding elements, including logos, typography, and color schemes</p>
+                Develop strategic brand guidelines for consistent communication across all platforms. Create impactful visual branding elements, including logos, typography, and color schemes.</p>
             </div>
           </div>
         </div>
- 
-        <!-- Process Automation -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)="changeImage(2)">
@@ -142,12 +133,10 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p class="brand-text">Build responsive, user-friendly websites and applications with seamless navigation. Leverage data analytics to optimize digital experiences and drive customer engagement.Integrate emerging technologies such as AI and AR for enhanced user interaction</p>
+              <p class="brand-text">Build responsive, user-friendly websites and applications with seamless navigation. Leverage data analytics to optimize digital experiences and drive customer engagement.Integrate emerging technologies such as AI and AR for enhanced user interaction.</p>
             </div>
           </div>
         </div>
- 
-        <!-- Data Visualization -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)="changeImage(3)">
@@ -164,8 +153,6 @@
         </div> 
       </div>
     </div>
- 
-    <!-- Image Section -->
     <div class="col-md-5 col-12 order-1 order-md-2 text-center text-md-start mb-4">
       <img [src]="currentImage" alt="Icon" class="image"/>
     </div>
@@ -176,8 +163,6 @@
   <div class="outcomes">
     <h1  class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
   </div>
-
-  <!-- Image row -->
   <div class="row justify-content-center mt-5">
     <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
       <img src="./assets/images/u1.svg" alt="Icon" class="img-fluid" />
@@ -192,14 +177,11 @@
       <img src="./assets/images/u4.svg" alt="Icon" class="img-fluid" />
     </div>  
   </div>
-
-  <!-- Text and technology section -->
   <div class="row mt-5">
     <h1 class="tech col-sm-12 col-md-4 col-xl-4 text-start text-md-left mt-5">We Work With Advanced Technology</h1>
 
     <div class="col-sm-12 col-md-8 col-xl-8">
       <div class="row justify-content-center mt-5">
-        <!-- First row of tech icons -->
         <div class="col-6 col-sm-4 col-md-2 text-center">
           <img src="./assets/logo/f1.png" alt="Power Apps" class="img-fluid" ngbTooltip="Figma" placement="bottom" >
         </div>
@@ -210,8 +192,6 @@
           <img src="./assets/logo/f3.png" alt="Power Bi" class="img-fluid" ngbTooltip="Illustrator" placement="bottom"/>
         </div>         
       </div>
-
-      <!-- Second row of tech icons -->
       <div class="row justify-content-center mt-5">
         <div class="col-6 col-sm-4 col-md-2 text-center">
           <img src="./assets/logo/f4.png" alt="Group 10410" class="img-fluid" ngbTooltip="Photoshop" placement="bottom"/>
@@ -229,13 +209,10 @@
 <div class="banner1">
 <div class="container py-5">
   <div class="row align-items-start mt-5">
-    <!-- Left Section: Get In Touch Header -->
     <div class="col-md-6 text-left">
       <h5 class="text-get">GET IN TOUCH</h5>
       <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
     </div>
-
-    <!-- Right Section: Form -->
     <div class="col-md-6">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form-group mt-5">
@@ -244,8 +221,7 @@
           <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
             Name is required
           </div>
-        </div>
-     
+        </div>     
         <div class="form-group mt-4">
           <label for="email">Email ID</label>
           <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
@@ -253,8 +229,7 @@
             <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
             <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
           </div>            
-        </div>
-     
+        </div>     
         <div class="form-group mt-4">
           <label for="service-type">Service Type</label>
           <select class="form-control mt-2" id="service-type" formControlName="service_type">

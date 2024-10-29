@@ -5,8 +5,7 @@
             <div class="hero-content">
               <p class="text-uppercase mb-2">
                 <a routerLink="/services" class="text-decoration-none">Services</a> / DEVOPS
-              </p>
-             
+              </p>             
               <h1 class="mb-3">Unify Development and Operations for Seamless Delivery</h1>
               <a routerLink="/contact" class="cta-button">
                 <span class="text">Let's talk</span>
@@ -65,35 +64,26 @@
         <p class="text1 col-md-9 col-sm-12">
           We follow a systematic, collaborative approach to DevOps, aligning your business objectives with cutting-edge tools and processes. Our DevOps experts work closely with your teams to design and implement solutions that foster agility and innovation.
         </p>
-      </div>
-   
-     
+      </div>  
       <div class="row text-center">
         <div class="col-md-3"></div>
         <div class="test-3 col-sm-12 col-md-9 mb-4 d-flex flex-wrap justify-content-xs-between justify-content-sm-between  justify-content-center">
-     
           <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-start">
             <img src="./assets/images/pf1.svg" alt="Icon" class="def-img mb-3" />
             <h5 class="define-text p-1">Collaborative Planning & Assessment</h5>
-          </div>
-     
+          </div>     
           <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-start">
             <img src="./assets/images/fs1.svg" alt="Icon" class="test-img mb-3" />
             <h5 class="idea-text p-1">Agile Development Methodologies</h5>
-          </div>
-     
-     
+          </div>    
           <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-start">
             <img src="./assets/images/pf4.svg" alt="Icon" class="pro-img mb-3" />
             <h5 class="prototype-text p-1">Continuous Integration & Automation</h5>
-          </div>
-     
-         
+          </div>    
           <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-start">
             <img src="./assets/images/ca4.svg" alt="Icon" class="ide-img mb-3" />
             <h5 class="iterate-text p-1">Security-First Mindset(DevOps)</h5>
-          </div>
-     
+          </div>     
         </div>
       </div>
     </section>
@@ -101,13 +91,10 @@
     <section id="capabilities" class="container py-5 ourcapabilities">
       <div class="row">
         <div class="col-12  text-start mb-4">
-          <h1 class="cap">Our Capabilities</h1>
-         
+          <h1 class="cap">Our Capabilities</h1>         
         </div>
-      </div>
-   
+      </div>   
       <div class="row">
-        <!-- Accordion Section -->
         <div class="col-md-7 col-12 order-2 order-md-1 p-0">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -118,7 +105,7 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <p class="brand-text">Set up continuous integration and continuous deployment pipelines to automate the build, test, and release processes</p>
+                  <p class="brand-text">Set up continuous integration and continuous deployment pipelines to automate the build, test, and release processes.</p>
                 </div>
               </div>
             </div>
@@ -172,8 +159,6 @@
             </div>
           </div>
         </div>
-     
-        <!-- Image Section -->
         <div class="col-md-5 col-12 order-1 order-md-2 text-center text-md-start mb-4">
           <img [src]="currentImage" alt="Icon" class="image"/>
         </div>
@@ -184,8 +169,6 @@
       <div class="outcomes">
         <h1 class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
       </div>
-   
-      <!-- Image row -->
       <div class="row justify-content-center mt-5">
         <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
           <img src="./assets/images/d1.svg" alt="Icon" class="img-fluid" />
@@ -202,10 +185,8 @@
       </div>
       <div class="row mt-5">
         <h1 class="tech col-sm-12 col-md-4 col-xl-4 text-start text-md-left mt-5">We Work With Advanced Technology</h1>
-   
         <div class="col-sm-12 col-md-8 col-xl-8">
           <div class="row justify-content-center mt-5">
-            <!-- First row of tech icons -->
             <div class="col-6 col-sm-4 col-md-2 text-center">
               <img src="./assets/images/devo1.png" alt="Power Apps" class="img-fluid" ngbTooltip="Jenkins" placement="bottom" >
             </div>           
@@ -220,24 +201,18 @@
             </div>
             <div class="col-6 col-sm-4 col-md-2 text-center">
               <img src="./assets/images/devo10.png" alt="Frame 3" class="img-fluid" ngbTooltip="Git" placement="bottom"/>
-            </div>     
-           
-          </div>  
-        
+            </div>  
+          </div> 
         </div>
-      </div>
-   
+      </div>   
     </section>
     <div class="banner1">
     <div class="container py-5">
       <div class="row align-items-start mt-5">
-        <!-- Left Section: Get In Touch Header -->
         <div class="col-md-6 text-left">
           <h5 class="text-get">GET IN TOUCH</h5>
           <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
         </div>
-   
-        <!-- Right Section: Form -->
         <div class="col-md-6">
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
             <div class="form-group mt-5">
@@ -246,8 +221,7 @@
               <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
                 Name is required
               </div>
-            </div>
-         
+            </div>         
             <div class="form-group mt-4">
               <label for="email">Email ID</label>
               <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
@@ -255,8 +229,7 @@
                 <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
                 <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
               </div>            
-            </div>
-         
+            </div>         
             <div class="form-group mt-4">
               <label for="service-type">Service Type</label>
               <select class="form-control mt-2" id="service-type" formControlName="service_type">

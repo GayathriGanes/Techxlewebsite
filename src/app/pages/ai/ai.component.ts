@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core'; 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
- 
+import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-ai',
   templateUrl: './ai.component.html',
@@ -73,8 +72,7 @@ export class AiComponent implements OnInit{
           closestSection = section;
         }
       }
-    });
- 
+    }); 
     if (closestSection && closestSection !== this.currentSection) {
       this.currentSection = closestSection;
       this.updateSectionTitle(closestSection);
@@ -88,8 +86,7 @@ export class AiComponent implements OnInit{
   }
   contactForm: FormGroup;
   successMessage: string = '';
-  errorMessage: string = '';
- 
+  errorMessage: string = ''; 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -98,8 +95,7 @@ export class AiComponent implements OnInit{
       service_type: ['', Validators.required]
      
     });
-  }
- 
+  } 
   onSubmit() {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
@@ -119,6 +115,4 @@ export class AiComponent implements OnInit{
       this.errorMessage = 'Please fill out all required fields.';
     }
   }
-
-
 }
