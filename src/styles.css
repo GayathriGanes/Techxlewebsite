@@ -352,8 +352,8 @@ margin-top:-40px;
 }
 .read-more {
   font-size: 0.9rem;
-  color: #0056b3;
-  font-weight: bold;
+  color:rgba(53,100,223,1) ;
+  font-weight:700;
   transition: opacity 0.3s ease;
 }
 .cards-container {
