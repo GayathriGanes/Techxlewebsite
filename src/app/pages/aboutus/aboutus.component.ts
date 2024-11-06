@@ -8,6 +8,7 @@ export class AboutusComponent {
  clients=[{imgSrc:'./assets/images/cl1.svg'},
           {imgSrc:'./assets/images/cl2.svg'},
           {imgSrc:'./assets/images/cl3.svg'},
-          {imgSrc:'./assets/images/cl4.svg'}
+          {imgSrc:'./assets/images/cl4.svg'},
+          {imgSrc:'./assets/images/cl5.svg'}
  ];
 }
