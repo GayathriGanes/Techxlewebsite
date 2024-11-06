@@ -52,7 +52,8 @@
   font-weight: 500;
   line-height: 23.1px;
   color: rgba(84, 93, 120, 1);
-  border:2px dotted black;
+  border: 1px solid #545d78;
+  border-style: dashed;
   height:150px;
   padding:3px;
   }

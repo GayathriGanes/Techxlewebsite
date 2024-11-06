@@ -50,24 +50,24 @@
     </nav>
     <section id="overview" class="overview container">
       <div class="row">
-        <div class=" col-md-3 col-sm-12 mb-4">
+        <div class=" col-md-4 col-lg-3 col-sm-12 mb-4">
           <h1  class="menu">Overview</h1>
           </div>
-        <p class="text1 col-md-9 col-sm-12">
+        <p class="text1 col-md-8 col-lg-9 col-sm-12">
           Maximize your business potential with Techxl’s cutting-edge AI application services. Our solutions are designed to help you harness the power of artificial intelligence to automate routine tasks, analyse large data sets, and provide actionable insights that drive business growth. We tailor AI solutions to fit your unique business needs, ensuring smarter operations, enhanced decision-making, and competitive advantage. Whether it’s AI-powered automation or advanced analytics, our solutions enable your organization to thrive in the age of digital transformation.
         </p>
       </div>
     </section>
     <section id="approach" class="ourapproach container">
       <div class="row">
-        <h1 class="menu col-md-3 col-sm-12 mb-4">Approach</h1>
-        <p class="text1 col-md-9 col-sm-12">
+        <h1 class="menu col-md-4 col-lg-3  col-sm-12 mb-4">Approach</h1>
+        <p class="text1 col-md-8 col-lg-9 col-sm-12">
           We follow a comprehensive, client-centric approach that involves collaborating closely with your team to identify areas where AI can deliver the most impact. Our AI specialists design, develop, and implement solutions that are scalable, secure, and aligned with your strategic goals.
         </p>
       </div>      
       <div class="row text-center">
-        <div class="col-md-3"></div>
-        <div class="test-3 col-sm-12 col-md-9 mb-4 d-flex flex-wrap justify-content-xs-between justify-content-sm-between  justify-content-center">     
+        <div class="col-md-4 col-lg-3"></div>
+        <div class="test-3 col-sm-12 col-md-8 col-lg-9 mb-4 d-flex flex-wrap justify-content-xs-between justify-content-sm-between  justify-content-center">     
           <div class="define col-12 col-md-0 mb-4 d-flex flex-column align-items-center justify-content-start">
             <img src="./assets/images/pf1.svg" alt="Icon" class="def-img mb-3" />
             <h5 class="define-text p-1"> Data-driven Analysis & Insights</h5>
@@ -230,21 +230,23 @@
             </div>         
             <div class="form-group mt-4">
               <label for="service-type">Service Type</label>
-              <select class="form-control mt-2" id="service-type" formControlName="service_type">
-                <option value="" disabled selected>Select a service type</option>
-                <option value="Power Platform Development">Power Platform Development</option>
-                <option value="Cloud App Development">Cloud App Development</option>
-                <option value="Staffing Service">Staffing Service</option>
-                <option value="UI/UX Designing">UI/UX Designing</option>
-                <option value="Full Stack Development">Full Stack Development</option>
-                <option value="AI Application">AI Application</option>
-                <option value="Devops">Devops</option>
-                <option value="Other">Other</option>
-              </select>
-              <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
-                Service type is required
+              <div class="custom-select-wrapper">
+                  <select class="form-control custom-select mt-2" id="service-type" formControlName="service_type">
+                      <option value="" disabled selected>Select a service type</option>
+                      <option value="Power Platform Development">Power Platform Development</option>
+                      <option value="Cloud App Development">Cloud App Development</option>
+                      <option value="Staffing Service">Staffing Service</option>
+                      <option value="UI/UX Designing">UI/UX Designing</option>
+                      <option value="Full Stack Development">Full Stack Development</option>
+                      <option value="AI Application">AI Application</option>
+                      <option value="Devops">Devops</option>
+                      <option value="Other">Other</option>
+                  </select>
               </div>
-            </div>
+              <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
+                  Service type is required
+              </div>
+          </div>
             <div class="form-group mt-4">
               <label for="message">Message</label>
               <textarea class="form-control mt-2" id="message" rows="4" formControlName="message"></textarea>

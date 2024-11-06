@@ -51,6 +51,22 @@ margin-left: 65px;
 a{
   color: #545d78;
 }
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+ 
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 10l6 6 6-6'/%3E%3C/svg%3E")  ;
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 25px;
+}
 label{
   color: #545D78;
   font-size: 18px;

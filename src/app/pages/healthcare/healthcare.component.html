@@ -143,21 +143,23 @@
             </div>         
             <div class="form-group mt-4">
               <label for="service-type">Service Type</label>
-              <select class="form-control mt-2" id="service-type" formControlName="service_type">
-                <option value="" disabled selected>Select a service type</option>
-                <option value="Power Platform Development">Power Platform Development</option>
-                <option value="Cloud App Development">Cloud App Development</option>
-                <option value="Staffing Service">Staffing Service</option>
-                <option value="UI/UX Designing">UI/UX Designing</option>
-                <option value="Full Stack Development">Full Stack Development</option>
-                <option value="AI Application">AI Application</option>
-                <option value="Devops">Devops</option>
-                <option value="Other">Other</option>
-              </select>
-              <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
-                Service type is required
+              <div class="custom-select-wrapper">
+                  <select class="form-control custom-select mt-2" id="service-type" formControlName="service_type">
+                      <option value="" disabled selected>Select a service type</option>
+                      <option value="Power Platform Development">Power Platform Development</option>
+                      <option value="Cloud App Development">Cloud App Development</option>
+                      <option value="Staffing Service">Staffing Service</option>
+                      <option value="UI/UX Designing">UI/UX Designing</option>
+                      <option value="Full Stack Development">Full Stack Development</option>
+                      <option value="AI Application">AI Application</option>
+                      <option value="Devops">Devops</option>
+                      <option value="Other">Other</option>
+                  </select>
               </div>
-            </div>
+              <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
+                  Service type is required
+              </div>
+          </div>
             <div class="form-group mt-4">
               <label for="message">Message</label>
               <textarea class="form-control mt-2" id="message" rows="4" formControlName="message"></textarea>
