@@ -7,6 +7,7 @@ import { Component} from '@angular/core';
 export class HeaderComponent {
   isNavbarCollapsed = true;
   selectedLink: string = '';
+  activeDropdownItem: string = '';
   toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
@@ -15,6 +16,9 @@ export class HeaderComponent {
   }
   selectLink(link: string) {
     this.selectedLink = link; 
+  }
+  selectDropdownItem(item: string): void {
+    this.activeDropdownItem = item;
   }
 }
  

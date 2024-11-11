@@ -9,7 +9,7 @@ body {
   transition: color 1s ease;
   letter-spacing: -0.2px !important;
   overflow: hidden !important;
-  line-height: 16px;
+  line-height: 16px !important;
   font-weight: 700 !important;
   cursor: pointer;
   padding: 10px 20px;
