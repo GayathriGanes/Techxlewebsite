@@ -5,39 +5,63 @@
         <div class="hero-content">
           <p class="text-uppercase mb-2">
             <a routerLink="/services" class="text-decoration-none">Services</a> / UI/UX designing
-          </p>
-         
+          </p>         
           <h1 class="mb-3">User-Centric Design, Business Impact</h1>
           <a routerLink="/contact" class="cta-button">
             <span class="text">Let's talk</span>
-            <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
+            <span class="arrow"><img src="./assets/logo/arrow.png" alt="Arrow Icon"></span>
           </a>
         </div>
       </div>
     </div>
   </div>
 </section>
- <mat-toolbar class="nav-toolbar container-fluid d-flex justify-content-center">
-<nav class="nav-container">
-      <a [routerLink]="['/ui']" fragment="overview" [ngClass]="{'active-link': activeLink === 'overview'}" (click)="setActiveLink('overview')">Overview</a>
-      <a [routerLink]="['/ui']" fragment="ourapproach" [ngClass]="{'active-link': activeLink === 'ourapproach'}" (click)="setActiveLink('ourapproach')">Our Approach</a>
-      <a [routerLink]="['/ui']" fragment="ourcapabilities" [ngClass]="{'active-link': activeLink === 'ourcapabilities'}" (click)="setActiveLink('ourcapabilities')">Our Capabilities</a>
-      <a [routerLink]="['/ui']" fragment="impact" [ngClass]="{'active-link': activeLink === 'impact'}" (click)="setActiveLink('impact')">Impact</a>
+<nav id="sticky-navbar" class="navbar navbar-expand-md navbar-light">
+  <div class="nav container">
+    <div class="current-section d-md-none text-start flex-grow-1">
+      {{ currentSectionTitle }}
+    </div>
+    <button class="navbar-toggler me-0 p-0" type="button" (click)="toggleNavbar()" aria-controls="navbarNav"
+      [attr.aria-expanded]="isNavbarCollapsed" aria-label="Toggle navigation">
+      <span *ngIf="!isNavbarCollapsed">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M6 10l6 6 6-6"/>
+        </svg>
+      </span>
+      <span *ngIf="isNavbarCollapsed" class="close-icon">&times;</span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentSection === 'overview'" (click)="scrollToSection('overview')">OVERVIEW</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentSection === 'approach'"  (click)="scrollToSection('approach')">OUR APPROACH</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentSection === 'capabilities'" (click)="scrollToSection('capabilities')">OUR CAPABILITIES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentSection === 'impact'" (click)="scrollToSection('impact')">IMPACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
-</mat-toolbar>
 <section id="overview" class="overview container">
   <div class="row">
-    <h1 class="menu   col-md-3 col-sm-12 mb-4">Overview</h1>
-    <p class="text col-md-9 col-sm-12">
-      Elevate your digital products with Techxle’s expert UI/UX Designing services. We create intuitive and visually appealing interfaces that provide a seamless user experience, ensuring that your applications are both functional and engaging. Our design approach focuses on understanding user needs and behaviors to craft experiences that delight and drive user satisfaction.
+    <div class=" col-md-4 col-lg-3 col-sm-12 mb-4">
+      <h1 class="menu">Overview</h1>
+    </div>   
+    <p class="text col-md-8 col-lg-9 col-sm-12">
+      Elevate your digital products with Techxl’s expert UI/UX Designing services. We create intuitive and visually appealing interfaces that provide a seamless user experience, ensuring that your applications are both functional and engaging. Our design approach focuses on understanding user needs and behaviors to craft experiences that delight and drive user satisfaction.
     </p>
   </div>
 </section>
-
-<section id="ourapproach" class="ourapproach container" >
+<section id="approach" class="ourapproach container" >
   <div class="row">
-   <h1 class="approach col-12 col-md-3">Approach</h1>
-   <p class="para1 col-12 col-md-9">We follow a user-centered design process that involves collaborating with stakeholders and users to create intuitive and aesthetically pleasing interfaces. Our design team uses the latest tools and techniques to build experiences that are not only functional but also enjoyable to use</p>
+   <h1 class="approach col-12 col-md-4 col-lg-3">Approach</h1>
+   <p class="para1 col-12 col-md-8 col-lg-9">We follow a user-centered design process that involves collaborating with stakeholders and users to create intuitive and aesthetically pleasing interfaces. Our design team uses the latest tools and techniques to build experiences that are not only functional but also enjoyable to use</p>
   </div>
   <div class="archit col-12 justify-content-center">
       <h2 class="heading py-2 d-flex justify-content-center">Design Thinking Process</h2>
@@ -48,27 +72,27 @@
       </div>
       <div class="car col-md-10  d-md-flex justify-content-around align-items-center  p-3">
           <div class="step">
-              <img src="assets/images/Discover.svg" alt="Define" class="icon"/>
+              <img src="./assets/images/Discover.svg" alt="Define" class="icon"/>
               <h4>Discover</h4>
               <p>Understand user needs, business goals, and market trends through comprehensive research.</p>
           </div>
           <div class="step">
-              <img src="assets/images/Define.svg" alt="Define" class="icon"/>
+              <img src="./assets/images/Define.svg" alt="Define" class="icon"/>
               <h4>Define</h4>
               <p>Develop a UX roadmap and strategy that aligns with the business objectives.</p>
           </div>
           <div class="step">
-              <img src="assets/images/Ideate.svg" alt="Ideate" class="icon"/>
+              <img src="./assets/images/Ideate.svg" alt="Ideate" class="icon"/>
               <h4>Ideate</h4>
               <p>Collaborate with the team to generate and evaluate ideas for potential features and/or solutions.</p>
           </div>
           <div class="step">
-              <img src="assets/images/Prototype.svg" alt="Prototype" class="icon"/>
+              <img src="./assets/images/Prototype.svg" alt="Prototype" class="icon"/>
               <h4>Prototype</h4>
               <p>Develop wireframes and interactive prototypes to visualize the user journey.</p>
           </div>
           <div class="step">
-              <img src="assets/images/Test.svg" alt="Test" class="icon"/>
+              <img src="./assets/images/Test.svg" alt="Test" class="icon"/>
               <h4>Test</h4>
               <p>Conduct usability testing to ensure the design meets user expectations and refine as needed.</p>
           </div>
@@ -78,20 +102,16 @@
       </div>
   </div>   
 </section>
-
 <div class="banner">
-<section id="ourcapabilities" class="container py-5 ourcapabilities">
+<section id="capabilities" class="container py-5 ourcapabilities">
   <div class="row">
     <div class="col-12  text-start mb-4">
       <h1 class="cap">Our Capabilities</h1>
     </div>
   </div>
-
   <div class="row">
-    <!-- Accordion Section -->
     <div class="col-md-7 col-12 order-2 order-md-1 p-0">
       <div class="accordion" id="accordionExample">
-        <!-- App Development -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" (click)="changeImage(1)">
@@ -101,12 +121,10 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <p class="brand-text">Craft cohesive brand identities that align with your business vision and values.
-                Develop strategic brand guidelines for consistent communication across all platforms. Create impactful visual branding elements, including logos, typography, and color schemes</p>
+                Develop strategic brand guidelines for consistent communication across all platforms. Create impactful visual branding elements, including logos, typography, and color schemes.</p>
             </div>
           </div>
         </div>
- 
-        <!-- Process Automation -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)="changeImage(2)">
@@ -115,12 +133,10 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p class="brand-text">Build responsive, user-friendly websites and applications with seamless navigation. Leverage data analytics to optimize digital experiences and drive customer engagement.Integrate emerging technologies such as AI and AR for enhanced user interaction</p>
+              <p class="brand-text">Build responsive, user-friendly websites and applications with seamless navigation. Leverage data analytics to optimize digital experiences and drive customer engagement.Integrate emerging technologies such as AI and AR for enhanced user interaction.</p>
             </div>
           </div>
         </div>
- 
-        <!-- Data Visualization -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" (click)="changeImage(3)">
@@ -137,8 +153,6 @@
         </div> 
       </div>
     </div>
- 
-    <!-- Image Section -->
     <div class="col-md-5 col-12 order-1 order-md-2 text-center text-md-start mb-4">
       <img [src]="currentImage" alt="Icon" class="image"/>
     </div>
@@ -147,53 +161,46 @@
 </div>
 <section id="impact" class="impact container">
   <div class="outcomes">
-    <h1 class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
+    <h1  class="outcome-head text-start mt-5">Most Desired Outcomes</h1>
   </div>
-
-  <!-- Image row -->
   <div class="row justify-content-center mt-5">
     <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-      <img src="assets/images/u1.svg" alt="Icon" class="img-fluid" />
+      <img src="./assets/images/u1.svg" alt="Icon" class="img-fluid" />
     </div>
     <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-      <img src="assets/images/u2.svg" alt="Icon" class="img-fluid" />
+      <img src="./assets/images/u2.svg" alt="Icon" class="img-fluid" />
     </div>
     <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-      <img src="assets/images/u3.svg" alt="Icon" class="img-fluid" />
+      <img src="./assets/images/u3.svg" alt="Icon" class="img-fluid" />
     </div>
     <div class="col-12 col-sm-6 col-md-3 text-center mb-3">
-      <img src="assets/images/u4.svg" alt="Icon" class="img-fluid" />
+      <img src="./assets/images/u4.svg" alt="Icon" class="img-fluid" />
     </div>  
   </div>
-
-  <!-- Text and technology section -->
   <div class="row mt-5">
     <h1 class="tech col-sm-12 col-md-4 col-xl-4 text-start text-md-left mt-5">We Work With Advanced Technology</h1>
 
     <div class="col-sm-12 col-md-8 col-xl-8">
       <div class="row justify-content-center mt-5">
-        <!-- First row of tech icons -->
-        <div class="col-6 col-sm-4 col-md-2 text-center">
-          <img src="assets/logo/f1.png" alt="Power Apps" class="img-fluid" ngbTooltip="Figma" placement="bottom" >
+        <div class="col-4 col-sm-4 col-md-2 text-center">
+          <img src="./assets/logo/f1.png" alt="Power Apps" class="img-fluid" ngbTooltip="Figma" placement="bottom" >
         </div>
-        <div class="col-6 col-sm-4 col-md-2 text-center">
-          <img src="assets/logo/f2.png" alt="Power Automation" class="img-fluid" ngbTooltip="Adobe XD" placement="bottom" />
+        <div class="col-4 col-sm-4 col-md-2 text-center">
+          <img src="./assets/logo/f2.png" alt="Power Automation" class="img-fluid" ngbTooltip="Adobe XD" placement="bottom" />
         </div>
-        <div class="col-6 col-sm-4 col-md-2 text-center">
-          <img src="assets/logo/f3.png" alt="Power Bi" class="img-fluid" ngbTooltip="Illustrator" placement="bottom"/>
+        <div class="col-4 col-sm-4 col-md-2 text-center">
+          <img src="./assets/logo/f3.png" alt="Power Bi" class="img-fluid" ngbTooltip="Illustrator" placement="bottom"/>
         </div>         
       </div>
-
-      <!-- Second row of tech icons -->
       <div class="row justify-content-center mt-5">
-        <div class="col-6 col-sm-4 col-md-2 text-center">
-          <img src="assets/logo/f4.png" alt="Group 10410" class="img-fluid" ngbTooltip="Photoshop" placement="bottom"/>
+        <div class="col-4 col-sm-4 col-md-2 text-center mt-md-0 mt-3">
+          <img src="./assets/logo/f4.png" alt="Group 10410" class="img-fluid" ngbTooltip="Photoshop" placement="bottom"/>
         </div>
-        <div class="col-6 col-sm-4 col-md-2 text-center">
-          <img src="assets/logo/f7.png" alt="Group 10411" class="img-fluid" ngbTooltip="Lucidchat" placement="bottom"/>
+        <div class="col-4 col-sm-4 col-md-2 text-center mt-md-0 mt-3">
+          <img src="./assets/logo/f7.png" alt="Group 10411" class="img-fluid" ngbTooltip="Lucidchat" placement="bottom"/>
         </div>
-        <div class="col-6 col-sm-4 col-md-2 text-center">
-          <img src="assets/logo/f8.png" alt="Clipart" class="img-fluid" ngbTooltip="Micro" placement="bottom"/>
+        <div class="col-4 col-sm-4 col-md-2 text-center mt-md-0 mt-3">
+          <img src="./assets/logo/f8.png" alt="Clipart" class="img-fluid" ngbTooltip="Micro" placement="bottom"/>
         </div>      
       </div>
     </div>
@@ -202,37 +209,59 @@
 <div class="banner1">
 <div class="container py-5">
   <div class="row align-items-start mt-5">
-    <!-- Left Section: Get In Touch Header -->
     <div class="col-md-6 text-left">
       <h5 class="text-get">GET IN TOUCH</h5>
       <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
     </div>
-
-    <!-- Right Section: Form -->
     <div class="col-md-6">
-      <form>
-        <div class="form-group">
-          <label for="name">NAME</label>
-          <input type="text" class="form-control mt-2" id="name" name="name">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mt-5">
+          <label for="name">Name</label>
+          <input type="text" class="form-control mt-2" id="name" formControlName="name" />
+          <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+            Name is required
+          </div>
+        </div>     
+        <div class="form-group mt-4">
+          <label for="email">Email ID</label>
+          <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
+          <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+            <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
+            <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
+          </div>            
+        </div>     
+        <div class="form-group mt-4">
+          <label for="service-type">Service Type</label>
+          <div class="custom-select-wrapper">
+              <select class="form-control custom-select mt-2" id="service-type" formControlName="service_type">
+                  <option value="" disabled selected>Select a service type</option>
+                  <option value="Power Platform Development">Power Platform Development</option>
+                  <option value="Cloud App Development">Cloud App Development</option>
+                  <option value="Staffing Service">Staffing Service</option>
+                  <option value="UI/UX Designing">UI/UX Designing</option>
+                  <option value="Full Stack Development">Full Stack Development</option>
+                  <option value="AI Application">AI Application</option>
+                  <option value="Devops">Devops</option>
+                  <option value="Other">Other</option>
+              </select>
+          </div>
+          <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
+              Service type is required
+          </div>
+      </div>
+        <div class="form-group mt-4">
+          <label for="message">Message</label>
+          <textarea class="form-control mt-2" id="message" rows="4" formControlName="message"></textarea>
+          <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+            Message is required
+          </div>
         </div>
-        <div class="form-group mt-3">
-          <label for="email">EMAIL ID</label>
-          <input type="email" class="form-control mt-2" id="email"  placeholder="name@example.com" name="email">
-        </div>
-        <div class="form-group mt-3">
-          <label for="service">SERVICE TYPE</label>
-          <input type="text" class="form-control mt-2" id="service" name="service">
-        </div>
-        <div class="form-group mt-3">
-          <label for="message">MESSAGE</label>
-          <textarea class="form-control mt-2" id="message" name="message" rows="4"></textarea>
-        </div>
-        <button mat-button class="read-more-button mt-3">
+        <button mat-button type="submit" class=" read-more-button mt-4">
           <span class="button-text">Send Enquiry</span>
-          <span >
-            <img src="assets/images/Icons (1).svg" alt="Techxle Logo" class="icon">
-          </span>
-          </button>
+          <span><img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
+        </button>
+        <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
       </form>
     </div>
   </div>

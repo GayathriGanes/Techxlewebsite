@@ -2,9 +2,8 @@
   .hero-section {   
       background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
         url("/assets/images/ui-banner.png");
-    }    
-  
-    .ourapproach{
+    } 
+   .ourapproach{
       margin-top:50px;
     }
     .approach{
@@ -41,8 +40,7 @@
   letter-spacing: 0.01em;
   color: rgba(6, 14, 35, 1);
   background: rgba(10, 24, 62, 0.1);
-  padding:5px;
-  
+  padding:5px;  
   }
   .step {
       text-align: center;
@@ -54,7 +52,8 @@
   font-weight: 500;
   line-height: 23.1px;
   color: rgba(84, 93, 120, 1);
-  border:2px dotted black;
+  border: 1px solid #545d78;
+  border-style: dashed;
   height:150px;
   padding:3px;
   }
@@ -68,16 +67,6 @@
   .ima{
       margin-bottom:120px;
   }
-
-  .read-more-button {
-    color: rgba(53, 100, 223, 1);
-}
-.read-more-button::before {  
-    background-color: rgba(53,100,223,1);  
-}
-.read-more-button:hover .button-text {
-    color: white;
-}
   @media (max-width: 767.98px) {
       .rotate-heading {
           display:none;

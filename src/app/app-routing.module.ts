@@ -2,45 +2,50 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ServiceComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { CareerComponent } from './pages/career/career.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { PowerplatformComponent } from './pages/powerplatform/powerplatform.component';
 import { CloudappComponent } from './pages/cloudapp/cloudapp.component';
 import { StaffingComponent } from './pages/staffing/staffing.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
 import { UIComponent } from './pages/ui/ui.component';
-import { LeadershipComponent } from './pages/leadership/leadership.component';
-import { PowerComponent } from './pages/power/power.component';
-import { CloudComponent } from './pages/cloud/cloud.component';
-import { StaffComponent } from './pages/staff/staff.component';
-import { StackComponent } from './pages/stack/stack.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SolutionsComponent } from './pages/solutions/solutions.component';
 import { AiComponent } from './pages/ai/ai.component';
 import { DevopsComponent } from './pages/devops/devops.component';
 import { HomeComponent } from './pages/home/home.component';
-
+import { InventoryComponent } from './pages/inventory/inventory.component';
+import { AcquisComponent } from './pages/acquis/acquis.component';
+import { SampleComponent } from './pages/sample/sample.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { ReviewComponent } from './pages/review/review.component';
+import { GrantComponent } from './pages/grant/grant.component';
+import { HealthcareComponent } from './pages/healthcare/healthcare.component';
+import { PsComponent } from './pages/ps/ps.component';
+import { SaleComponent } from './pages/sale/sale.component';
 
 
 const routes: Routes = [
   { path: 'services', component: ServiceComponent} ,
-  {path:'powerplatform',component:PowerplatformComponent},
-  {path:'cloudapp',component:CloudappComponent},
-  {path:'staffing',component:StaffingComponent},
-  {path:'fullstack',component:FullstackComponent},
-  {path:'ui',component:UIComponent},
-  {path:'ai',component:AiComponent},
-  {path:'devops',component:DevopsComponent},
+  {path:'services/power-platform-solution',component:PowerplatformComponent},
+  {path:'services/cloud-app-development',component:CloudappComponent},
+  {path:'services/staffing-service',component:StaffingComponent},
+  {path:'services/full-stack-development',component:FullstackComponent},
+  {path:'services/ui-ux-designing',component:UIComponent},
+  {path:'services/ai-application',component:AiComponent},
+  {path:'services/devops',component:DevopsComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'leader',component:LeadershipComponent},
-  {path:'career',component:CareerComponent},
   {path:'contact',component:ContactComponent},
-  {path:'power',component:PowerComponent},
-  {path:'cloud',component:CloudComponent},
-  {path:'staff',component:StaffComponent},
-  {path:'stack',component:StackComponent},
-  {path:'design',component:DesignComponent},
+  {path:'solutions/lab-automation-&-reservation',component:DesignComponent},
   {path:'solutions',component:SolutionsComponent},
+  {path:'solutions/inventory-management',component:InventoryComponent},
+  {path:'solutions/acquisition-support-for-labs',component:AcquisComponent},
+  {path:'solutions/sample-tracking',component:SampleComponent},
+  {path:'solutions/project-portfolio-management',component:ProjectComponent},
+  {path:'solutions/review-board-management',component:ReviewComponent},
+  {path:'solutions/grant-applications',component:GrantComponent},
+  {path:'solutions/healthcare-portal',component:HealthcareComponent},
+  {path:'solutions/psr',component:PsComponent},
+  {path:'solutions/custom-sales-crm-platform',component:SaleComponent},
   {path: '', component:HomeComponent },
   
 ];

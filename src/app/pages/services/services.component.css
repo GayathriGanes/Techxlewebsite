@@ -23,16 +23,6 @@
   letter-spacing: 0.01em;
   color: #0a183e;
 }
-
-.read-more-button {
-  color: rgba(53, 100, 223, 1);
-} 
-.read-more-button::before {  
-  background-color: rgba(53,100,223,1);   
-} 
-.read-more-button:hover .button-text {
-  color: white;
-}
 .card-body {
   height: 410px;
   border-radius: 4px;
@@ -52,22 +42,15 @@
   font-weight: 400;
   line-height: 25.6px;
   letter-spacing: 0.02em;
-  text-align: center;
- 
+  text-align: center; 
 }
-.service-icon{
- 
-  height: 60px;
- 
- 
-}
- 
- 
+.service-icon{ 
+  height: 60px;  
+}  
 @media (max-width: 576px) {
   .lead {
     font-size: 0.9rem;
-  }
- 
+  } 
   .belief ,.explore{
     font-size: 1.5rem;
   }

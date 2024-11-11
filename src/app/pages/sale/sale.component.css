@@ -1,0 +1,11 @@
+.hero-section {   
+    background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
+      url("/assets/images/servicebanner.png");
+  }
+  .container{
+    overflow-x:scroll;
+    scroll-behavior:smooth;  
+  } 
+  .container::-webkit-scrollbar{
+    display:none;
+  }

@@ -3,7 +3,13 @@
   font-weight: 800;
   line-height: 22.68px;
   letter-spacing: 0.08em;
-  color: #3564DF;
+  color: #3564DF; 
+}
+.container{
+  margin-top: 90px;
+}
+.banner2{
+  background-color:#EDF1FD
 }
 .font{
 font-size: 38px;
@@ -19,8 +25,7 @@ letter-spacing: 0.01em;
 color: #0A183E99;
 }
 strong{
-  color: #060E23;
- 
+  color: #060E23; 
 }
 .direction{
 font-size: 18px;
@@ -37,8 +42,7 @@ margin-left: 65px;
   font-size: 18px;
   font-weight: 600;
   color: #060e23;  
-}
- 
+} 
 .work-content, .job {
   font-size: 18px;
   font-weight: 500;
@@ -46,6 +50,22 @@ margin-left: 65px;
 }
 a{
   color: #545d78;
+}
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+ 
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35' fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 10l6 6 6-6'/%3E%3C/svg%3E")  ;
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 25px;
 }
 label{
   color: #545D78;
@@ -59,19 +79,10 @@ label{
     height:48px;
     border-radius: 4px;
   }
-  .read-more-button {
-    color: rgba(53, 100, 223, 1);
-}
-.read-more-button::before {  
-    background-color: rgba(53,100,223,1);  
-}
-.read-more-button:hover .button-text {
-    color: white;
-}
 @media (max-width:797.98px)
 {
    .font{
-    font-size:30px;
-    width:100%;
-   } 
+    font-size:30px !important;
+    width:100% !important;
+   }
 }
