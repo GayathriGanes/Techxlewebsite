@@ -80,7 +80,7 @@ export class CloudappComponent implements OnInit {
     }
   } 
   currentImage: string = "./assets/images/Group 10412.png"; // default image path
-  imageArray:string[] = ["Group 10412.png", "image_1054-transformed 1.png", "standard-quality-control-concept-m 1.png", "woman-scrolling-laptop 1.png"];
+  imageArray:string[] = ["Group 10412.png", "image_1054-transformed 1.png", "cloud1.png", "cloud2.png"];
 
   changeImage(panelNumber: number) {
     this.currentImage = './assets/images/'+this.imageArray[panelNumber-1];
