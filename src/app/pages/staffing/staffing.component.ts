@@ -94,7 +94,7 @@ export class StaffingComponent implements OnInit {
       name: ['', Validators.required],
       message: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      service_type: ['', Validators.required]
+      service_type: ['Staffing Service', Validators.required]
      
     });
   } 

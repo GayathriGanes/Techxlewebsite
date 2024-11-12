@@ -92,7 +92,7 @@ export class PowerplatformComponent implements OnInit {
       name: ['', Validators.required],
       message: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      service_type: ['', Validators.required]     
+      service_type: ['Power Platform Development', Validators.required]     
     });
   } 
   onSubmit() {

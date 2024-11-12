@@ -21,7 +21,9 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item ite" routerLink="/services" [ngClass]="{'active-dropdown': activeDropdownItem === 'servi'}"
               (click)="selectDropdownItem('servi')" (click)="selectLink('services')" (click)="closeNavbar()">All Services &nbsp;&nbsp;<span class="bold">&#8594;</span></a></li>
-            <li><a class="dropdown-item mt-3" routerLink="/services/power-platform-solution" [ngClass]="{'active-dropdown': activeDropdownItem === 'power'}"
+
+            <li><a class="dropdown-item mt-2" routerLink="/services/power-platform-solution" [ngClass]="{'active-dropdown': activeDropdownItem === 'power'}"
+
               (click)="selectDropdownItem('power')" (click)="selectLink('services')" (click)="closeNavbar()">Power Platform Solution </a></li>
             <li><a class="dropdown-item mt-3" routerLink="/services/cloud-app-development" [ngClass]="{'active-dropdown': activeDropdownItem === 'cloud'}"
               (click)="selectDropdownItem('cloud')" (click)="selectLink('services')" (click)="closeNavbar()">Cloud App Development</a></li>
@@ -71,11 +73,11 @@
             (click)="selectLink('solutions')" (click)="closeNavbar()">SOLUTIONS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/aboutus" [ngClass]="{'active': selectedLink === 'aboutus'}"
+          <a class="nav-link" routerLink="/about-us" [ngClass]="{'active': selectedLink === 'aboutus'}"
             (click)="selectLink('aboutus')" (click)="closeNavbar()">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" [ngClass]="{'active': selectedLink === 'contact'}"
+          <a class="nav-link" routerLink="/contact-us" [ngClass]="{'active': selectedLink === 'contact'}"
             (click)="selectLink('contact')" (click)="closeNavbar()">CONTACT US</a>
         </li>
       </ul>

@@ -120,4 +120,7 @@
   {
      white-space:nowrap;
   }
+  p{
+    min-width:300px;
+  }
 }

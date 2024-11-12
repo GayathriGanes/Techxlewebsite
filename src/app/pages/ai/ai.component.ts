@@ -92,7 +92,7 @@ export class AiComponent implements OnInit{
       name: ['', Validators.required],
       message: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      service_type: ['', Validators.required]
+      service_type: ['AI Application', Validators.required]
      
     });
   } 
