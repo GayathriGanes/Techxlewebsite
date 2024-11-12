@@ -93,7 +93,7 @@ export class CloudappComponent implements OnInit {
       name: ['', Validators.required],
       message: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      service_type: ['', Validators.required]
+      service_type: ['Cloud App Development', Validators.required]
      
     });
   } 

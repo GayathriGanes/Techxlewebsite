@@ -21,23 +21,23 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item ite" routerLink="/services" [ngClass]="{'active-dropdown': activeDropdownItem === 'servi'}"
               (click)="selectDropdownItem('servi')" (click)="selectLink('services')" (click)="closeNavbar()">All Services &nbsp;&nbsp;<span class="bold">&#8594;</span></a></li>
-            <li><a class="dropdown-item mt-1" routerLink="/services/power-platform-solution" [ngClass]="{'active-dropdown': activeDropdownItem === 'power'}"
+            <li><a class="dropdown-item mt-2" routerLink="/services/power-platform-solution" [ngClass]="{'active-dropdown': activeDropdownItem === 'power'}"
               (click)="selectDropdownItem('power')" (click)="selectLink('services')" (click)="closeNavbar()">Power Platform Solution </a></li>
-            <li><a class="dropdown-item mt-1" routerLink="/services/cloud-app-development" [ngClass]="{'active-dropdown': activeDropdownItem === 'cloud'}"
+            <li><a class="dropdown-item mt-3" routerLink="/services/cloud-app-development" [ngClass]="{'active-dropdown': activeDropdownItem === 'cloud'}"
               (click)="selectDropdownItem('cloud')" (click)="selectLink('services')" (click)="closeNavbar()">Cloud App Development</a></li>
-            <li><a class="dropdown-item mt-1" routerLink="/services/staffing-service" [ngClass]="{'active-dropdown': activeDropdownItem === 'staffing'}"
+            <li><a class="dropdown-item mt-3" routerLink="/services/staffing-service" [ngClass]="{'active-dropdown': activeDropdownItem === 'staffing'}"
               (click)="selectDropdownItem('staffing')" (click)="selectLink('services')"  (click)="closeNavbar()">Staffing Service</a></li>
-              <li><a class="dropdown-item mt-1" routerLink="/services/ui-ux-designing" [ngClass]="{'active-dropdown': activeDropdownItem === 'ui'}"
+              <li><a class="dropdown-item mt-3" routerLink="/services/ui-ux-designing" [ngClass]="{'active-dropdown': activeDropdownItem === 'ui'}"
                 (click)="selectDropdownItem('ui')" (click)="selectLink('services')" (click)="closeNavbar()">UI/UX Designing</a></li>
-                <li><a class="dropdown-item mt-1" routerLink="/services/full-stack-development" [ngClass]="{'active-dropdown': activeDropdownItem === 'fullstack'}"
+                <li><a class="dropdown-item mt-3" routerLink="/services/full-stack-development" [ngClass]="{'active-dropdown': activeDropdownItem === 'fullstack'}"
                 (click)="selectDropdownItem('fullstack')" (click)="selectLink('services')" (click)="closeNavbar()">Full Stack Development</a></li>
-                <li><a class="dropdown-item mt-1" routerLink="/services/ai-application" [ngClass]="{'active-dropdown': activeDropdownItem === 'ai'}"
+                <li><a class="dropdown-item mt-3" routerLink="/services/ai-application" [ngClass]="{'active-dropdown': activeDropdownItem === 'ai'}"
                 (click)="selectDropdownItem('ai')" (click)="selectLink('services')" (click)="closeNavbar()">AI Application</a></li>
-                <li><a class="dropdown-item devops mt-1" routerLink="/services/devops" [ngClass]="{'active-dropdown': activeDropdownItem === 'devops'}"
+                <li><a class="dropdown-item devops mt-3" routerLink="/services/devops" [ngClass]="{'active-dropdown': activeDropdownItem === 'devops'}"
                 (click)="selectDropdownItem('devops')" (click)="selectLink('services')" (click)="closeNavbar()">DevOps</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
           <a class="nav-link"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" [ngClass]="{'active': selectedLink === 'solutions'}">
             SOLUTIONS
           </a>
@@ -65,13 +65,17 @@
                 <li><a class="dropdown-item sale mt-1" routerLink="/solutions/custom-sales-crm-platform" [ngClass]="{'active-dropdown': activeDropdownItem === 'sale'}"
                 (click)="selectDropdownItem('sale')" (click)="selectLink('solutions')" (click)="closeNavbar()">Custom Sales CRM Platform</a></li>
           </ul>
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/solutions" [ngClass]="{'active': selectedLink === 'solutions'}"
+            (click)="selectLink('solutions')" (click)="closeNavbar()">SOLUTIONS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/aboutus" [ngClass]="{'active': selectedLink === 'aboutus'}"
+          <a class="nav-link" routerLink="/about-us" [ngClass]="{'active': selectedLink === 'aboutus'}"
             (click)="selectLink('aboutus')" (click)="closeNavbar()">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" [ngClass]="{'active': selectedLink === 'contact'}"
+          <a class="nav-link" routerLink="/contact-us" [ngClass]="{'active': selectedLink === 'contact'}"
             (click)="selectLink('contact')" (click)="closeNavbar()">CONTACT US</a>
         </li>
       </ul>

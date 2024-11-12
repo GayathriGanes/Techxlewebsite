@@ -143,7 +143,16 @@ color: rgba(84, 93, 120, 1) !important;
   }
  }  
   .dropdown-menu{
-    margin-left:-65px;
+    margin-left:-85px;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .ite{
+    padding-top:10px;
+    padding-bottom:30px;
+  }
+  .devops{
+    padding-bottom:10px;
   }
   .dropdown-menu[data-bs-popper] {
     margin-top: 0 !important;
