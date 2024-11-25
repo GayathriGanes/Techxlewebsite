@@ -1,6 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'; 
+import { Component, OnInit, HostListener } from '@angular/core'; 
 @Component({
   selector: 'app-ui',
   templateUrl: './ui.component.html',
@@ -84,37 +82,6 @@ export class UIComponent implements OnInit  {
 
   changeImage(panelNumber: number) {
     this.currentImage = './assets/images/'+this.imageArray[panelNumber-1];
-  }
-  contactForm: FormGroup;
-  successMessage: string = '';
-  errorMessage: string = ''; 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      message: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      service_type: ['UI/UX Designing', Validators.required]
-     
-    });
-  } 
-  onSubmit() {
-    if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
-      this.http.post('https://www.techxle.org/formAcition/contact-us', formData)
-        .subscribe(
-          (response) => {
-            console.log('Form submitted successfully', response);
-            this.successMessage = 'Your message has been sent successfully!';
-            this.contactForm.reset();  
-          },
-          (error) => {
-            console.error('Error occurred while submitting the form', error);
-            this.errorMessage = 'There was an error sending your message. Please try again.';
-          }
-        );
-    } else {
-      this.errorMessage = 'Please fill out all required fields.';
-    }
   }
 }
 

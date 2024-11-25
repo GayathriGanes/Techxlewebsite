@@ -1,7 +1,4 @@
-.hero-section {
-     background: linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%),
-      url("/assets/images/face-recognition-personal-identification-collage 1.png");
-  }   
+   
   @media (min-width:768px) and (max-width:1024px){
     .image{
       height:650px;

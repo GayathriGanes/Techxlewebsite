@@ -1,6 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core'; 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-ai',
   templateUrl: './ai.component.html',
@@ -83,36 +81,5 @@ export class AiComponent implements OnInit{
   imageArray:string[] = ["smiling-business-lady-working-with-colleagues 1.png", "busi1.png", "integration.png", "busi2.png","augmented-reality-integration-enhanced-interactive-experiences-digital-platforms_972075-45024-transformed 1.png"];
   changeImage(panelNumber: number) {
     this.currentImage = './assets/images/'+this.imageArray[panelNumber-1];
-  }
-  contactForm: FormGroup;
-  successMessage: string = '';
-  errorMessage: string = ''; 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      message: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      service_type: ['AI Application', Validators.required]
-     
-    });
-  } 
-  onSubmit() {
-    if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
-      this.http.post('https://www.techxle.org/formAcition/contact-us', formData)
-        .subscribe(
-          (response) => {
-            console.log('Form submitted successfully', response);
-            this.successMessage = 'Your message has been sent successfully!';
-            this.contactForm.reset();  
-          },
-          (error) => {
-            console.error('Error occurred while submitting the form', error);
-            this.errorMessage = 'There was an error sending your message. Please try again.';
-          }
-        );
-    } else {
-      this.errorMessage = 'Please fill out all required fields.';
-    }
   }
 }
