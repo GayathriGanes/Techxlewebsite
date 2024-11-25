@@ -1,6 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-fullstack',
   templateUrl: './fullstack.component.html',
@@ -83,36 +81,5 @@ export class FullstackComponent implements OnInit {
   imageArray:string[] = ["turned-gray-laptop-computer 1.png", "programming-background-with-person-working-with-codes-computer (1) 1.png", "repairman-doing-annual-system-servicing 1.png", "application-programming-interface-hologram (1) 1.png","image_1054-transformed 1.png"];
   changeImage(panelNumber: number) {
     this.currentImage = './assets/images/'+this.imageArray[panelNumber-1];
-  }
-  contactForm: FormGroup;
-  successMessage: string = '';
-  errorMessage: string = ''; 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
-    this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      message: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      service_type: ['Full Stack Development', Validators.required]
-     
-    });
-  } 
-  onSubmit() {
-    if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
-      this.http.post('https://www.techxle.org/formAcition/contact-us', formData)
-        .subscribe(
-          (response) => {
-            console.log('Form submitted successfully', response);
-            this.successMessage = 'Your message has been sent successfully!';
-            this.contactForm.reset();  
-          },
-          (error) => {
-            console.error('Error occurred while submitting the form', error);
-            this.errorMessage = 'There was an error sending your message. Please try again.';
-          }
-        );
-    } else {
-      this.errorMessage = 'Please fill out all required fields.';
-    }
   }
 }

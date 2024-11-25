@@ -1,21 +1,10 @@
-<section class="hero-section d-flex justify-content-center align-items-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-8 col-12">
-        <div class="hero-content">
-          <p class="text-uppercase mb-2">
-            <a routerLink="/solutions" class="text-decoration-none">Solutions</a> / lab automation and reservation
-          </p>         
-          <h1 class="mb-3">Business transformation through technology.</h1>
-          <a routerLink="/contact-us" class="cta-button">
-            <span class="text">Let's talk</span>
-            <span class="arrow"><img src="assets/logo/arrow.png" alt="Arrow Icon"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>  
+<app-hero-section
+  [backgroundImage]="'./assets/images/m1.png'"
+  [breadcrumbText]="'Solutions'"
+  [breadcrumbLink]="'/solutions'"
+  [secondaryText]="'lab automation and reservation'"
+  [heading]="'Business transformation through technology.'">
+</app-hero-section>
 <nav id="sticky-navbar" class="navbar navbar-expand-md navbar-light">
   <div class="nav container">
     <div class="current-section d-md-none text-start flex-grow-1">
@@ -123,69 +112,4 @@
    </div>
   </div>
 </section>
-<div class="container py-5">
-    <div class="row align-items-start mt-5">
-      <div class="col-md-6 text-left">
-        <h5 class="text-get">GET IN TOUCH</h5>
-        <h1 class="font">Have a Project? We Would Love to Hear From You</h1>
-      </div>       
-      <div class="col-md-6">
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-          <div class="form-group mt-5">
-            <label for="name">Name</label>
-            <input type="text" class="form-control mt-2" id="name" formControlName="name" />
-            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
-              Name is required
-            </div>
-          </div>       
-          <div class="form-group mt-4">
-            <label for="email">Email ID</label>
-            <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
-            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
-              <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
-              <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
-            </div>            
-          </div>       
-          <div class="form-group mt-4">
-            <label for="service-type">Service Type</label>
-            <div class="custom-select-wrapper">
-                <select class="form-control custom-select mt-2" id="service-type" formControlName="service_type">
-                    <option value="" disabled selected>Select a service type</option>
-                    <option value="Power Platform Development">Power Platform Development</option>
-                    <option value="Cloud App Development">Cloud App Development</option>
-                    <option value="Staffing Service">Staffing Service</option>
-                    <option value="UI/UX Designing">UI/UX Designing</option>
-                    <option value="Full Stack Development">Full Stack Development</option>
-                    <option value="AI Application">AI Application</option>
-                    <option value="Devops">DevOps</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div *ngIf="contactForm.get('service_type')?.invalid && contactForm.get('service_type')?.touched" class="text-danger">
-                Service type is required
-            </div>
-        </div>
-          <div class="form-group mt-4">
-            <label for="message">Message</label>
-            <textarea class="form-control mt-2" id="message" rows="4" formControlName="message"></textarea>
-            <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
-              Message is required
-            </div>
-          </div>
-          <button mat-button type="submit" class=" read-more-button mt-4">
-            <span class="button-text">Send Enquiry</span>
-            <span><img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
-          </button>
-          <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
-          <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
-        </form>
-      </div>
-    </div>
-</div>
-
-
-
-
-
-
-
+<app-form [serviceType]="''" [showBanner]="false"></app-form> 

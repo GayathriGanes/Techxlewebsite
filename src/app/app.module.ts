@@ -39,6 +39,13 @@ import { HealthcareComponent } from './pages/healthcare/healthcare.component';
 import { PsComponent } from './pages/ps/ps.component';
 import { SaleComponent } from './pages/sale/sale.component';
 import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
+import { HeroSectionComponent } from './pages/hero-section/hero-section.component';
+import { FormComponent } from './pages/form/form.component';
+
+
+
+
+
 
 
 
@@ -74,7 +81,13 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
     GrantComponent,
     HealthcareComponent,
     PsComponent,
-    SaleComponent
+    SaleComponent,
+    HeroSectionComponent,
+    FormComponent,
+    
+    
+    
+   
     
   ],
   imports: [

@@ -1,0 +1,25 @@
+<section
+  class="hero-section d-flex justify-content-center align-items-center"
+  [ngStyle]="{
+    'background': 'linear-gradient(90deg, #060e23 0%, rgba(17, 41, 106, 0) 124.34%), url(' + backgroundImage + ')'}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-12">
+        <div class="hero-content">
+          <p class="text-uppercase mb-2">
+            <a [routerLink]="breadcrumbLink" class="text-decoration-none">
+              {{ breadcrumbText }}
+            </a>
+            / {{ secondaryText }}
+          </p>
+          <h1 class="mb-3">{{ heading }}</h1>
+          <a routerLink="/contact-us" class="cta-button">
+            <span class="text">Let's talk</span>
+            <span class="arrow"><img src="./assets/logo/arrow.png" alt="Arrow Icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -21,7 +21,9 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item ite" routerLink="/services" [ngClass]="{'active-dropdown': activeDropdownItem === 'servi'}"
               (click)="selectDropdownItem('servi')" (click)="selectLink('services')" (click)="closeNavbar()">All Services &nbsp;&nbsp;<span class="bold">&#8594;</span></a></li>
+
             <li><a class="dropdown-item mt-2" routerLink="/services/power-platform-solution" [ngClass]="{'active-dropdown': activeDropdownItem === 'power'}"
+
               (click)="selectDropdownItem('power')" (click)="selectLink('services')" (click)="closeNavbar()">Power Platform Solution </a></li>
             <li><a class="dropdown-item mt-3" routerLink="/services/cloud-app-development" [ngClass]="{'active-dropdown': activeDropdownItem === 'cloud'}"
               (click)="selectDropdownItem('cloud')" (click)="selectLink('services')" (click)="closeNavbar()">Cloud App Development</a></li>
