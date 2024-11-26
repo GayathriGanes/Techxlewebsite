@@ -1,81 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef} from '@angular/core';
 @Component({
   selector: 'app-sample',
   templateUrl: './sample.component.html',
   styleUrl: './sample.component.css'
 })
-export class SampleComponent implements OnInit {
-  currentSection: string = 'challenges';
-  currentSectionTitle: string = 'Challenges';
-  isNavbarCollapsed: boolean = false;
-  scrollDisabled: boolean = false; 
-  ngOnInit() {
-    if(typeof window !=='undefined' && typeof localStorage !=='undefined') {
-    const savedSection = localStorage.getItem('currentSection');
-    if (savedSection) {
-      this.scrollToSection(savedSection);
-    }
-   }
-  }
-  toggleNavbar() {
-    this.isNavbarCollapsed = !this.isNavbarCollapsed;
-  }
-  scrollToSection(section: string) {
-    const element = document.getElementById(section);
-    if (element) {
-      const headerOffset = 200;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      this.scrollDisabled = true;
-      setTimeout(() => {
-        this.scrollDisabled = false;
-      }, 1000);
-      this.updateSectionTitle(section);
-      this.currentSection = section;
-      localStorage.setItem('currentSection', section);
-      if (this.isNavbarCollapsed) {
-        this.isNavbarCollapsed = false;
-      }
-    }
-  }
-  updateSectionTitle(section: string) {
-    const sectionTitles: any = {
-      challenges: 'Challenges',
-      solutions: 'Solutions',
-      impact: 'Impact',
-    };
-    this.currentSectionTitle = sectionTitles[section];
-  }
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    if (this.scrollDisabled) {
-      return;
-    }
-    const sections = ['challenges', 'solutions', 'impact'];
-    let closestSection = null;
-    let minDistance = Number.MAX_VALUE;
-    sections.forEach(section => {
-      const element = document.getElementById(section);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const distanceFromTop = Math.abs(rect.top);  
- 
-        if (rect.top < window.innerHeight && rect.bottom > 0 && distanceFromTop < minDistance) {
-          minDistance = distanceFromTop;
-          closestSection = section;
-        }
-      }
-    }); 
-    if (closestSection && closestSection !== this.currentSection) {
-      this.currentSection = closestSection;
-      this.updateSectionTitle(closestSection);
-      localStorage.setItem('currentSection', closestSection);
-    }
-  }
+export class SampleComponent {
+  
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   services = [
     { name: 'Lab Automation & Reaservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
