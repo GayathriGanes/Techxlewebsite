@@ -5,33 +5,53 @@
   [secondaryText]="'UI/UX designing'"
   [heading]="'User-Centric Design, Business Impact'">
 </app-hero-section>
-<nav id="sticky-navbar" class="navbar navbar-expand-md navbar-light">
+<nav id="sticky-navbar" class="navbar navbar-expand-md navbar-light" 
+  appNavbar 
+  #navbarDirective="appNavbar"
+  [sections]="['overview', 'approach', 'capabilities', 'impact']" 
+  [headerOffset]="200" 
+  [sectionTitles]="{ overview: 'Overview', approach: 'Our Approach', capabilities: 'Our Capabilities', impact: 'Impact' }">
   <div class="nav container">
     <div class="current-section d-md-none text-start flex-grow-1">
-      {{ currentSectionTitle }}
+      {{ navbarDirective.currentSectionTitle }}
     </div>
-    <button class="navbar-toggler me-0 p-0" type="button" (click)="toggleNavbar()" aria-controls="navbarNav"
-      [attr.aria-expanded]="isNavbarCollapsed" aria-label="Toggle navigation">
-      <span *ngIf="!isNavbarCollapsed">
+    <button 
+      class="navbar-toggler me-0 p-0" 
+      type="button" 
+      aria-controls="navbarNav" 
+      aria-label="Toggle navigation" 
+      [attr.aria-expanded]="navbarDirective.isNavbarCollapsed"
+      (click)="navbarDirective.isNavbarCollapsed = !navbarDirective.isNavbarCollapsed">
+      <span *ngIf="!navbarDirective.isNavbarCollapsed">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M6 10l6 6 6-6"/>
+          <path d="M6 10l6 6 6-6" />
         </svg>
       </span>
-      <span *ngIf="isNavbarCollapsed" class="close-icon">&times;</span>
+      <span *ngIf="navbarDirective.isNavbarCollapsed" class="close-icon">&times;</span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
+    <div 
+      class="collapse navbar-collapse justify-content-center"
+      [ngClass]="{'show': navbarDirective.isNavbarCollapsed}">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'overview'" (click)="scrollToSection('overview')">OVERVIEW</a>
+          <a class="nav-link" 
+             [class.active]="navbarDirective.currentSection === 'overview'" 
+             (click)="navbarDirective.scrollToSectionAndClose('overview')">OVERVIEW</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'approach'"  (click)="scrollToSection('approach')">OUR APPROACH</a>
+          <a class="nav-link" 
+             [class.active]="navbarDirective.currentSection === 'approach'" 
+             (click)="navbarDirective.scrollToSectionAndClose('approach')">OUR APPROACH</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'capabilities'" (click)="scrollToSection('capabilities')">OUR CAPABILITIES</a>
+          <a class="nav-link" 
+             [class.active]="navbarDirective.currentSection === 'capabilities'" 
+             (click)="navbarDirective.scrollToSectionAndClose('capabilities')">OUR CAPABILITIES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [class.active]="currentSection === 'impact'" (click)="scrollToSection('impact')">IMPACT</a>
+          <a class="nav-link" 
+             [class.active]="navbarDirective.currentSection === 'impact'" 
+             (click)="navbarDirective.scrollToSectionAndClose('impact')">IMPACT</a>
         </li>
       </ul>
     </div>

@@ -41,6 +41,7 @@ import { SaleComponent } from './pages/sale/sale.component';
 import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
 import { HeroSectionComponent } from './pages/hero-section/hero-section.component';
 import { FormComponent } from './pages/form/form.component';
+import { NavbarDirective } from './pages/directives/navbar.directive';
 
 
 
@@ -84,6 +85,7 @@ import { FormComponent } from './pages/form/form.component';
     SaleComponent,
     HeroSectionComponent,
     FormComponent,
+    NavbarDirective,
     
     
     
