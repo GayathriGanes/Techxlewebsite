@@ -22,6 +22,8 @@ import { GrantComponent } from './pages/grant/grant.component';
 import { HealthcareComponent } from './pages/healthcare/healthcare.component';
 import { PsComponent } from './pages/ps/ps.component';
 import { SaleComponent } from './pages/sale/sale.component';
+import { LabaxLimsComponent } from './pages/labax-lims/labax-lims.component';
+import { ErpSolutionsComponent } from './pages/erp-solutions/erp-solutions.component';
 
 
 const routes: Routes = [
@@ -46,6 +48,8 @@ const routes: Routes = [
   {path:'solutions/healthcare-portal',component:HealthcareComponent},
   {path:'solutions/psr',component:PsComponent},
   {path:'solutions/custom-sales-crm-platform',component:SaleComponent},
+  {path:'solutions/labax-lims',component:LabaxLimsComponent},
+  {path:'solutions/erp-solutions',component:ErpSolutionsComponent},
   {path: '', component:HomeComponent },
   
 ];

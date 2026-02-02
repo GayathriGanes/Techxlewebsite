@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
 @Component({
-  selector: 'app-solutions',
-  templateUrl: './solutions.component.html',
-  styleUrl: './solutions.component.css'
+  selector: 'app-labax-lims',
+  templateUrl: './labax-lims.component.html',
+  styleUrl: './labax-lims.component.css'
 })
-export class SolutionsComponent {
+export class LabaxLimsComponent {
+ @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   services = [
     { name: 'Lab Automation & Reservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
     { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/solutions/inventory-management' },
@@ -25,4 +27,11 @@ export class SolutionsComponent {
   hoverOut(service:any) {
     service.isHovered = false;
   }
+  next() {
+    this.container.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+  prev() {
+    this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
+  }
+
 }

@@ -42,6 +42,8 @@ import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
 import { HeroSectionComponent } from './pages/hero-section/hero-section.component';
 import { FormComponent } from './pages/form/form.component';
 import { NavbarDirective } from './pages/directives/navbar.directive';
+import { LabaxLimsComponent } from './pages/labax-lims/labax-lims.component';
+import { ErpSolutionsComponent } from './pages/erp-solutions/erp-solutions.component';
 
 
 
@@ -86,6 +88,8 @@ import { NavbarDirective } from './pages/directives/navbar.directive';
     HeroSectionComponent,
     FormComponent,
     NavbarDirective,
+    LabaxLimsComponent,
+    ErpSolutionsComponent,
     
     
     
