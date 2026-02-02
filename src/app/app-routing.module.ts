@@ -25,6 +25,7 @@ import { SaleComponent } from './pages/sale/sale.component';
 import { LabaxLimsComponent } from './pages/labax-lims/labax-lims.component';
 import { ErpSolutionsComponent } from './pages/erp-solutions/erp-solutions.component';
 import { RagComponent } from './pages/rag/rag.component';
+import { VideoPlayerComponent } from './pages/video-player/video-player.component';
 
 
 const routes: Routes = [
@@ -51,7 +52,8 @@ const routes: Routes = [
   {path:'solutions/custom-sales-crm-platform',component:SaleComponent},
   {path:'solutions/labax-lims',component:LabaxLimsComponent},
   {path:'solutions/erp-solutions',component:ErpSolutionsComponent},
-    {path:'solutions/agentic-rag',component:RagComponent},
+  {path:'solutions/agentic-rag',component:RagComponent},
+  { path: ':demoKey', component: VideoPlayerComponent },
   {path: '', component:HomeComponent },
   
 ];
