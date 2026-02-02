@@ -7,7 +7,7 @@ import { Component, ViewChild, ElementRef} from '@angular/core';
 export class InventoryComponent   {
 
   services = [
-    { name: 'Lab Automation & Reaservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
+    { name: 'Lab Automation & Reservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
     { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/solutions/inventory-management' },
     { name: 'Acquisition Support For Labs', image: './assets/images/m13.png', isHovered: false,route:'/solutions/acquisition-support-for-labs' },
     { name: 'Sample Tracking', image: './assets/images/m14.png', isHovered: false,route:'/solutions/sample-tracking' },
@@ -19,7 +19,7 @@ export class InventoryComponent   {
     { name: 'Custom Sales CRM Platform ', image: './assets/images/Group 10412.png', isHovered: false,route:'/solutions/custom-sales-crm-platform' },
   ];
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
- 
+
   hoverIn(service:any) {
     service.isHovered = true;
   }
@@ -32,5 +32,5 @@ export class InventoryComponent   {
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
-  
+
 }

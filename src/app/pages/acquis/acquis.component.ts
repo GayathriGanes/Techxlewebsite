@@ -5,10 +5,10 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrl: './acquis.component.css'
 })
 export class AcquisComponent   {
-  
+
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   services = [
-    { name: 'Lab Automation & Reaservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
+    { name: 'Lab Automation & Reservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
     { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/solutions/inventory-management' },
     { name: 'Acquisition Support For Labs', image: './assets/images/m13.png', isHovered: false,route:'/solutions/acquisition-support-for-labs' },
     { name: 'Sample Tracking', image: './assets/images/m14.png', isHovered: false,route:'/solutions/sample-tracking' },
@@ -31,5 +31,5 @@ export class AcquisComponent   {
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
-  
+
 }
