@@ -22,6 +22,10 @@ import { GrantComponent } from './pages/grant/grant.component';
 import { HealthcareComponent } from './pages/healthcare/healthcare.component';
 import { PsComponent } from './pages/ps/ps.component';
 import { SaleComponent } from './pages/sale/sale.component';
+import { LabaxLimsComponent } from './pages/labax-lims/labax-lims.component';
+import { ErpSolutionsComponent } from './pages/erp-solutions/erp-solutions.component';
+import { RagComponent } from './pages/rag/rag.component';
+import { VideoPlayerComponent } from './pages/video-player/video-player.component';
 
 
 const routes: Routes = [
@@ -35,7 +39,7 @@ const routes: Routes = [
   {path:'services/devops',component:DevopsComponent},
   {path:'about-us',component:AboutusComponent},
   {path:'contact-us',component:ContactComponent},
-  {path:'solutions/lab-automation-&-reservation',component:DesignComponent},
+  {path:'solutions/lab-automation-and-reservation',component:DesignComponent},
   {path:'solutions',component:SolutionsComponent},
   {path:'solutions/inventory-management',component:InventoryComponent},
   {path:'solutions/acquisition-support-for-labs',component:AcquisComponent},
@@ -46,6 +50,10 @@ const routes: Routes = [
   {path:'solutions/healthcare-portal',component:HealthcareComponent},
   {path:'solutions/psr',component:PsComponent},
   {path:'solutions/custom-sales-crm-platform',component:SaleComponent},
+  {path:'solutions/labax-lims',component:LabaxLimsComponent},
+  {path:'solutions/erp-solutions',component:ErpSolutionsComponent},
+  {path:'solutions/agentic-rag',component:RagComponent},
+  { path: ':demoKey', component: VideoPlayerComponent },
   {path: '', component:HomeComponent },
   
 ];

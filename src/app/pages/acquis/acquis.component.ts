@@ -8,7 +8,7 @@ export class AcquisComponent   {
 
   @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   services = [
-    { name: 'Lab Automation & Reservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-&-reservation' },
+    { name: 'Lab Automation & Reservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-and-reservation' },
     { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/solutions/inventory-management' },
     { name: 'Acquisition Support For Labs', image: './assets/images/m13.png', isHovered: false,route:'/solutions/acquisition-support-for-labs' },
     { name: 'Sample Tracking', image: './assets/images/m14.png', isHovered: false,route:'/solutions/sample-tracking' },
@@ -18,6 +18,9 @@ export class AcquisComponent   {
     { name: 'Healthcare Portal', image: './assets/images/m20.png', isHovered: false,route:'/solutions/healthcare-portal' },
     { name: 'PSR', image: './assets/images/m21.png', isHovered: false,route:'/solutions/psr' },
     { name: 'Custom Sales CRM Platform ', image: './assets/images/Group 10412.png', isHovered: false,route:'/solutions/custom-sales-crm-platform' },
+    { name: 'LabAx LIMS', image: './assets/images/labax(1).png', isHovered: false,route:'/solutions/labax-lims' },
+    { name: 'ERP Solutions', image: './assets/images/erp(1).png', isHovered: false,route:'/solutions/erp-solutions' },
+    { name: 'Agentic RAG', image: './assets/images/agent.png', isHovered: false,route:'/solutions/agentic-rag' },
   ];
   hoverIn(service:any) {
     service.isHovered = true;

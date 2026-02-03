@@ -1,12 +1,12 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-@Component({
-  selector: 'app-sale',
-  templateUrl: './sale.component.html',
-  styleUrl: './sale.component.css'
-})
-export class SaleComponent   {
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
-  @ViewChild('container', { read: ElementRef }) container!: ElementRef;
+@Component({
+  selector: 'app-erp-solutions',
+  templateUrl: './erp-solutions.component.html',
+  styleUrl: './erp-solutions.component.css'
+})
+export class ErpSolutionsComponent {
+ @ViewChild('container', { read: ElementRef }) container!: ElementRef;
   services = [
     { name: 'Lab Automation & Reservation', image: './assets/images/m11.png', isHovered: false,route:'/solutions/lab-automation-and-reservation' },
     { name: 'Inventory Management', image: './assets/images/m12.png', isHovered: false,route:'/solutions/inventory-management' },
@@ -34,4 +34,5 @@ export class SaleComponent   {
   prev() {
     this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
   }
+
 }

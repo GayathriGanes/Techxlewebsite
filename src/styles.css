@@ -301,6 +301,11 @@ color: rgba(84, 93, 120, 1);
   color:rgba(84,93,120,1);
   font-weight:800;
 }
+.high2{
+  color:#545D78;
+  font-weight:600;
+}
+
 .card-slider1{
   background: rgba(237, 241, 253, 1);
   margin-top:80px;
