@@ -1,0 +1,52 @@
+.client h2{
+ font-family: Plus Jakarta Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 26px;
+line-height: 145%;
+letter-spacing: 0%;
+text-align: center;
+color: #060E23;
+
+
+}
+
+.card
+{
+  background-color:rgba(255,255,255,1);
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);  
+  height:250px;
+  width: 250px;
+}
+.card-img
+{
+  width:80%;
+  height:80%;
+}
+.client-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar - Chrome, Safari */
+.client-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar - Firefox */
+.client-scroll {
+  scrollbar-width: none;
+}
+
+/* Horizontal row */
+.client-row {
+  display: flex;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Each item */
+.client-item {
+  flex: 0 0 auto;
+}

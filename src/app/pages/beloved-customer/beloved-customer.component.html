@@ -1,0 +1,16 @@
+<section class="client py-5">
+  <div class="container">
+    <div class="d-flex justify-content-center pt-4 pb-5">
+      <h2>Our Trusted Beloved Customer</h2>
+    </div>
+    <div class="client-scroll pb-4">
+      <div class="client-row">
+        <div class="client-item" *ngFor="let client of clients">
+          <div class="card client-card d-flex justify-content-center align-items-center">
+            <img [src]="client.imgSrc" class="card-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

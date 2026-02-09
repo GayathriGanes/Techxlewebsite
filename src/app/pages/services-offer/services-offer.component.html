@@ -1,0 +1,35 @@
+<div class="container py-5">
+    <h2 class="text-center mb-4">
+        Our <span class="text-primarya">Services</span> We Offer
+    </h2>
+
+    <!-- MAIN BACKGROUND CARD -->
+    <div class="services-bg" [ngStyle]="{ 'background-image': 'url(' + selectedService.image + ')' }">
+
+        <!-- LEFT SERVICE LIST -->
+        <div class="service-list-card shadow">
+            <div *ngFor="let service of services" class="service-item"
+                [class.active]="service.title === selectedService.title" (click)="selectService(service)">
+                {{ service.title }}
+                  <span *ngIf="service.title === selectedService.title" class="arrow">
+    →
+  </span>
+            </div>
+        </div>
+
+        <!-- BOTTOM DESCRIPTION BAR -->
+        <div class="bottom-overlay">
+            <p>
+                {{ selectedService.description }}
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container py-2">
+  <p class="cta-text text-center mb-0">
+    Ready to Modernize Operations and Scale with AI?
+    <a href="/contact-us" class="cta-link">Schedule a Consultation</a>
+  </p>
+</div>

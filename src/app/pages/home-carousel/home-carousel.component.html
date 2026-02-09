@@ -1,0 +1,46 @@
+<div class="home-carousel px-2">
+  <div
+    class="carousel-slide"
+    [style.backgroundImage]="'url(' + slides[activeSlide].image + ')'"
+  >
+    <div class="overlay"></div>
+
+    <div class="container h-100 position-relative">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-6 col-md-8 text-white">
+          <h1 class="carousel-title">
+            {{ slides[activeSlide].title }}
+          </h1>
+
+          <p class="carousel-desc">
+            {{ slides[activeSlide].description }}
+          </p>
+
+          <div class="carousel-buttons mt-4">
+            <a routerLink="/contact-us">
+            <button class="btn btn-primary me-3">
+              Book a Strategy Call
+            </button>
+            </a>
+            <a routerLink="/solutions">
+            <button class="btn btn-outline-light">
+              Explore Our Solutions
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom-left indicators (exact UI) -->
+    <div class="carousel-indicators-custom">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        (click)="setSlide(i)"
+        [class.active]="activeSlide === i"
+      >
+        {{ slide.index }}
+      </span>
+    </div>
+  </div>
+</div>

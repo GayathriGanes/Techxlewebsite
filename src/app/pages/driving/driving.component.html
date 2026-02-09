@@ -1,0 +1,68 @@
+<div class="driving-bg py-3">
+  <div class="row align-items-center mx-5">
+
+    <!-- LEFT SIDE -->
+    <div class="col-lg-4 col-md-4 col-12 mb-4 mb-md-0">
+
+      <h2 class="mb-4 ms-0 ms-lg-5 ps-0 ps-lg-2">
+        Driving Productivity <br />
+        With <span class="text-primarya">Intelligent Technologies</span>
+      </h2>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-lg-8 col-md-8 col-12 me-0 ">
+
+      <p class="text-muted mb-4">
+        Organizations today face growing pressure to deliver better outcomes
+        with limited resources. TechXL enables productivity transformation by
+        embedding AI, automation, and integration-first design into existing
+        environments — reducing cost, effort, and complexity.
+      </p>
+
+      <!-- TABS -->
+      <ul class="nav nav-tabs border-0 mb-3 bg-white">
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            [class.active]="activeTab === 'approach'"
+            (click)="setTab('approach')"
+          >
+            Our approach focuses
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            [class.active]="activeTab === 'solutions'"
+            (click)="setTab('solutions')"
+          >
+            Our solutions are designed
+          </button>
+        </li>
+      </ul>
+
+      <!-- TAB CONTENT -->
+      <div *ngIf="activeTab === 'approach'">
+        <ul>
+          <li>Maximizing value from existing systems and data</li>
+          <li>Automating repetitive and manual workflows</li>
+          <li>Enhancing visibility and decision-making</li>
+          <li>Delivering faster time-to-value</li>
+        </ul>
+      </div>
+
+      <div *ngIf="activeTab === 'solutions'">
+        <ul>
+          <li>Improve operational and clinical productivity</li>
+          <li>Reduce manual effort and human error</li>
+          <li>Scale with evolving organizational needs</li>
+          <li>Integrate seamlessly with existing systems</li>
+          <li>Meet security, privacy, and compliance standards</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
