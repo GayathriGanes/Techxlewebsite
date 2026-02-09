@@ -1,0 +1,148 @@
+.services-bg {
+  background-image: url('/assets/images/Industries We Work.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 80px 0px; /* top & bottom space */
+}
+.services-wrapper{
+    padding:10px;
+}
+
+/* ===== CENTER TITLE ===== */
+.title-wrapper {
+  margin-bottom: 40px;
+}
+
+.main-title {
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 145%;
+  color: #060e23;
+
+  span {
+    color: #2150d0;
+    font-weight: 600;
+  }
+}
+
+/* LEFT SIDE */
+.sub-title {
+font-weight: 500;
+font-size: 30px;
+line-height: 145%;
+letter-spacing: 0px;
+  color: #060E23;
+}
+
+.description {
+ 
+font-weight: 500;
+font-size: 18px;
+line-height: 165%;
+letter-spacing: 1%;
+color:#545D78;
+
+
+}
+
+.home-indus-text {
+
+font-weight: 600;
+font-size: 18px;
+line-height: 165%;
+letter-spacing: 1%;
+color:#060E23;
+
+}
+
+.custom-list {
+  padding-left: 20px;
+  
+
+  li {
+    margin-bottom: 10px;
+    color: #545D78;
+font-weight: 500;
+font-size: 18px;
+line-height: 175%;
+letter-spacing: 1%;
+
+  }
+}
+
+/* RIGHT SIDE */
+.right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.industry-item {
+  background: #f3f4f6;
+  border-radius: 70px;
+  padding: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.dot {
+  width: 60px;
+  height: 60px;
+  background: #3564DF33;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+}
+.dot img {
+  width: 30px;
+  height: 30px;
+  display: block;   /* removes inline spacing */
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+
+  .services-box {
+    padding: 50px 30px;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .title-wrapper {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .services-box {
+    padding: 40px 20px;
+    border-radius: 25px;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .industry-item {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+}
