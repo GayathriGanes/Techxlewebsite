@@ -1,0 +1,75 @@
+<section class="case-study-section py-5 mt-5">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h2 class="case-study-title">
+          Case <span >Study</span>
+        </h2>
+        <p class="case-study-small">
+          Our Solutions Help Organizations Modernize Operations And Achieve Tangible Results Across<br>
+          Healthcare And Enterprise Environments
+        </p>
+      </div>
+
+      <!-- Arrow Buttons -->
+      <div class="d-flex mb-5">
+        <button class="nav-btn"
+        (click)="prev()"
+        [disabled]="currentIndex === 0">
+
+  <img src="assets/images/Button - Previous slide.svg" alt="Previous" class="arrow-img">
+
+</button>
+
+<button class="nav-btn"
+        (click)="next()"
+        [disabled]="currentIndex === caseStudies.length - 1">
+
+  <img src="assets/images/Button - Next slide.svg" alt="Next" class="arrow-img">
+
+</button>
+
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="row align-items-start case-card">
+
+      <!-- Left Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="image-wrapper">
+          <img [src]="caseStudies[currentIndex].image" class="" />
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-lg-6">
+        <span class="text-tag">
+          {{ caseStudies[currentIndex].tag }}
+        </span>
+
+        <h3 class="text-title mt-2">
+          {{ caseStudies[currentIndex].title }}
+        </h3>
+
+        <p class="text-description mt-3"
+   [innerHTML]="caseStudies[currentIndex].description">
+</p>
+
+
+        <button 
+  class="btn custom-view-btn rounded-pill px-4 mt-3"
+  (click)="goToSolution()">
+  View More
+</button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+

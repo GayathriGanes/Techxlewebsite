@@ -47,6 +47,7 @@ import { ErpSolutionsComponent } from './pages/erp-solutions/erp-solutions.compo
 import { RagComponent } from './pages/rag/rag.component';
 import { VideoPlayerComponent } from './pages/video-player/video-player.component';
 import { HomeIndustriesComponent } from './pages/home-industries/home-industries.component';
+import { CaseStudyComponent } from './pages/case-study/case-study.component';
 
 
 
@@ -96,6 +97,7 @@ import { HomeIndustriesComponent } from './pages/home-industries/home-industries
     RagComponent,
     VideoPlayerComponent,
     HomeIndustriesComponent,
+    CaseStudyComponent,
     
     
     
