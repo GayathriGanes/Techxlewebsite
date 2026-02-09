@@ -46,6 +46,7 @@ import { LabaxLimsComponent } from './pages/labax-lims/labax-lims.component';
 import { ErpSolutionsComponent } from './pages/erp-solutions/erp-solutions.component';
 import { RagComponent } from './pages/rag/rag.component';
 import { VideoPlayerComponent } from './pages/video-player/video-player.component';
+import { HomeIndustriesComponent } from './pages/home-industries/home-industries.component';
 
 
 
@@ -94,6 +95,7 @@ import { VideoPlayerComponent } from './pages/video-player/video-player.componen
     ErpSolutionsComponent,
     RagComponent,
     VideoPlayerComponent,
+    HomeIndustriesComponent,
     
     
     
