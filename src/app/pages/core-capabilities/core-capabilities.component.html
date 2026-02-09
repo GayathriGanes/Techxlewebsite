@@ -1,0 +1,117 @@
+<section class="core-section py-3 mt-2 ">
+  <div class="container">
+
+    <!-- Title -->
+    <div class="text-center mb-4">
+      <h2 class="core-cap-title">
+        Core <span >Capabilities</span>
+      </h2>
+    </div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-5 custom-tabs">
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          [ngClass]="{ active: activeTab === 'ai' }"
+          (click)="setTab('ai')">
+          AI-Powered Technology Solutions
+        </button>
+      </li>
+
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          [ngClass]="{ active: activeTab === 'services' }"
+          (click)="setTab('services')">
+          Professional Services & Consulting
+        </button>
+      </li>
+
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          [ngClass]="{ active: activeTab === 'product' }"
+          (click)="setTab('product')">
+          Product & UX Innovation
+        </button>
+      </li>
+    </ul>
+
+    <!-- Content Section -->
+    <div class="row align-items-center mb-4">
+
+      <!-- LEFT SIDE -->
+      <div class="col-lg-6">
+
+        <!-- AI TAB -->
+        <div *ngIf="activeTab === 'ai'">
+          <p class="core-description">
+            We design and build AI-enabled systems that enhance productivity, intelligence, and efficiency — without requiring major changes to your existing infrastructure.
+          </p>
+
+          <h6 class="core-desc-title mt-4 mb-3">
+            Our technology solutions include:
+          </h6>
+
+          <ul class="feature-list list-unstyled">
+            <li *ngFor="let item of aiFeatures">
+              <span class="check-icon">✓</span>
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- SERVICES TAB -->
+        <div *ngIf="activeTab === 'services'">
+          <p class="core-description">
+           Technology success depends on strategy, execution, and people. Our professional services ensure solutions are aligned with business goals and delivered with confidence.
+          </p>
+
+          <h6 class="core-desc-title mt-4 mb-3">
+            We provide:
+          </h6>
+
+          <ul class="feature-list list-unstyled">
+            <li *ngFor="let item of serviceFeatures">
+              <span class="check-icon">✓</span>
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRODUCT TAB -->
+        <div *ngIf="activeTab === 'product'">
+          <p class="core-description">
+            We build modern products that prioritize usability, security, and extensibility — ensuring adoption and long-term value.<br>
+            Every solution is designed with real users in mind — clinicians, administrators, researchers, and enterprise teams.
+          </p>
+
+          <h6 class="core-desc-title mt-4 mb-3">
+            Our capabilities include:
+          </h6>
+
+          <ul class="feature-list list-unstyled">
+            <li *ngFor="let item of productFeatures">
+              <span class="check-icon">✓</span>
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE IMAGE -->
+      <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        <div class="image-card">
+          <img
+            [src]="getImage()"
+            class="img-fluid"
+            alt="Capability Image">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

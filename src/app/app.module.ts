@@ -48,6 +48,7 @@ import { RagComponent } from './pages/rag/rag.component';
 import { VideoPlayerComponent } from './pages/video-player/video-player.component';
 import { HomeIndustriesComponent } from './pages/home-industries/home-industries.component';
 import { CaseStudyComponent } from './pages/case-study/case-study.component';
+import { CoreCapabilitiesComponent } from './pages/core-capabilities/core-capabilities.component';
 
 
 
@@ -98,6 +99,7 @@ import { CaseStudyComponent } from './pages/case-study/case-study.component';
     VideoPlayerComponent,
     HomeIndustriesComponent,
     CaseStudyComponent,
+    CoreCapabilitiesComponent,
     
     
     

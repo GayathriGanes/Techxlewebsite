@@ -1,14 +1,13 @@
-.services-wrapper {
-  
+.services-bg {
   background-image: url('/assets/images/Industries We Work.png');
-  background-position: center;
   background-repeat: no-repeat;
-}
+  background-position: center;
+  background-size: cover;
 
-.services-box {
-  border-radius: 40px;
-  padding: 70px 80px;
-  position: relative;
+  padding: 80px 0px; /* top & bottom space */
+}
+.services-wrapper{
+    padding:10px;
 }
 
 /* ===== CENTER TITLE ===== */
@@ -82,7 +81,7 @@ letter-spacing: 1%;
 
 .industry-item {
   background: #f3f4f6;
-  border-radius: 50px;
+  border-radius: 70px;
   padding: 8px;
   font-size: 17px;
   font-weight: 500;
