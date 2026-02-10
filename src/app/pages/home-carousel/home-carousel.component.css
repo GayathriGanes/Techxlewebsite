@@ -1,0 +1,130 @@
+.home-carousel {
+  width: 100%;
+  margin-top:90px;
+}
+
+/* Full height but capped */
+.carousel-slide {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: right top;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  border-bottom-left-radius: 22px;
+
+}
+
+/* Dark blue gradient overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.container {
+  z-index: 2;
+}
+
+/* Typography */
+.carousel-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.carousel-desc {
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 520px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #2f6df6;
+  border: none;
+  padding: 10px 22px;
+  border-radius:40px;
+}
+
+.btn-outline-light {
+  padding: 10px 22px;
+  border-radius:40px;
+}
+
+.carousel-indicators-custom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  padding: 14px 36px 18px 36px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+
+  /* Only top-right rounded */
+  border-top-right-radius: 28px;
+
+  /* IMPORTANT */
+  overflow: visible;
+}
+.carousel-indicators-custom::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -28px;
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* Indicator numbers */
+.carousel-indicators-custom span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #060E23;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 12px;
+  margin-right: 14px; /* normal gap */
+}
+
+/* Grey line for NON-active */
+.carousel-indicators-custom span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 35px;
+  width: 20px;
+  height: 2px;
+  background-color: #c4c4c4;
+}
+
+/* Active indicator text */
+.carousel-indicators-custom span.active {
+  font-weight: 600;
+  margin-right: 28px; /* INCREASED GAP after active */
+}
+
+/* Active blue line */
+.carousel-indicators-custom span.active::after {
+  width: 33px;
+  background-color: #2563eb;
+}
+
+
+/* Responsive tuning */
+@media (max-width: 768px) {
+  .carousel-title {
+    font-size: 1.8rem;
+  }
+
+  .carousel-desc {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,32 @@
+.driving-bg {
+  background-image: url('/assets/images/image 97.png');
+  background-repeat: no-repeat;
+}
+
+h2 {
+  font-family: Plus Jakarta Sans;
+font-weight: 300;
+font-style: Light;
+font-size: 30px;
+line-height: 145%;
+letter-spacing: 0px;
+text-transform: capitalize;
+}
+.text-primarya{
+    color:#2150D0;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color:#2150D0 !important;
+  border-bottom: 2px solid #2150D0 !important;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}

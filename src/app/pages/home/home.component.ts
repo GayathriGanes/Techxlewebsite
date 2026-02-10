@@ -5,7 +5,7 @@ import { Component,HostListener,ViewChild,ElementRef} from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  isScrolled: boolean = false;    
+  /*isScrolled: boolean = false;    
     @HostListener('window:scroll', [])
       onWindowScroll(): void {
         const scrollPosition = window.scrollY;
@@ -46,5 +46,5 @@ export class HomeComponent {
     
       prev() {
         this.container.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
-      }     
+      } */    
 }

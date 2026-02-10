@@ -1,0 +1,103 @@
+/* MAIN BACKGROUND */
+.services-bg {
+  position: relative;
+  min-height: 420px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* LEFT CARD */
+.service-list-card {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: #fff;
+  width: 280px;
+  border-radius: 10px;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+/* SERVICE ITEM */
+.service-item {
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 500;
+  color: #444;
+  transition: 0.3s;
+  border-bottom: 1px solid #060E231A
+}
+
+
+.service-item.active {
+  color: #2150D0;
+  font-weight: 600;
+}
+
+/* BOTTOM BLACK OVERLAY */
+.bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 18px 30px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+.bottom-overlay p {
+  max-width: 520px;
+  margin-left: auto;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.arrow {
+  font-size: 16px;
+  color: #2150D0;
+  margin-left: 8px;
+}
+.cta-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.cta-link {
+  color: #2150D0; /* Bootstrap primary blue */
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 6px;
+  text-decoration: underline;
+}
+.text-primarya{
+    color: #2150D0;
+}
+@media (max-width: 768px) {
+
+  .services-bg {
+    display: flex;
+    flex-direction: column;
+    min-height: 260px; /* FIX */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .service-list-card {
+    position: relative;
+    width: 80%;
+    margin-bottom: 40px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .bottom-overlay {
+    position: relative;
+    padding: 16px;
+  }
+}
