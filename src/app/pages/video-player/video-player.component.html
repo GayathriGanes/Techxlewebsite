@@ -1,3 +1,5 @@
-<video #player *ngIf="videoUrl" width="100%" controls autoplay muted>
+<div style="margin-top: 7em;">
+<video #player *ngIf="videoUrl" width="100%" style="height: 80vh;" controls autoplay loop>
   <source [src]="videoUrl" type="video/mp4" />
 </video>
+</div>
