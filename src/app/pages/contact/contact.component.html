@@ -11,12 +11,24 @@
         </p>
         <h5 class="direction mt-4">India - Offshore Development Center</h5>
         <p class="address">
-          <strong>Address:</strong> Office #G33, 626-1, Thudiyalur <br> Saravanampatti Road, Coimbatore,<br> Tamilnadu 641049.
+          <strong>Techxle Consulting Services Pvt Ltd</strong>
         </p>
-        <h5 class="direction">Get Direction</h5>
-              <a href="https://www.google.co.in/maps/place/g33,+626,+Thudiyalur+-+Saravanampatti+Rd,+Saravanampatti,+Coimbatore,+Tamil+Nadu+641006/@11.0817133,76.9860789,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba8f79549fbbaa9:0xe49a4e6935008b8e!8m2!3d11.0817133!4d76.9886538?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="vector">
-                <img src="./assets/images/Vector (1).png" alt="Icon" class="vector"/>
+        <p class="address">
+          <strong>D-U-N-S:</strong> 73-784-9886
+        </p>
+        <p class="address">
+          <strong>Address:</strong> SF4, Prabhatham Apartment,<br/>Chinnamettupalayam, Saravanampatti,<br/>Coimbatore - 641049 Tamilnadu.
+        </p>
+
+          <p class="address">
+              <strong>Phone:</strong> <a href="tel:+91 91502 22922">+91 91502 22922</a>
+            </p>
+              <div class="mb-5">
+              <a href="https://www.google.co.in/maps/place/g33,+626,+Thudiyalur+-+Saravanampatti+Rd,+Saravanampatti,+Coimbatore,+Tamil+Nadu+641006/@11.0817133,76.9860789,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba8f79549fbbaa9:0xe49a4e6935008b8e!8m2!3d11.0817133!4d76.9886538?entry=ttu&g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="direction" style="text-decoration: none;">
+                Get Direction <img src="./assets/images/Vector (1).png" alt="Icon"/>
               </a>
+              </div>
+
               <h5 class="work">Work with us / Careers:</h5>
               <p class="work-content"><a href="mailto:contact@techxl.org">contact&#64;techxl.org</a></p>
         </div>
@@ -31,25 +43,25 @@
               <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
                 Name is required
               </div>
-            </div>         
+            </div>
             <div class="form-group mt-4">
               <label for="email">Email ID</label>
               <input type="email" class="form-control mt-2" id="email" placeholder="name@example.com" formControlName="email" />
               <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
                 <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</div>
                 <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</div>
-              </div>            
-            </div>         
+              </div>
+            </div>
             <div class="form-group mt-4">
               <label for="phone">Phone Number</label>
               <input type="text" class="form-control mt-2" id="phone" formControlName="phone_no" />
-              <div *ngIf="contactForm.get('phone_no')?.invalid && contactForm.get('phone')?.touched" class="text-danger">
+              <div *ngIf="contactForm.get('phone_no')?.invalid && contactForm.get('phone_no')?.touched" class="text-danger">
                 <div *ngIf="contactForm.get('phone_no')?.errors?.['required']">Phone number is required</div>
                 <div *ngIf="contactForm.get('phone_no')?.errors?.['maxlength']">Phone number cannot exceed 13 digits</div>
                 <div *ngIf="contactForm.get('phone_no')?.errors?.['minlength']">Phone number must be at least 10 digits</div>
                 <div *ngIf="contactForm.get('phone_no')?.errors?.['pattern']">Phone number must be numeric</div>
               </div>
-            </div>         
+            </div>
             <div class="form-group mt-4">
               <label for="service-type">Service Type</label>
               <div class="custom-select-wrapper">
@@ -71,14 +83,23 @@
           </div>
             <div class="form-group mt-4">
               <label for="message">Message</label>
-              <textarea class="form-control mt-2" id="message" rows="4" formControlName="message"></textarea>
+              <textarea class="form-control mt-2" id="message" rows="6" style="height:100px" formControlName="message"></textarea>
               <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
                 Message is required
               </div>
             </div>
-            <button mat-button type="submit" class=" read-more-button mt-4">
-              <span class="button-text">Send Enquiry</span>
-              <span><img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
+            <div class="form-group mt-4">
+              <label>Security Check: What is {{ captchaNum1 }} + {{ captchaNum2 }}?</label>
+              <input type="number" class="form-control mt-2" formControlName="captcha" placeholder="Enter the answer" />
+              <div *ngIf="contactForm.get('captcha')?.invalid && contactForm.get('captcha')?.touched" class="text-danger">
+                <div *ngIf="contactForm.get('captcha')?.errors?.['required']">This field is required</div>
+                <div *ngIf="contactForm.get('captcha')?.errors?.['captchaWrong']">Incorrect answer, please try again</div>
+              </div>
+            </div>
+            <button mat-button type="submit" class=" read-more-button mt-4" [disabled]="isLoading">
+              <span class="button-text">{{ isLoading ? 'Sending...' : 'Send Enquiry' }}</span>
+              <span *ngIf="!isLoading"><img src="./assets/images/Icons (1).svg" alt="Techxle Logo" class="icon" /></span>
+              <span *ngIf="isLoading" class="spinner-border spinner-border-sm ms-2" role="status" aria-hidden="true"></span>
             </button>
             <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
             <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
@@ -88,4 +109,3 @@
     </div>
   </div>
   </div>
-  
