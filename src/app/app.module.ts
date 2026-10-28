@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FooterComponent } from './pages/footer/footer.component';
@@ -18,7 +18,7 @@ import { CloudappComponent } from './pages/cloudapp/cloudapp.component';
 import { StaffingComponent } from './pages/staffing/staffing.component';
 import { UIComponent } from './pages/ui/ui.component';
 import { FullstackComponent } from './pages/fullstack/fullstack.component';
-import{MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
 import { MissionComponent } from './pages/mission/mission.component';
 import { DesignComponent } from './pages/design/design.component';
@@ -38,7 +38,7 @@ import { GrantComponent } from './pages/grant/grant.component';
 import { HealthcareComponent } from './pages/healthcare/healthcare.component';
 import { PsComponent } from './pages/ps/ps.component';
 import { SaleComponent } from './pages/sale/sale.component';
-import {NgbModule, NgbScrollSpyModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbScrollSpyModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeroSectionComponent } from './pages/hero-section/hero-section.component';
 import { FormComponent } from './pages/form/form.component';
 import { NavbarDirective } from './pages/directives/navbar.directive';
@@ -53,17 +53,7 @@ import { HomeCarouselComponent } from './pages/home-carousel/home-carousel.compo
 import { BelovedCustomerComponent } from './pages/beloved-customer/beloved-customer.component';
 import { DrivingComponent } from './pages/driving/driving.component';
 import { ServicesOfferComponent } from './pages/services-offer/services-offer.component';
-
-
-
-
-
-
-
-
-
-
-
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -108,11 +98,7 @@ import { ServicesOfferComponent } from './pages/services-offer/services-offer.co
     BelovedCustomerComponent,
     DrivingComponent,
     ServicesOfferComponent,
-    
-    
-    
-   
-    
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,
@@ -128,6 +114,7 @@ import { ServicesOfferComponent } from './pages/services-offer/services-offer.co
     MatInputModule,
     RouterModule,
     ReactiveFormsModule,
+    FormsModule,
     NgbScrollSpyModule
   ],
   providers: [
@@ -136,6 +123,5 @@ import { ServicesOfferComponent } from './pages/services-offer/services-offer.co
     provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent],
-
 })
 export class AppModule { }
