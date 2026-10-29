@@ -21,6 +21,9 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
   messages: ChatMessage[] = [];
   quickSuggestions: string[] = [];
 
+  botBodyImg = 'assets/images/ai-bot-body.png';
+  botAvatarImg = 'assets/images/ai-bot-avatar.png';
+
   private needsScroll = false;
   private readonly STORAGE_KEY = 'techxle_chatbot_conversation_v1';
 
@@ -76,6 +79,13 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
   dismissTeaser(event: MouseEvent): void {
     event.stopPropagation();
     this.showTeaser = false;
+  }
+
+  onBotImageError(event: Event): void {
+    const img = event.target as HTMLImageElement;
+    if (img && img.src.indexOf('ai-bot-avatar.png') === -1) {
+      img.src = this.botAvatarImg;
+    }
   }
 
   sendMessage(textToSend?: string): void {

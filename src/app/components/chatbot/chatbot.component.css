@@ -10,7 +10,7 @@
 /* Teaser Bubble */
 .chatbot-teaser {
   position: absolute;
-  bottom: 74px;
+  bottom: 84px;
   right: 0;
   background: #ffffff;
   color: #0a183e;
@@ -25,6 +25,20 @@
   animation: floatBounce 3s ease-in-out infinite;
   border: 1px solid rgba(53, 100, 223, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 10;
+}
+
+.chatbot-teaser::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 32px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  transform: rotate(45deg);
+  border-right: 1px solid rgba(53, 100, 223, 0.15);
+  border-bottom: 1px solid rgba(53, 100, 223, 0.15);
 }
 
 .chatbot-teaser:hover {
@@ -72,61 +86,237 @@
   color: #0a183e;
 }
 
-/* Floating Launcher Button */
+/* Floating Launcher Mascot Button */
 .chatbot-launcher {
   position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #3564df 0%, #1c45b8 100%);
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  width: 82px;
+  height: 78px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(53, 100, 223, 0.4), 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  animation: botLauncherPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.chatbot-launcher:hover {
-  transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 12px 28px rgba(53, 100, 223, 0.5);
+.chatbot-launcher:focus {
+  outline: none;
 }
 
-.chatbot-launcher:active {
-  transform: scale(0.96);
+/* Outer Aura Glow */
+.bot-aura-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -45px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(53, 100, 223, 0.35) 0%, rgba(96, 165, 250, 0.18) 50%, rgba(53, 100, 223, 0) 72%);
+  pointer-events: none;
+  animation: botAuraBreath 3.6s ease-in-out infinite;
+  z-index: 1;
 }
 
-.launcher-icon-wrapper {
+/* Concentric Ripple Pulse Rings */
+.bot-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 74px;
+  height: 64px;
+  margin-top: -32px;
+  margin-left: -37px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 100, 223, 0.45);
+  pointer-events: none;
+  z-index: 1;
+  animation: botPulseRing 3.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.bot-pulse-ring.ring-2 {
+  animation-delay: 1.6s;
+}
+
+/* Floating Character Wrapper */
+.bot-character-float {
   position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: botFloatLevitate 3.6s ease-in-out infinite;
+  transition: transform 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center bottom;
 }
 
-.launcher-icon {
-  width: 28px;
-  height: 28px;
+.chatbot-launcher:hover .bot-character-float {
+  transform: translateY(-8px) scale(1.08);
+  animation-play-state: paused;
 }
 
+.chatbot-launcher:active .bot-character-float {
+  transform: translateY(2px) scale(0.92);
+  transition: transform 0.1s ease;
+}
+
+/* Mascot Inner Frame */
+.bot-character-inner {
+  position: relative;
+  width: 76px;
+  height: 60px;
+  display: block;
+}
+
+/* Mascot Body Image */
+.bot-mascot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(10, 24, 62, 0.28));
+  transition: filter 0.25s ease;
+}
+
+.chatbot-launcher:hover .bot-mascot-img {
+  filter: drop-shadow(0 10px 22px rgba(53, 100, 223, 0.45));
+}
+
+/* Animated Eyes Overlay */
+.bot-eyes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: botGazeShift 6.5s ease-in-out infinite;
+}
+
+.bot-eye {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.95), 0 0 12px rgba(96, 165, 250, 0.8);
+  animation: botBlink 3.8s ease-in-out infinite;
+  transform-origin: center;
+  transition: border-radius 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bot-eye.left-eye {
+  left: 27.9%;
+  top: 35.0%;
+  width: 9.3%;
+  height: 21.9%;
+}
+
+.bot-eye.right-eye {
+  left: 62.2%;
+  top: 35.0%;
+  width: 9.3%;
+  height: 21.2%;
+}
+
+.chatbot-launcher:hover .bot-eye {
+  animation-play-state: paused;
+  border-radius: 50% 50% 25% 25%;
+  transform: scaleY(0.75) translateY(-1px);
+  box-shadow: 0 0 8px #ffffff, 0 0 16px rgba(96, 165, 250, 1);
+}
+
+/* Dynamic Ground Shadow */
+.bot-ground-shadow {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -26px;
+  width: 52px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(10, 24, 62, 0.35) 0%, rgba(10, 24, 62, 0.1) 45%, rgba(10, 24, 62, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+  animation: botShadowLevitate 3.6s ease-in-out infinite;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.chatbot-launcher:hover .bot-ground-shadow {
+  transform: scale(1.15, 0.85);
+  opacity: 0.22;
+}
+
+/* Sparkle AI Indicator */
 .sparkle-ai {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  font-size: 12px;
-  animation: pulseSparkle 2s ease infinite;
+  top: -6px;
+  right: -2px;
+  font-size: 13px;
+  line-height: 1;
+  pointer-events: none;
+  animation: pulseSparkle 2.2s ease infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-.unread-dot {
+/* Online Badge */
+.bot-online-badge {
   position: absolute;
-  top: 4px;
+  bottom: 0px;
   right: 4px;
   width: 12px;
   height: 12px;
   background-color: #10b981;
   border: 2px solid #ffffff;
   border-radius: 50%;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+/* Unread Badge */
+.unread-dot {
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 13px;
+  height: 13px;
+  background-color: #ef4444;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+  animation: unreadPulse 2s ease infinite;
+}
+
+/* Hover Tooltip Pill */
+.bot-hover-pill {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: #0a183e;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(10, 24, 62, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(53, 100, 223, 0.35);
+  z-index: 5;
+}
+
+.chatbot-launcher:hover .bot-hover-pill {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Chat Window */
@@ -181,6 +371,25 @@
   justify-content: center;
   color: #ffffff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.bot-avatar.mascot-avatar {
+  width: 44px;
+  height: 36px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header-bot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
 
 .status-indicator {
@@ -294,6 +503,25 @@
   justify-content: center;
   flex-shrink: 0;
   margin-bottom: 14px;
+}
+
+.msg-avatar.mascot-msg-avatar {
+  width: 28px;
+  height: 24px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.message-bot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(53, 100, 223, 0.25));
 }
 
 .msg-content-wrapper {
@@ -607,6 +835,115 @@
   }
   40% {
     transform: scale(1);
+  }
+}
+
+/* Mascot Bot Animations */
+@keyframes botLauncherPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(20px);
+  }
+  70% {
+    transform: scale(1.08) translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes botFloatLevitate {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-11px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(1.5deg);
+  }
+}
+
+@keyframes botShadowLevitate {
+  0%, 100% {
+    transform: scale(1, 1);
+    opacity: 0.55;
+  }
+  25% {
+    transform: scale(0.88, 0.82);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(0.74, 0.68);
+    opacity: 0.22;
+  }
+  75% {
+    transform: scale(0.9, 0.85);
+    opacity: 0.45;
+  }
+}
+
+@keyframes botBlink {
+  0%, 42%, 46%, 86%, 92%, 100% {
+    transform: scaleY(1);
+  }
+  44% {
+    transform: scaleY(0.08);
+  }
+  88%, 90% {
+    transform: scaleY(0.08);
+  }
+}
+
+@keyframes botGazeShift {
+  0%, 35%, 100% {
+    transform: translate(0, 0);
+  }
+  40%, 55% {
+    transform: translate(2px, -0.5px);
+  }
+  65%, 80% {
+    transform: translate(-2px, 0.5px);
+  }
+}
+
+@keyframes botPulseRing {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+@keyframes botAuraBreath {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
+}
+
+@keyframes unreadPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 12px rgba(239, 68, 68, 0.9);
   }
 }
 
