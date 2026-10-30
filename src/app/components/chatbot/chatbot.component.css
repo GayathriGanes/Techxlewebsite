@@ -2,7 +2,7 @@
 .chatbot-wrapper {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  right: 18px;
   z-index: 9999;
   font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
