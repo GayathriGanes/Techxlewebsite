@@ -10,7 +10,7 @@
 /* Teaser Bubble */
 .chatbot-teaser {
   position: absolute;
-  bottom: 82px;
+  bottom: 96px;
   right: 0;
   background: #ffffff;
   color: #0a183e;
@@ -75,97 +75,63 @@
 /* Floating Launcher Button */
 .chatbot-launcher {
   position: relative;
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #ffffff 0%, #f0f4ff 100%);
-  border: 2.5px solid #3564df;
-  color: #ffffff;
+  width: auto;
+  height: auto;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 10px 28px rgba(53, 100, 223, 0.35), 0 2px 8px rgba(10, 24, 62, 0.12);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 0;
   overflow: visible;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .chatbot-launcher:hover {
-  transform: scale(1.08) translateY(-3px);
-  box-shadow: 0 14px 34px rgba(53, 100, 223, 0.45), 0 4px 12px rgba(10, 24, 62, 0.15);
-  border-color: #214ac2;
+  transform: scale(1.1) translateY(-4px);
 }
 
 .chatbot-launcher:active {
-  transform: scale(0.96);
+  transform: scale(0.95);
 }
 
 .launcher-robot-container {
   position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .launcher-robot-img {
-  width: 52px;
+  width: 75px;
   height: auto;
-  max-height: 58px;
+  max-height: 85px;
   object-fit: contain;
   display: block;
   user-select: none;
   -webkit-user-drag: none;
-  filter: drop-shadow(0 4px 8px rgba(53, 100, 223, 0.25));
-  transition: transform 0.25s ease;
-  z-index: 2;
+  filter: drop-shadow(0 10px 18px rgba(10, 24, 62, 0.22)) drop-shadow(0 2px 6px rgba(53, 100, 223, 0.2));
+  transition: filter 0.3s ease;
 }
 
 .chatbot-launcher:hover .launcher-robot-img {
-  transform: scale(1.05);
-}
-
-.launcher-glow-pulse {
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
-  border-radius: 50%;
-  border: 2px solid rgba(53, 100, 223, 0.4);
-  animation: pulseLauncherRing 2.4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-@keyframes pulseLauncherRing {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(0.95);
-    opacity: 0;
-  }
+  filter: drop-shadow(0 14px 26px rgba(53, 100, 223, 0.42)) drop-shadow(0 4px 10px rgba(10, 24, 62, 0.25));
 }
 
 .unread-dot {
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 6px;
+  right: 6px;
   width: 14px;
   height: 14px;
   background-color: #10b981;
   border: 2.5px solid #ffffff;
   border-radius: 50%;
   z-index: 5;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* Chat Window */
