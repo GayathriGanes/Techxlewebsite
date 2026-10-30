@@ -72,61 +72,440 @@
   color: #0a183e;
 }
 
-/* Floating Launcher Button */
-.chatbot-launcher {
+/* ============================================================
+   Festive Mascot Launcher (Diwali, Christmas, New Year)
+   ============================================================ */
+.chatbot-launcher.festive-launcher {
   position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #3564df 0%, #1c45b8 100%);
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  width: 86px;
+  height: 82px;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(53, 100, 223, 0.4), 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.chatbot-launcher:hover {
-  transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 12px 28px rgba(53, 100, 223, 0.5);
+.chatbot-launcher.festive-launcher:hover {
+  transform: scale(1.06) translateY(-4px);
 }
 
-.chatbot-launcher:active {
-  transform: scale(0.96);
+.chatbot-launcher.festive-launcher:active {
+  transform: scale(0.95) translateY(2px);
 }
 
-.launcher-icon-wrapper {
+/* Pulsing Festive Aura Glow */
+.festive-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96px;
+  height: 90px;
+  margin-top: -45px;
+  margin-left: -48px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: festiveAuraBreathe 3.4s ease-in-out infinite;
+  transition: background 1.2s ease, filter 1.2s ease;
+}
+
+/* Specific Aura Styles for each mode */
+.aura-diwali .festive-aura {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.38) 0%, rgba(239, 68, 68, 0.18) 52%, rgba(245, 158, 11, 0) 74%);
+  filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.45));
+}
+
+.aura-christmas .festive-aura {
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.32) 0%, rgba(34, 197, 94, 0.2) 50%, rgba(96, 165, 250, 0) 74%);
+  filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.4));
+}
+
+.aura-newyear .festive-aura {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.35) 0%, rgba(234, 179, 8, 0.22) 50%, rgba(168, 85, 247, 0) 74%);
+  filter: drop-shadow(0 0 16px rgba(59, 130, 246, 0.45));
+}
+
+/* Expanding Ripple Pulse Rings */
+.festive-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 76px;
+  height: 72px;
+  margin-top: -36px;
+  margin-left: -38px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  transition: border-color 1.2s ease;
+}
+
+.aura-diwali .festive-pulse-ring {
+  border: 2px solid rgba(245, 158, 11, 0.4);
+}
+
+.aura-christmas .festive-pulse-ring {
+  border: 2px solid rgba(239, 68, 68, 0.35);
+}
+
+.aura-newyear .festive-pulse-ring {
+  border: 2px solid rgba(59, 130, 246, 0.4);
+}
+
+.festive-pulse-ring.ring-1 {
+  animation: festiveRingRipple 3.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.festive-pulse-ring.ring-2 {
+  animation: festiveRingRipple 3.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  animation-delay: 1.6s;
+}
+
+/* Floating Character Box */
+.festive-character-box {
   position: relative;
+  width: 82px;
+  height: 78px;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: festiveBotFloat 3.6s ease-in-out infinite;
+  transform-origin: center bottom;
 }
 
-.launcher-icon {
-  width: 28px;
-  height: 28px;
-}
-
-.sparkle-ai {
+/* Cross-fading Bot Layers */
+.festive-bot-layer {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  font-size: 12px;
-  animation: pulseSparkle 2s ease infinite;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.92) translateY(6px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
+.festive-bot-layer.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.festive-bot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 14px rgba(10, 24, 62, 0.28));
+  transition: filter 1s ease;
+}
+
+.aura-diwali .festive-bot-img {
+  filter: drop-shadow(0 8px 18px rgba(245, 158, 11, 0.42));
+}
+
+.aura-christmas .festive-bot-img {
+  filter: drop-shadow(0 8px 18px rgba(239, 68, 68, 0.36));
+}
+
+.aura-newyear .festive-bot-img {
+  filter: drop-shadow(0 8px 18px rgba(59, 130, 246, 0.45));
+}
+
+/* Twinkle Sparkles */
+.festive-sparkle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
+  user-select: none;
+}
+
+.festive-sparkle.sparkle-1 {
+  top: -2px;
+  left: 2px;
+  font-size: 15px;
+  animation: sparkleTwinkle 2.8s ease-in-out infinite alternate;
+}
+
+.festive-sparkle.sparkle-2 {
+  top: 6px;
+  right: 0px;
+  font-size: 13px;
+  animation: sparkleTwinkle 2.2s ease-in-out infinite alternate 0.7s;
+}
+
+.festive-sparkle.sparkle-3 {
+  bottom: 14px;
+  right: -4px;
+  font-size: 11px;
+  animation: sparkleTwinkle 2.5s ease-in-out infinite alternate 1.4s;
+}
+
+/* Online Status Dot on Launcher */
+.festive-online-dot {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #10b981;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+  z-index: 5;
+}
+
+/* Unread Badge */
 .unread-dot {
   position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 12px;
-  height: 12px;
-  background-color: #10b981;
+  top: 6px;
+  right: 8px;
+  width: 13px;
+  height: 13px;
+  background-color: #ef4444;
   border: 2px solid #ffffff;
   border-radius: 50%;
+  z-index: 6;
+  animation: pulseDot 1.8s ease infinite;
+}
+
+/* Dynamic Levitation Ground Shadow */
+.festive-ground-shadow {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 46px;
+  height: 10px;
+  margin-left: -23px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(10, 24, 62, 0.28) 0%, rgba(10, 24, 62, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+  animation: shadowPulse 3.6s ease-in-out infinite;
+}
+
+/* Mode Indicator Dots (Subtle progress indicator) */
+.festive-mode-indicators {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 6px;
+  background: rgba(10, 24, 62, 0.45);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  z-index: 5;
+  opacity: 0.8;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.chatbot-launcher:hover .festive-mode-indicators {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}
+
+.mode-indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.mode-indicator-dot.active {
+  width: 14px;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Hover Tooltip Pill */
+.festive-hover-pill {
+  position: absolute;
+  bottom: 94px;
+  right: 0;
+  background: rgba(10, 24, 62, 0.94);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 10px 24px rgba(10, 24, 62, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(8px) scale(0.95);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 10;
+}
+
+.festive-hover-pill::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 34px;
+  width: 10px;
+  height: 10px;
+  background: rgba(10, 24, 62, 0.94);
+  transform: rotate(45deg);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.chatbot-launcher:hover .festive-hover-pill {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.pill-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.pill-sub {
+  font-size: 11px;
+  color: #93c5fd;
+  font-weight: 500;
+}
+
+/* Header & Message Avatar Styling */
+.festive-header-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  overflow: visible;
+  position: relative;
+}
+
+.header-bot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.4s ease;
+}
+
+.festive-msg-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f0f4ff;
+  border: 1.5px solid rgba(53, 100, 223, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.msg-bot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Animations */
+@keyframes festiveBotFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-7px) scale(1.02);
+  }
+}
+
+@keyframes festiveAuraBreathe {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes festiveRingRipple {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.85;
+  }
+  75% {
+    transform: scale(1.45);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(0.72);
+    opacity: 0.18;
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0% {
+    transform: scale(0.8) rotate(-10deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2) rotate(15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
 }
 
 /* Chat Window */

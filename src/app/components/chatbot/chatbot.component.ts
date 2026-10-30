@@ -1,14 +1,25 @@
-import { Component, OnInit, AfterViewChecked, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewChecked, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ChatbotService, ChatMessage, ChatAction } from '../../services/chatbot.service';
+
+export interface FestiveMode {
+  id: 'diwali' | 'christmas' | 'newyear';
+  name: string;
+  badge: string;
+  greeting: string;
+  teaser: string;
+  image: string;
+  auraClass: string;
+  sparkleEmoji: string;
+}
 
 @Component({
   selector: 'app-chatbot',
   templateUrl: './chatbot.component.html',
   styleUrls: ['./chatbot.component.css']
 })
-export class ChatbotComponent implements OnInit, AfterViewChecked {
+export class ChatbotComponent implements OnInit, OnDestroy, AfterViewChecked {
   @ViewChild('scrollContainer') private scrollContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('queryInput') private queryInput?: ElementRef<HTMLInputElement>;
 
@@ -20,6 +31,48 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
   showTeaser = true;
   messages: ChatMessage[] = [];
   quickSuggestions: string[] = [];
+
+  // Festive animation modes (Diwali, Christmas, New Year)
+  readonly festiveModes: FestiveMode[] = [
+    {
+      id: 'diwali',
+      name: 'Diwali Mode',
+      badge: '🪔 Happy Diwali!',
+      greeting: 'Happy Diwali! Ask Techxle AI',
+      teaser: 'Happy Diwali! Explore Techxle AI solutions.',
+      image: 'assets/images/bot-diwali.png',
+      auraClass: 'aura-diwali',
+      sparkleEmoji: '✨'
+    },
+    {
+      id: 'christmas',
+      name: 'Christmas Mode',
+      badge: '🎄 Merry Christmas!',
+      greeting: 'Merry Christmas! Ask Techxle AI',
+      teaser: 'Merry Christmas! Ready to help you with Techxle.',
+      image: 'assets/images/bot-christmas.png',
+      auraClass: 'aura-christmas',
+      sparkleEmoji: '❄️'
+    },
+    {
+      id: 'newyear',
+      name: 'New Year Mode',
+      badge: '🎉 Happy New Year 2027!',
+      greeting: 'Happy New Year! Ask Techxle AI',
+      teaser: 'Happy New Year 2027! Explore our AI solutions.',
+      image: 'assets/images/bot-newyear.png',
+      auraClass: 'aura-newyear',
+      sparkleEmoji: '🎊'
+    }
+  ];
+
+  currentModeIndex = 0;
+  private modeIntervalTimer: any = null;
+  private isModePaused = false;
+
+  get currentFestiveMode(): FestiveMode {
+    return this.festiveModes[this.currentModeIndex];
+  }
 
   private needsScroll = false;
   private readonly STORAGE_KEY = 'techxle_chatbot_conversation_v1';
@@ -34,10 +87,51 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
     this.quickSuggestions = this.chatbotService.getQuickSuggestions();
     this.loadHistory();
 
-    // Auto-hide the teaser after 10 seconds if not interacted
-    setTimeout(() => {
-      this.showTeaser = false;
-    }, 10000);
+    if (typeof window !== 'undefined') {
+      this.startModeCycle();
+
+      // Auto-hide the teaser after 10 seconds if not interacted
+      setTimeout(() => {
+        this.showTeaser = false;
+      }, 10000);
+    }
+  }
+
+  startModeCycle(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    if (this.modeIntervalTimer) {
+      clearInterval(this.modeIntervalTimer);
+    }
+    // Slowly change the 3 festive modes repeatedly every 5.5 seconds
+    this.modeIntervalTimer = setInterval(() => {
+      if (!this.isModePaused) {
+        this.currentModeIndex = (this.currentModeIndex + 1) % this.festiveModes.length;
+      }
+    }, 5500);
+  }
+
+  pauseModeCycle(): void {
+    this.isModePaused = true;
+  }
+
+  resumeModeCycle(): void {
+    this.isModePaused = false;
+  }
+
+  setMode(index: number, event?: MouseEvent): void {
+    if (event) {
+      event.stopPropagation();
+    }
+    this.currentModeIndex = index % this.festiveModes.length;
+  }
+
+  ngOnDestroy(): void {
+    if (this.modeIntervalTimer) {
+      clearInterval(this.modeIntervalTimer);
+      this.modeIntervalTimer = null;
+    }
   }
 
   ngAfterViewChecked(): void {
